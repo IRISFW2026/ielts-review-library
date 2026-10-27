@@ -141,6 +141,28 @@
       "dateBasis": "材料日期"
     },
     {
+      "id": "speaking-studio",
+      "date": "2026-10-23",
+      "skill": "口语",
+      "kind": "模考",
+      "en": "Speaking Studio",
+      "zh": "口语限时模考",
+      "topic": "口语训练",
+      "tags": [
+        "口语训练",
+        "综合练习"
+      ],
+      "description": "Part 1至3 · 自定义题目 · 整场录音、分题时间轴与ZIP导出",
+      "path": "reviews/2026-10-23/speaking/mock/speaking-studio/index.html",
+      "source": "IRISFW2026/speaking2026/index.html",
+      "aliases": [
+        "https://irisfw2026.github.io/speaking2026/"
+      ],
+      "dateBasis": "首次发布日期 工具没有单次材料日期",
+      "title": "1023-口语-模考-Speaking Studio 口语限时模考",
+      "url": "/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/"
+    },
+    {
       "id": "four-listening-topics",
       "date": "2026-10-22",
       "skill": "听力",
@@ -300,6 +322,28 @@
       "source": "Termite-Mounds-Review.html",
       "aliases": [],
       "dateBasis": "首次发布日期 材料学习日期未标注"
+    },
+    {
+      "id": "singing",
+      "date": "2026-10-06",
+      "skill": "口语",
+      "kind": "Part 1",
+      "en": "Singing",
+      "zh": "唱歌",
+      "topic": "艺术与文化",
+      "tags": [
+        "艺术与文化",
+        "口语训练"
+      ],
+      "description": "9道问答 · 关键词提示 · 纠错、答案遮挡与跟读",
+      "path": "reviews/2026-10-06/speaking/part-1/singing/index.html",
+      "source": "IRISFW2026/speaking2026/singing.html",
+      "aliases": [
+        "https://irisfw2026.github.io/speaking2026/singing.html"
+      ],
+      "dateBasis": "原练习页明确标注2026年10月6日",
+      "title": "1006-口语-Part 1-Singing 唱歌",
+      "url": "/ielts-review-library/reviews/2026-10-06/speaking/part-1/singing/"
     },
     {
       "id": "three-reading-topics",

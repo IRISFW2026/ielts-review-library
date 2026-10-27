@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<title>1023-口语-模考-Speaking Studio 口语限时模考</title>
+<style>
+:root{--ink:#16233b;--muted:#69778c;--paper:#f5f7fc;--surface:#fff;--line:#e6eaf2;--primary:#4759e9;--primary-dark:#343fc1;--lilac:#eef0ff;--teal:#158774;--warning:#a86a16;--error:#bc4b52;--radius:18px;--shadow:0 15px 45px rgba(30,45,90,.07)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--paper)}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #b3bbff;outline-offset:2px}a{color:var(--primary)}
+.shell{max-width:1240px;margin:auto;padding:24px 32px 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:24px}.identity{display:flex;gap:14px;align-items:center}.mark{width:45px;height:45px;display:grid;place-items:center;border-radius:15px;background:var(--primary);color:white;font-size:23px;font-weight:800}.identity strong{font-size:20px;letter-spacing:-.5px;display:block}.identity small{font-size:12px;color:var(--muted);display:block;margin-top:2px}.topright{display:flex;align-items:center;gap:12px}.privacy{color:#42766b;font-size:12px;background:#e5f5ef;border:1px solid #c7e6d9;padding:8px 12px;border-radius:99px;white-space:nowrap}.tabs{display:flex;gap:7px;background:#e9edfa;padding:5px;border-radius:13px}.tab{border:0;border-radius:10px;padding:9px 15px;background:transparent;color:#57647a;font-weight:700;font-size:13px;white-space:nowrap}.tab.active{background:#fff;color:var(--primary);box-shadow:0 3px 10px rgba(51,66,102,.07)}.tab:disabled{opacity:.5}
+.hero{margin:10px 0 26px}.eyebrow{font-size:12px;color:var(--primary);font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font-size:clamp(29px,3.1vw,43px);letter-spacing:-1.7px;line-height:1.17;margin:10px 0}.hero p{color:var(--muted);font-size:15px;line-height:1.8;margin:0;max-width:820px}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.pill{border:1px solid var(--line);background:white;border-radius:99px;padding:9px 14px;font-size:13px;font-weight:700;color:#45536c}.pill span{color:var(--primary);font-variant-numeric:tabular-nums}
+.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,.85fr);gap:20px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}.panel h2{font-size:18px;margin:0 0 8px;letter-spacing:-.3px}.subtle{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 18px}.section-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.mini{font-size:12px;color:var(--muted)}.editor{min-height:360px;width:100%;resize:vertical;border:1px solid #d9e0ed;background:#fafbff;border-radius:12px;padding:17px;line-height:1.7;font-size:13px;color:var(--ink)}.field{display:grid;gap:7px;margin:15px 0}.field label{color:#4e5d76;font-size:13px;font-weight:700}.hint-editor{width:100%;min-height:62px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--ink);font-size:12px;line-height:1.6}.switch{display:flex;align-items:center;gap:10px;font-size:13px;color:#45546c;margin-top:14px}.switch input{width:16px;height:16px;accent-color:var(--primary)}
+.btn{border:1px solid transparent;border-radius:12px;padding:12px 17px;font-weight:760;font-size:13px;display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap}.btn.primary{background:var(--primary);color:white}.btn.primary:hover{background:var(--primary-dark)}.btn.secondary{background:#f0f2fb;color:#354565;border-color:#e5eafa}.btn.ghost{color:var(--muted);background:transparent;border-color:var(--line)}.btn.danger{background:#fff4f4;border-color:#f0cfcf;color:#a03b42}.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn-wide{width:100%}.notice{border:1px solid #dce4f8;background:#f7f9ff;border-radius:12px;padding:12px 14px;line-height:1.65;color:#4b5972;font-size:12px;margin:15px 0}.notice.warning{background:#fff8ed;border-color:#f4deb8;color:#93601b}.notice.success{background:#ecfaf5;border-color:#caebde;color:#227b61}.notice.danger{background:#fff4f4;border-color:#f1d2d2;color:#9d3a41}.q-list{max-height:600px;overflow:auto;padding-right:4px;display:grid;gap:12px}.q-card{padding:15px;border:1px solid var(--line);border-radius:13px;background:#fdfdff}.qcard-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:7px}.part-tag{display:inline-flex;align-items:center;padding:5px 9px;border-radius:7px;font-weight:800;font-size:10px;letter-spacing:.4px;background:#eef0ff;color:#4b56c5}.part-tag.p2{background:#f5ebff;color:#7946a8}.part-tag.p3{background:#e5f7f4;color:#157e6f}.q-card strong{font-size:13px;line-height:1.55;display:block;margin-bottom:9px}.qcard-hint{font-size:11px;color:var(--muted);margin-bottom:6px}.muted{color:var(--muted)}.empty{color:var(--muted);text-align:center;padding:50px 10px}
+.hidden{display:none!important}.examwrap{display:grid;grid-template-columns:minmax(0,1.18fr) 320px;gap:20px}.exam-card{text-align:center;padding:30px 34px}.exam-top{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left}.exam-progress{font-size:13px;color:var(--muted);font-weight:700}.meter{margin:17px 0 20px;background:#edf0fa;height:8px;border-radius:99px;overflow:hidden}.meter>div{background:var(--primary);height:100%;transition:width .3s}.time-circle{height:208px;width:208px;border-radius:50%;display:grid;place-items:center;margin:24px auto;background:conic-gradient(var(--primary) 0%,#eef0ff 0%);padding:11px;transition:background .15s}.time-inner{height:100%;width:100%;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}.time-num{font-size:54px;font-weight:840;letter-spacing:-3px;font-variant-numeric:tabular-nums}.time-label{font-size:12px;color:var(--muted)}.time-circle.ending{background:conic-gradient(var(--error) var(--percent),#ffe9e9 0%)}.time-circle.ending .time-num{color:var(--error)}.q-title{font-size:clamp(21px,2.5vw,29px);line-height:1.45;letter-spacing:-.5px;margin:14px auto;max-width:650px}.topic{font-size:12px;color:var(--primary);font-weight:750;letter-spacing:.7px}.tips{padding:16px;border:1px solid #e2e7f6;background:#f8faff;border-radius:14px;text-align:left;margin:18px 0 10px}.tips .caption{font-size:11px;color:#72809b;font-weight:750;letter-spacing:.4px;margin-bottom:9px}.tips ul{list-style:none;padding:0;margin:0;display:grid;gap:7px;font-size:13px;line-height:1.5;color:#405070}.tips li:before{content:'↳';color:var(--primary);margin-right:9px;font-weight:800}.status-line{font-size:12px;color:var(--muted);min-height:21px;margin:13px 0}.live-area{white-space:pre-wrap;line-height:1.85;min-height:155px;background:#f9faff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:13px;color:#33425e;overflow-wrap:anywhere}.live-area i{color:#9ba4b5}.light-title{color:#687792;font-size:12px;letter-spacing:.7px;font-weight:850;margin-bottom:10px}.smallnote{font-size:12px;color:var(--muted);line-height:1.75}.divider{border-top:1px solid var(--line);margin:17px 0}.exam-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:center}
+.result-toolbar{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:18px;flex-wrap:wrap}.result-toolbar h2{margin:0 0 5px}.result-actions{display:flex;flex-wrap:wrap;gap:8px}.result-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-bottom:20px}.metric{padding:16px;border-radius:13px;border:1px solid var(--line);background:#fafbff}.metric strong{font-size:22px;display:block;margin-bottom:5px}.metric small{font-size:11px;color:var(--muted)}.answers{display:grid;gap:15px}.answer-card{padding:18px;border:1px solid var(--line);border-radius:13px}.answer-card h3{font-size:15px;line-height:1.5;margin:12px 0 9px}.answer-card textarea{width:100%;min-height:92px;border:1px solid #dce1ed;background:#fbfcff;padding:13px;border-radius:10px;resize:vertical;line-height:1.6;font-size:13px}.answer-card p{font-size:12px;line-height:1.6;color:var(--muted);margin:8px 0}.meta-line{font-size:11px;color:#8290a6}.footer{margin-top:22px;text-align:center;font-size:12px;line-height:1.8;color:#8591a4}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:#223352;color:#fff;padding:11px 20px;border-radius:99px;opacity:0;pointer-events:none;transition:.25s;z-index:10;font-size:13px;box-shadow:0 12px 40px #253b6370}.toast.show{opacity:1;transform:translate(-50%,0)}
+.question-audio-line{display:flex;gap:14px;align-items:center;justify-content:center}.question-audio-line .q-title{margin:14px 0;flex:0 1 auto}.speak-btn{flex:none;display:inline-grid;place-items:center;min-width:40px;height:40px;border-radius:13px;border:1px solid #d6dcf5;background:#f0f2ff;font-size:19px;cursor:pointer;transition:background .2s,box-shadow .2s}.speak-btn:hover{background:#e3e8ff}.speak-btn.reading{background:#e1faef;border-color:#b0dec9;box-shadow:0 0 0 3px #c3f0df}.speak-btn:focus-visible{outline:3px solid #bbc3ff;outline-offset:2px}.speak-btn.small{height:31px;min-width:34px;font-size:15px;border-radius:9px}.qcard-tags{display:flex;align-items:center;gap:8px}.timeline-live{border:1px solid #dce4f8;background:#f7f9ff;padding:15px;border-radius:13px;margin:14px 0}.timeline-live strong{display:block;font-variant-numeric:tabular-nums;font-size:20px;margin:9px 0;color:var(--primary)}.transcript-optional{border:1px solid var(--line);border-radius:11px;padding:13px;margin:12px 0}.transcript-optional summary{cursor:pointer;font-size:13px;font-weight:700}.transcript-optional .live-area{margin:12px 0}.time-pair{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.time-chip{background:#eef1fa;color:#34456a;border-radius:8px;padding:6px 8px;font-variant-numeric:tabular-nums;font-size:11px}.answer-card details summary{cursor:pointer;color:#4759e9;font-weight:700;font-size:12px;padding:9px 0}.voice-select{border:1px solid #d9e0ed;background:#fff;border-radius:9px;padding:10px;font-size:13px;color:var(--ink);width:100%}
+@media(max-width:860px){.shell{padding:15px 15px 35px}.top{flex-wrap:wrap}.layout,.examwrap{grid-template-columns:1fr}.privacy{display:none}.panel{padding:18px}.exam-card{padding:20px 15px}.result-summary{grid-template-columns:1fr 1fr}.topright{width:100%}.tabs{width:100%;justify-content:space-between}.tab{flex:1}.hero h1{font-size:30px}.time-circle{width:185px;height:185px}.time-num{font-size:48px}.editor{min-height:250px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Version 3: Complete Part 2 cue card and writable outline. */
+.cue-sheet{margin:16px 0;padding:18px 20px;text-align:left;background:#fff;border:1px solid #dce1f0;border-left:4px solid #7054b9;border-radius:13px;box-shadow:0 5px 16px rgba(33,46,93,.04)}
+.cue-sheet .caption{font-size:11px;font-weight:850;letter-spacing:.7px;color:#7054b9;margin-bottom:9px}
+.cue-sheet ul{padding-left:23px;margin:0;list-style:disc;display:grid;gap:7px;font-size:14px;line-height:1.58;color:#263653}
+.cue-sheet li::marker{color:#7054b9}
+.cue-sheet .cue-empty{color:#7f8797;font-size:13px}
+.qcard-full-cues{margin:8px 0 12px;background:#f6f3ff;border-radius:10px;padding:11px 13px}
+.qcard-full-cues strong{font-size:11px;margin:0 0 5px;color:#7054b9}
+.qcard-full-cues ul{list-style:disc;margin:0;padding-left:18px;display:grid;gap:5px;font-size:12px;line-height:1.55;color:#44516b}
+.outline-block{text-align:left;margin:14px 0 17px;padding:16px;background:#f6f9ff;border:1px solid #cfdaf6;border-radius:13px}
+.outline-block label{display:block;font-size:13px;font-weight:850;color:#344d84;margin-bottom:7px}
+.outline-block p{font-size:12px;line-height:1.6;color:#667994;margin:6px 0 11px}
+.outline-editor{display:block;width:100%;min-height:114px;border:1px solid #cfdbef;border-radius:10px;background:white;padding:12px 14px;line-height:1.65;font-size:14px;resize:vertical;color:#263653}
+.outline-editor.compact{min-height:82px;font-size:12px;padding:10px}
+.q-card .outline-mini-label{font-size:11px;color:#415989;font-weight:800;margin:10px 0 6px}
+.type-chip{font-weight:750;color:#674c95;font-size:11px;background:#f4eeff;border-radius:5px;padding:2px 6px}
+@media(max-width:860px){.cue-sheet{padding:15px}.cue-sheet ul{font-size:13px}}
+</style>
+<style id="review-library-navigation">.library-navigation{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 20px;padding:0 0 13px;border-bottom:1px solid #dfe6ee;font:13px/1.7 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}.library-navigation a{color:#365f91;text-decoration:none;font-weight:650;min-height:30px;display:inline-flex;align-items:center}.library-navigation span{color:#728093}.hero h1{font-size:clamp(24px,3vw,35px);line-height:1.5;letter-spacing:0;overflow-wrap:anywhere}@media(max-width:600px){.library-navigation{font-size:12px;gap:7px}.controls select,.controls button,.btn{min-height:44px}select,textarea{font-size:16px!important}.hero h1{font-size:24px}}</style></head>
+<body>
+<div class="shell"><nav class="library-navigation" aria-label="复习库导航"><a href="/ielts-review-library/index.html">← 复习总览</a><span>2026-10-23 · 口语</span><a href="/ielts-review-library/reviews/2026-10-06/speaking/part-1/singing/">Singing 唱歌练习 →</a></nav>
+  <header class="top">
+    <div class="identity"><div class="mark">S.</div><div><strong>Speaking Studio</strong><small>IELTS SPEAKING · YOUR PRACTICE SPACE</small></div></div>
+    <div class="topright"><span class="privacy">● 本地优先 · 不公开上传</span><nav class="tabs" aria-label="工作流程"><button id="tab-editor" class="tab active" data-tab="editor">01 题库</button><button id="tab-exam" class="tab" data-tab="exam">02 限时模考</button><button id="tab-results" class="tab" data-tab="results">03 复盘导出</button></nav></div>
+  </header>
+  <section class="hero"><div class="eyebrow">Practice smarter, not longer</div><h1>1023-口语-模考-Speaking Studio 口语限时模考</h1><p>粘贴新题目，直接开练。Part 1 / Part 3 每题 30 秒，Part 2 每题 2 分钟；倒计时结束后自动结束本题并切到下一题。复盘时一键导出完整题目、答题时间轴、Part 2 提纲和整场原始录音；无需人工校对实时转写。</p><div class="stats"><span class="pill">Part 1 <span>00:30</span></span><span class="pill">Part 2 <span>02:00</span></span><span class="pill">Part 3 <span>00:30</span></span><span class="pill">自动切题 <span>ON</span></span></div></section>
+
+  <main>
+    <section id="view-editor" class="layout">
+      <div class="panel">
+        <div class="section-top"><h2>导入一套新题</h2><span class="mini">支持粘贴 Wofo 风格题目</span></div>
+        <p class="subtle">按照 Part 1 / Part 2 / Part 3 分段，直接粘贴含编号的问题和 Part 2 要点。下面已经放入一套示例；点击“解析并载入”即可更换。</p>
+        <textarea id="paper-input" class="editor" spellcheck="false" aria-label="雅思口语题目文本"></textarea>
+        <div class="btn-row"><button class="btn primary" id="parse-btn">解析并载入这套题 →</button><button class="btn secondary" id="restore-demo-btn">恢复示例题</button></div>
+        <div id="parse-message" aria-live="polite"></div>
+        <div class="divider"></div>
+        <div class="section-top"><h2>模考设置</h2></div>
+        <label class="switch"><input type="checkbox" id="speech-on"> 可选：试验性实时英语转写（默认关闭，不建议作为评分依据）</label>
+        <label class="switch"><input type="checkbox" id="read-on" checked> 自动朗读每道题（朗读结束后，才开始倒计时）</label>
+        <div class="field"><label for="tts-voice">考官声音 · 优先英式英语</label><select id="tts-voice" class="voice-select"><option value="">自动选择英式英语语音</option></select><span class="mini">使用 Mac / Chrome 系统语音，并非雅思考试官方原声；无可用语音时可手动开始计时。</span></div>
+        <label class="switch"><input type="checkbox" id="prep-on"> Part 2 先准备 60 秒（可选，默认关闭）</label>
+        <label class="switch"><input type="checkbox" id="hint-on" checked> 模考时显示答题思路</label>
+        <div class="notice">以<strong>原始录音 + 每题答题时间轴</strong>为准。默认不转写，也不用花时间校对。结束后一键下载 ZIP（音频 + 题目 + 时间点 + 提纲）。题目和笔记暂存在本机浏览器；<strong>录音必须在刷新或关闭前下载</strong>。</div>
+        <div class="btn-row"><button class="btn primary btn-wide" id="start-btn">开始完整限时模考　→</button></div>
+      </div>
+      <aside class="panel"><div class="section-top"><h2>题目与答题思路</h2><span id="question-count" class="mini">0 题</span></div><p class="subtle">系统会为新题生成基础答题框架；你可以在这里逐题修改。思路是提示，不是固定范文。</p><div id="question-list" class="q-list"></div></aside>
+    </section>
+
+    <section id="view-exam" class="examwrap hidden">
+      <div class="panel exam-card">
+        <div class="exam-top"><span id="exam-part" class="part-tag">PART 1</span><span id="exam-number" class="exam-progress">01 / 09</span></div><div class="meter"><div id="progress-fill" style="width:0%"></div></div>
+        <div id="timer-circle" class="time-circle" role="timer" aria-label="倒计时"><div class="time-inner"><div id="timer-text" class="time-num">00:30</div><div id="timer-caption" class="time-label">剩余回答时间</div></div></div>
+        <div id="exam-topic" class="topic">SECONDARY SCHOOL</div><div class="question-audio-line"><h2 id="exam-question" class="q-title">Do you remember your first day at secondary school?</h2><button id="speak-question-btn" type="button" class="speak-btn" title="朗读 / 重播当前题目" aria-label="朗读 / 重播当前题目">🔊</button></div>
+        <div id="exam-cues" class="cue-sheet hidden"><div class="caption">PART 2 · 完整题卡 / YOU SHOULD SAY</div><ul id="exam-cues-list"></ul></div>
+        <div id="part2-outline-box" class="outline-block hidden"><label for="part2-outline">✎ MY OUTLINE · 我的 Part 2 提纲</label><p>写下关键词或结构即可。内容仅保存在本机，并会包含在复盘导出中；不会混入你的英语回答。</p><textarea id="part2-outline" class="outline-editor" placeholder="Who / When / Where / What happened / Why …
+在这里写提纲，支持中文和英文。" aria-label="Part 2 我的个人提纲"></textarea></div>
+        <div id="exam-tips" class="tips"><div class="caption">ANSWER ROUTE · 答题思路（按题型生成）</div><ul id="exam-tips-list"></ul></div>
+        <div id="exam-status" class="status-line" aria-live="polite">等待开始</div>
+        <div class="exam-actions"><button id="begin-answer-btn" class="btn primary hidden" type="button">开始计时 →</button><button id="skip-btn" class="btn secondary">结束本题 / 下一题 →</button><button id="stop-btn" class="btn danger">结束整套模考</button></div>
+      </div>
+      <aside class="panel"><div class="light-title">RECORDING · 原始录音</div><div id="mic-indicator" class="notice">等待申请麦克风权限</div><div class="timeline-live"><div class="mini">录音时间轴 · 当前进度</div><strong id="segment-live">00:00.0 · 尚未开始</strong><p class="smallnote">自动记录每题展示、朗读、准备和正式作答的起止时间；导出时和录音一起提供。</p></div><p class="smallnote">题目先播报，<strong>播报结束才开始倒计时</strong>。点击 🔊 可以重播，但作答时不会暂停或重置倒计时；扬声器播放的声音有可能被麦克风录进去。</p><details class="transcript-optional" id="transcript-details"><summary>实验功能：查看实时转写（可忽略）</summary><div id="live-transcript" class="live-area"><i>默认已关闭实时转写。</i></div><p class="smallnote">只有在题库设置中主动开启转写后才会运行；自动识别可能错漏，不能直接视为实际口误。</p></details><div class="divider"></div><div class="light-title">隐私说明</div><p class="smallnote">本网页不含自建上传服务器。麦克风录音只保存在本机浏览器，必须由你手动导出。若主动开启在线语音识别，浏览器厂商可能处理音频数据。</p></aside>
+    </section>
+
+    <section id="view-results" class="panel hidden">
+      <div class="result-toolbar"><div><h2>这一套练完了</h2><p class="subtle" style="margin:0">无需校对识别结果。保存原始录音和分题时间轴，再交给 ChatGPT 分析。</p></div><div class="result-actions"><button class="btn secondary" id="copy-btn">复制题目 + 时间轴</button><button class="btn primary" id="export-zip-btn">一键导出完整复盘包 ZIP</button></div></div>
+      <div id="results-summary" class="result-summary"></div>
+      <div id="results-notice" class="notice"></div>
+      <div class="btn-row" style="margin-bottom:18px"><button class="btn secondary" id="download-txt-btn">下载题目与时间轴 .txt</button><button class="btn secondary" id="download-audio-btn">下载整场录音</button><button class="btn ghost" id="again-btn">使用本套题再练一次</button><button class="btn ghost" id="edit-new-btn">编辑 / 导入新题</button></div>
+      <div id="answer-list" class="answers"></div>
+    </section>
+  </main>
+  <div class="footer">Speaking Studio · 个人单文件网页 · 无需充值 · 未经你操作不会自动发布或分享资料<br>建议 Mac 使用 Chrome，允许麦克风；语音识别默认关闭。先导出音频再关闭页面。</div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{'use strict';
+const EXAMPLE=`题目
+
+Part 1
+Secondary school
+1. Do you remember your first day at secondary school?
+2. Were there any subjects that you found difficult at secondary school?
+3. What was your favourite subject at secondary school?
+4. Is there anything you miss about your secondary school?
+
+Part 2
+Describe a popular person
+- Who this person is
+- What kind of person he or she is
+- When you see him or her normally
+- And explain why you think this person is popular
+
+Part 3
+1. Why are some students popular in school?
+2. Is it important for a teacher to be popular?
+3. Do you think good teachers are always popular among students?
+4. What are the qualities of being a good teacher?`;
+const $=id=>document.getElementById(id);
+const STORAGE='ielts-speaking-studio-v1';let requestedVoice='';
+let raw=EXAMPLE, questions=[], view='editor', active=0, phase='reading', timerTick=0, deadline=0, fullTime=30, onGoing=false, stream=null, recorder=null, recordingParts=[], recordingBlob=null, recordingUrl=null, recordingMime='', recordStartedAt=0, speech=null, speechActive=false, recStorage='', recFinal='', recInterim='', autoNextHandle=0, allowRecording=false, speechWarning='', testedOnce=false, voiceList=[], readingToken=0, isQuestionSpeaking=false, audioReadyPromise=Promise.resolve(false), audioReadyResolve=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const clean=s=>s.replace(/\*\*/g,'').replace(/^\s*#+\s*/,'').replace(/^\s*[-–]\s*(?=part\s*\d)/i,'').trim();
+const partSeconds=p=>p===2?120:30;
+function toast(message){const e=$('toast');e.textContent=message;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
+function niceTime(n){n=Math.max(0,Math.ceil(n));return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}
+function offsetTime(n){if(n==null||!Number.isFinite(n))return '—';const ticks=Math.round(Math.max(0,n)*10),mm=Math.floor(ticks/600),ss=Math.floor((ticks%600)/10),t=ticks%10;return String(mm).padStart(2,'0')+':'+String(ss).padStart(2,'0')+'.'+t}
+function mark(){return Math.round(Math.max(0,(performance.now()-recordStartedAt)/1000)*100)/100}
+function timeRange(a,b){return offsetTime(a)+' → '+offsetTime(b)}
+function timeTimeline(q){return `题目出现 ${offsetTime(q.questionAt)} · 朗读 ${timeRange(q.readStartAt,q.readEndAt)} · 准备 ${timeRange(q.prepStartAt,q.prepEndAt)} · 作答 ${timeRange(q.startedAt,q.finishedAt)}`}
+function updateSegment(){const el=$('segment-live');if(!el)return;const q=questions[active];el.textContent=`${offsetTime(mark())} · ${q?'Part '+q.part+' · '+(phase==='reading'?'朗读题目':phase==='prepare'?'准备提纲':phase==='answer'?'限时作答':'待开始'):'待开始'}`}
+
+function h(s){return (s||'').split('\n').map(x=>x.trim()).filter(Boolean)}
+const PART2_LABELS={experience:'经历 / 故事',person:'人物',place:'地点',object:'物品',media:'书籍 / 影视 / 媒体',activity:'活动 / 爱好',skill:'技能 / 学习',event:'事件 / 场合',idea:'观点 / 规则',other:'综合描述'};
+function part2Type(q){const s=(q.text||'').toLowerCase();
+ if(/\b(a time when|an occasion when|a situation where|a moment when|an experience|something that happened|a time you|when you (helped|lost|felt|were))\b/.test(s))return 'experience';
+ if(/\b(a person|someone|a friend|a family member|a teacher|a neighbour|a neighbor|a colleague|a celebrity|a famous person|a child|an elderly person|a popular person|a person you)\b/.test(s))return 'person';
+ if(/\b(a place|a city|a country|a town|a building|a park|a restaurant|a shop|a store|a museum|a library|a room|a beach|a garden|a natural place|somewhere)\b/.test(s))return 'place';
+ if(/\b(a book|a film|a movie|a tv show|a television programme|a song|a podcast|an article|an advertisement|a website|an app|a video)\b/.test(s))return 'media';
+ if(/\b(a skill|something you learnt|something you learned|a language you|something you want to learn|a subject you want to study)\b/.test(s))return 'skill';
+ if(/\b(an activity|a hobby|a sport|an exercise|a game|a journey|a trip|a holiday|a vacation|a leisure activity)\b/.test(s))return 'activity';
+ if(/\b(an event|a party|a celebration|a festival|a wedding|a concert|a meeting|a competition)\b/.test(s))return 'event';
+ if(/\b(a rule|a law|an idea|a decision|a piece of advice|a change|a goal|a plan)\b/.test(s))return 'idea';
+ if(/\b(a gift|an object|an item|a thing|something you bought|something you own|a device|a gadget|a piece of clothing|a piece of furniture|a photo|a photograph)\b/.test(s))return 'object';
+ return 'other';
+}
+function cuePlan(cue,kind){const t=cue.replace(/^and\s+/i,'').trim(),s=t.toLowerCase();
+ if(/why.*(feel|felt)/.test(s))return '解释感受：说清情绪，并用一个原因支撑';
+ if(/how you (feel|felt)|how (it|this) made you feel/.test(s))return '说出当时感受，以及现在回想的感受';
+ if(/why|reason|explain/.test(s))return '解释原因：具体事实 / 小例子 → 为什么会这样';
+ if(/who|which person|relationship|know this person/.test(s))return '交代人物：身份、关系，以及如何认识';
+ if(/where|location/.test(s))return kind==='place'?'介绍位置、周围环境和一个鲜明细节':'说清地点和当时的场景';
+ if(/when|how long|how often/.test(s))return '交代时间 / 频率：给出具体情境';
+ if(/what (happened|you did|you do|you learned|you learnt)/.test(s))return '展开过程：按顺序讲两三步，不要只列关键词';
+ if(/what (kind|type)|character|personality/.test(s))return '特点：用两种具体特质 + 一件小事来说明';
+ if(/look like|appearance/.test(s))return '外观：挑出两处最容易想象的细节';
+ if(/what (it is|this is)|what the/.test(s))return '说清对象是什么，以及它的具体特点';
+ if(/how you (use|got|choose|chose|found|met|started|know|learned|learnt)/.test(s))return '描述你如何接触 / 获得 / 选择它，并补充细节';
+ if(/what (you|they|he|she|it)/.test(s))return '补充题卡要求的事实：'+t.replace(/[.?]$/,'');
+ return '回应题卡要点：'+t.replace(/[.?]$/,'');
+}
+function guidance(q){const s=q.text.toLowerCase();
+ if(q.part===2){const kind=part2Type(q),routes={
+ experience:['开场：直接点出是哪一次经历 / 发生了什么','故事背景：时间、地点、相关人物'],
+ person:['开场：这个人是谁、你们是什么关系','人物画像：用有辨识度的性格 / 行为举例'],
+ place:['开场：说出地点及它与你的关系','场景描绘：位置、氛围、一个具体画面'],
+ object:['开场：说清物品名称、从哪里得到的','物品细节：样子、用途以及与你的联系'],
+ media:['开场：作品名称、类型、何时接触','内容聚焦：用一句话概括，再挑一个亮点'],
+ activity:['开场：活动是什么、多久做一次','过程 / 场景：你怎样参加，和谁一起'],
+ skill:['开场：是什么技能、你为何关注它','学习过程：何时开始、怎样练习、有何困难'],
+ event:['开场：是什么活动或事件','还原现场：时间、地点、参与者和经过'],
+ idea:['开场：直接讲清规则 / 决定 / 建议是什么','背景：为什么会出现这个想法或决定'],
+ other:['开场：明确描述的对象','补充背景：与你的关系及具体场景']};
+ const lines=routes[kind].slice();
+ if(q.cues?.length){for(const cue of q.cues)lines.push(cuePlan(cue,kind));}
+ else lines.push('按题目要求补全 who / what / when / where / why 等关键细节');
+ lines.push(kind==='experience'||kind==='event'?'结尾：事情的结果、你的感受和收获':kind==='person'?'结尾：用一个具体例子回应题目核心评价':kind==='place'?'结尾：它为什么特别，你是否还想去':kind==='skill'?'结尾：进步或计划，以及对你的意义':'结尾：回答题目的核心 why / how you feel，形成完整收束');
+ return lines.join('\n');
+ }
+ if(/first day/.test(s))return '直接回答：还记不记得\n场景：第一天发生了什么\n一个细节 + 当时的感受';
+ if(/subjects.*difficult|subject.*difficult/.test(s))return '最难的科目是什么\n为什么难（理解 / 计算 / 记忆）\n当时如何应对';
+ if(/favourite subject|favorite subject/.test(s))return '最喜欢的科目\n喜欢的原因\n举一个课堂或老师的细节';
+ if(/miss.*secondary school/.test(s))return '最怀念的人或事情\n一个回忆或小细节\n为什么现在还怀念';
+ if(/why.*students.*popular/.test(s))return '列出主要特点（如友善、乐于助人）\n解释这些特点为何吸引同学\n举例或说明结果';
+ if(/important.*teacher.*popular/.test(s))return '表达立场：有帮助，但不一定必需\n原因：促进信任和参与\n限制：教学能力更重要';
+ if(/good teachers.*always popular/.test(s))return '不一定：好老师也可能严格\n解释为什么受欢迎≠教学有效\n举个课堂管理或考试标准的例子';
+ if(/qualities.*good teacher/.test(s))return '列出两项品质：耐心、清晰讲解等\n解释它们如何帮助学生\n用例子收尾';
+ if(/^did |^were |^was /.test(s))return '先回答过去是否发生过\n提供一个过去的细节\n补充感受或结果（注意过去时）';
+ if(/^do you |^are you |^is there/.test(s))return '先直接回答问题\n补充习惯 / 个人经历\n说明一个原因或例子';
+ if(/^what /.test(s)&&q.part===1)return '直接说出具体答案\n解释为什么\n加入一个个人细节';
+ if(/^why /.test(s))return '核心原因是什么\n进一步解释原因\n提供例子 / 结果';
+ if(/^should |^is it important |^do you think/.test(s))return '明确观点（可以有条件）\n原因：对谁有什么影响\n一个例子或另一面';
+ return q.part===1?'直接回答\n补充个人细节\n给出一个原因': '明确观点\n解释原因\n举例或说明结果';
+}
+function parsePaper(text){const lines=text.split(/\r?\n/);let part=0,topic='',items=[],p2=null,hasCueIntro=false;
+ const addCue=(line)=>{if(!p2)return;const cleaned=line.replace(/^(?:[-•*]\s*|\d+[.)、]\s*)/,'').trim();if(cleaned)p2.cues.push(cleaned)};
+ for(const source of lines){const t=clean(source);if(!t||/^(题目|全程模考|×|x)$/i.test(t))continue;
+ const pm=t.match(/^part\s*([123])(?:\b|\s|:|：)/i);if(pm){part=Number(pm[1]);topic='';p2=null;hasCueIntro=false;continue;}
+ const n=t.match(/^\d{1,2}\s*[.)、]\s*(.+)/);
+ if(part===2){
+  if(/^you should say\s*[:：]?$/i.test(t)){hasCueIntro=true;continue;}
+  if(/^(?:[-•*]\s*|\d+[.)、]\s*)/.test(t)&&p2){addCue(t);continue;}
+  if(!p2&&(/^(?:describe|talk about|tell me about)\b/i.test(t)||n)){
+   p2={part:2,text:n?n[1]:t,topic:'Long turn',cues:[],outline:'',transcript:'',status:'pending'};items.push(p2);continue;
+  }
+  if(p2&&/^(who|what|when|where|why|how|which|and explain|explain)\b/i.test(t)){addCue(t);continue;}
+  if(p2&&hasCueIntro&&t&&!/^(?:describe|talk about)\b/i.test(t)){addCue(t);continue;}
+  if(p2&&p2.cues.length&&t&&!/^\w+\s*[:：]$/.test(t)){p2.cues[p2.cues.length-1]+=' '+t;continue;}
+  continue;
+ }
+ if(n){if(!part)part=1;items.push({part,topic:topic||`Part ${part}`,text:n[1],cues:[],transcript:'',status:'pending'});continue;}
+ if(part===1||part===3){if(!/^[-•*]/.test(t)&&!/^(?:\d+|you should say)\s*[:：]?$/.test(t))topic=t;}
+ }
+ items.forEach((q,i)=>{q.id=i+1;q.hint=guidance(q);q.seconds=partSeconds(q.part);q.durationActual=0;q.startedAt=null;q.finishedAt=null;q.questionAt=null;q.readStartAt=null;q.readEndAt=null;q.prepStartAt=null;q.prepEndAt=null;});return items;
+}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify({raw,questions,settings:{speech:$('speech-on').checked,prep:$('prep-on').checked,showHint:$('hint-on').checked,read:$('read-on').checked,voice:$('tts-voice').value}}))}catch(e){console.warn('Local save unavailable',e)}}
+function restore(){try{const x=JSON.parse(localStorage.getItem(STORAGE));if(x&&x.raw&&Array.isArray(x.questions)&&x.questions.length){raw=x.raw;questions=x.questions.map((q,i)=>{const v={...q,id:i+1,seconds:partSeconds(q.part),outline:q.outline||''};if(v.part===2&&(!v.hint||v.hint==='人物是谁 / 如何认识\n描述性格与一件具体事例\n平时什么时候见到 / 联系\n总结他（她）受欢迎的原因'))v.hint=guidance(v);return v});$('speech-on').checked=!!x.settings?.speech;$('prep-on').checked=!!x.settings?.prep;$('hint-on').checked=x.settings?.showHint!==false;$('read-on').checked=x.settings?.read!==false;requestedVoice=x.settings?.voice||'';return}}catch(e){}questions=parsePaper(raw)}
+function goto(name){if(onGoing&&name!=='exam'){toast('模考进行中；请先结束整套模考');return}view=name;['editor','exam','results'].forEach(n=>{$('view-'+n).classList.toggle('hidden',n!==name);$('tab-'+n).classList.toggle('active',n===name)});if(name==='results')renderResults();window.scrollTo({top:0,behavior:'smooth'})}
+function renderList(){const c=$('question-list');$('question-count').textContent=`${questions.length} 道题`;if(!questions.length){c.innerHTML='<div class="empty">还没有导入题目</div>';return}
+ c.innerHTML=questions.map((q,i)=>`<div class="q-card"><div class="qcard-head"><span class="part-tag p${q.part}">PART ${q.part} · Q${questions.filter(x=>x.part===q.part).indexOf(q)+1}</span><div class="qcard-tags"><span class="mini">${q.seconds}s</span><button class="speak-btn small" type="button" title="试听这道题" aria-label="试听第 ${i+1} 道题" data-preview-index="${i}">🔊</button></div></div><strong>${esc(q.text)}</strong>${q.part===2?`<div class="qcard-full-cues"><strong>完整题卡 · You should say</strong>${q.cues?.length?`<ul>${q.cues.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<span class="mini">这道题没有提供分项提示点</span>'}</div><div class="qcard-hint">自动识别题型：<span class="type-chip">${PART2_LABELS[part2Type(q)]}</span> · 答题思路将结合提示点生成</div><div class="outline-mini-label">✎ 我的 Part 2 提纲（可选；与模考页面同步）</div><textarea class="outline-editor compact" data-outline-index="${i}" placeholder="写下关键词和思路；内容会一起导出">${esc(q.outline||'')}</textarea>`:''}<div class="qcard-hint">答题思路（可编辑）</div><textarea class="hint-editor" aria-label="${esc(q.text)} 的答题思路" data-hint-index="${i}">${esc(q.hint)}</textarea></div>`).join('');
+ c.querySelectorAll('textarea[data-hint-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.hintIndex].hint=e.value;save()}));
+ c.querySelectorAll('textarea[data-outline-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.outlineIndex].outline=e.value;save()}));
+ c.querySelectorAll('button[data-preview-index]').forEach(e=>e.addEventListener('click',()=>{if(onGoing)return;playQuestion(questions[+e.dataset.previewIndex],null,e)}));
+}
+function showQuestion(){const q=questions[active];$('exam-part').textContent=`PART ${q.part}`;$('exam-part').className=`part-tag p${q.part}`;$('exam-number').textContent=`${String(active+1).padStart(2,'0')} / ${String(questions.length).padStart(2,'0')}`;$('progress-fill').style.width=`${active/questions.length*100}%`;$('exam-topic').textContent=(q.topic||`PART ${q.part}`).toUpperCase();$('exam-question').textContent=q.text;$('exam-tips-list').innerHTML=h(q.hint).map(x=>`<li>${esc(x)}</li>`).join('');$('exam-tips').classList.toggle('hidden',!$('hint-on').checked);$('exam-cues').classList.toggle('hidden',q.part!==2);$('exam-cues-list').innerHTML=(q.cues?.length?q.cues:['本题没有提供额外提示点，请围绕题干展开。']).map(x=>`<li>${esc(x)}</li>`).join('');$('part2-outline-box').classList.toggle('hidden',q.part!==2);$('part2-outline').value=q.part===2?(q.outline||''):'';$('live-transcript').innerHTML='<i>正在等待语音识别结果…</i>';setTimer(q.seconds,q.seconds);}
+function setTimer(left,total){$('timer-text').textContent=niceTime(left);let percent=100*Math.max(0,Math.min(1,left/total));const circle=$('timer-circle');circle.style.background=`conic-gradient(${left<=7?'#bc4b52':'#4759e9'} ${percent}%,${left<=7?'#ffe8e9':'#eef0ff'} 0%)`;circle.classList.toggle('ending',left<=7);circle.style.setProperty('--percent',percent+'%');updateSegment()}
+function refreshVoices(){
+ if(!('speechSynthesis' in window))return;
+ voiceList=window.speechSynthesis.getVoices().filter(v=>/^en[-_]/i.test(v.lang));
+ voiceList.sort((a,b)=>Number(/^en[-_]GB/i.test(b.lang))-Number(/^en[-_]GB/i.test(a.lang))||a.name.localeCompare(b.name));
+ const select=$('tts-voice');if(!select)return;
+ const value=select.value||requestedVoice;
+ select.innerHTML='<option value="">自动选择英式英语语音</option>'+voiceList.map(v=>`<option value="${esc(v.voiceURI)}">${esc(v.name)} (${esc(v.lang)})${v.localService?' · 本机':''}</option>`).join('');
+ if(voiceList.some(v=>v.voiceURI===value))select.value=value;
+}
+function getSelectedVoice(){const v=$('tts-voice').value||requestedVoice;return voiceList.find(x=>x.voiceURI===v)||voiceList.find(x=>/^en[-_]GB/i.test(x.lang))||voiceList.find(x=>/^en[-_]US/i.test(x.lang))||voiceList[0]||null}
+function stopQuestionAudio(){readingToken++;isQuestionSpeaking=false;document.querySelectorAll('.speak-btn').forEach(b=>b.classList.remove('reading'));try{window.speechSynthesis?.cancel()}catch(e){}}
+function speakText(q){if(q.part===2){return `${q.text}. You should say: ${(q.cues||[]).join('. ')}.`}return q.text}
+function requireManualStart(message){if(!onGoing||phase!=='reading')return;$('begin-answer-btn').classList.remove('hidden');$('timer-caption').textContent='题目播报未完成 · 计时未开始';$('exam-status').textContent=message+'。点击「开始计时」继续，或按喇叭重试。'}
+function playQuestion(q,onComplete=null,button=null){
+ if(!q)return;stopQuestionAudio();
+ if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window)){
+  if(onComplete)requireManualStart('浏览器不支持语音朗读');else toast('当前浏览器不支持朗读功能');return;
+ }
+ const token=readingToken, utt=new SpeechSynthesisUtterance(speakText(q));
+ const voice=getSelectedVoice();if(voice)utt.voice=voice;
+ utt.lang=voice?.lang||'en-GB';utt.rate=.91;utt.pitch=1;utt.volume=1;
+ isQuestionSpeaking=true; if(button)button.classList.add('reading');
+ if(onComplete){q.readStartAt=mark();$('begin-answer-btn').classList.add('hidden');$('timer-caption').textContent='正在朗读 · 尚未计时';$('exam-status').textContent='考官正在朗读题目，朗读结束后自动开始倒计时…'}
+ const complete=(ok)=>{if(token!==readingToken)return;isQuestionSpeaking=false;if(button)button.classList.remove('reading');if(onComplete){if(ok){q.readEndAt=mark();onComplete()}else requireManualStart('自动朗读失败')}else if(onGoing&&phase==='answer'){$('exam-status').textContent='正在限时作答 · 计时不会因重播暂停'}};
+ utt.onend=()=>complete(true);utt.onerror=(e)=>{if(e.error==='interrupted'||e.error==='canceled')return;complete(false)};
+ try{window.speechSynthesis.cancel();window.speechSynthesis.speak(utt);if(onComplete)setTimeout(()=>{if(token===readingToken&&isQuestionSpeaking&&onGoing&&phase==='reading')requireManualStart('题目朗读等待时间较长')},28000)}catch(e){complete(false)}
+}
+function afterQuestionRead(){if(!onGoing||phase!=='reading')return;$('begin-answer-btn').classList.add('hidden');const q=questions[active];if(q.part===2&&$('prep-on').checked){phase='prepare';q.prepStartAt=mark();$('timer-caption').textContent='Part 2 准备时间';$('exam-status').textContent='题目朗读结束 · 准备 60 秒后自动进入 2 分钟回答';updateSegment();startCountdown(60)}else startAnswer()}
+function micStatus(text,type=''){const n=$('mic-indicator');n.textContent=text;n.className='notice'+(type?' '+type:'')}
+async function startExam(){if(!questions.length){toast('请先解析并载入题目');return}if(onGoing)return;if(recorder?.state==='recording'){toast('上一场录音尚未结束');return}if(questions.some(q=>q.status==='done'||q.status==='skipped'||q.transcript?.trim())){if(!window.confirm('开始新模考将清空上一轮时间轴和转写；如果原录音还没导出，也将丢失。确定继续吗？'))return}
+ stopQuestionAudio();clearTimeout(autoNextHandle);if(recordingUrl)URL.revokeObjectURL(recordingUrl);recordingUrl=null;recordingBlob=null;recordingParts=[];recordingMime='';stream=null;recorder=null;testedOnce=false;allowRecording=false;audioReadyPromise=Promise.resolve(false);audioReadyResolve=null;questions.forEach(q=>{q.transcript='';q.status='pending';q.durationActual=0;q.startedAt=null;q.finishedAt=null;q.questionAt=null;q.readStartAt=null;q.readEndAt=null;q.prepStartAt=null;q.prepEndAt=null});save();
+ try{if(!navigator.mediaDevices?.getUserMedia)throw new Error('当前页面无法申请麦克风。请使用最新版 Chrome，或通过 HTTPS 打开网页。');stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:false});if(typeof MediaRecorder==='undefined')throw new Error('浏览器不支持整场音频录制');let choices=['audio/webm;codecs=opus','audio/mp4','audio/webm'];recordingMime=choices.find(t=>MediaRecorder.isTypeSupported(t))||'';recorder=new MediaRecorder(stream,recordingMime?{mimeType:recordingMime}:undefined);audioReadyPromise=new Promise(resolve=>{audioReadyResolve=resolve});recorder.ondataavailable=e=>{if(e.data?.size)recordingParts.push(e.data)};recorder.onstop=()=>{recordingBlob=new Blob(recordingParts,{type:recorder.mimeType||recordingMime||'audio/webm'});if(recordingBlob.size)recordingUrl=URL.createObjectURL(recordingBlob);audioReadyResolve?.(recordingBlob.size>0);audioReadyResolve=null;if(view==='results')renderResults()};recorder.onerror=()=>{audioReadyResolve?.(false);audioReadyResolve=null};recorder.start(1000);allowRecording=true}catch(e){allowRecording=false;if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}const msg=e.message||String(e);if(!window.confirm(`录音不可用：${msg}
+
+是否仍只用倒计时练习？这个模式无法导出音频。`))return}
+ onGoing=true;active=0;recordStartedAt=performance.now();goto('exam');micStatus(allowRecording?'● 整场录音进行中（录音优先）':'仅计时：没有音频录制',allowRecording?'success':'warning');startQuestion()}
+function startQuestion(){if(!onGoing)return;const q=questions[active];q.questionAt=mark();showQuestion();phase='reading';updateSegment();$('timer-caption').textContent='即将朗读 · 尚未计时';$('begin-answer-btn').classList.add('hidden');if($('read-on').checked){playQuestion(q,afterQuestionRead,$('speak-question-btn'))}else requireManualStart('自动朗读已关闭')}
+function startAnswer(){const q=questions[active];if(phase==='prepare'&&q.prepEndAt==null)q.prepEndAt=mark();phase='answer';q.startedAt=mark();recStorage='';recFinal='';recInterim='';$('timer-caption').textContent='剩余回答时间';$('exam-status').textContent='正在限时作答 · 到 0 自动进入下一题';updateSegment();startSpeech(q);startCountdown(q.seconds)}
+function startCountdown(seconds){cancelAnimationFrame(timerTick);fullTime=seconds;deadline=performance.now()+seconds*1000;const tick=()=>{if(!onGoing)return;let remain=(deadline-performance.now())/1000;setTimer(remain,fullTime);if(remain<=0){timeUp();return}timerTick=requestAnimationFrame(tick)};timerTick=requestAnimationFrame(tick)}
+function timeUp(){if(phase==='prepare'){cancelAnimationFrame(timerTick);startAnswer();return}finishQuestion(false)}
+function stopSpeech(){speechActive=false;if(speech){try{speech.stop()}catch(e){}speech=null}return (recStorage+' '+recFinal).trim().replace(/\s+/g,' ')}
+function startSpeech(q){stopSpeech();const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!$('speech-on').checked){speechWarning='已关闭实时转写';$('live-transcript').innerHTML='<i>已关闭实时转写；整场音频仍然录制中。</i>';return}if(!SR){speechWarning='浏览器不支持实时英语转写';$('live-transcript').innerHTML='<i>当前浏览器不支持 Web Speech Recognition。请使用 Chrome，或事后补录文字。</i>';return}speechWarning='';speechActive=true;const id=q.id;
+ const attach=()=>{if(!speechActive||!onGoing||questions[active]?.id!==id||phase!=='answer')return;const rec=new SR();speech=rec;rec.lang='en-US';rec.continuous=true;rec.interimResults=true;rec.maxAlternatives=1;recFinal='';recInterim='';rec.onresult=e=>{let fin='',inter='';for(let i=0;i<e.results.length;i++){const t=e.results[i][0].transcript;if(e.results[i].isFinal)fin+=' '+t;else inter+=' '+t}recFinal=fin.trim();recInterim=inter.trim();const output=(recStorage+' '+recFinal+' '+recInterim).trim();$('live-transcript').textContent=output||'正在聆听…';q.transcript=(recStorage+' '+recFinal).trim();save()};rec.onerror=e=>{if(e.error==='not-allowed'||e.error==='service-not-allowed'){speechWarning='语音识别权限未授予';speechActive=false;$('live-transcript').textContent='语音识别未获授权；录音仍会继续。'}else if(e.error==='network'){speechWarning='语音识别网络连接失败';speechActive=false;$('live-transcript').textContent='语音识别网络失败；录音仍在保存，可结束后下载。'}else if(e.error!=='no-speech'&&e.error!=='aborted'){speechWarning='语音识别出现问题：'+e.error}};rec.onend=()=>{if(!speechActive||!onGoing||questions[active]?.id!==id||phase!=='answer')return;recStorage=(recStorage+' '+recFinal).trim();recFinal='';recInterim='';setTimeout(attach,230)};try{rec.start()}catch(e){speechWarning='无法开启语音识别：'+e.message;speechActive=false;$('live-transcript').textContent='语音识别未能启动，录音仍在继续。'}};attach()}
+function finishQuestion(manual){if(!onGoing||phase!=='answer')return;stopQuestionAudio();cancelAnimationFrame(timerTick);const q=questions[active];let text=stopSpeech();if(!text)text=q.transcript||'';q.transcript=text;q.status=manual?'skipped':'done';q.finishedAt=mark();q.durationActual=Math.max(0,+(q.finishedAt-q.startedAt).toFixed(2));save();$('exam-status').textContent=manual?'已结束本题':'时间到，自动切题';if(active===questions.length-1){autoNextHandle=setTimeout(finishExam,450)}else{active++;autoNextHandle=setTimeout(startQuestion,600)}}
+function finishExam(){stopQuestionAudio();cancelAnimationFrame(timerTick);clearTimeout(autoNextHandle);if(!onGoing){goto('results');return}onGoing=false;stopSpeech();if(recorder&&recorder.state!=='inactive'){try{recorder.stop()}catch(e){audioReadyResolve?.(false)}}if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}save();goto('results');toast('模考结束 · 正在整理整场录音，请等待后下载 ZIP')}
+function getReport(){const date=new Date().toLocaleString('zh-CN',{hour12:false});const len=questions.length;let out=`IELTS SPEAKING V4 · 原始录音诊断资料
+练习日期：${date}
+题目数：${len}
+录音原则：以整场原始音频为准；默认不需要转写和人工校对。
+网页倒计时：Part 1 / Part 3 每题 30 秒，Part 2 作答 120 秒；题目播报结束后开始（Part 2 如开启 60 秒准备时间，则准备结束后开始）。
+时间轴说明：各时间点为浏览器记录的相对录音起始偏移，精度约 0.1 秒；受录音设备和事件触发延迟影响，不保证音频采样级精准。${allowRecording?'':'本轮未成功取得音频，请留意。'}
+提醒：Part 2 提纲不是实际回答；机器转写（如有）未经校对，不应当直接按语法错误计分。
+
+`;
+ let counter={1:0,2:0,3:0};for(const q of questions){counter[q.part]++;out+=`========== PART ${q.part} · Q${counter[q.part]} ==========
+`;if(q.topic)out+=`话题：${q.topic}
+`;out+=`题目：${q.text}
+`;if(q.cues?.length)out+=`完整题卡提示点：
+${q.cues.map(s=>' - '+s).join('\n')}
+`;if(q.part===2)out+=`我写的 Part 2 提纲（不是口语回答）：
+${q.outline?.trim()||'[未填写]'}
+`;out+=`限时：${q.seconds} 秒
+状态：${q.status==='done'?'完成计时':q.status==='skipped'?'提前跳题 / 提前停止':'未作答'}
+时间轴（录音从 00:00.0 计）：
+  题目出现：${offsetTime(q.questionAt)}
+  题目自动朗读：${timeRange(q.readStartAt,q.readEndAt)}
+  Part 2 准备：${timeRange(q.prepStartAt,q.prepEndAt)}
+  我的正式作答：${timeRange(q.startedAt,q.finishedAt)}
+  作答时长：${q.durationActual??0} 秒
+`;if(q.transcript?.trim())out+=`可选机器转写（未经校对，可能有错）：
+${q.transcript.trim()}
+`;out+='\n';}
+ out+=`---------- 请按以下标准复盘 ----------
+1. 请优先根据整场原始录音，结合每题正式作答时间范围匹配题目，不要把题目朗读或准备时间算作学生回答。
+2. 先转写真实英语作答；不确定的地方标注[听不清/可能转写错误]，不要把机器误识别当作真实语法错误。
+3. 按首次独立限时表现，给9道题简洁诊断，并识别重复出现的3个核心问题；最差1–2题深入分析。
+4. 给出5–8个跨话题语块、能力掌握度和下一轮复练任务。若无法直接听取音频，应说明依据限制，不要臆造语音评分。
+`;return out}
+function timelineCsv(){const rows=[['part','question_no','topic','question','status','question_shown_sec','reading_start_sec','reading_end_sec','prep_start_sec','prep_end_sec','answer_start_sec','answer_end_sec','answer_duration_sec']];let cnt={1:0,2:0,3:0};for(const q of questions){cnt[q.part]++;rows.push([q.part,cnt[q.part],q.topic,q.text,q.status,q.questionAt,q.readStartAt,q.readEndAt,q.prepStartAt,q.prepEndAt,q.startedAt,q.finishedAt,q.durationActual])}return '\ufeff'+rows.map(row=>row.map(cell=>'"'+String(cell??'').replace(/"/g,'""')+'"').join(',')).join('\r\n')}
+function renderResults(){if(!questions.length)return;const done=questions.filter(x=>x.status==='done').length, started=questions.filter(x=>x.startedAt!=null).length,q=questions.length;$('results-summary').innerHTML=`<div class="metric"><strong>${q}</strong><small>题目总数</small></div><div class="metric"><strong>${done}</strong><small>按计时完成</small></div><div class="metric"><strong>${started}</strong><small>已记录作答时间段</small></div>`;$('results-notice').className='notice'+(!recordingBlob?' warning':' success');$('results-notice').textContent=recordingBlob?'整场录音已就绪。推荐直接点击“一键导出完整复盘包 ZIP”，无需转写或人工校对。':recorder&&recorder.state!=='inactive'?'正在结束录音，请稍等数秒后导出。':'尚未拿到可下载的音频；可以先复制题目和时间轴，但不能把只有 TXT 的 ZIP 当作整场录音。';$('download-audio-btn').disabled=!recordingBlob;
+ let count={1:0,2:0,3:0};$('answer-list').innerHTML=questions.map((x,i)=>{count[x.part]++;return `<div class="answer-card"><div class="qcard-head"><span class="part-tag p${x.part}">PART ${x.part} · Q${count[x.part]}</span><span class="meta-line">${x.seconds} 秒限时</span></div><h3>${esc(x.text)}</h3>${x.cues?.length?`<div class="qcard-full-cues"><strong>完整提示要点</strong><ul>${x.cues.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></div>`:''}<div class="time-pair"><span class="time-chip">题目 ${offsetTime(x.questionAt)}</span><span class="time-chip">朗读 ${timeRange(x.readStartAt,x.readEndAt)}</span>${x.part===2?`<span class="time-chip">准备 ${timeRange(x.prepStartAt,x.prepEndAt)}</span>`:''}<span class="time-chip">作答 ${timeRange(x.startedAt,x.finishedAt)}</span></div>${x.part===2?`<p>我的 Part 2 提纲（非口语回答）</p><textarea class="outline-editor compact" data-result-outline-index="${i}" placeholder="你的提纲">${esc(x.outline||'')}</textarea>`:''}<details><summary>可选：查看 / 手动输入机器转写（默认无需修改）</summary><textarea placeholder="可留空：原始音频才是主要复盘依据" data-answer-index="${i}" aria-label="${esc(x.text)} 对应的可选英语转写">${esc(x.transcript||'')}</textarea></details></div>`}).join('');$('answer-list').querySelectorAll('textarea[data-answer-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.answerIndex].transcript=e.value;save()}));$('answer-list').querySelectorAll('textarea[data-result-outline-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.resultOutlineIndex].outline=e.value;save()}))}
+function downloadBlob(blob,name){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000)}
+async function copyText(){const t=getReport();try{await navigator.clipboard.writeText(t);toast('已复制题目、提纲和时间轴；音频请单独导出')}catch(e){const temp=document.createElement('textarea');temp.value=t;temp.style.position='fixed';temp.style.left='-9999px';document.body.appendChild(temp);temp.select();let ok=document.execCommand('copy');temp.remove();if(ok)toast('已复制完整题目与时间轴');else{downloadBlob(new Blob([t],{type:'text/plain;charset=utf-8'}),'IELTS_Speaking_Review.txt');toast('浏览器阻止复制，已为你下载 TXT')}}}
+function audioName(){return `IELTS_Speaking_Full_Recording.${/mp4/.test(recordingBlob?.type||recordingMime)?'m4a':'webm'}`}
+function crc32(data){let c=0xffffffff;for(let i=0;i<data.length;i++){c^=data[i];for(let j=0;j<8;j++)c=(c&1)?(c>>>1)^0xedb88320:c>>>1}return(c^0xffffffff)>>>0}
+function combine(chunks){const size=chunks.reduce((n,a)=>n+a.length,0);const out=new Uint8Array(size);let offset=0;for(const a of chunks){out.set(a,offset);offset+=a.length}return out}
+function zipEntries(list){const enc=new TextEncoder();let local=[],central=[],ofs=0;const now=new Date();const time=((now.getHours()&31)<<11)|((now.getMinutes()&63)<<5)|Math.floor(now.getSeconds()/2);const date=(((Math.max(1980,now.getFullYear())-1980)&127)<<9)|(((now.getMonth()+1)&15)<<5)|(now.getDate()&31);for(const item of list){const name=enc.encode(item.name),content=item.data,crc=crc32(content);const l=new Uint8Array(30),v=new DataView(l.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x0800,true);v.setUint16(8,0,true);v.setUint16(10,time,true);v.setUint16(12,date,true);v.setUint32(14,crc,true);v.setUint32(18,content.length,true);v.setUint32(22,content.length,true);v.setUint16(26,name.length,true);local.push(l,name,content);const c=new Uint8Array(46),w=new DataView(c.buffer);w.setUint32(0,0x02014b50,true);w.setUint16(4,20,true);w.setUint16(6,20,true);w.setUint16(8,0x0800,true);w.setUint16(10,0,true);w.setUint16(12,time,true);w.setUint16(14,date,true);w.setUint32(16,crc,true);w.setUint32(20,content.length,true);w.setUint32(24,content.length,true);w.setUint16(28,name.length,true);w.setUint32(42,ofs,true);central.push(c,name);ofs+=l.length+name.length+content.length}const cd=combine(central);const end=new Uint8Array(22),dv=new DataView(end.buffer);dv.setUint32(0,0x06054b50,true);dv.setUint16(8,list.length,true);dv.setUint16(10,list.length,true);dv.setUint32(12,cd.length,true);dv.setUint32(16,ofs,true);return new Blob([...local,cd,end],{type:'application/zip'})}
+async function exportZip(){if(audioReadyPromise){try{await audioReadyPromise}catch(e){}}
+ const enc=new TextEncoder(),contents=[{name:'IELTS_Speaking_Review.txt',data:enc.encode(getReport())},{name:'Question_Timeline.csv',data:enc.encode(timelineCsv())}];
+ if(recordingBlob?.size){contents.push({name:audioName(),data:new Uint8Array(await recordingBlob.arrayBuffer())})}
+ const readme=`IELTS Speaking Studio V4 · 录音优先
+
+1. 优先把整场录音和 IELTS_Speaking_Review.txt 一起上传 ChatGPT / Descript。
+2. TXT 包含完整题目、Part 2 题卡、个人提纲和逐题时间轴；CSV 为原始时间数值。
+3. 若未生成录音，ZIP 仅包含文本文档和时间表，不代表录音成功。
+4. 题目朗读可能被麦克风录入，分析时请用正式作答起止时间定位学生声音。
+5. 浏览器转写默认关闭；若开启后产生文本，也不应当直接当成原话评分。
+6. 网站不自动上传个人录音。需要人工下载后保存或分享。`;
+ contents.push({name:'README_使用说明.txt',data:enc.encode(readme)});
+ downloadBlob(zipEntries(contents),'IELTS_Speaking_Review_Audio_First.zip');
+ toast(recordingBlob?.size?'已打包录音 + 题目 + 时间轴 + 提纲':'未取得音频；只导出了题目和时间轴')}
+
+function changePaper(){if(onGoing)return;const p=$('paper-input').value.trim();const parsed=parsePaper(p);if(!parsed.length){$('parse-message').innerHTML='<div class="notice warning">未识别到题目。请检查是否有 Part 1 / Part 2 / Part 3 标题，以及 1.、2. 等题号。</div>';return}raw=p;questions=parsed;save();renderList();$('parse-message').innerHTML=`<div class="notice success">已载入 ${parsed.length} 道题（Part 1：${parsed.filter(x=>x.part===1).length} / Part 2：${parsed.filter(x=>x.part===2).length} / Part 3：${parsed.filter(x=>x.part===3).length}）。可以修改答题思路后开始模考。</div>`;toast('题库已更新')}
+function init(){restore();try{if(!localStorage.getItem('ielts-speaking-studio-audio-first-v4')){$('speech-on').checked=false;localStorage.setItem('ielts-speaking-studio-audio-first-v4','1');save()}}catch(e){$('speech-on').checked=false}$('paper-input').value=raw;renderList();$('parse-btn').onclick=changePaper;$('restore-demo-btn').onclick=()=>{$('paper-input').value=EXAMPLE;changePaper()};$('start-btn').onclick=startExam;$('part2-outline').addEventListener('input',e=>{if(questions[active]?.part===2){questions[active].outline=e.target.value;save()}});$('begin-answer-btn').onclick=()=>{if(onGoing&&phase==='reading'){stopQuestionAudio();afterQuestionRead()}};$('speak-question-btn').onclick=()=>{if(onGoing){const reading=phase==='reading';playQuestion(questions[active],reading?afterQuestionRead:null,$('speak-question-btn'));if(!reading)toast('重播题目不会暂停倒计时')}};$('skip-btn').onclick=()=>{if(phase==='prepare'){cancelAnimationFrame(timerTick);startAnswer()}else if(phase==='reading'){stopQuestionAudio();questions[active].status='skipped';questions[active].finishedAt=null;if(active===questions.length-1)finishExam();else{active++;startQuestion()}}else finishQuestion(true)};$('stop-btn').onclick=()=>{if(window.confirm('确定提前结束整套模考？已录音内容仍可导出。')){if(phase==='answer'&&questions[active]){questions[active].transcript=stopSpeech()||questions[active].transcript||'';questions[active].status='skipped';questions[active].finishedAt=mark();questions[active].durationActual=Math.max(0,+(questions[active].finishedAt-questions[active].startedAt).toFixed(2))}finishExam()}};$('copy-btn').onclick=copyText;$('export-zip-btn').onclick=exportZip;$('download-txt-btn').onclick=()=>downloadBlob(new Blob([getReport()],{type:'text/plain;charset=utf-8'}),'IELTS_Speaking_Review.txt');$('download-audio-btn').onclick=()=>{if(recordingBlob)downloadBlob(recordingBlob,audioName())};$('again-btn').onclick=()=>{goto('editor');$('start-btn').focus()};$('edit-new-btn').onclick=()=>goto('editor');for(const name of ['editor','exam','results'])$('tab-'+name).onclick=()=>{if(name==='exam'&&!onGoing){toast('请先在题库页面点击「开始完整限时模考」');return}goto(name)};['speech-on','prep-on','hint-on','read-on'].forEach(i=>$(i).addEventListener('change',save));$('tts-voice').addEventListener('change',()=>{requestedVoice=$('tts-voice').value;save()});refreshVoices();if('speechSynthesis' in window){window.speechSynthesis.addEventListener?.('voiceschanged',refreshVoices)}$('results-notice').textContent='尚未开始模考';$('tab-exam').title='模考开始时自动进入';}
+init();
+})();
+</script>
+</body>
+</html>

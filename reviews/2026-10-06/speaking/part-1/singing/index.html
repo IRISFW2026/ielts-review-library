@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1006-口语-Part 1-Singing 唱歌</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#111827;--soft:#eef2ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+main{max-width:920px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#111827,#374151);color:#fff;border-radius:20px;padding:28px;margin-bottom:22px}
+.hero h1{margin:0 0 8px;font-size:30px}.hero p{margin:6px 0;color:#e5e7eb}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.controls select,.controls button{border:0;border-radius:10px;padding:10px 12px;font-size:14px}
+.controls button{cursor:pointer}
+.section-title{margin:30px 0 12px;font-size:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.q{font-weight:700;font-size:18px;margin-bottom:8px}
+.zh{color:var(--muted);margin-bottom:12px}
+.answer{font-size:17px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 11px;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.slow{background:var(--soft)}
+.keywords{margin-top:12px;padding:10px 12px;background:#f9fafb;border-radius:10px;color:#4b5563}
+.chip{display:inline-block;background:#eef2ff;padding:3px 8px;border-radius:999px;margin:2px;font-size:13px}
+details{margin-top:12px}summary{cursor:pointer;color:#374151;font-weight:600}
+.note{padding:10px 12px;background:#fff7ed;border-radius:10px;margin-top:10px}
+.mini{font-size:14px;color:var(--muted)}
+.footer{margin-top:36px;color:var(--muted);font-size:13px}
+.hidden-answer .answer{filter:blur(7px);user-select:none}.hidden-answer .answer:hover{filter:none}
+</style>
+<style id="review-library-navigation">.library-navigation{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 20px;padding:0 0 13px;border-bottom:1px solid #dfe6ee;font:13px/1.7 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}.library-navigation a{color:#365f91;text-decoration:none;font-weight:650;min-height:30px;display:inline-flex;align-items:center}.library-navigation span{color:#728093}.hero h1{font-size:clamp(24px,3vw,35px);line-height:1.5;letter-spacing:0;overflow-wrap:anywhere}@media(max-width:600px){.library-navigation{font-size:12px;gap:7px}.controls select,.controls button,.btn{min-height:44px}select,textarea{font-size:16px!important}.hero h1{font-size:24px}}</style></head>
+<body>
+<main><nav class="library-navigation" aria-label="复习库导航"><a href="/ielts-review-library/index.html">← 复习总览</a><span>2026-10-06 · 口语</span><a href="/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/">进入完整限时模考 →</a></nav>
+<section class="hero">
+<h1>1006-口语-Part 1-Singing 唱歌</h1>
+<p>Part 1 主题积累｜2026-10-06</p>
+<p>目标：短句 + 词块直接组织英语，而不是先想完整中文再翻译。</p>
+<div class="controls">
+<select id="voiceSelect"></select>
+<button onclick="setRate(1)">正常语速</button>
+<button onclick="setRate(.78)">慢速跟读</button>
+<button onclick="toggleAnswers()">隐藏/显示答案</button>
+</div>
+<p class="mini" style="color:#d1d5db">发音使用浏览器/系统自带英文语音，优先选择 en-GB 英式语音；不同设备可用声音会有所不同。</p>
+</section>
+
+<h2 class="section-title">A. 原始 Part 1 四题</h2>
+
+<section class="card">
+<div class="q">1. Do you like singing? Why?</div>
+<div class="zh">你喜欢唱歌吗？为什么？</div>
+<div class="answer" id="a1">Not really. I'm not very good at singing, and I'm a little tone-deaf. Sometimes I think I'm singing in tune, but apparently I'm not.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a1',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a1',.72)">🐢 慢速跟读</button></div>
+<div class="keywords"><b>关键词：</b> <span class="chip">tone-deaf</span><span class="chip">sing in tune</span></div>
+<details><summary>查看反馈</summary><div class="note">tone-deaf = 五音不全；sing in tune = 唱准调。不要说 tongue-deaf 或 sing the right tone。</div></details>
+</section>
+
+<section class="card">
+<div class="q">2. Have you ever learnt how to sing?</div>
+<div class="zh">你以前学过唱歌吗？</div>
+<div class="answer" id="a2">No, I've never had any formal singing lessons. I just sing along to songs I like for fun sometimes. I've never really learned how to sing properly.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a2',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a2',.72)">🐢 慢速跟读</button></div>
+<div class="keywords"><b>关键词：</b> <span class="chip">formal singing lessons</span><span class="chip">sing along to songs</span><span class="chip">for fun</span></div>
+</section>
+
+<section class="card">
+<div class="q">3. Who do you want to sing for?</div>
+<div class="zh">你想唱给谁听？</div>
+<div class="answer" id="a3">Probably just myself. I sometimes sing when I'm bored, but singing in front of other people makes me feel embarrassed. So I prefer singing when I'm alone.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a3',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a3',.72)">🐢 慢速跟读</button></div>
+<div class="keywords"><b>关键词：</b> <span class="chip">when I'm bored</span><span class="chip">feel embarrassed</span><span class="chip">when I'm alone</span></div>
+</section>
+
+<section class="card">
+<div class="q">4. Do you think singing can bring happiness to people?</div>
+<div class="zh">你认为唱歌能给人带来快乐吗？</div>
+<div class="answer" id="a4">Yes, definitely, but I don't think singing only brings happiness. Singers can express all kinds of emotions through their voices. Some songs make people feel happy, while others can make them feel sad or emotional.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a4',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a4',.72)">🐢 慢速跟读</button></div>
+<div class="keywords"><b>关键词：</b> <span class="chip">express emotions</span><span class="chip">make people feel</span></div>
+</section>
+
+<h2 class="section-title">B. 同主题随机追问</h2>
+
+<section class="card">
+<div class="q">5. When do you usually sing?</div>
+<div class="zh">你通常什么时候唱歌？</div>
+<div class="answer" id="a5">I rarely sing. I think the last time was last year. I couldn't sleep one night, so I stayed up singing until about 3 a.m.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a5',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a5',.72)">🐢 慢速跟读</button></div>
+<div class="keywords"><b>关键词：</b> <span class="chip">rarely sing</span><span class="chip">couldn't sleep</span><span class="chip">stay up</span></div>
+</section>
+
+<section class="card">
+<div class="q">6. Do you ever sing with your friends?</div>
+<div class="zh">你会和朋友一起唱歌吗？</div>
+<div class="answer" id="a6">Yes, sometimes. I've been to karaoke with friends and colleagues before. But I only feel comfortable singing around close friends because I'm not very confident about my singing.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a6',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a6',.72)">🐢 慢速跟读</button></div>
+</section>
+
+<section class="card">
+<div class="q">7. What kind of music do you like singing?</div>
+<div class="zh">你喜欢唱什么类型的歌？</div>
+<div class="answer" id="a7">I prefer soft and gentle songs, especially love songs or popular songs that are easy to sing along to. I don't listen to music that much, so I usually only know songs that I've heard many times.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a7',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a7',.72)">🐢 慢速跟读</button></div>
+</section>
+
+<section class="card">
+<div class="q">8. Would you like to learn singing in the future?</div>
+<div class="zh">以后想学唱歌吗？</div>
+<div class="answer" id="a8">Maybe. I'd like to take singing lessons someday, but probably not now. I don't really have enough time or money for it, and to be honest, singing isn't a major interest of mine.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a8',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a8',.72)">🐢 慢速跟读</button></div>
+</section>
+
+<section class="card">
+<div class="q">9. Why do some people enjoy singing so much?</div>
+<div class="zh">为什么有些人很享受唱歌？</div>
+<div class="answer" id="a9">I think one reason is that some people are naturally good at singing, so they get a lot of positive feedback from others. Another reason is that singing helps people express their feelings and release their emotions.</div>
+<div class="tools"><button class="btn primary" onclick="speak('a9',1)">▶ 正常发音</button><button class="btn slow" onclick="speak('a9',.72)">🐢 慢速跟读</button></div>
+</section>
+
+<h2 class="section-title">C. 今日高频纠错</h2>
+<div class="card">
+<p>❌ tongue-deaf → ✅ <b>tone-deaf</b></p>
+<p>❌ sing the right tone → ✅ <b>sing in tune</b></p>
+<p>❌ I'm not really like singing → ✅ <b>I don't really like singing</b></p>
+<p>❌ listen music → ✅ <b>listen to music</b></p>
+<p>❌ other peoples → ✅ <b>other people</b></p>
+<p>❌ I sing very very less → ✅ <b>I rarely sing / I don't sing very often</b></p>
+<p>❌ learn singing in formal lessons → ✅ <b>take singing lessons / have formal singing lessons</b></p>
+</div>
+
+<h2 class="section-title">D. 练习方法</h2>
+<div class="card">
+<p><b>第一轮：</b>只看关键词回答，每题 15–25 秒。</p>
+<p><b>第二轮：</b>播放参考答案，逐句 shadowing，先慢速，再正常速度。</p>
+<p><b>第三轮：</b>隐藏答案，再次回答。允许换句子，不要求背参考答案。</p>
+</div>
+
+<p class="footer">IELTS Speaking Review · Singing · Personal practice page</p>
+</main>
+
+<script>
+let globalRate = 1;
+const synth = window.speechSynthesis;
+const select = document.getElementById('voiceSelect');
+
+function loadVoices(){
+  const voices = synth.getVoices();
+  let english = voices.filter(v => /^en(-|_)/i.test(v.lang));
+  english.sort((a,b)=>{
+    const aa=/en-GB/i.test(a.lang)?0:1;
+    const bb=/en-GB/i.test(b.lang)?0:1;
+    return aa-bb || a.name.localeCompare(b.name);
+  });
+  select.innerHTML='';
+  english.forEach(v=>{
+    const o=document.createElement('option');
+    o.value=voices.indexOf(v);
+    o.textContent=v.name+' · '+v.lang;
+    select.appendChild(o);
+  });
+}
+loadVoices();
+if ('onvoiceschanged' in speechSynthesis) speechSynthesis.onvoiceschanged=loadVoices;
+
+function setRate(r){globalRate=r}
+function speak(id,r){
+  synth.cancel();
+  const text=document.getElementById(id).innerText;
+  const u=new SpeechSynthesisUtterance(text);
+  const voices=synth.getVoices();
+  const chosen=voices[Number(select.value)] || voices.find(v=>/en-GB/i.test(v.lang)) || voices.find(v=>/^en/i.test(v.lang));
+  if(chosen) u.voice=chosen;
+  u.lang=chosen?.lang || 'en-GB';
+  u.rate=r || globalRate;
+  u.pitch=1;
+  synth.speak(u);
+}
+function toggleAnswers(){document.body.classList.toggle('hidden-answer')}
+</script>
+</body>
+</html>
