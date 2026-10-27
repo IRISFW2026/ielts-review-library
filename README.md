@@ -1,30 +1,52 @@
-# IELTS Review Library
+# Iris 的雅思复习库
 
-三篇阅读的逐句精读、词汇听写与拼写、带英式音标和五星复习优先级的词汇库，以及搭配造句练习。
+按时间、科目和主题查找复习内容。首页提供按时间、按主题与表格清单三种查看方式，并支持搜索和科目筛选。
 
-## 链接命名
+[打开复习总览](https://irisfw2026.github.io/ielts-review-library/index.html)
 
-建议仓库名 `ielts-review-library`。路径按类型、学习日期、文章名和练习模块分层。
+## 命名规则
 
-- `reading/2026-09-30/how-they-move/reading/`
-- `reading/2026-09-30/humans-and-food/dictation/`
-- `reading/2026-09-30/survivors-story/vocabulary/`
-- `reading/2026-09-30/survivors-story/collocations/`
+显示名称使用 `MMDD-科目-题型-English topic 中文主题`，例如 `1027-写作-大作文-Work-life balance 工作与生活平衡`。
 
-同一天每篇文章使用唯一 slug。修订内容保留同一路径；新的学习批次使用新的日期目录。
+日期优先依据材料文件名或材料标注；没有材料日期时，使用页面首次发布日期并在首页标注。技术更新日期不替代学习材料日期。目录包括年份，跨年不混淆。
 
-## 发布
+## 目录结构
 
-将本目录内容上传到 GitHub 仓库根目录。在 Settings → Pages 中选择 Deploy from a branch、main 和 / (root)。访问 GitHub 返回的 Pages 地址。所有页面为静态页面，没有后台或 API 密钥。
+正式复习页放在 `reviews/YYYY-MM-DD/科目英文/题型英文/主题英文/index.html`。例如：
 
-## 本地查看
+`reviews/2026-10-27/writing/task-2/work-life-balance/index.html`
 
-用静态 HTTP 服务打开本目录；直接打开 index.html 也可使用。`IELTS-Reading-Review-Preview.html` 为单文件离线预览，采用哈希路径切换模块，正式部署文件使用上述目录路径。
+`catalog.json` 是目录数据，记录日期依据、主题、路径和旧入口；首页使用同一份数据生成的内嵌快照，直接打开也能浏览。
 
-## 内容规模
+根目录旧 HTML 文件保留为跳转入口；不再作为独立专题重复展示。旧书签的查询参数与章节锚点继续传递。原首页的三篇阅读移入2026年9月30日的阅读合集；旧首页文章锚点自动转至该合集。
 
-119 个原句；265 个不同词汇或短语条目，语境不同的词义保留独立记录；18 组重点搭配练习，每组含原句与译文、模板、用法、参考例句及三个造句任务。
+## 复习目录
 
-星级是基于本篇作用和跨话题迁移价值的备考建议，不是雅思官方分级。音标为英式常用读法；短语实际朗读中存在弱读变化。朗读使用浏览器设备语音，英式声音可用时优先选择。词义开放式回答由学习者对照自评；英文拼写可自动核对。
+| 日期 | 科目与题型 | 标准名称与链接 |
+|---|---|---|
+| 2026-10-27 | 写作 大作文 | [1027-写作-大作文-Work-life balance 工作与生活平衡](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-27/writing/task-2/work-life-balance/) |
+| 2026-10-27 | 听力 Part 1 | [1027-听力-Part 1-AA Property Rentals 公寓租赁](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-27/listening/part-1/aa-property-rentals/) |
+| 2026-10-26 | 阅读 真题 | [1026-阅读-真题-Why don’t we sleep 我们为什么不睡觉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/reading/exam/why-dont-we-sleep/) |
+| 2026-10-26 | 听力 Part 1 | [1026-听力-Part 1-Second-hand Cars 二手车咨询](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/listening/part-1/second-hand-cars/) |
+| 2026-10-26 | 听力 Part 3 | [1026-听力-Part 3-Drama & Voice Coaching 戏剧声音指导](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/listening/part-3/drama-voice-coaching/) |
+| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Five Task 1 Types 五类图表题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/five-task1-types/) |
+| 2026-10-23 | 写作 小作文 | [1023-写作-小作文-Town Population 英国小镇人口](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/writing/task-1/town-population/) |
+| 2026-10-22 | 听力 合集 | [1022-听力-合集-Four Listening Topics 四篇听力主题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/listening/collection/four-listening-topics/) |
+| 2026-10-22 | 写作 小作文 | [1022-写作-小作文-Australia Employment 澳大利亚就业占比](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/writing/task-1/australia-employment/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Kākāpō 鸮鹦鹉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/kakapo/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Davies Sisters 戴维斯姐妹](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/davies-sisters/) |
+| 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Robot Umpires 机器人裁判](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/robot-umpires/) |
+| 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Procrastination 拖延](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/procrastination/) |
+| 2026-10-16 | 阅读 模考 | [1016-阅读-模考-Manatees 海牛](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-16/reading/practice/manatees/) |
+| 2026-10-11 | 阅读 精读 | [1011-阅读-精读-Termite Mounds 白蚁丘](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-11/reading/close-reading/termite-mounds/) |
+| 2026-09-30 | 阅读 合集 | [0930-阅读-合集-Three Reading Topics 三篇阅读主题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-09-30/reading/collection/three-reading-topics/) |
 
-原文来源：930-How they move.pdf、930-Humans and Food.pdf、930-Survivor’s Story.pdf。所有学习例句与文化信念表达均区分于原文事实。草稿与复习记录仅在当前浏览器保存。
+## 更新约定
+
+新增内容时，同步更新目录数据和首页快照；同一材料的修订保留现有专题地址。日期有新证据时，再更新归档并保留原地址跳转。更新后检查首页筛选、专题返回导航、旧书签和发布状态。
+
+## 练习记录
+
+专题迁移沿用原来的 localStorage 键与词句 ID，同一浏览器中的现有进度继续使用。记录不会自动跨设备同步，清理浏览器或更换设备前请从练习页导出备份。朗读依赖浏览器和设备提供的英语音色；部分页面另有在线词典发音选项。
+
+整理日期为2026年10月27日。
