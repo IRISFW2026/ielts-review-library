@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>UK QS150 · 2028 申请地图</title>
-<meta name="description" content="2028 英国 QS150 硕士申请地图：非伦敦院校、推荐专业、申请定位与费用规划。">
+<title>UK QS150 · 2027 入学地图 · 2026 申请</title>
+<meta name="description" content="2027 年入学、2026 年申请的英国 QS150 硕士院校地图，使用最新 QS 世界大学排名 2027，提供官网与申请入口。">
 <style>
 :root{
   --ink:#111827;
   --muted:#667085;
   --line:rgba(15,23,42,.08);
-  --glass:rgba(255,255,255,.88);
+  --glass:rgba(255,255,255,.82);
   --glass-strong:rgba(255,255,255,.96);
   --blue:#2563eb;
   --soft:#f5f7fa;
-  --shadow:0 18px 44px rgba(15,23,42,.16);
+  --shadow:0 12px 40px rgba(15,23,42,.11);
 }
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:#eef2f6;color:var(--ink);
@@ -45,8 +45,8 @@ body{overflow:hidden}
   border:1px solid rgba(255,255,255,.75);
   box-shadow:0 8px 24px rgba(15,23,42,.10);
 }
-.brand .eyebrow{font-size:11px;font-weight:800;letter-spacing:.13em;color:#64748b}
-.brand .title{font-size:21px;font-weight:800;letter-spacing:-.03em;margin-top:3px}
+.brand .eyebrow{font-size:10px;font-weight:650;letter-spacing:.10em;color:#7b8491}
+.brand .title{font-size:21px;font-weight:700;letter-spacing:-.03em;margin-top:4px}
 .brand .sub{font-size:12px;color:var(--muted);margin-top:3px}
 
 .filters{
@@ -63,19 +63,22 @@ body{overflow:hidden}
   box-shadow:0 5px 16px rgba(15,23,42,.08);
   color:#475467;font-size:12px;font-weight:700;
 }
-.filter.active{background:#111827;color:#fff}
+.filter.active{background:rgba(255,255,255,.98);color:#252c35;box-shadow:inset 0 0 0 1px rgba(118,130,146,.18),0 3px 9px rgba(15,23,42,.11)}
+.filter.active:before{content:"";display:inline-block;width:5px;height:5px;background:#d5a129;border-radius:50%;margin:0 6px 1px 0}
 
 .map-actions{
   position:absolute;top:18px;right:340px;z-index:1200;
   display:flex;gap:8px;
 }
 .iconbtn{
-  border:0;cursor:pointer;width:46px;height:46px;border-radius:16px;
+  border:0;cursor:pointer;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  box-shadow:0 7px 22px rgba(15,23,42,.10);
+  box-shadow:0 3px 12px rgba(15,23,42,.09);
   border:1px solid rgba(255,255,255,.75);
   font-size:18px;color:#111827
 }
+.iconbtn svg{width:18px;height:18px;flex-shrink:0}.iconbtn.homebtn{width:auto;padding:0 15px;gap:7px;border-radius:999px;font-size:12px;font-weight:600}
+.iconbtn:hover{background:#fff}.iconbtn:focus-visible,.filter:focus-visible{outline:2px solid #9aa7b6;outline-offset:3px}
 
 /* right rail */
 .sidebar{
@@ -86,7 +89,7 @@ body{overflow:hidden}
   backdrop-filter:blur(22px);
   -webkit-backdrop-filter:blur(22px);
   border:1px solid rgba(255,255,255,.8);
-  box-shadow:0 14px 34px rgba(15,23,42,.14);
+  box-shadow:0 8px 30px rgba(15,23,42,.10);
   overflow:hidden;
   display:flex;flex-direction:column;
 }
@@ -97,12 +100,12 @@ body{overflow:hidden}
   background:rgba(255,255,255,.72);
   flex-shrink:0;max-height:66%;overflow:auto;scrollbar-width:thin;
 }
-.detail-head{position:sticky;top:0;z-index:2;padding:17px 17px 13px;background:#fff;border-bottom:1px solid var(--line)}
+.detail-head{position:sticky;top:0;z-index:2;padding:17px 17px 13px;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
 .detail-category{font-size:11px;color:#667085;margin-top:7px}
 .detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}
-.detail-actions a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:9px 7px;border:1px solid #dbe5f4;border-radius:12px;background:#fff;color:#2563eb;text-decoration:none;font-size:12px;font-weight:700}
-.detail-actions a.primary{background:#2563eb;color:#fff;border-color:#2563eb}
-.detail-actions a:hover{background:#eef4ff}.detail-actions a.primary:hover{background:#1d4ed8}
+.detail-actions a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:9px 7px;border:1px solid #e4e7eb;border-radius:999px;background:#f5f6f8;color:#4c596b;text-decoration:none;font-size:12px;font-weight:600}
+.detail-actions a.primary{background:#fff3cc;color:#755719;border-color:#efe0b0}
+.detail-actions a:hover{background:#eceff3}.detail-actions a.primary:hover{background:#ffebaf}
 .detail-actions svg,.place-row svg{width:17px;height:17px;flex-shrink:0}
 .detail-body{padding:0 17px 16px}
 .place-info{padding:6px 0 8px;border-bottom:1px solid var(--line)}
@@ -149,7 +152,7 @@ body{overflow:hidden}
   scrollbar-width:thin;
 }
 .school-card{
-  display:grid;grid-template-columns:50px minmax(0,1fr);
+  display:grid;grid-template-columns:42px minmax(0,1fr);
   gap:10px;align-items:center;
   padding:10px;
   margin:6px 0;
@@ -159,62 +162,57 @@ body{overflow:hidden}
   border:1px solid transparent;
 }
 .school-card:hover{background:#f7f9fb}
-.school-card.active{
-  background:#eef4ff;
-  border-color:rgba(37,99,235,.38);
-  box-shadow:0 10px 24px rgba(37,99,235,.16);
-  transform:translateX(-2px);
-}
-.school-card.active .avatar{
-  background:linear-gradient(145deg,#2f6df6,#1d4ed8);
-  color:#fff;
-  box-shadow:0 6px 14px rgba(37,99,235,.24);
-}
-.school-card.active .card-title{color:#1747b8}
-.school-card.active .badge{background:#dce8ff;color:#1747b8}
+.school-card.active{background:#fff7df;border-color:rgba(192,143,25,.17);box-shadow:none}
+.school-card.active .avatar{background:#fff0b9;color:#94691a;box-shadow:none}
+.school-card.active .card-title{color:#44371d}
+.school-card.active .badge{background:#f6ebce;color:#7f6a40}
 .avatar{
-  width:50px;height:50px;border-radius:15px;display:grid;place-items:center;
-  font-size:13px;font-weight:850;color:#334155;
-  background:linear-gradient(145deg,#e9eef6,#d9e2ee);
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  color:#7b8490;background:#f0f2f5;
 }
-.card-title{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.avatar svg{width:22px;height:22px}
+.card-title{font-size:13px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card-en{font-size:11px;color:#667085;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card-meta{display:flex;gap:6px;align-items:center;margin-top:5px}
-.qs{font-size:11px;font-weight:800}
+.qs{font-size:10px;font-weight:600;color:#667085}.selected-item a{color:#755719;text-decoration:none}.selected-item a:hover{text-decoration:underline}.budget-note{display:block;font-size:10px!important;color:#8b95a5!important;margin-top:4px}
 .badge{font-size:10px;padding:3px 6px;border-radius:999px;background:#eef2f6;color:#344054;font-weight:700}
 
-/* Each star is anchored to its school coordinates; only its label is offset. */
+/* Hollow stars turn warm yellow on selection; labels move independently of coordinates. */
 .school-star-icon{background:none;border:0;outline-offset:5px}
 .school-pin{position:relative;width:32px;height:32px;cursor:pointer}
-.star-anchor{position:absolute;inset:0;width:32px;height:32px;overflow:visible;filter:drop-shadow(0 2px 3px rgba(91,65,16,.28))}
-.star-anchor path{fill:#fbbc04;stroke:#fff;stroke-width:3;stroke-linejoin:round;paint-order:stroke fill}
-.school-pin.active .star-anchor path{fill:#2563eb}
-.school-pin.active .star-anchor{filter:drop-shadow(0 0 5px rgba(37,99,235,.42))}
+.school-pin:before{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.98);box-shadow:0 2px 8px rgba(38,49,65,.17);transition:background .18s,box-shadow .18s;pointer-events:none}
+.star-anchor{position:absolute;left:5px;top:5px;width:22px;height:22px;overflow:visible;pointer-events:none}
+.star-anchor path{fill:#fff;stroke:#7b8796;stroke-width:2.1;stroke-linejoin:round;transition:fill .18s,stroke .18s}
+.school-pin.active:before{background:#fff9e5;box-shadow:0 0 0 5px rgba(255,202,56,.15),0 3px 12px rgba(137,104,23,.2)}
+.school-pin.active .star-anchor path{fill:#ffcb3d;stroke:#ae7b16}
+.school-pin:hover:before{box-shadow:0 3px 12px rgba(38,49,65,.24)}
 .pin-leader{position:absolute;inset:0;width:32px;height:32px;overflow:visible;pointer-events:none}
-.pin-leader path{stroke:#c5a14d;stroke-width:1.3;fill:none}
-.school-pin.active .pin-leader path{stroke:#5a88ef;stroke-width:1.6}
-.pin-label{position:absolute;display:flex;align-items:center;gap:7px;width:max-content;max-width:185px;padding:7px 10px;border-radius:11px;background:rgba(255,255,255,.97);border:1px solid rgba(15,23,42,.09);box-shadow:0 3px 12px rgba(15,23,42,.12);transform:translateY(-50%);white-space:nowrap;color:#344054}
+.pin-leader path{stroke:#aab2be;stroke-width:1;fill:none}
+.school-pin.active .pin-leader path{stroke:#c7a548;stroke-width:1.2}
+.pin-label{position:absolute;display:flex;align-items:center;gap:7px;width:max-content;max-width:200px;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.87);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);box-shadow:0 2px 7px rgba(15,23,42,.09);transform:translateY(-50%);white-space:nowrap;color:#46505c;transition:background .18s,box-shadow .18s}
 .pin-label.left{transform:translate(-100%,-50%)}
-.pin-label .name{font-size:12px;font-weight:750}
-.pin-label .rank{font-size:10px;font-weight:600;color:#7c8798}
-.school-pin.active .pin-label{background:#2563eb;border-color:#2563eb;box-shadow:0 5px 16px rgba(37,99,235,.25);color:white}
-.school-pin.active .pin-label .rank{color:#d9e6ff}
+.pin-label .name{font-size:12px;font-weight:600}
+.pin-label .rank{font-size:10px;font-weight:500;color:#8a929d}
+.school-pin.active .pin-label{background:rgba(255,251,237,.97);border-color:rgba(217,181,78,.48);box-shadow:0 3px 12px rgba(133,108,45,.14);color:#554324}
+.school-pin.active .pin-label .rank{color:#947b43}
 .school-star-icon:focus-visible{outline:3px solid #2563eb;border-radius:8px}
 .manual-map-controls{margin:0 0 30px 18px!important;display:flex;align-items:flex-end;gap:9px}
-.zoom-buttons{display:flex;flex-direction:column;overflow:hidden;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.9);border-radius:15px;box-shadow:0 5px 18px rgba(15,23,42,.14)}
+.zoom-buttons{display:flex;flex-direction:column;overflow:hidden;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:999px;box-shadow:0 3px 12px rgba(15,23,42,.1)}
 .zoom-buttons button{width:44px;height:44px;border:0;background:transparent;font:24px/1 system-ui;color:#344054;cursor:pointer}
 .zoom-buttons button+button{border-top:1px solid #eef1f5}
 .zoom-buttons button:hover{background:#f1f5fb}
 .map-gesture-hint{padding:7px 9px;margin-bottom:2px;background:rgba(255,255,255,.86);border-radius:8px;font-size:10px;color:#718096;pointer-events:none}
-.locate-school{width:100%;margin-top:12px;padding:10px 12px;border:1px solid #dbe7fc;background:#eef4ff;border-radius:11px;color:#2563eb;font:inherit;font-size:12px;font-weight:600;line-height:1.4;cursor:pointer}
-.locate-school:hover{background:#e5eeff}
-@media(max-width:900px){.star-anchor{width:20px;height:20px;left:6px;top:6px;right:auto;bottom:auto}.manual-map-controls{margin:0 0 26px 12px!important}.map-gesture-hint{font-size:9px;padding:6px 8px}.pin-label{padding:6px 8px;border-radius:9px}.pin-label .name{font-size:11px}.pin-label .rank{font-size:9px}.locate-school{min-height:44px}}
+.locate-school{width:100%;margin-top:12px;padding:10px 12px;border:1px solid #e4e7eb;background:#f3f5f7;border-radius:999px;color:#566273;font:inherit;font-size:12px;font-weight:600;line-height:1.4;cursor:pointer}
+.locate-school:hover{background:#e9edf2}
+@media(prefers-reduced-motion:reduce){.school-card,.school-pin:before,.star-anchor path,.pin-label{transition:none}}
+@media(max-width:900px){.school-pin:before{inset:2px}.star-anchor{width:20px;height:20px;left:6px;top:6px}.manual-map-controls{margin:0 0 26px 12px!important}.map-gesture-hint{font-size:9px;padding:6px 8px}.pin-label{padding:6px 9px}.pin-label .name{font-size:11px}.pin-label .rank{display:none}.locate-school{min-height:44px}}
 
 /* Leaflet critical layout CSS */
 .leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,
 .leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{
   position:absolute;left:0;top:0}
 .leaflet-container{overflow:hidden;background:#dbe7f1;outline-offset:1px;-webkit-tap-highlight-color:transparent}
+.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}.leaflet-container.leaflet-touch-drag{touch-action:pinch-zoom}.leaflet-container.leaflet-touch-zoom.leaflet-touch-drag{touch-action:none}
 .leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-user-drag:none}
 .leaflet-tile{visibility:hidden}.leaflet-tile-loaded{visibility:inherit}
 .leaflet-zoom-animated{transform-origin:0 0}.leaflet-map-pane{z-index:400}
@@ -243,10 +241,11 @@ body{overflow:hidden}
   }
   .sidebar{display:none}
   .map-actions{right:12px;top:12px}
-  .brand{left:12px;top:12px;width:235px;padding:11px 13px;border-radius:19px}
-  .brand .title{font-size:17px}
-  .brand .sub{display:none}
-  .filters{left:12px;top:92px;max-width:calc(100% - 24px)}
+  .brand{left:12px;top:12px;width:calc(100% - 156px);max-width:235px;padding:11px 13px;border-radius:21px}
+  .brand .title{font-size:clamp(15px,4vw,17px)}
+  .brand .eyebrow{font-size:9px;letter-spacing:.04em}.brand .sub{font-size:10px;line-height:1.5}
+  .map-actions{gap:6px}.iconbtn.homebtn{padding:0 12px;gap:5px}
+  .filters{left:12px;top:104px;max-width:calc(100% - 24px)}
   .filter{padding:8px 11px}
   .mobile-content{
     display:block;padding:16px 12px 26px;background:#eef2f6;
@@ -269,9 +268,9 @@ body{overflow:hidden}
   <div id="map"></div>
 
   <div class="brand">
-    <div class="eyebrow">UK QS150</div>
-    <div class="title">2028 申请地图</div>
-    <div class="sub">非伦敦 · 商科 / 数字营销 / 电商</div>
+    <div class="eyebrow">UK QS150 · QS 2027</div>
+    <div class="title">2027 入学地图</div>
+    <div class="sub">2026 年申请 · 非伦敦院校</div>
   </div>
 
   <div class="filters">
@@ -282,8 +281,8 @@ body{overflow:hidden}
   </div>
 
   <div class="map-actions">
-    <button class="iconbtn" id="fitBtn" title="查看全部">⌖</button>
-    <button class="iconbtn" id="fullscreenBtn" title="全屏">⛶</button>
+    <button class="iconbtn homebtn" id="fitBtn" title="返回院校总览"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/><path d="M8 8h8v8H8z"/></svg><span>总览</span></button>
+    <button class="iconbtn" id="fullscreenBtn" title="全屏" aria-label="全屏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
   </div>
 
   <aside class="sidebar">
@@ -335,27 +334,29 @@ const schoolDirectory={
   LIV:{website:"https://www.liverpool.ac.uk/",apply:"https://theuniversityofliverpool.my.site.com/s/",applyGuide:"https://www.liverpool.ac.uk/postgraduate-taught/applying/online/",applyNote:"进入 University of Liverpool 官方申请系统。",address:"Foundation Building, Brownlow Hill, Liverpool L69 7ZX, United Kingdom",region:"England",phone:"+44 151 794 5927",phoneLabel:"招生咨询",contact:"https://www.liverpool.ac.uk/about/contact-us/"},
   NCL:{website:"https://www.ncl.ac.uk/",apply:"https://www.ncl.ac.uk/postgraduate/applications-offers/",applyGuide:"https://www.ncl.ac.uk/postgraduate/applications-offers/",applyNote:"在官方硕士申请页点击 Apply now，进入 Apply to Newcastle。",address:"Newcastle upon Tyne, Tyne and Wear NE1 7RU, United Kingdom",region:"England",phone:"+44 191 208 6000",phoneLabel:"学校总机",contact:"https://www.ncl.ac.uk/who-we-are/contact/"}
 };
-schools.forEach(s=>Object.assign(s,schoolDirectory[s.initials]));
+const qsProfiles={BHM:"university-birmingham",LDS:"university-leeds",GLA:"university-glasgow",SHF:"university-sheffield",SOU:"university-southampton",EXE:"university-exeter",LIV:"university-liverpool",NCL:"newcastle-university"};
+schools.forEach(s=>Object.assign(s,schoolDirectory[s.initials],{qsSource:"https://www.topuniversities.com/universities/"+qsProfiles[s.initials]}));
 
 let currentFilter="全部";
 let activeName=null;
 
 const map=L.map("map",{
   zoomControl:false,attributionControl:true,
-  scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,
+  scrollWheelZoom:true,doubleClickZoom:true,boxZoom:true,
   inertia:false,zoomAnimation:false,markerZoomAnimation:false,
-  dragging:!L.Browser.mobile,touchZoom:false,trackResize:false,
+  dragging:true,touchZoom:true,bounceAtZoomLimits:false,trackResize:false,
+  zoomSnap:.25,zoomDelta:.5,wheelPxPerZoomLevel:160,wheelDebounceTime:30,
   minZoom:5,maxZoom:16,
   maxBounds:[[43,-24],[65,18]],maxBoundsViscosity:1
 });
 const manualZoom=L.control({position:"bottomleft"});
 manualZoom.onAdd=()=>{
   const root=L.DomUtil.create("div","manual-map-controls");
-  root.innerHTML='<div class="zoom-buttons"><button type="button" id="zoomInBtn" title="放大地图" aria-label="放大地图">＋</button><button type="button" id="zoomOutBtn" title="缩小地图" aria-label="缩小地图">−</button></div><span class="map-gesture-hint">'+(L.Browser.mobile?'★ 院校位置 · 使用＋/−缩放':'★ 院校位置 · 拖动查看 · 使用＋/−缩放')+'</span>';
+  root.innerHTML='<div class="zoom-buttons"><button type="button" id="zoomInBtn" title="放大地图" aria-label="放大地图">＋</button><button type="button" id="zoomOutBtn" title="缩小地图" aria-label="缩小地图">−</button></div><span class="map-gesture-hint">'+(L.Browser.mobile?'双指缩放 · 拖动浏览':'滚轮 / 触控板缩放 · 拖动浏览')+'</span>';
   L.DomEvent.disableClickPropagation(root);
   L.DomEvent.disableScrollPropagation(root);
-  root.querySelector("#zoomInBtn").onclick=()=>{map.stop();map.setZoom(map.getZoom()+1,{animate:false});};
-  root.querySelector("#zoomOutBtn").onclick=()=>{map.stop();map.setZoom(map.getZoom()-1,{animate:false});};
+  root.querySelector("#zoomInBtn").onclick=()=>{map.stop();map.setZoom(map.getZoom()+.5,{animate:false});};
+  root.querySelector("#zoomOutBtn").onclick=()=>{map.stop();map.setZoom(map.getZoom()-.5,{animate:false});};
   return root;
 };
 manualZoom.addTo(map);
@@ -409,7 +410,7 @@ function pinIcon(s){
     html:`<div class="school-pin ${activeName===s.name?"active":""}" data-school="${s.name}">
       <svg class="pin-leader" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 16L${16+dx} ${16+dy}"/></svg>
       <svg class="star-anchor" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 20.2 11 30 12.2 22.8 19 24.7 29 16 24 7.3 29 9.2 19 2 12.2 11.8 11Z"/></svg>
-      <span class="pin-label ${dx<0?"left":""}" style="left:${16+dx}px;top:${16+dy}px"><span class="name">${s.name}</span><span class="rank">${s.qs}</span></span>
+      <span class="pin-label ${dx<0?"left":""}" style="left:${16+dx}px;top:${16+dy}px"><span class="name">${s.name}</span><span class="rank">QS ${s.qs}</span></span>
     </div>`,
     iconSize:[32,32],iconAnchor:[16,16]
   });
@@ -441,7 +442,8 @@ function buildMarkers(){
 function layoutMobileLabels(){
   if(window.innerWidth>900||!map._loaded)return;
   const size=map.getSize(),occupied=[];
-  const reserved=[{x:10,y:8,w:240,h:126},{x:10,y:size.y-120,w:50,h:100}];
+  const reserved=[{x:10,y:8,w:240,h:140},{x:10,y:size.y-120,w:50,h:100},{x:65,y:size.y-63,w:200,h:33}];
+  const stars=visibleSchools().map(s=>{const p=map.latLngToContainerPoint([s.lat,s.lng]);return {name:s.name,x:p.x-16,y:p.y-16,w:32,h:32};});
   const overlaps=(a,b)=>Math.max(0,Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y));
   visibleSchools().slice().sort((a,b)=>b.lat-a.lat).forEach(s=>{
     const root=markerMap.get(s.name)?.getElement()?.querySelector(".school-pin");
@@ -452,12 +454,14 @@ function layoutMobileLabels(){
     const width=label.offsetWidth,height=label.offsetHeight,[preferredX,preferredY]=labelOffsets[s.name];
     let best=null;
     for(const direction of [Math.sign(preferredX),-Math.sign(preferredX)]){
+      for(const distance of [25,35,45]){
       for(const delta of [0,-26,26,-52,52,-78,78]){
-        const dx=direction*25,dy=preferredY+delta;
+        const dx=direction*distance,dy=preferredY+delta;
         const rect={x:point.x+dx+(direction<0?-width:0),y:point.y+dy-height/2,w:width+4,h:height+4};
         const overflow=Math.max(0,8-rect.x)+Math.max(0,rect.x+rect.w-size.x+8)+Math.max(0,8-rect.y)+Math.max(0,rect.y+rect.h-size.y+22);
-        const score=overflow*10000+occupied.reduce((sum,r)=>sum+overlaps(rect,r)*10,0)+reserved.reduce((sum,r)=>sum+overlaps(rect,r)*10,0)+Math.abs(delta)+(direction===Math.sign(preferredX)?0:12);
+        const score=overflow*10000+occupied.reduce((sum,r)=>sum+overlaps(rect,r)*10,0)+reserved.reduce((sum,r)=>sum+overlaps(rect,r)*10,0)+stars.reduce((sum,r)=>sum+(r.name===s.name?0:overlaps(rect,r)*30),0)+Math.abs(delta)+(distance-25)+(direction===Math.sign(preferredX)?0:12);
         if(!best||score<best.score)best={dx,dy,rect,score};
+      }
       }
     }
     label.classList.toggle("left",best.dx<0);
@@ -472,10 +476,19 @@ function fitAllSchools(){
   const desktop=window.innerWidth>900;
   map.stop();
   map.fitBounds(L.latLngBounds(schools.map(s=>[s.lat,s.lng])),{
-    paddingTopLeft:desktop?[80,130]:[55,125],
+    paddingTopLeft:desktop?[80,130]:[55,145],
     paddingBottomRight:desktop?[375,85]:[55,85],
     maxZoom:desktop?6.4:6,animate:false
   });
+}
+function returnToOverview(){
+  if(currentFilter!=="全部"){
+    currentFilter="全部";
+    document.querySelectorAll(".filter").forEach(button=>button.classList.toggle("active",button.dataset.filter==="全部"));
+    buildMarkers();
+    renderLists();
+  }
+  fitAllSchools();
 }
 function locateSchool(name){
   const s=schools.find(x=>x.name===name);
@@ -489,12 +502,12 @@ function locateSchool(name){
 
 function cardHTML(s){
   return `<article class="school-card ${activeName===s.name?"active":""}" data-name="${s.name}" role="button" tabindex="0" aria-pressed="${activeName===s.name}" aria-label="选择${s.name}">
-    <div class="avatar">${s.initials}</div>
+    <div class="avatar" aria-hidden="true">${detailIcon("university")}</div>
     <div>
       <div class="card-title">${s.name}</div>
       <div class="card-en">${s.en}</div>
       <div class="card-meta">
-        <span class="qs">QS ${s.qs}</span>
+        <span class="qs">QS 2027 · ${s.qs}</span>
         <span class="badge">${s.level}</span>
       </div>
     </div>
@@ -520,6 +533,7 @@ function renderLists(){
 
 function detailIcon(type){
   const paths={
+    university:'<path d="m3 8 9-5 9 5M4 9h16M6 10v8m6-8v8m6-8v8M3 21h18M4 18h16"/>',
     web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/>',
     apply:'<path d="M14 3h7v7M21 3 11 13M10 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6"/>',
     pin:'<path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
@@ -549,14 +563,14 @@ function detailHTML(s){
     </div>
     <p class="detail-section-title">申请规划</p>
     <div class="selected-grid">
-      <div class="selected-item"><b>QS 2027</b><span>${s.qs}</span></div>
+      <div class="selected-item"><b>QS 世界排名 2027</b><span><a href="${s.qsSource}" target="_blank" rel="noopener noreferrer" title="查看 QS 官方排名">${s.qs} ↗</a></span></div>
       <div class="selected-item"><b>申请定位</b><span>${s.level}</span></div>
       <div class="selected-item" style="grid-column:1/-1"><b>推荐专业</b><span>${s.program}</span></div>
-      <div class="selected-item" style="grid-column:1/-1"><b>2028 费用规划</b><span>${s.cost}</span></div>
+      <div class="selected-item" style="grid-column:1/-1"><b>留学预算参考 · 人民币</b><span>${s.cost}</span><span class="budget-note">预算估算；2027 年实际学费以官网为准</span></div>
     </div>
     <div class="selected-gain"><b>毕业后的增量价值</b><span>${s.gain}</span></div>
     <button type="button" class="locate-school" data-locate="${s.name}">定位这所学校 ↗</button>
-    <p class="detail-source">${s.applyNote}<br><a href="${s.applyGuide}" target="_blank" rel="noopener noreferrer">官方申请说明 ↗</a> · <a href="${s.contact}" target="_blank" rel="noopener noreferrer">官方联系信息 ↗</a>${s.addressSource?` · <a href="${s.addressSource}" target="_blank" rel="noopener noreferrer">地址来源 ↗</a>`:""}<br>地址、电话及申请链接核对：2026.10.28<br>照片、评价与开放时间可在 Google Maps 查看。</p>
+    <p class="detail-source">2027 年入学 · 2026 年申请<br>${s.applyNote}<br><a href="${s.applyGuide}" target="_blank" rel="noopener noreferrer">官方申请说明 ↗</a> · <a href="${s.contact}" target="_blank" rel="noopener noreferrer">官方联系信息 ↗</a>${s.addressSource?` · <a href="${s.addressSource}" target="_blank" rel="noopener noreferrer">地址来源 ↗</a>`:""}<br><a href="${s.qsSource}" target="_blank" rel="noopener noreferrer">QS 2027 官方排名 ↗</a> · 核对：2026.10.28<br>照片、评价与开放时间可在 Google Maps 查看。</p>
     </div>
   `;
 }
@@ -605,7 +619,7 @@ document.querySelectorAll(".filter").forEach(btn=>{
 
 document.getElementById("fitBtn").title="返回英国院校全景";
 document.getElementById("fitBtn").setAttribute("aria-label","返回英国院校全景");
-document.getElementById("fitBtn").addEventListener("click",fitAllSchools);
+document.getElementById("fitBtn").addEventListener("click",returnToOverview);
 ["selectedPanel","mobileSelected"].forEach(id=>{
   document.getElementById(id).addEventListener("click",event=>{
     const button=event.target.closest("[data-locate]");
