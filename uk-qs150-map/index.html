@@ -92,17 +92,37 @@ body{overflow:hidden}
 }
 
 .selected{
-  padding:17px 17px 15px;
+  padding:0;
   border-bottom:1px solid var(--line);
   background:rgba(255,255,255,.72);
+  flex-shrink:0;max-height:66%;overflow:auto;scrollbar-width:thin;
 }
+.detail-head{position:sticky;top:0;z-index:2;padding:17px 17px 13px;background:#fff;border-bottom:1px solid var(--line)}
+.detail-category{font-size:11px;color:#667085;margin-top:7px}
+.detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}
+.detail-actions a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:9px 7px;border:1px solid #dbe5f4;border-radius:12px;background:#fff;color:#2563eb;text-decoration:none;font-size:12px;font-weight:700}
+.detail-actions a.primary{background:#2563eb;color:#fff;border-color:#2563eb}
+.detail-actions a:hover{background:#eef4ff}.detail-actions a.primary:hover{background:#1d4ed8}
+.detail-actions svg,.place-row svg{width:17px;height:17px;flex-shrink:0}
+.detail-body{padding:0 17px 16px}
+.place-info{padding:6px 0 8px;border-bottom:1px solid var(--line)}
+.place-row{display:flex;gap:10px;align-items:flex-start;margin-top:12px;color:#667085}
+.place-row div{min-width:0}.place-row b{display:block;font-size:10px;font-weight:600;color:#7b8494;margin-bottom:3px}
+.place-row span,.place-row a{font-size:12px;line-height:1.6;color:#344054;text-decoration:none;overflow-wrap:anywhere}
+.place-row a:hover,.detail-source a:hover{text-decoration:underline;color:#2563eb}
+.place-tools{display:flex;gap:13px;flex-wrap:wrap;margin-top:12px}.place-tools a{font-size:11px;color:#2563eb;text-decoration:none;padding:4px 0}
+.detail-section-title{font-size:11px;font-weight:750;color:#667085;margin:15px 0 0}
+.detail-source{font-size:10px;line-height:1.6;color:#8b95a5;margin:12px 0 0}.detail-source a{color:#718096;text-decoration:none}
+.mobile-selected{padding:0!important;overflow:hidden}.mobile-selected> b,.mobile-selected>div:not(.detail-head):not(.detail-body){display:block;margin:15px}
+.mobile-selected .detail-head{position:relative}.mobile-selected .detail-body{padding-bottom:17px}
+.school-card:focus-visible,.detail-actions a:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
 .selected.empty{
   padding:20px 17px;
 }
 .selected .hint-title{font-size:15px;font-weight:800}
 .selected .hint-sub{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
-.selected h2{margin:0;font-size:20px;letter-spacing:-.03em}
-.selected .en{font-size:12px;color:var(--muted);margin-top:3px}
+.detail-head h2{margin:0;font-size:20px;letter-spacing:-.03em}
+.detail-head .en{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5}
 .selected-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;
 }
@@ -118,13 +138,14 @@ body{overflow:hidden}
 .selected-gain span{font-size:12px;line-height:1.45;color:#1f2937}
 
 .sidebar-head{
+  flex-shrink:0;
   display:flex;justify-content:space-between;align-items:center;
   padding:13px 15px 9px;
 }
 .sidebar-head b{font-size:12px;color:#475467}
 .sidebar-head span{font-size:11px;color:#98a2b3}
 .school-list{
-  overflow:auto;padding:0 10px 12px;
+  overflow:auto;padding:0 10px 12px;min-height:0;flex:1;
   scrollbar-width:thin;
 }
 .school-card{
@@ -303,6 +324,19 @@ const schools=[
 {name:"纽卡斯尔大学",en:"Newcastle University",initials:"NCL",qs:"149",city:"Newcastle upon Tyne",lat:54.9783,lng:-1.6178,level:"稳妥",program:"MSc Electronic Commerce",cost:"约 ¥45–48万",gain:"专业与跨境电商经历最直接衔接，强化电商管理、数字营销与数据能力。"}
 ];
 
+// Public contact details and postgraduate entry routes checked against university websites, 2026-10-28.
+const schoolDirectory={
+  BHM:{website:"https://www.birmingham.ac.uk/",apply:"https://www.birmingham.ac.uk/study/postgraduate/taught/apply",applyGuide:"https://www.birmingham.ac.uk/study/postgraduate/taught/apply",applyNote:"在官方申请页选择课程，再点击 Apply now。",address:"Edgbaston, Birmingham B15 2TT, United Kingdom",region:"England",phone:"+44 121 414 3344",phoneLabel:"学校总机",contact:"https://www.birmingham.ac.uk/contact"},
+  LDS:{website:"https://www.leeds.ac.uk/",apply:"https://myleedsportal.leeds.ac.uk/signin-landing/",applyGuide:"https://www.leeds.ac.uk/study/doc/apply-masters-courses",applyNote:"进入 MyLeeds 官方申请系统，注册或登录后选择硕士课程。",address:"Woodhouse Lane, Leeds LS2 9JT, United Kingdom",region:"England",phone:"+44 113 243 1751",phoneLabel:"学校总机",contact:"https://www.leeds.ac.uk/contactus"},
+  GLA:{website:"https://www.gla.ac.uk/",apply:"https://www.gla.ac.uk/postgraduate/how-to-apply-for-a-postgraduate-taught-degree/applying-for-a-programme/",applyGuide:"https://www.gla.ac.uk/postgraduate/how-to-apply-for-a-postgraduate-taught-degree/",applyNote:"按官方流程进入课程页，点击 Apply now 开始申请。",address:"University Avenue, Glasgow G12 8QQ, United Kingdom",region:"Scotland",phone:"+44 141 330 2000",phoneLabel:"学校总机",contact:"https://www.gla.ac.uk/explore/maps/contact/",addressSource:"https://www.gla.ac.uk/myglasgow/planning/contact/"},
+  SHF:{website:"https://sheffield.ac.uk/",apply:"https://www.sheffield.ac.uk/postgradapplication/",applyGuide:"https://sheffield.ac.uk/postgraduate/taught/apply/applying",applyNote:"进入官方 Postgraduate Online Application Form。",address:"Western Bank, Sheffield S10 2TN, United Kingdom",region:"England",phone:"+44 114 222 2000",phoneLabel:"学校总机",contact:"https://sheffield.ac.uk/efm/contact"},
+  SOU:{website:"https://www.southampton.ac.uk/",apply:"https://engage-uos.powerappsportals.com/",applyGuide:"https://www.southampton.ac.uk/study/postgraduate-taught/apply",applyNote:"进入 Southampton 官方申请系统，登录后选择课程。",address:"University Road, Southampton SO17 1BJ, United Kingdom",region:"England",phone:"+44 23 8059 5000",phoneLabel:"学校总机",contact:"https://www.southampton.ac.uk/about/contact"},
+  EXE:{website:"https://www.exeter.ac.uk/",apply:"https://srs.exeter.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app_crs",applyGuide:"https://www.exeter.ac.uk/masters-degrees/apply/",applyNote:"进入新生硕士申请系统，不使用在校生快速申请通道。",address:"University Reception, Stocker Road, Exeter EX4 4PY, United Kingdom",region:"England",phone:"+44 1392 661000",phoneLabel:"大学接待处",contact:"https://www.exeter.ac.uk/contact/"},
+  LIV:{website:"https://www.liverpool.ac.uk/",apply:"https://theuniversityofliverpool.my.site.com/s/",applyGuide:"https://www.liverpool.ac.uk/postgraduate-taught/applying/online/",applyNote:"进入 University of Liverpool 官方申请系统。",address:"Foundation Building, Brownlow Hill, Liverpool L69 7ZX, United Kingdom",region:"England",phone:"+44 151 794 5927",phoneLabel:"招生咨询",contact:"https://www.liverpool.ac.uk/about/contact-us/"},
+  NCL:{website:"https://www.ncl.ac.uk/",apply:"https://www.ncl.ac.uk/postgraduate/applications-offers/",applyGuide:"https://www.ncl.ac.uk/postgraduate/applications-offers/",applyNote:"在官方硕士申请页点击 Apply now，进入 Apply to Newcastle。",address:"Newcastle upon Tyne, Tyne and Wear NE1 7RU, United Kingdom",region:"England",phone:"+44 191 208 6000",phoneLabel:"学校总机",contact:"https://www.ncl.ac.uk/who-we-are/contact/"}
+};
+schools.forEach(s=>Object.assign(s,schoolDirectory[s.initials]));
+
 let currentFilter="全部";
 let activeName=null;
 
@@ -454,7 +488,7 @@ function locateSchool(name){
 }
 
 function cardHTML(s){
-  return `<article class="school-card ${activeName===s.name?"active":""}" data-name="${s.name}">
+  return `<article class="school-card ${activeName===s.name?"active":""}" data-name="${s.name}" role="button" tabindex="0" aria-pressed="${activeName===s.name}" aria-label="选择${s.name}">
     <div class="avatar">${s.initials}</div>
     <div>
       <div class="card-title">${s.name}</div>
@@ -478,13 +512,42 @@ function renderLists(){
 
   document.querySelectorAll(".school-card").forEach(card=>{
     card.addEventListener("click",()=>selectSchool(card.dataset.name));
+    card.addEventListener("keydown",event=>{
+      if(event.key==="Enter"||event.key===" "){event.preventDefault();selectSchool(card.dataset.name);}
+    });
   });
 }
 
+function detailIcon(type){
+  const paths={
+    web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/>',
+    apply:'<path d="M14 3h7v7M21 3 11 13M10 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6"/>',
+    pin:'<path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+    phone:'<path d="m8 3 3 5-3 3c1 2 3 4 5 5l3-3 5 3c0 4-2 5-5 5C9 21 3 15 3 8c0-3 1-5 5-5Z"/>'
+  };
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[type]}</svg>`;
+}
 function detailHTML(s){
+  const placeQuery=encodeURIComponent(s.en+", "+s.address);
+  const mapURL="https://www.google.com/maps/search/?api=1&query="+placeQuery;
+  const directionsURL="https://www.google.com/maps/dir/?api=1&destination="+placeQuery;
   return `
-    <h2>${s.name}</h2>
-    <div class="en">${s.en} · ${s.city}</div>
+    <div class="detail-head">
+      <h2>${s.name}</h2>
+      <div class="en">${s.en}</div>
+      <div class="detail-category">大学 · ${s.city} · ${s.region}</div>
+      <div class="detail-actions">
+        <a href="${s.website}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}官网（新窗口）">${detailIcon("web")}学校官网</a>
+        <a class="primary" href="${s.apply}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}硕士申请入口（新窗口）" title="${s.applyNote}">${detailIcon("apply")}申请入口</a>
+      </div>
+    </div>
+    <div class="detail-body">
+    <div class="place-info">
+      <div class="place-row">${detailIcon("pin")}<div><b>校区 / 联系地址</b><a href="${mapURL}" target="_blank" rel="noopener noreferrer">${s.address}</a></div></div>
+      <div class="place-row">${detailIcon("phone")}<div><b>${s.phoneLabel}</b><a href="tel:${s.phone.replace(/\s/g,"")}">${s.phone}</a></div></div>
+      <div class="place-tools"><a href="${mapURL}" target="_blank" rel="noopener noreferrer">Google Maps 查看 ↗</a><a href="${directionsURL}" target="_blank" rel="noopener noreferrer">路线 ↗</a></div>
+    </div>
+    <p class="detail-section-title">申请规划</p>
     <div class="selected-grid">
       <div class="selected-item"><b>QS 2027</b><span>${s.qs}</span></div>
       <div class="selected-item"><b>申请定位</b><span>${s.level}</span></div>
@@ -493,6 +556,8 @@ function detailHTML(s){
     </div>
     <div class="selected-gain"><b>毕业后的增量价值</b><span>${s.gain}</span></div>
     <button type="button" class="locate-school" data-locate="${s.name}">定位这所学校 ↗</button>
+    <p class="detail-source">${s.applyNote}<br><a href="${s.applyGuide}" target="_blank" rel="noopener noreferrer">官方申请说明 ↗</a> · <a href="${s.contact}" target="_blank" rel="noopener noreferrer">官方联系信息 ↗</a>${s.addressSource?` · <a href="${s.addressSource}" target="_blank" rel="noopener noreferrer">地址来源 ↗</a>`:""}<br>地址、电话及申请链接核对：2026.10.28<br>照片、评价与开放时间可在 Google Maps 查看。</p>
+    </div>
   `;
 }
 
@@ -507,6 +572,7 @@ function selectSchool(name){
   const panel=document.getElementById("selectedPanel");
   panel.className="selected";
   panel.innerHTML=detailHTML(s);
+  panel.scrollTop=0;
 
   const mobile=document.getElementById("mobileSelected");
   mobile.innerHTML=detailHTML(s);
