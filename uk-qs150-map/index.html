@@ -241,6 +241,8 @@ body{overflow:hidden}
   }
 }
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.6.1/ol.css">
+<style>#cleanBasemap{position:absolute;inset:0;z-index:100;pointer-events:none;background:#c8dcf4}#cleanBasemap .ol-viewport{pointer-events:none}.leaflet-container{background:#c8dcf4}</style>
 </head>
 <body>
 <div class="app" id="app">
@@ -288,6 +290,8 @@ body{overflow:hidden}
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/ol@10.6.1/dist/ol.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@13.8.0/dist/olms.js"></script>
 <script>
 const schools=[
 {name:"伯明翰大学",en:"University of Birmingham",initials:"BHM",qs:"=68",city:"Birmingham",lat:52.4508,lng:-1.9305,level:"冲刺",program:"MSc Marketing – Digital Marketing",cost:"约 ¥49–52万",gain:"学校平台强，补足品牌战略、消费者洞察和数字营销管理能力。"},
@@ -304,9 +308,36 @@ let currentFilter="全部";
 let activeName=null;
 
 const map=L.map("map",{zoomControl:false,scrollWheelZoom:true,attributionControl:true});
-L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png",{
-  maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="https://www.openstreetmap.fr/">OSM France</a>' 
-}).addTo(map);
+// Canvas vector basemap: Google-inspired palette, independent open map data.
+const baseHost=document.createElement("div");
+baseHost.id="cleanBasemap";
+map.getContainer().prepend(baseHost);
+try {
+const baseView=new ol.View({center:ol.proj.fromLonLat([-2.8,54.2]),zoom:6});
+const baseMap=new ol.Map({target:baseHost,controls:[],interactions:[],view:baseView,pixelRatio:Math.min(window.devicePixelRatio||1,2)});
+let pendingSync=false;
+function syncBasemap(){
+  if(pendingSync)return;
+  pendingSync=true;
+  requestAnimationFrame(()=>{
+    pendingSync=false;
+    if(!map._loaded)return;
+    baseMap.updateSize();
+    const center=map.getCenter();
+    baseView.setCenter(ol.proj.fromLonLat([center.lng,center.lat]));
+    baseView.setZoom(map.getZoom());
+  });
+}
+map.on("move zoom resize",syncBasemap);
+olms.apply(baseMap,"./map-style.json?v=1").then(syncBasemap).catch(error=>{
+  console.error("Basemap unavailable",error);
+  baseHost.innerHTML='<div style="position:absolute;left:18px;bottom:32px;color:#64748b;font:12px system-ui">地图底图暂时未能加载，请稍后刷新。</div>';
+});
+} catch(error) {
+  console.error("Basemap initialization unavailable",error);
+  baseHost.innerHTML='<div style="position:absolute;left:18px;bottom:32px;color:#64748b;font:12px system-ui">地图底图暂时未能加载，请稍后刷新。</div>';
+}
+map.attributionControl.addAttribution('<a href="https://openfreemap.org/">OpenFreeMap</a> · © <a href="https://openmaptiles.org/">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>');
 
 const markerMap=new Map();
 
@@ -322,7 +353,7 @@ function pinIcon(s){
       <span class="name">${s.name}</span>
       <span class="rank">${s.qs}</span>
     </div>`,
-    iconSize:[160,34],iconAnchor:[80,17]
+    iconSize:[0,0],iconAnchor:[0,0]
   });
 }
 
@@ -458,4 +489,5 @@ setTimeout(()=>map.invalidateSize(),180);
 </script>
 </body>
 </html>
+
 
