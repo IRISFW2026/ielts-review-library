@@ -268,7 +268,7 @@ body{overflow:hidden}
   <aside class="sidebar">
     <div class="selected empty" id="selectedPanel">
       <div class="hint-title">选择一所学校</div>
-      <div class="hint-sub">点击地图上的学校标签，或右侧学校列表。详情会固定显示在这里，不再遮挡地图。</div>
+      <div class="hint-sub">点击星标或院校列表，地图会放大到该校并点亮星标，详情显示在这里。</div>
     </div>
 
     <div class="sidebar-head">
@@ -281,7 +281,7 @@ body{overflow:hidden}
   <section class="mobile-content">
     <div class="mobile-selected" id="mobileSelected">
       <b>选择一所学校</b>
-      <div style="font-size:12px;color:#667085;margin-top:4px">点击上方地图标签或下面的院校卡片查看详情。</div>
+      <div style="font-size:12px;color:#667085;margin-top:4px">点击星标或院校卡片，放大到该校并点亮星标。</div>
     </div>
     <div class="mobile-list" id="mobileList"></div>
   </section>
@@ -395,7 +395,7 @@ function buildMarkers(){
   visible.forEach(s=>{
     if(markerMap.has(s.name))return;
     const marker=L.marker([s.lat,s.lng],{
-      icon:pinIcon(s),title:s.name+" · 点击查看详情",alt:s.name,
+      icon:pinIcon(s),title:s.name+" · 点击放大并查看详情",alt:s.name,
       keyboard:true,autoPanOnFocus:false,draggable:false,riseOnHover:false
     }).addTo(map);
     marker.on("click",()=>selectSchool(s.name));
@@ -511,6 +511,10 @@ function selectSchool(name){
   const mobile=document.getElementById("mobileSelected");
   mobile.innerHTML=detailHTML(s);
 
+  locateSchool(name);
+  if(window.innerWidth<=900){
+    map.getContainer().scrollIntoView({block:"start",behavior:"auto"});
+  }
 }
 
 document.querySelectorAll(".filter").forEach(btn=>{
@@ -523,10 +527,10 @@ document.querySelectorAll(".filter").forEach(btn=>{
     document.getElementById("selectedPanel").className="selected empty";
     document.getElementById("selectedPanel").innerHTML=
       `<div class="hint-title">选择一所学校</div>
-       <div class="hint-sub">点击地图上的学校标签，或右侧学校列表。详情会固定显示在这里，不再遮挡地图。</div>`;
+       <div class="hint-sub">点击星标或院校列表，地图会放大到该校并点亮星标，详情显示在这里。</div>`;
 
     document.getElementById("mobileSelected").innerHTML=
-      `<b>选择一所学校</b><div style="font-size:12px;color:#667085;margin-top:4px">点击上方地图标签或下面的院校卡片查看详情。</div>`;
+      `<b>选择一所学校</b><div style="font-size:12px;color:#667085;margin-top:4px">点击星标或院校卡片，放大到该校并点亮星标。</div>`;
 
     buildMarkers();
     renderLists();
