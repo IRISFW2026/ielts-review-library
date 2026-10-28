@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
@@ -152,15 +152,16 @@
         "口语训练",
         "综合练习"
       ],
-      "description": "Part 1至3 · 自定义题目 · 整场录音、分题时间轴与ZIP导出",
+      "description": "逐行导题 · Part 开场引导与3秒停顿 · 录音与AI复盘文本按练习时间导出",
       "path": "reviews/2026-10-23/speaking/mock/speaking-studio/index.html",
       "source": "IRISFW2026/speaking2026/index.html",
       "aliases": [
         "https://irisfw2026.github.io/speaking2026/"
       ],
       "dateBasis": "首次发布日期 工具没有单次材料日期",
-      "title": "1023-口语-模考-Speaking Studio 口语限时模考",
-      "url": "/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/"
+      "title": "口语模考，Speaking Studio",
+      "url": "/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/",
+      "displayTitle": "口语模考，Speaking Studio"
     },
     {
       "id": "four-listening-topics",

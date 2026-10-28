@@ -31,7 +31,7 @@
 | 2026-10-26 | 听力 Part 3 | [1026-听力-Part 3-Drama & Voice Coaching 戏剧声音指导](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/listening/part-3/drama-voice-coaching/) |
 | 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Five Task 1 Types 五类图表题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/five-task1-types/) |
 | 2026-10-23 | 写作 小作文 | [1023-写作-小作文-Town Population 英国小镇人口](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/writing/task-1/town-population/) |
-| 2026-10-23 | 口语 模考 | [1023-口语-模考-Speaking Studio 口语限时模考](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/) |
+| 2026-10-23 | 口语 模考 | [口语模考，Speaking Studio](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/) |
 | 2026-10-22 | 听力 合集 | [1022-听力-合集-Four Listening Topics 四篇听力主题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/listening/collection/four-listening-topics/) |
 | 2026-10-22 | 写作 小作文 | [1022-写作-小作文-Australia Employment 澳大利亚就业占比](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/writing/task-1/australia-employment/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Kākāpō 鸮鹦鹉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/kakapo/) |
@@ -73,3 +73,4 @@ node scripts/build-catalog.mjs --check
 - Singing：2026年10月6日的9道Part 1问答、纠错、关键词和跟读。
 
 原网址保留为跳转入口。两库的GitHub Pages使用同一域名，模考工具继续沿用原localStorage键；页面不上传或迁入用户录音。录音仍需在刷新或关闭前导出。详见 [迁移记录](docs/speaking-migration.md)。
+

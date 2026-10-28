@@ -22,7 +22,7 @@ for (const entry of catalog.entries) {
   if (ids.has(entry.id) || paths.has(entry.path)) throw new Error(`Duplicate entry: ${entry.id}`);
   ids.add(entry.id); paths.add(entry.path);
   await access(path.join(root, entry.path));
-  entry.title = `${entry.date.slice(5,7)}${entry.date.slice(8,10)}-${entry.skill}-${entry.kind}-${entry.en} ${entry.zh}`;
+  entry.title = entry.displayTitle || `${entry.date.slice(5,7)}${entry.date.slice(8,10)}-${entry.skill}-${entry.kind}-${entry.en} ${entry.zh}`;
   entry.url = prefix + entry.path.slice(0, -10);
 }
 catalog.entries.sort((a,b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
@@ -47,3 +47,4 @@ for (const [name,value] of outputs) {
 }
 if (check && stale.length) {console.error('Catalog outputs need regeneration: '+stale.join(', '));process.exitCode=1;}
 else console.log(`${check?'Checked':'Updated'} ${entries.length} topics; ${stale.length} file(s) ${check?'stale':'changed'}.`);
+

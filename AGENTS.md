@@ -21,3 +21,8 @@ The user has adopted the current date, skill and topic structure as the standard
 - Preserve responsive layout and existing practice features. Keep personal progress separate from static catalog data.
 - Present links with standardized display names. Prefer tables when presenting several links.
 - This is an update-on-creation workflow; do not claim that an unattended service monitors other conversations or creates future content by itself.
+
+
+## Speaking Studio tool exception
+
+The user explicitly requested the reusable tool name `口语模考，Speaking Studio` without a date prefix, including its homepage link. Its catalog entry uses `displayTitle`; the original canonical path and first publication date stay unchanged. This exception applies only to the reusable tool. Practice export filenames use the actual session start date and time in the device timezone (`MMDD-YYYY-HHmmss`), not the publication date or later download date. Preserve this behavior when regenerating the catalog.

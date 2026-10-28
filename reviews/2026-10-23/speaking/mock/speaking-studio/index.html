@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light" />
-<title>1023-口语-模考-Speaking Studio 口语限时模考</title>
+<title>口语模考，Speaking Studio</title>
 <style>
 :root{--ink:#16233b;--muted:#69778c;--paper:#f5f7fc;--surface:#fff;--line:#e6eaf2;--primary:#4759e9;--primary-dark:#343fc1;--lilac:#eef0ff;--teal:#158774;--warning:#a86a16;--error:#bc4b52;--radius:18px;--shadow:0 15px 45px rgba(30,45,90,.07)}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--paper)}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #b3bbff;outline-offset:2px}a{color:var(--primary)}
@@ -35,32 +35,33 @@
 .q-card .outline-mini-label{font-size:11px;color:#415989;font-weight:800;margin:10px 0 6px}
 .type-chip{font-weight:750;color:#674c95;font-size:11px;background:#f4eeff;border-radius:5px;padding:2px 6px}
 @media(max-width:860px){.cue-sheet{padding:15px}.cue-sheet ul{font-size:13px}}
+.session-label{margin-top:12px!important;color:var(--teal)!important;font-size:12px!important}.import-preview{border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}.import-preview summary{cursor:pointer;font-size:13px;font-weight:700}.preview-list{max-height:220px;overflow:auto;margin-top:10px;font-size:12px;line-height:1.7}.preview-list ol{padding-left:24px}.preview-list li{padding:3px 0}.handoff-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}.handoff-card{border:1px solid var(--line);border-radius:15px;padding:20px;background:#fafbff}.handoff-card h3{font-size:18px;margin:10px 0}.handoff-card p{font-size:13px;line-height:1.7;color:var(--muted)}.handoff-card small{display:block;overflow-wrap:anywhere;color:var(--muted);margin-top:12px;font-size:11px}.handoff-card audio{width:100%;margin:0 0 16px}.step{font-size:12px;font-weight:750;color:var(--primary)}#report-preview{width:100%;min-height:260px;margin:15px 0;border:1px solid var(--line);border-radius:10px;padding:12px;resize:vertical;font:12px/1.7 system-ui}.answer-card .replay-answer{margin-top:12px}@media(max-width:680px){.handoff-grid{grid-template-columns:1fr}.handoff-card{padding:16px}.result-summary{grid-template-columns:repeat(3,minmax(0,1fr))}.metric{padding:10px}.result-toolbar .pill{font-size:11px;white-space:normal}}
 </style>
 <style id="review-library-navigation">.library-navigation{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 20px;padding:0 0 13px;border-bottom:1px solid #dfe6ee;font:13px/1.7 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}.library-navigation a{color:#365f91;text-decoration:none;font-weight:650;min-height:30px;display:inline-flex;align-items:center}.library-navigation span{color:#728093}.hero h1{font-size:clamp(24px,3vw,35px);line-height:1.5;letter-spacing:0;overflow-wrap:anywhere}@media(max-width:600px){.library-navigation{font-size:12px;gap:7px}.controls select,.controls button,.btn{min-height:44px}select,textarea{font-size:16px!important}.hero h1{font-size:24px}}</style></head>
 <body>
-<div class="shell"><nav class="library-navigation" aria-label="复习库导航"><a href="/ielts-review-library/index.html">← 复习总览</a><span>2026-10-23 · 口语</span><a href="/ielts-review-library/reviews/2026-10-06/speaking/part-1/singing/">Singing 唱歌练习 →</a></nav>
+<div class="shell"><nav class="library-navigation" aria-label="复习库导航"><a href="/ielts-review-library/index.html">← 复习总览</a><span>口语训练工具</span><a href="/ielts-review-library/reviews/2026-10-06/speaking/part-1/singing/">Singing 唱歌练习 →</a></nav>
   <header class="top">
     <div class="identity"><div class="mark">S.</div><div><strong>Speaking Studio</strong><small>IELTS SPEAKING · YOUR PRACTICE SPACE</small></div></div>
     <div class="topright"><span class="privacy">● 本地优先 · 不公开上传</span><nav class="tabs" aria-label="工作流程"><button id="tab-editor" class="tab active" data-tab="editor">01 题库</button><button id="tab-exam" class="tab" data-tab="exam">02 限时模考</button><button id="tab-results" class="tab" data-tab="results">03 复盘导出</button></nav></div>
   </header>
-  <section class="hero"><div class="eyebrow">Practice smarter, not longer</div><h1>1023-口语-模考-Speaking Studio 口语限时模考</h1><p>粘贴新题目，直接开练。Part 1 / Part 3 每题 30 秒，Part 2 每题 2 分钟；倒计时结束后自动结束本题并切到下一题。复盘时一键导出完整题目、答题时间轴、Part 2 提纲和整场原始录音；无需人工校对实时转写。</p><div class="stats"><span class="pill">Part 1 <span>00:30</span></span><span class="pill">Part 2 <span>02:00</span></span><span class="pill">Part 3 <span>00:30</span></span><span class="pill">自动切题 <span>ON</span></span></div></section>
+  <section class="hero"><div class="eyebrow">Practice smarter, not longer</div><h1>口语模考，Speaking Studio</h1><p>粘贴题目 → 听考官引导、限时作答并录音 → 把录音和复盘文本交给 AI。每个 Part 开始先播报引导语，停顿 3 秒再读第一题；读完题目才开始作答计时。</p><p id="session-label" class="session-label">导出按实际练习时间命名</p><div class="stats"><span class="pill">Part 1 <span>00:30</span></span><span class="pill">Part 2 <span>02:00</span></span><span class="pill">Part 3 <span>00:30</span></span><span class="pill">自动切题 <span>ON</span></span></div></section>
 
   <main>
     <section id="view-editor" class="layout">
       <div class="panel">
-        <div class="section-top"><h2>导入一套新题</h2><span class="mini">支持粘贴 Wofo 风格题目</span></div>
-        <p class="subtle">按照 Part 1 / Part 2 / Part 3 分段，直接粘贴含编号的问题和 Part 2 要点。下面已经放入一套示例；点击“解析并载入”即可更换。</p>
+        <div class="section-top"><h2>导入一套新题</h2><span class="mini">支持无题号 · 每行一道题</span></div>
+        <p class="subtle">直接粘贴即可，不需要自己编号。整套题请保留 Part 1 / Part 2 / Part 3 标题；Part 2 的 You should say 和提示点会合并为一张题卡。先查看下方识别预览，再载入。短话题标题（如 Singing）会作为分组。</p>
         <textarea id="paper-input" class="editor" spellcheck="false" aria-label="雅思口语题目文本"></textarea>
-        <div class="btn-row"><button class="btn primary" id="parse-btn">解析并载入这套题 →</button><button class="btn secondary" id="restore-demo-btn">恢复示例题</button></div>
+        <div class="field"><label for="import-part">没有 Part 标题的内容归入</label><select id="import-part" class="voice-select"><option value="1">Part 1 · 每行一道题</option><option value="2">Part 2 · 题干 + 提示点</option><option value="3">Part 3 · 每行一道题</option></select></div><details class="import-preview" open><summary id="import-summary">识别预览</summary><div id="import-preview" aria-live="polite"></div></details><div class="btn-row"><button class="btn primary" id="parse-btn">解析并载入这套题 →</button><button class="btn secondary" id="restore-demo-btn">恢复示例题</button></div>
         <div id="parse-message" aria-live="polite"></div>
         <div class="divider"></div>
         <div class="section-top"><h2>模考设置</h2></div>
-        <label class="switch"><input type="checkbox" id="speech-on"> 可选：试验性实时英语转写（默认关闭，不建议作为评分依据）</label>
+        <label class="switch"><input type="checkbox" id="speech-on"> 可选：实时英语转写（默认关闭，可能经浏览器在线服务处理）</label>
         <label class="switch"><input type="checkbox" id="read-on" checked> 自动朗读每道题（朗读结束后，才开始倒计时）</label>
         <div class="field"><label for="tts-voice">考官声音 · 优先英式英语</label><select id="tts-voice" class="voice-select"><option value="">自动选择英式英语语音</option></select><span class="mini">使用 Mac / Chrome 系统语音，并非雅思考试官方原声；无可用语音时可手动开始计时。</span></div>
         <label class="switch"><input type="checkbox" id="prep-on"> Part 2 先准备 60 秒（可选，默认关闭）</label>
         <label class="switch"><input type="checkbox" id="hint-on" checked> 模考时显示答题思路</label>
-        <div class="notice">以<strong>原始录音 + 每题答题时间轴</strong>为准。默认不转写，也不用花时间校对。结束后一键下载 ZIP（音频 + 题目 + 时间点 + 提纲）。题目和笔记暂存在本机浏览器；<strong>录音必须在刷新或关闭前下载</strong>。</div>
+        <div class="notice">练完只需保存<strong>录音 + AI 复盘文本</strong>，在支持音频分析的 AI 中一起上传。文本已经包含转写、预估评分、纠错、参考答案和生成 Word 的要求。<strong>录音请在刷新或关闭前下载</strong>；网页不会自动上传或给出 AI 评分。</div>
         <div class="btn-row"><button class="btn primary btn-wide" id="start-btn">开始完整限时模考　→</button></div>
       </div>
       <aside class="panel"><div class="section-top"><h2>题目与答题思路</h2><span id="question-count" class="mini">0 题</span></div><p class="subtle">系统会为新题生成基础答题框架；你可以在这里逐题修改。思路是提示，不是固定范文。</p><div id="question-list" class="q-list"></div></aside>
@@ -82,14 +83,20 @@
     </section>
 
     <section id="view-results" class="panel hidden">
-      <div class="result-toolbar"><div><h2>这一套练完了</h2><p class="subtle" style="margin:0">无需校对识别结果。保存原始录音和分题时间轴，再交给 ChatGPT 分析。</p></div><div class="result-actions"><button class="btn secondary" id="copy-btn">复制题目 + 时间轴</button><button class="btn primary" id="export-zip-btn">一键导出完整复盘包 ZIP</button></div></div>
+      <div class="result-toolbar"><div><h2>把这一轮练习交给 AI 复盘</h2><p class="subtle" style="margin:0">保存两个文件，在同一条 AI 消息中一起上传。无需解压。</p></div><span id="result-session" class="pill"></span></div>
       <div id="results-summary" class="result-summary"></div>
-      <div id="results-notice" class="notice"></div>
-      <div class="btn-row" style="margin-bottom:18px"><button class="btn secondary" id="download-txt-btn">下载题目与时间轴 .txt</button><button class="btn secondary" id="download-audio-btn">下载整场录音</button><button class="btn ghost" id="again-btn">使用本套题再练一次</button><button class="btn ghost" id="edit-new-btn">编辑 / 导入新题</button></div>
+      <div id="results-notice" class="notice" aria-live="polite"></div>
+      <div class="handoff-grid">
+        <div class="handoff-card"><span class="step">1 · 保存声音</span><h3>整场原始录音</h3><p>你的真实作答，保留停顿、语速和发音。先回听确认，再下载。</p><audio id="review-audio" controls preload="metadata" class="hidden"></audio><button class="btn primary" id="download-audio-btn">下载录音</button><small id="audio-filename"></small></div>
+        <div class="handoff-card"><span class="step">2 · 保存题目和要求</span><h3>AI 复盘文本</h3><p>包含题目、作答时间段、提纲和完整批改要求。与录音一起上传给 AI。</p><div class="btn-row"><button class="btn primary" id="download-txt-btn">下载 AI 复盘文本</button><button class="btn secondary" id="copy-btn">复制给 AI</button></div><small id="text-filename"></small></div>
+      </div>
+      <div class="notice">下一步：在支持音频分析的 AI 中，同时上传<strong>录音 + AI 复盘文本</strong>；若只能粘贴文字，先上传录音，再点「复制给 AI」。AI 应先转写，再逐题纠错、预估四项分数、给 7 分参考答案，最后整理 Word。若 AI 无法读取录音，请先获取可靠转写；仅凭文字不能评价发音。</div>
+      <details class="transcript-optional"><summary>预览要交给 AI 的完整内容 / 备用 ZIP</summary><textarea id="report-preview" readonly aria-label="AI 复盘文本预览"></textarea><button class="btn ghost" id="export-zip-btn">备用：下载两文件 ZIP</button><p class="smallnote">ZIP 只保留录音和复盘文本；日常使用上面两个下载按钮即可。</p></details>
+      <div class="btn-row" style="margin-bottom:18px"><button class="btn ghost" id="again-btn">使用本套题再练一次</button><button class="btn ghost" id="edit-new-btn">编辑 / 导入新题</button></div>
       <div id="answer-list" class="answers"></div>
     </section>
   </main>
-  <div class="footer">Speaking Studio · 个人单文件网页 · 无需充值 · 未经你操作不会自动发布或分享资料<br>建议 Mac 使用 Chrome，允许麦克风；语音识别默认关闭。先导出音频再关闭页面。</div>
+  <div class="footer">Speaking Studio · 引导听题 / 录音练习 / AI 复盘材料<br>建议 Mac 使用 Chrome，允许麦克风；语音识别默认关闭。先导出音频再关闭页面。</div>
 </div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
@@ -116,7 +123,7 @@ Part 3
 3. Do you think good teachers are always popular among students?
 4. What are the qualities of being a good teacher?`;
 const $=id=>document.getElementById(id);
-const STORAGE='ielts-speaking-studio-v1';let requestedVoice='';
+const STORAGE='ielts-speaking-studio-v1';let requestedVoice='', sessionStartedAt=null, sessionStamp='', audioFinalizing=false, startingExam=false, audioDownloaded=false, playbackEnd=null, importPreviewHandle=0;
 let raw=EXAMPLE, questions=[], view='editor', active=0, phase='reading', timerTick=0, deadline=0, fullTime=30, onGoing=false, stream=null, recorder=null, recordingParts=[], recordingBlob=null, recordingUrl=null, recordingMime='', recordStartedAt=0, speech=null, speechActive=false, recStorage='', recFinal='', recInterim='', autoNextHandle=0, allowRecording=false, speechWarning='', testedOnce=false, voiceList=[], readingToken=0, isQuestionSpeaking=false, audioReadyPromise=Promise.resolve(false), audioReadyResolve=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const clean=s=>s.replace(/\*\*/g,'').replace(/^\s*#+\s*/,'').replace(/^\s*[-–]\s*(?=part\s*\d)/i,'').trim();
@@ -127,7 +134,7 @@ function offsetTime(n){if(n==null||!Number.isFinite(n))return '—';const ticks=
 function mark(){return Math.round(Math.max(0,(performance.now()-recordStartedAt)/1000)*100)/100}
 function timeRange(a,b){return offsetTime(a)+' → '+offsetTime(b)}
 function timeTimeline(q){return `题目出现 ${offsetTime(q.questionAt)} · 朗读 ${timeRange(q.readStartAt,q.readEndAt)} · 准备 ${timeRange(q.prepStartAt,q.prepEndAt)} · 作答 ${timeRange(q.startedAt,q.finishedAt)}`}
-function updateSegment(){const el=$('segment-live');if(!el)return;const q=questions[active];el.textContent=`${offsetTime(mark())} · ${q?'Part '+q.part+' · '+(phase==='reading'?'朗读题目':phase==='prepare'?'准备提纲':phase==='answer'?'限时作答':'待开始'):'待开始'}`}
+function updateSegment(){const el=$('segment-live');if(!el)return;const q=questions[active];el.textContent=`${offsetTime(mark())} · ${q?'Part '+q.part+' · '+(phase==='intro'?'Part 开场引导':phase==='reading'?'朗读题目':phase==='prepare'?'准备提纲':phase==='answer'?'限时作答':'待开始'):'待开始'}`}
 
 function h(s){return (s||'').split('\n').map(x=>x.trim()).filter(Boolean)}
 const PART2_LABELS={experience:'经历 / 故事',person:'人物',place:'地点',object:'物品',media:'书籍 / 影视 / 媒体',activity:'活动 / 爱好',skill:'技能 / 学习',event:'事件 / 场合',idea:'观点 / 规则',other:'综合描述'};
@@ -191,40 +198,54 @@ function guidance(q){const s=q.text.toLowerCase();
  if(/^should |^is it important |^do you think/.test(s))return '明确观点（可以有条件）\n原因：对谁有什么影响\n一个例子或另一面';
  return q.part===1?'直接回答\n补充个人细节\n给出一个原因': '明确观点\n解释原因\n举例或说明结果';
 }
-function parsePaper(text){const lines=text.split(/\r?\n/);let part=0,topic='',items=[],p2=null,hasCueIntro=false;
- const addCue=(line)=>{if(!p2)return;const cleaned=line.replace(/^(?:[-•*]\s*|\d+[.)、]\s*)/,'').trim();if(cleaned)p2.cues.push(cleaned)};
- for(const source of lines){const t=clean(source);if(!t||/^(题目|全程模考|×|x)$/i.test(t))continue;
- const pm=t.match(/^part\s*([123])(?:\b|\s|:|：)/i);if(pm){part=Number(pm[1]);topic='';p2=null;hasCueIntro=false;continue;}
- const n=t.match(/^\d{1,2}\s*[.)、]\s*(.+)/);
- if(part===2){
-  if(/^you should say\s*[:：]?$/i.test(t)){hasCueIntro=true;continue;}
-  if(/^(?:[-•*]\s*|\d+[.)、]\s*)/.test(t)&&p2){addCue(t);continue;}
-  if(!p2&&(/^(?:describe|talk about|tell me about)\b/i.test(t)||n)){
-   p2={part:2,text:n?n[1]:t,topic:'Long turn',cues:[],outline:'',transcript:'',status:'pending'};items.push(p2);continue;
+
+function parsePaper(text, defaultPart=Number($('import-part')?.value||1)){
+ const lines=text.replace(/\r/g,'').split('\n');let part=defaultPart,topic='',items=[],p2=null,cueMode=false;
+ const hasParts=lines.some(x=>/^part\s*[123](?:\b|[:：])/i.test(clean(x)));
+ const strip=x=>x.replace(/^(?:(?:Q(?:uestion)?\s*)?\d{1,3}\s*[.)、:：]\s*|[•●▪*–—-]\s*)/i,'').trim();
+ const isQuestion=x=>/[?？]$/.test(x)||/^(?:what|why|when|where|who|whose|which|how|do|does|did|is|are|was|were|have|has|had|can|could|would|will|should|tell|describe|talk)\b/i.test(x);
+ const add=(text,p=part)=>{const q={part:p,topic:topic||`Part ${p}`,text,cues:[],outline:'',transcript:'',status:'pending'};items.push(q);return q};
+ for(const source of lines){const t=clean(source);if(!t||/^(?:题目|questions?|ielts speaking|全程模考|×)$/i.test(t))continue;
+  const pm=t.match(/^part\s*([123])(?:\b|[:：])/i);if(pm){part=+pm[1];topic='';p2=null;cueMode=false;continue}
+  const body=strip(t);if(!body)continue;
+  if(part===2){
+   if(/^you should say\s*[:：]?$/i.test(body)){cueMode=true;continue}
+   if(/^(?:describe|talk about|tell me about)\b/i.test(body)){p2=add(body);cueMode=false;continue}
+   if(!p2){p2=add(body);continue}
+   if(cueMode||/^(?:who|what|when|where|why|how|which|and explain|explain)\b/i.test(body)||/^[-•*–]/.test(t)){p2.cues.push(body);continue}
+   // A wrapped cue line continues the preceding cue; never becomes a new Part 2 question.
+   if(p2.cues.length)p2.cues[p2.cues.length-1]+=' '+body;else p2.text+=' '+body;
+  }else{
+   const numbered=/^(?:Q(?:uestion)?\s*)?\d{1,3}\s*[.)、:：]/i.test(t);
+   const shortHeading=body.split(/\s+/).length<=5&&!isQuestion(body)&&!numbered;
+   if(shortHeading&&hasParts){topic=body;continue}
+   add(body);
   }
-  if(p2&&/^(who|what|when|where|why|how|which|and explain|explain)\b/i.test(t)){addCue(t);continue;}
-  if(p2&&hasCueIntro&&t&&!/^(?:describe|talk about)\b/i.test(t)){addCue(t);continue;}
-  if(p2&&p2.cues.length&&t&&!/^\w+\s*[:：]$/.test(t)){p2.cues[p2.cues.length-1]+=' '+t;continue;}
-  continue;
  }
- if(n){if(!part)part=1;items.push({part,topic:topic||`Part ${part}`,text:n[1],cues:[],transcript:'',status:'pending'});continue;}
- if(part===1||part===3){if(!/^[-•*]/.test(t)&&!/^(?:\d+|you should say)\s*[:：]?$/.test(t))topic=t;}
- }
- items.forEach((q,i)=>{q.id=i+1;q.hint=guidance(q);q.seconds=partSeconds(q.part);q.durationActual=0;q.startedAt=null;q.finishedAt=null;q.questionAt=null;q.readStartAt=null;q.readEndAt=null;q.prepStartAt=null;q.prepEndAt=null;});return items;
+ items.forEach((q,i)=>{q.id=i+1;q.hint=guidance(q);q.seconds=partSeconds(q.part);q.durationActual=0;for(const k of ['startedAt','finishedAt','questionAt','readStartAt','readEndAt','prepStartAt','prepEndAt'])q[k]=null});return items;
 }
-function save(){try{localStorage.setItem(STORAGE,JSON.stringify({raw,questions,settings:{speech:$('speech-on').checked,prep:$('prep-on').checked,showHint:$('hint-on').checked,read:$('read-on').checked,voice:$('tts-voice').value}}))}catch(e){console.warn('Local save unavailable',e)}}
-function restore(){try{const x=JSON.parse(localStorage.getItem(STORAGE));if(x&&x.raw&&Array.isArray(x.questions)&&x.questions.length){raw=x.raw;questions=x.questions.map((q,i)=>{const v={...q,id:i+1,seconds:partSeconds(q.part),outline:q.outline||''};if(v.part===2&&(!v.hint||v.hint==='人物是谁 / 如何认识\n描述性格与一件具体事例\n平时什么时候见到 / 联系\n总结他（她）受欢迎的原因'))v.hint=guidance(v);return v});$('speech-on').checked=!!x.settings?.speech;$('prep-on').checked=!!x.settings?.prep;$('hint-on').checked=x.settings?.showHint!==false;$('read-on').checked=x.settings?.read!==false;requestedVoice=x.settings?.voice||'';return}}catch(e){}questions=parsePaper(raw)}
-function goto(name){if(onGoing&&name!=='exam'){toast('模考进行中；请先结束整套模考');return}view=name;['editor','exam','results'].forEach(n=>{$('view-'+n).classList.toggle('hidden',n!==name);$('tab-'+n).classList.toggle('active',n===name)});if(name==='results')renderResults();window.scrollTo({top:0,behavior:'smooth'})}
+function previewImport(){const draft=$('paper-input').value;const parsed=parsePaper(draft);$('import-summary').textContent=`识别预览 · ${parsed.length} 道题 · 自动编号`;
+ $('import-preview').innerHTML=parsed.length?'<div class="preview-list"><ol>'+parsed.map(q=>`<li><b>Part ${q.part}</b> · ${esc(q.text)}${q.cues.length?` <span class="mini">（${q.cues.length} 个提示点）</span>`:''}</li>`).join('')+'</ol></div>':'<p class="smallnote">粘贴题目后会在这里逐行识别。没有 Part 标题时，使用上方选择的 Part。</p>';
+}
+function stampDate(date){const p=n=>String(n).padStart(2,'0');return `${p(date.getMonth()+1)}${p(date.getDate())}-${date.getFullYear()}-${p(date.getHours())}${p(date.getMinutes())}${p(date.getSeconds())}`}
+function sessionDate(){return sessionStartedAt?new Date(sessionStartedAt):new Date()}
+function exportPrefix(){return `${sessionStamp||stampDate(sessionDate())}-口语模考`}
+function sessionLabel(){return sessionStartedAt?sessionDate().toLocaleString('zh-CN',{hour12:false})+' · 本次练习开始时间':'尚未开始 · 文件按实际练习时间命名'}
+function updateSessionLabel(){$('session-label').textContent=sessionLabel()}
+function protectRecording(){return !audioFinalizing&&(!recordingBlob||audioDownloaded||window.confirm('这一轮录音尚未下载。继续会清除它，确定已不需要保存吗？'))}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify({raw,questions,sessionStartedAt,sessionStamp,settings:{speech:$('speech-on').checked,prep:$('prep-on').checked,showHint:$('hint-on').checked,read:$('read-on').checked,voice:$('tts-voice').value}}))}catch(e){console.warn('Local save unavailable',e)}}
+function restore(){try{const x=JSON.parse(localStorage.getItem(STORAGE));if(x&&x.raw&&Array.isArray(x.questions)&&x.questions.length){raw=x.raw;sessionStartedAt=x.sessionStartedAt&&Number.isFinite(Date.parse(x.sessionStartedAt))?x.sessionStartedAt:null;sessionStamp=sessionStartedAt?(/^\d{4}-\d{4}-\d{6}$/.test(x.sessionStamp||'')?x.sessionStamp:stampDate(new Date(sessionStartedAt))):'';questions=x.questions.map((q,i)=>{const v={...q,id:i+1,seconds:partSeconds(q.part),outline:q.outline||''};if(v.part===2&&(!v.hint||v.hint==='人物是谁 / 如何认识\n描述性格与一件具体事例\n平时什么时候见到 / 联系\n总结他（她）受欢迎的原因'))v.hint=guidance(v);return v});$('speech-on').checked=!!x.settings?.speech;$('prep-on').checked=!!x.settings?.prep;$('hint-on').checked=x.settings?.showHint!==false;$('read-on').checked=x.settings?.read!==false;requestedVoice=x.settings?.voice||'';return}}catch(e){}questions=parsePaper(raw)}
+function goto(name){if(startingExam&&name!=='editor'){toast('正在申请麦克风，请稍等');return}if(onGoing&&name!=='exam'){toast('模考进行中；请先结束整套模考');return}view=name;['editor','exam','results'].forEach(n=>{$('view-'+n).classList.toggle('hidden',n!==name);$('tab-'+n).classList.toggle('active',n===name)});if(name==='results')renderResults();window.scrollTo({top:0,behavior:'smooth'})}
 function renderList(){const c=$('question-list');$('question-count').textContent=`${questions.length} 道题`;if(!questions.length){c.innerHTML='<div class="empty">还没有导入题目</div>';return}
  c.innerHTML=questions.map((q,i)=>`<div class="q-card"><div class="qcard-head"><span class="part-tag p${q.part}">PART ${q.part} · Q${questions.filter(x=>x.part===q.part).indexOf(q)+1}</span><div class="qcard-tags"><span class="mini">${q.seconds}s</span><button class="speak-btn small" type="button" title="试听这道题" aria-label="试听第 ${i+1} 道题" data-preview-index="${i}">🔊</button></div></div><strong>${esc(q.text)}</strong>${q.part===2?`<div class="qcard-full-cues"><strong>完整题卡 · You should say</strong>${q.cues?.length?`<ul>${q.cues.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<span class="mini">这道题没有提供分项提示点</span>'}</div><div class="qcard-hint">自动识别题型：<span class="type-chip">${PART2_LABELS[part2Type(q)]}</span> · 答题思路将结合提示点生成</div><div class="outline-mini-label">✎ 我的 Part 2 提纲（可选；与模考页面同步）</div><textarea class="outline-editor compact" data-outline-index="${i}" placeholder="写下关键词和思路；内容会一起导出">${esc(q.outline||'')}</textarea>`:''}<div class="qcard-hint">答题思路（可编辑）</div><textarea class="hint-editor" aria-label="${esc(q.text)} 的答题思路" data-hint-index="${i}">${esc(q.hint)}</textarea></div>`).join('');
  c.querySelectorAll('textarea[data-hint-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.hintIndex].hint=e.value;save()}));
- c.querySelectorAll('textarea[data-outline-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.outlineIndex].outline=e.value;save()}));
+ c.querySelectorAll('textarea[data-outline-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.outlineIndex].outline=e.value;save();$('report-preview').value=getReport()}));
  c.querySelectorAll('button[data-preview-index]').forEach(e=>e.addEventListener('click',()=>{if(onGoing)return;playQuestion(questions[+e.dataset.previewIndex],null,e)}));
 }
 function showQuestion(){const q=questions[active];$('exam-part').textContent=`PART ${q.part}`;$('exam-part').className=`part-tag p${q.part}`;$('exam-number').textContent=`${String(active+1).padStart(2,'0')} / ${String(questions.length).padStart(2,'0')}`;$('progress-fill').style.width=`${active/questions.length*100}%`;$('exam-topic').textContent=(q.topic||`PART ${q.part}`).toUpperCase();$('exam-question').textContent=q.text;$('exam-tips-list').innerHTML=h(q.hint).map(x=>`<li>${esc(x)}</li>`).join('');$('exam-tips').classList.toggle('hidden',!$('hint-on').checked);$('exam-cues').classList.toggle('hidden',q.part!==2);$('exam-cues-list').innerHTML=(q.cues?.length?q.cues:['本题没有提供额外提示点，请围绕题干展开。']).map(x=>`<li>${esc(x)}</li>`).join('');$('part2-outline-box').classList.toggle('hidden',q.part!==2);$('part2-outline').value=q.part===2?(q.outline||''):'';$('live-transcript').innerHTML='<i>正在等待语音识别结果…</i>';setTimer(q.seconds,q.seconds);}
 function setTimer(left,total){$('timer-text').textContent=niceTime(left);let percent=100*Math.max(0,Math.min(1,left/total));const circle=$('timer-circle');circle.style.background=`conic-gradient(${left<=7?'#bc4b52':'#4759e9'} ${percent}%,${left<=7?'#ffe8e9':'#eef0ff'} 0%)`;circle.classList.toggle('ending',left<=7);circle.style.setProperty('--percent',percent+'%');updateSegment()}
 function refreshVoices(){
- if(!('speechSynthesis' in window))return;
+ if(!window.speechSynthesis)return;
  voiceList=window.speechSynthesis.getVoices().filter(v=>/^en[-_]/i.test(v.lang));
  voiceList.sort((a,b)=>Number(/^en[-_]GB/i.test(b.lang))-Number(/^en[-_]GB/i.test(a.lang))||a.name.localeCompare(b.name));
  const select=$('tts-voice');if(!select)return;
@@ -233,12 +254,12 @@ function refreshVoices(){
  if(voiceList.some(v=>v.voiceURI===value))select.value=value;
 }
 function getSelectedVoice(){const v=$('tts-voice').value||requestedVoice;return voiceList.find(x=>x.voiceURI===v)||voiceList.find(x=>/^en[-_]GB/i.test(x.lang))||voiceList.find(x=>/^en[-_]US/i.test(x.lang))||voiceList[0]||null}
-function stopQuestionAudio(){readingToken++;isQuestionSpeaking=false;document.querySelectorAll('.speak-btn').forEach(b=>b.classList.remove('reading'));try{window.speechSynthesis?.cancel()}catch(e){}}
+function stopQuestionAudio(){clearTimeout(autoNextHandle);readingToken++;isQuestionSpeaking=false;document.querySelectorAll('.speak-btn').forEach(b=>b.classList.remove('reading'));try{window.speechSynthesis?.cancel()}catch(e){}}
 function speakText(q){if(q.part===2){return `${q.text}. You should say: ${(q.cues||[]).join('. ')}.`}return q.text}
 function requireManualStart(message){if(!onGoing||phase!=='reading')return;$('begin-answer-btn').classList.remove('hidden');$('timer-caption').textContent='题目播报未完成 · 计时未开始';$('exam-status').textContent=message+'。点击「开始计时」继续，或按喇叭重试。'}
 function playQuestion(q,onComplete=null,button=null){
  if(!q)return;stopQuestionAudio();
- if(!('speechSynthesis' in window)||!('SpeechSynthesisUtterance' in window)){
+ if(!window.speechSynthesis||!window.SpeechSynthesisUtterance){
   if(onComplete)requireManualStart('浏览器不支持语音朗读');else toast('当前浏览器不支持朗读功能');return;
  }
  const token=readingToken, utt=new SpeechSynthesisUtterance(speakText(q));
@@ -252,27 +273,47 @@ function playQuestion(q,onComplete=null,button=null){
 }
 function afterQuestionRead(){if(!onGoing||phase!=='reading')return;$('begin-answer-btn').classList.add('hidden');const q=questions[active];if(q.part===2&&$('prep-on').checked){phase='prepare';q.prepStartAt=mark();$('timer-caption').textContent='Part 2 准备时间';$('exam-status').textContent='题目朗读结束 · 准备 60 秒后自动进入 2 分钟回答';updateSegment();startCountdown(60)}else startAnswer()}
 function micStatus(text,type=''){const n=$('mic-indicator');n.textContent=text;n.className='notice'+(type?' '+type:'')}
-async function startExam(){if(!questions.length){toast('请先解析并载入题目');return}if(onGoing)return;if(recorder?.state==='recording'){toast('上一场录音尚未结束');return}if(questions.some(q=>q.status==='done'||q.status==='skipped'||q.transcript?.trim())){if(!window.confirm('开始新模考将清空上一轮时间轴和转写；如果原录音还没导出，也将丢失。确定继续吗？'))return}
- stopQuestionAudio();clearTimeout(autoNextHandle);if(recordingUrl)URL.revokeObjectURL(recordingUrl);recordingUrl=null;recordingBlob=null;recordingParts=[];recordingMime='';stream=null;recorder=null;testedOnce=false;allowRecording=false;audioReadyPromise=Promise.resolve(false);audioReadyResolve=null;questions.forEach(q=>{q.transcript='';q.status='pending';q.durationActual=0;q.startedAt=null;q.finishedAt=null;q.questionAt=null;q.readStartAt=null;q.readEndAt=null;q.prepStartAt=null;q.prepEndAt=null});save();
- try{if(!navigator.mediaDevices?.getUserMedia)throw new Error('当前页面无法申请麦克风。请使用最新版 Chrome，或通过 HTTPS 打开网页。');stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:false});if(typeof MediaRecorder==='undefined')throw new Error('浏览器不支持整场音频录制');let choices=['audio/webm;codecs=opus','audio/mp4','audio/webm'];recordingMime=choices.find(t=>MediaRecorder.isTypeSupported(t))||'';recorder=new MediaRecorder(stream,recordingMime?{mimeType:recordingMime}:undefined);audioReadyPromise=new Promise(resolve=>{audioReadyResolve=resolve});recorder.ondataavailable=e=>{if(e.data?.size)recordingParts.push(e.data)};recorder.onstop=()=>{recordingBlob=new Blob(recordingParts,{type:recorder.mimeType||recordingMime||'audio/webm'});if(recordingBlob.size)recordingUrl=URL.createObjectURL(recordingBlob);audioReadyResolve?.(recordingBlob.size>0);audioReadyResolve=null;if(view==='results')renderResults()};recorder.onerror=()=>{audioReadyResolve?.(false);audioReadyResolve=null};recorder.start(1000);allowRecording=true}catch(e){allowRecording=false;if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}const msg=e.message||String(e);if(!window.confirm(`录音不可用：${msg}
+async function startExam(){if(!questions.length){toast('请先解析并载入题目');return}if(onGoing||startingExam)return;if(audioFinalizing||recorder?.state==='recording'){toast('上一场录音尚未结束，请稍等');return}if($('paper-input').value.trim()!==raw){changePaper();toast('已识别新题；确认题目后再点击开始');return}if(recordingBlob||questions.some(q=>q.status==='done'||q.status==='skipped'||q.transcript?.trim())){if(!window.confirm('开始新模考将清空上一轮时间轴和转写；如果原录音还没导出，也将丢失。确定继续吗？'))return}
+ stopQuestionAudio();clearTimeout(autoNextHandle);sessionStartedAt=null;sessionStamp='';audioDownloaded=false;playbackEnd=null;if(recordingUrl)URL.revokeObjectURL(recordingUrl);recordingUrl=null;recordingBlob=null;recordingParts=[];recordingMime='';stream=null;recorder=null;testedOnce=false;allowRecording=false;audioReadyPromise=Promise.resolve(false);audioReadyResolve=null;questions.forEach(q=>{q.transcript='';q.status='pending';q.durationActual=0;q.startedAt=null;q.finishedAt=null;q.questionAt=null;q.readStartAt=null;q.readEndAt=null;q.prepStartAt=null;q.prepEndAt=null});save();
+ startingExam=true;$('start-btn').disabled=true;try{if(!navigator.mediaDevices?.getUserMedia)throw new Error('当前页面无法申请麦克风。请使用最新版 Chrome，或通过 HTTPS 打开网页。');stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:false});if(typeof MediaRecorder==='undefined')throw new Error('浏览器不支持整场音频录制');let choices=['audio/webm;codecs=opus','audio/mp4','audio/webm'];recordingMime=choices.find(t=>MediaRecorder.isTypeSupported(t))||'';recorder=new MediaRecorder(stream,recordingMime?{mimeType:recordingMime}:undefined);audioReadyPromise=new Promise(resolve=>{audioReadyResolve=resolve});recorder.ondataavailable=e=>{if(e.data?.size)recordingParts.push(e.data)};recorder.onstop=()=>{audioFinalizing=false;recordingBlob=new Blob(recordingParts,{type:recorder.mimeType||recordingMime||'audio/webm'});if(recordingBlob.size)recordingUrl=URL.createObjectURL(recordingBlob);audioReadyResolve?.(recordingBlob.size>0);audioReadyResolve=null;if(view==='results')renderResults()};recorder.onerror=()=>{audioFinalizing=false;audioReadyResolve?.(false);audioReadyResolve=null;micStatus('录音设备发生错误，结束后请检查已保存音频','warning')};recorder.start(1000);allowRecording=true}catch(e){allowRecording=false;if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}const msg=e.message||String(e);if(!window.confirm(`录音不可用：${msg}
 
-是否仍只用倒计时练习？这个模式无法导出音频。`))return}
- onGoing=true;active=0;recordStartedAt=performance.now();goto('exam');micStatus(allowRecording?'● 整场录音进行中（录音优先）':'仅计时：没有音频录制',allowRecording?'success':'warning');startQuestion()}
-function startQuestion(){if(!onGoing)return;const q=questions[active];q.questionAt=mark();showQuestion();phase='reading';updateSegment();$('timer-caption').textContent='即将朗读 · 尚未计时';$('begin-answer-btn').classList.add('hidden');if($('read-on').checked){playQuestion(q,afterQuestionRead,$('speak-question-btn'))}else requireManualStart('自动朗读已关闭')}
+是否仍只用倒计时练习？这个模式无法导出音频。`)){startingExam=false;$('start-btn').disabled=false;return}}
+ startingExam=false;$('start-btn').disabled=false;sessionStartedAt=new Date().toISOString();sessionStamp=stampDate(new Date(sessionStartedAt));updateSessionLabel();save();onGoing=true;active=0;recordStartedAt=performance.now();goto('exam');micStatus(allowRecording?'● 整场录音进行中（录音优先）':'仅计时：没有音频录制',allowRecording?'success':'warning');startQuestion()}
+
+const PART_INTROS={1:"Now let's begin Part 1. I will ask you some questions about yourself and familiar topics.",2:"Now let's move on to Part 2. You will see a topic card. Please speak for up to two minutes.",3:"Now let's begin Part 3. We will discuss some broader questions related to the topic."};
+function beginPartIntro(q,then){
+ stopQuestionAudio();phase='intro';const token=readingToken;
+ $('speak-question-btn').disabled=true;$('skip-btn').disabled=true;$('begin-answer-btn').classList.add('hidden');
+ $('exam-question').textContent=`下面开始 Part ${q.part}`;$('exam-tips').classList.add('hidden');$('exam-cues').classList.add('hidden');$('part2-outline-box').classList.add('hidden');
+ $('timer-caption').textContent='Part 开场引导 · 尚未计时';$('exam-status').textContent=PART_INTROS[q.part];updateSegment();
+ const pause=()=>{if(token!==readingToken||!onGoing)return;clearTimeout(autoNextHandle);$('begin-answer-btn').classList.add('hidden');let left=3;
+  const tick=()=>{if(token!==readingToken||!onGoing)return;if(left===0){then();return}$('timer-text').textContent='0'+left;$('timer-caption').textContent='准备听题';$('exam-status').textContent=`引导结束 · ${left} 秒后播报第一题`;left--;autoNextHandle=setTimeout(tick,1000)};tick();
+ };
+ const fallback=()=>{if(token!==readingToken||!onGoing)return;$('begin-answer-btn').textContent='继续 · 3 秒后听题 →';$('begin-answer-btn').classList.remove('hidden');$('exam-status').textContent='开场引导播报不可用。请阅读上方 Part 提示，再点击继续。'};
+ if(!$('read-on').checked){pause();return}
+ if(!window.speechSynthesis||!window.SpeechSynthesisUtterance){fallback();return}
+ const u=new SpeechSynthesisUtterance(PART_INTROS[q.part]);const voice=getSelectedVoice();if(voice)u.voice=voice;u.lang=voice?.lang||'en-GB';u.rate=.91;
+ let settled=false;u.onend=()=>{if(settled)return;settled=true;pause()};u.onerror=()=>{if(settled)return;settled=true;fallback()};
+ try{window.speechSynthesis.speak(u);autoNextHandle=setTimeout(()=>{if(!settled){settled=true;fallback()}},20000)}catch(e){settled=true;fallback()}
+}
+function readCurrentQuestion(){if(!onGoing)return;const q=questions[active];q.questionAt=mark();showQuestion();phase='reading';$('speak-question-btn').disabled=false;$('skip-btn').disabled=false;$('begin-answer-btn').textContent='开始计时 →';updateSegment();$('timer-caption').textContent='即将朗读 · 尚未计时';$('begin-answer-btn').classList.add('hidden');if($('read-on').checked)playQuestion(q,afterQuestionRead,$('speak-question-btn'));else requireManualStart('自动朗读已关闭')}
+function startQuestion(){if(!onGoing)return;const q=questions[active];showQuestion();if(active===0||questions[active-1].part!==q.part)beginPartIntro(q,readCurrentQuestion);else readCurrentQuestion()}
 function startAnswer(){const q=questions[active];if(phase==='prepare'&&q.prepEndAt==null)q.prepEndAt=mark();phase='answer';q.startedAt=mark();recStorage='';recFinal='';recInterim='';$('timer-caption').textContent='剩余回答时间';$('exam-status').textContent='正在限时作答 · 到 0 自动进入下一题';updateSegment();startSpeech(q);startCountdown(q.seconds)}
 function startCountdown(seconds){cancelAnimationFrame(timerTick);fullTime=seconds;deadline=performance.now()+seconds*1000;const tick=()=>{if(!onGoing)return;let remain=(deadline-performance.now())/1000;setTimer(remain,fullTime);if(remain<=0){timeUp();return}timerTick=requestAnimationFrame(tick)};timerTick=requestAnimationFrame(tick)}
 function timeUp(){if(phase==='prepare'){cancelAnimationFrame(timerTick);startAnswer();return}finishQuestion(false)}
 function stopSpeech(){speechActive=false;if(speech){try{speech.stop()}catch(e){}speech=null}return (recStorage+' '+recFinal).trim().replace(/\s+/g,' ')}
 function startSpeech(q){stopSpeech();const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!$('speech-on').checked){speechWarning='已关闭实时转写';$('live-transcript').innerHTML='<i>已关闭实时转写；整场音频仍然录制中。</i>';return}if(!SR){speechWarning='浏览器不支持实时英语转写';$('live-transcript').innerHTML='<i>当前浏览器不支持 Web Speech Recognition。请使用 Chrome，或事后补录文字。</i>';return}speechWarning='';speechActive=true;const id=q.id;
  const attach=()=>{if(!speechActive||!onGoing||questions[active]?.id!==id||phase!=='answer')return;const rec=new SR();speech=rec;rec.lang='en-US';rec.continuous=true;rec.interimResults=true;rec.maxAlternatives=1;recFinal='';recInterim='';rec.onresult=e=>{let fin='',inter='';for(let i=0;i<e.results.length;i++){const t=e.results[i][0].transcript;if(e.results[i].isFinal)fin+=' '+t;else inter+=' '+t}recFinal=fin.trim();recInterim=inter.trim();const output=(recStorage+' '+recFinal+' '+recInterim).trim();$('live-transcript').textContent=output||'正在聆听…';q.transcript=(recStorage+' '+recFinal).trim();save()};rec.onerror=e=>{if(e.error==='not-allowed'||e.error==='service-not-allowed'){speechWarning='语音识别权限未授予';speechActive=false;$('live-transcript').textContent='语音识别未获授权；录音仍会继续。'}else if(e.error==='network'){speechWarning='语音识别网络连接失败';speechActive=false;$('live-transcript').textContent='语音识别网络失败；录音仍在保存，可结束后下载。'}else if(e.error!=='no-speech'&&e.error!=='aborted'){speechWarning='语音识别出现问题：'+e.error}};rec.onend=()=>{if(!speechActive||!onGoing||questions[active]?.id!==id||phase!=='answer')return;recStorage=(recStorage+' '+recFinal).trim();recFinal='';recInterim='';setTimeout(attach,230)};try{rec.start()}catch(e){speechWarning='无法开启语音识别：'+e.message;speechActive=false;$('live-transcript').textContent='语音识别未能启动，录音仍在继续。'}};attach()}
-function finishQuestion(manual){if(!onGoing||phase!=='answer')return;stopQuestionAudio();cancelAnimationFrame(timerTick);const q=questions[active];let text=stopSpeech();if(!text)text=q.transcript||'';q.transcript=text;q.status=manual?'skipped':'done';q.finishedAt=mark();q.durationActual=Math.max(0,+(q.finishedAt-q.startedAt).toFixed(2));save();$('exam-status').textContent=manual?'已结束本题':'时间到，自动切题';if(active===questions.length-1){autoNextHandle=setTimeout(finishExam,450)}else{active++;autoNextHandle=setTimeout(startQuestion,600)}}
-function finishExam(){stopQuestionAudio();cancelAnimationFrame(timerTick);clearTimeout(autoNextHandle);if(!onGoing){goto('results');return}onGoing=false;stopSpeech();if(recorder&&recorder.state!=='inactive'){try{recorder.stop()}catch(e){audioReadyResolve?.(false)}}if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}save();goto('results');toast('模考结束 · 正在整理整场录音，请等待后下载 ZIP')}
-function getReport(){const date=new Date().toLocaleString('zh-CN',{hour12:false});const len=questions.length;let out=`IELTS SPEAKING V4 · 原始录音诊断资料
+function finishQuestion(manual){if(!onGoing||phase!=='answer')return;stopQuestionAudio();cancelAnimationFrame(timerTick);const q=questions[active];let text=stopSpeech();if(!text)text=q.transcript||'';q.transcript=text;q.status=manual?'skipped':'done';q.finishedAt=mark();q.durationActual=Math.max(0,+(q.finishedAt-q.startedAt).toFixed(2));save();phase='transition';$('skip-btn').disabled=true;$('speak-question-btn').disabled=true;$('exam-status').textContent=manual?'已结束本题':'时间到，自动切题';if(active===questions.length-1){autoNextHandle=setTimeout(finishExam,450)}else{active++;autoNextHandle=setTimeout(startQuestion,600)}}
+function finishExam(){stopQuestionAudio();cancelAnimationFrame(timerTick);clearTimeout(autoNextHandle);if(!onGoing){goto('results');return}onGoing=false;stopSpeech();if(recorder&&recorder.state!=='inactive'){try{audioFinalizing=true;recorder.stop()}catch(e){audioFinalizing=false;audioReadyResolve?.(false)}}if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}save();goto('results');toast('模考结束 · 保存录音和 AI 复盘文本即可')}
+function getReport(){const date=sessionLabel();const len=questions.length;let out=`口语模考，Speaking Studio · AI 复盘材料
 练习日期：${date}
+文件标识：${exportPrefix()}
+录音文件：${recordingBlob?.size?audioName():"未附录音；不能假定音频存在"}
 题目数：${len}
-录音原则：以整场原始音频为准；默认不需要转写和人工校对。
+录音原则：以整场原始音频为准；请由能读取音频的 AI 先转写，再分析。网页本身未进行 AI 批改或评分。
 网页倒计时：Part 1 / Part 3 每题 30 秒，Part 2 作答 120 秒；题目播报结束后开始（Part 2 如开启 60 秒准备时间，则准备结束后开始）。
-时间轴说明：各时间点为浏览器记录的相对录音起始偏移，精度约 0.1 秒；受录音设备和事件触发延迟影响，不保证音频采样级精准。${allowRecording?'':'本轮未成功取得音频，请留意。'}
+时间轴说明：各时间点为浏览器记录的相对录音起始偏移，精度约 0.1 秒；受录音设备和事件触发延迟影响，不保证音频采样级精准。${recordingBlob?.size?'':'当前页面没有可用音频；若之前已下载，请另附原文件。'}
 提醒：Part 2 提纲不是实际回答；机器转写（如有）未经校对，不应当直接按语法错误计分。
 
 `;
@@ -294,40 +335,41 @@ ${q.outline?.trim()||'[未填写]'}
 `;if(q.transcript?.trim())out+=`可选机器转写（未经校对，可能有错）：
 ${q.transcript.trim()}
 `;out+='\n';}
- out+=`---------- 请按以下标准复盘 ----------
-1. 请优先根据整场原始录音，结合每题正式作答时间范围匹配题目，不要把题目朗读或准备时间算作学生回答。
-2. 先转写真实英语作答；不确定的地方标注[听不清/可能转写错误]，不要把机器误识别当作真实语法错误。
-3. 按首次独立限时表现，给9道题简洁诊断，并识别重复出现的3个核心问题；最差1–2题深入分析。
-4. 给出5–8个跨话题语块、能力掌握度和下一轮复练任务。若无法直接听取音频，应说明依据限制，不要臆造语音评分。
+ out+=`---------- 请直接按以下要求完成 AI 复盘 ----------
+你是一位雅思口语教练。我会同时提供本轮原始录音和这份材料。目标是获得基于真实作答的诊断与可复练的改进方法。
+1. 先确认你能否实际读取、听取附件音频。如果不能，请明确说明，并请我提供可靠转写；不能声称已听过音频，不能编造我的回答或分数。
+2. 按下面的正式作答时间段逐题转写英语，跳过考官引导、题目朗读和准备时间。保留真实口误和重复；听不清处标注[听不清]。不要把提纲或机器误识别当作学生回答。
+3. 根据实际可用证据，给整场练习一个非官方预估分数和四项分数：流利度与连贯性、词汇、语法多样性与准确性、发音。逐项说明依据与不确定性；未实际听到音频时不评价发音，缺少证据的项目标注无法判断。本练习使用简化计时，不完全等同正式考试。
+4. 用表格逐题列出：题目、我的原话、最关键的问题、自然的改法和原因。抓住最影响表达的 3 个重复问题；不要把正常口语停顿或转写错误一律判为语言错误。
+5. 每道已作答题目给一份自然、符合题意、约 7 分水平的参考答案，尽量沿用我真实的经历和立场。缺少个人事实请标注可替换细节，不能编造我的经历。Part 1 简洁展开，Part 2 形成完整叙述，Part 3 解释观点并举例。
+6. 提取 5–8 个可复用词块，给出中文含义、例句和一轮 10 分钟复练计划。
+7. 最后把转写、预估评分、逐题纠错、参考答案和复练计划整理成中文说明的 Word 文档，文件名以 ${exportPrefix()} 开头。若当前环境不能创建 Word，请提供可直接复制到 Word 的排版内容并说明。
 `;return out}
-function timelineCsv(){const rows=[['part','question_no','topic','question','status','question_shown_sec','reading_start_sec','reading_end_sec','prep_start_sec','prep_end_sec','answer_start_sec','answer_end_sec','answer_duration_sec']];let cnt={1:0,2:0,3:0};for(const q of questions){cnt[q.part]++;rows.push([q.part,cnt[q.part],q.topic,q.text,q.status,q.questionAt,q.readStartAt,q.readEndAt,q.prepStartAt,q.prepEndAt,q.startedAt,q.finishedAt,q.durationActual])}return '\ufeff'+rows.map(row=>row.map(cell=>'"'+String(cell??'').replace(/"/g,'""')+'"').join(',')).join('\r\n')}
-function renderResults(){if(!questions.length)return;const done=questions.filter(x=>x.status==='done').length, started=questions.filter(x=>x.startedAt!=null).length,q=questions.length;$('results-summary').innerHTML=`<div class="metric"><strong>${q}</strong><small>题目总数</small></div><div class="metric"><strong>${done}</strong><small>按计时完成</small></div><div class="metric"><strong>${started}</strong><small>已记录作答时间段</small></div>`;$('results-notice').className='notice'+(!recordingBlob?' warning':' success');$('results-notice').textContent=recordingBlob?'整场录音已就绪。推荐直接点击“一键导出完整复盘包 ZIP”，无需转写或人工校对。':recorder&&recorder.state!=='inactive'?'正在结束录音，请稍等数秒后导出。':'尚未拿到可下载的音频；可以先复制题目和时间轴，但不能把只有 TXT 的 ZIP 当作整场录音。';$('download-audio-btn').disabled=!recordingBlob;
- let count={1:0,2:0,3:0};$('answer-list').innerHTML=questions.map((x,i)=>{count[x.part]++;return `<div class="answer-card"><div class="qcard-head"><span class="part-tag p${x.part}">PART ${x.part} · Q${count[x.part]}</span><span class="meta-line">${x.seconds} 秒限时</span></div><h3>${esc(x.text)}</h3>${x.cues?.length?`<div class="qcard-full-cues"><strong>完整提示要点</strong><ul>${x.cues.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></div>`:''}<div class="time-pair"><span class="time-chip">题目 ${offsetTime(x.questionAt)}</span><span class="time-chip">朗读 ${timeRange(x.readStartAt,x.readEndAt)}</span>${x.part===2?`<span class="time-chip">准备 ${timeRange(x.prepStartAt,x.prepEndAt)}</span>`:''}<span class="time-chip">作答 ${timeRange(x.startedAt,x.finishedAt)}</span></div>${x.part===2?`<p>我的 Part 2 提纲（非口语回答）</p><textarea class="outline-editor compact" data-result-outline-index="${i}" placeholder="你的提纲">${esc(x.outline||'')}</textarea>`:''}<details><summary>可选：查看 / 手动输入机器转写（默认无需修改）</summary><textarea placeholder="可留空：原始音频才是主要复盘依据" data-answer-index="${i}" aria-label="${esc(x.text)} 对应的可选英语转写">${esc(x.transcript||'')}</textarea></details></div>`}).join('');$('answer-list').querySelectorAll('textarea[data-answer-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.answerIndex].transcript=e.value;save()}));$('answer-list').querySelectorAll('textarea[data-result-outline-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.resultOutlineIndex].outline=e.value;save()}))}
+function renderResults(){if(!questions.length)return;const done=questions.filter(x=>x.status==='done').length, started=questions.filter(x=>x.startedAt!=null).length,q=questions.length;$('results-summary').innerHTML=`<div class="metric"><strong>${q}</strong><small>题目总数</small></div><div class="metric"><strong>${done}</strong><small>按计时完成</small></div><div class="metric"><strong>${started}</strong><small>已记录作答时间段</small></div>`;$('result-session').textContent=sessionLabel();updateSessionLabel();
+ const ready=!!recordingBlob?.size;$('results-notice').className='notice'+(ready?' success':' warning');
+ $('results-notice').textContent=ready?'录音已就绪。下载录音和 AI 复盘文本，在 AI 中一起上传即可。录音尚未长期保存，请先下载。':audioFinalizing?'录音正在收尾，请稍等；就绪后下载按钮会自动启用。':sessionStartedAt?'本机当前没有这轮录音（刷新后音频不会保留，或本轮未能录音）。若已下载，请使用原音频；只上传文本无法评价真实语音。':'还没有开始模考。可以预览题目和 AI 要求；完成一轮后才能下载录音。';
+ $('download-audio-btn').disabled=!ready||audioFinalizing;$('download-txt-btn').disabled=audioFinalizing;$('copy-btn').disabled=audioFinalizing;$('export-zip-btn').disabled=audioFinalizing;
+ $('audio-filename').textContent=ready?audioName():'录音完成后显示文件名';$('text-filename').textContent=reportName();$('report-preview').value=getReport();
+ const player=$('review-audio');player.classList.toggle('hidden',!ready);if(ready&&player.getAttribute('src')!==recordingUrl){player.src=recordingUrl;player.load()}
+ let count={1:0,2:0,3:0};$('answer-list').innerHTML=questions.map((x,i)=>{count[x.part]++;return `<div class="answer-card"><div class="qcard-head"><span class="part-tag p${x.part}">PART ${x.part} · Q${count[x.part]}</span><span class="meta-line">${x.seconds} 秒限时</span></div><h3>${esc(x.text)}</h3>${x.cues?.length?`<div class="qcard-full-cues"><strong>完整提示要点</strong><ul>${x.cues.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></div>`:''}<div class="time-pair"><span class="time-chip">题目 ${offsetTime(x.questionAt)}</span><span class="time-chip">朗读 ${timeRange(x.readStartAt,x.readEndAt)}</span>${x.part===2?`<span class="time-chip">准备 ${timeRange(x.prepStartAt,x.prepEndAt)}</span>`:''}<span class="time-chip">作答 ${timeRange(x.startedAt,x.finishedAt)}</span></div><button class="btn secondary replay-answer" data-replay-index="${i}" ${!recordingBlob?.size||x.startedAt==null||x.finishedAt==null?"disabled":""}>回听这一题</button>${x.part===2?`<p>我的 Part 2 提纲（非口语回答）</p><textarea class="outline-editor compact" data-result-outline-index="${i}" placeholder="你的提纲">${esc(x.outline||'')}</textarea>`:''}<details><summary>可选：查看 / 手动输入机器转写（默认无需修改）</summary><textarea placeholder="可留空：原始音频才是主要复盘依据" data-answer-index="${i}" aria-label="${esc(x.text)} 对应的可选英语转写">${esc(x.transcript||'')}</textarea></details></div>`}).join('');$('answer-list').querySelectorAll('textarea[data-answer-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.answerIndex].transcript=e.value;save();$('report-preview').value=getReport()}));$('answer-list').querySelectorAll('textarea[data-result-outline-index]').forEach(e=>e.addEventListener('input',()=>{questions[+e.dataset.resultOutlineIndex].outline=e.value;save();$('report-preview').value=getReport()}))}
+function reportName(){return exportPrefix()+'-AI复盘.txt'}
 function downloadBlob(blob,name){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000)}
-async function copyText(){const t=getReport();try{await navigator.clipboard.writeText(t);toast('已复制题目、提纲和时间轴；音频请单独导出')}catch(e){const temp=document.createElement('textarea');temp.value=t;temp.style.position='fixed';temp.style.left='-9999px';document.body.appendChild(temp);temp.select();let ok=document.execCommand('copy');temp.remove();if(ok)toast('已复制完整题目与时间轴');else{downloadBlob(new Blob([t],{type:'text/plain;charset=utf-8'}),'IELTS_Speaking_Review.txt');toast('浏览器阻止复制，已为你下载 TXT')}}}
-function audioName(){return `IELTS_Speaking_Full_Recording.${/mp4/.test(recordingBlob?.type||recordingMime)?'m4a':'webm'}`}
+async function copyText(){const t=getReport();try{await navigator.clipboard.writeText(t);toast('已复制题目和 AI 批改要求；请同时上传录音')}catch(e){const temp=document.createElement('textarea');temp.value=t;temp.style.position='fixed';temp.style.left='-9999px';document.body.appendChild(temp);temp.select();let ok=document.execCommand('copy');temp.remove();if(ok)toast('已复制 AI 复盘文本；请同时上传录音');else{downloadBlob(new Blob([t],{type:'text/plain;charset=utf-8'}),reportName());toast('浏览器阻止复制，已为你下载 TXT')}}}
+function audioName(){return `${exportPrefix()}-录音.${/mp4/.test(recordingBlob?.type||recordingMime)?'m4a':'webm'}`}
 function crc32(data){let c=0xffffffff;for(let i=0;i<data.length;i++){c^=data[i];for(let j=0;j<8;j++)c=(c&1)?(c>>>1)^0xedb88320:c>>>1}return(c^0xffffffff)>>>0}
 function combine(chunks){const size=chunks.reduce((n,a)=>n+a.length,0);const out=new Uint8Array(size);let offset=0;for(const a of chunks){out.set(a,offset);offset+=a.length}return out}
 function zipEntries(list){const enc=new TextEncoder();let local=[],central=[],ofs=0;const now=new Date();const time=((now.getHours()&31)<<11)|((now.getMinutes()&63)<<5)|Math.floor(now.getSeconds()/2);const date=(((Math.max(1980,now.getFullYear())-1980)&127)<<9)|(((now.getMonth()+1)&15)<<5)|(now.getDate()&31);for(const item of list){const name=enc.encode(item.name),content=item.data,crc=crc32(content);const l=new Uint8Array(30),v=new DataView(l.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x0800,true);v.setUint16(8,0,true);v.setUint16(10,time,true);v.setUint16(12,date,true);v.setUint32(14,crc,true);v.setUint32(18,content.length,true);v.setUint32(22,content.length,true);v.setUint16(26,name.length,true);local.push(l,name,content);const c=new Uint8Array(46),w=new DataView(c.buffer);w.setUint32(0,0x02014b50,true);w.setUint16(4,20,true);w.setUint16(6,20,true);w.setUint16(8,0x0800,true);w.setUint16(10,0,true);w.setUint16(12,time,true);w.setUint16(14,date,true);w.setUint32(16,crc,true);w.setUint32(20,content.length,true);w.setUint32(24,content.length,true);w.setUint16(28,name.length,true);w.setUint32(42,ofs,true);central.push(c,name);ofs+=l.length+name.length+content.length}const cd=combine(central);const end=new Uint8Array(22),dv=new DataView(end.buffer);dv.setUint32(0,0x06054b50,true);dv.setUint16(8,list.length,true);dv.setUint16(10,list.length,true);dv.setUint32(12,cd.length,true);dv.setUint32(16,ofs,true);return new Blob([...local,cd,end],{type:'application/zip'})}
-async function exportZip(){if(audioReadyPromise){try{await audioReadyPromise}catch(e){}}
- const enc=new TextEncoder(),contents=[{name:'IELTS_Speaking_Review.txt',data:enc.encode(getReport())},{name:'Question_Timeline.csv',data:enc.encode(timelineCsv())}];
- if(recordingBlob?.size){contents.push({name:audioName(),data:new Uint8Array(await recordingBlob.arrayBuffer())})}
- const readme=`IELTS Speaking Studio V4 · 录音优先
-
-1. 优先把整场录音和 IELTS_Speaking_Review.txt 一起上传 ChatGPT / Descript。
-2. TXT 包含完整题目、Part 2 题卡、个人提纲和逐题时间轴；CSV 为原始时间数值。
-3. 若未生成录音，ZIP 仅包含文本文档和时间表，不代表录音成功。
-4. 题目朗读可能被麦克风录入，分析时请用正式作答起止时间定位学生声音。
-5. 浏览器转写默认关闭；若开启后产生文本，也不应当直接当成原话评分。
-6. 网站不自动上传个人录音。需要人工下载后保存或分享。`;
- contents.push({name:'README_使用说明.txt',data:enc.encode(readme)});
- downloadBlob(zipEntries(contents),'IELTS_Speaking_Review_Audio_First.zip');
- toast(recordingBlob?.size?'已打包录音 + 题目 + 时间轴 + 提纲':'未取得音频；只导出了题目和时间轴')}
-
-function changePaper(){if(onGoing)return;const p=$('paper-input').value.trim();const parsed=parsePaper(p);if(!parsed.length){$('parse-message').innerHTML='<div class="notice warning">未识别到题目。请检查是否有 Part 1 / Part 2 / Part 3 标题，以及 1.、2. 等题号。</div>';return}raw=p;questions=parsed;save();renderList();$('parse-message').innerHTML=`<div class="notice success">已载入 ${parsed.length} 道题（Part 1：${parsed.filter(x=>x.part===1).length} / Part 2：${parsed.filter(x=>x.part===2).length} / Part 3：${parsed.filter(x=>x.part===3).length}）。可以修改答题思路后开始模考。</div>`;toast('题库已更新')}
-function init(){restore();try{if(!localStorage.getItem('ielts-speaking-studio-audio-first-v4')){$('speech-on').checked=false;localStorage.setItem('ielts-speaking-studio-audio-first-v4','1');save()}}catch(e){$('speech-on').checked=false}$('paper-input').value=raw;renderList();$('parse-btn').onclick=changePaper;$('restore-demo-btn').onclick=()=>{$('paper-input').value=EXAMPLE;changePaper()};$('start-btn').onclick=startExam;$('part2-outline').addEventListener('input',e=>{if(questions[active]?.part===2){questions[active].outline=e.target.value;save()}});$('begin-answer-btn').onclick=()=>{if(onGoing&&phase==='reading'){stopQuestionAudio();afterQuestionRead()}};$('speak-question-btn').onclick=()=>{if(onGoing){const reading=phase==='reading';playQuestion(questions[active],reading?afterQuestionRead:null,$('speak-question-btn'));if(!reading)toast('重播题目不会暂停倒计时')}};$('skip-btn').onclick=()=>{if(phase==='prepare'){cancelAnimationFrame(timerTick);startAnswer()}else if(phase==='reading'){stopQuestionAudio();questions[active].status='skipped';questions[active].finishedAt=null;if(active===questions.length-1)finishExam();else{active++;startQuestion()}}else finishQuestion(true)};$('stop-btn').onclick=()=>{if(window.confirm('确定提前结束整套模考？已录音内容仍可导出。')){if(phase==='answer'&&questions[active]){questions[active].transcript=stopSpeech()||questions[active].transcript||'';questions[active].status='skipped';questions[active].finishedAt=mark();questions[active].durationActual=Math.max(0,+(questions[active].finishedAt-questions[active].startedAt).toFixed(2))}finishExam()}};$('copy-btn').onclick=copyText;$('export-zip-btn').onclick=exportZip;$('download-txt-btn').onclick=()=>downloadBlob(new Blob([getReport()],{type:'text/plain;charset=utf-8'}),'IELTS_Speaking_Review.txt');$('download-audio-btn').onclick=()=>{if(recordingBlob)downloadBlob(recordingBlob,audioName())};$('again-btn').onclick=()=>{goto('editor');$('start-btn').focus()};$('edit-new-btn').onclick=()=>goto('editor');for(const name of ['editor','exam','results'])$('tab-'+name).onclick=()=>{if(name==='exam'&&!onGoing){toast('请先在题库页面点击「开始完整限时模考」');return}goto(name)};['speech-on','prep-on','hint-on','read-on'].forEach(i=>$(i).addEventListener('change',save));$('tts-voice').addEventListener('change',()=>{requestedVoice=$('tts-voice').value;save()});refreshVoices();if('speechSynthesis' in window){window.speechSynthesis.addEventListener?.('voiceschanged',refreshVoices)}$('results-notice').textContent='尚未开始模考';$('tab-exam').title='模考开始时自动进入';}
+async function exportZip(){if(audioFinalizing){toast('正在整理录音，请稍等');return}
+ const enc=new TextEncoder(),contents=[{name:reportName(),data:enc.encode(getReport())}];
+ if(recordingBlob?.size)contents.push({name:audioName(),data:new Uint8Array(await recordingBlob.arrayBuffer())});
+ downloadBlob(zipEntries(contents),exportPrefix()+'-复盘.zip');if(recordingBlob?.size)audioDownloaded=true;
+ toast(recordingBlob?.size?'已下载录音和复盘文本 ZIP':'当前没有录音，仅下载复盘文本')}
+function replayAnswer(i){const q=questions[i],player=$('review-audio');if(!recordingBlob?.size||q.startedAt==null||q.finishedAt==null)return;playbackEnd=q.finishedAt;player.currentTime=q.startedAt;player.play().catch(()=>toast('请点击录音播放器开始播放'));player.scrollIntoView({behavior:'smooth',block:'center'})}
+function changePaper(){if(onGoing||startingExam)return;if(audioFinalizing){toast('录音正在整理，请稍等');return}const p=$('paper-input').value.trim();const parsed=parsePaper(p);if(!parsed.length){$('parse-message').innerHTML='<div class="notice warning">未识别到题目。请按每行一道题粘贴；整套题保留 Part 标题，无需题号。</div>';return}if(!protectRecording())return;stopQuestionAudio();recordingBlob=null;if(recordingUrl)URL.revokeObjectURL(recordingUrl);recordingUrl=null;recorder=null;sessionStartedAt=null;sessionStamp="";audioDownloaded=false;raw=p;questions=parsed;save();renderList();previewImport();updateSessionLabel();$('parse-message').innerHTML=`<div class="notice success">已载入 ${parsed.length} 道题（Part 1：${parsed.filter(x=>x.part===1).length} / Part 2：${parsed.filter(x=>x.part===2).length} / Part 3：${parsed.filter(x=>x.part===3).length}）。可以修改答题思路后开始模考。</div>`;toast('题库已更新')}
+function init(){restore();try{if(!localStorage.getItem('ielts-speaking-studio-audio-first-v4')){$('speech-on').checked=false;localStorage.setItem('ielts-speaking-studio-audio-first-v4','1');save()}}catch(e){$('speech-on').checked=false}$('paper-input').value=raw;renderList();previewImport();updateSessionLabel();$('paper-input').addEventListener('input',()=>{clearTimeout(importPreviewHandle);importPreviewHandle=setTimeout(previewImport,150)});$('import-part').onchange=previewImport;$('answer-list').addEventListener('click',e=>{const b=e.target.closest('[data-replay-index]');if(b)replayAnswer(+b.dataset.replayIndex)});$('review-audio').addEventListener('timeupdate',()=>{const a=$('review-audio');if(playbackEnd!=null&&a.currentTime>=playbackEnd){a.pause();playbackEnd=null}});$('review-audio').addEventListener('seeking',()=>{const a=$('review-audio');if(playbackEnd!=null&&(a.currentTime>playbackEnd||a.currentTime<0))playbackEnd=null});$('parse-btn').onclick=changePaper;$('restore-demo-btn').onclick=()=>{$('paper-input').value=EXAMPLE;changePaper()};$('start-btn').onclick=startExam;$('part2-outline').addEventListener('input',e=>{if(questions[active]?.part===2){questions[active].outline=e.target.value;save()}});$('begin-answer-btn').onclick=()=>{if(onGoing&&phase==='intro'){stopQuestionAudio();const token=readingToken;$('begin-answer-btn').classList.add('hidden');$('exam-status').textContent='准备听题 · 3 秒后播报第一题';autoNextHandle=setTimeout(()=>{if(onGoing&&token===readingToken)readCurrentQuestion()},3000)}else if(onGoing&&phase==='reading'){stopQuestionAudio();afterQuestionRead()}};$('speak-question-btn').onclick=()=>{if(onGoing){const reading=phase==='reading';playQuestion(questions[active],reading?afterQuestionRead:null,$('speak-question-btn'));if(!reading)toast('重播题目不会暂停倒计时')}};$('skip-btn').onclick=()=>{if(phase==='prepare'){cancelAnimationFrame(timerTick);startAnswer()}else if(phase==='reading'){stopQuestionAudio();questions[active].status='skipped';questions[active].finishedAt=null;if(active===questions.length-1)finishExam();else{active++;startQuestion()}}else finishQuestion(true)};$('stop-btn').onclick=()=>{if(window.confirm('确定提前结束整套模考？已录音内容仍可导出。')){if(phase==='answer'&&questions[active]){questions[active].transcript=stopSpeech()||questions[active].transcript||'';questions[active].status='skipped';questions[active].finishedAt=mark();questions[active].durationActual=Math.max(0,+(questions[active].finishedAt-questions[active].startedAt).toFixed(2))}finishExam()}};$('copy-btn').onclick=copyText;$('export-zip-btn').onclick=exportZip;$('download-txt-btn').onclick=()=>downloadBlob(new Blob([getReport()],{type:'text/plain;charset=utf-8'}),reportName());$('download-audio-btn').onclick=()=>{if(recordingBlob){downloadBlob(recordingBlob,audioName());audioDownloaded=true}};$('again-btn').onclick=()=>{goto('editor');$('start-btn').focus()};$('edit-new-btn').onclick=()=>goto('editor');for(const name of ['editor','exam','results'])$('tab-'+name).onclick=()=>{if(name==='exam'&&!onGoing){toast('请先在题库页面点击「开始完整限时模考」');return}goto(name)};['speech-on','prep-on','hint-on','read-on'].forEach(i=>$(i).addEventListener('change',save));$('tts-voice').addEventListener('change',()=>{requestedVoice=$('tts-voice').value;save()});refreshVoices();if(window.speechSynthesis){window.speechSynthesis.addEventListener?.('voiceschanged',refreshVoices)}window.addEventListener('beforeunload',e=>{if(onGoing||startingExam||audioFinalizing||(recordingBlob&&!audioDownloaded)){e.preventDefault();e.returnValue=''}});$('results-notice').textContent='尚未开始模考';$('tab-exam').title='模考开始时自动进入';}
 init();
 })();
 </script>
 </body>
 </html>
+
