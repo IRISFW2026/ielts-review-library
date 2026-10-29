@@ -1,8 +1,30 @@
 {
   "version": 1,
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "emails-buildings-1029",
+      "date": "2026-10-29",
+      "skill": "口语",
+      "kind": "模考",
+      "en": "Emails & Buildings",
+      "zh": "邮件与建筑",
+      "topic": "口语训练",
+      "tags": [
+        "口语训练",
+        "艺术与文化",
+        "人口与城市",
+        "生活与服务"
+      ],
+      "description": "Part 1两日答案合并 · Part 2玛丝菲尔与鹭湖 · Part 3四题 · 24词块、朗读与遮挡复述",
+      "path": "reviews/2026-10-29/speaking/mock/emails-buildings/index.html",
+      "source": "1029-2026-103116-口语模考",
+      "aliases": [],
+      "dateBasis": "原始模考开始日期2026年10月29日 Part 1合并10月28日练习内容",
+      "title": "1029-口语-模考-Emails & Buildings 邮件与建筑",
+      "url": "/ielts-review-library/reviews/2026-10-29/speaking/mock/emails-buildings/"
+    },
     {
       "id": "work-life-balance",
       "date": "2026-10-27",
