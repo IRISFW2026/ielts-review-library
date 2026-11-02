@@ -4,6 +4,26 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "university-development-1102",
+      "date": "2026-11-02",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "University Development",
+      "zh": "大学校园规划",
+      "topic": "人口与城市",
+      "tags": [
+        "人口与城市",
+        "综合练习"
+      ],
+      "description": "地图题 · 6.5—7分目标范文11句解析 · 12条纠错 · 24张发音翻卡 · 中译英与复写",
+      "path": "reviews/2026-11-02/writing/task-1/university-development/index.html",
+      "dateBasis": "用户提供的地图题与写作练习日期2026年11月2日",
+      "source": "用户提供地图、原稿及本次批改与目标范文",
+      "aliases": [],
+      "title": "1102-写作-小作文-University Development 大学校园规划",
+      "url": "/ielts-review-library/reviews/2026-11-02/writing/task-1/university-development/"
+    },
+    {
       "id": "fitchton-railway-station-1102",
       "date": "2026-11-02",
       "skill": "听力",
