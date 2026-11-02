@@ -1,8 +1,48 @@
 {
   "version": 1,
-  "updated": "2026-10-29",
+  "updated": "2026-11-02",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "fitchton-railway-station-1102",
+      "date": "2026-11-02",
+      "skill": "听力",
+      "kind": "真题",
+      "en": "Fitchton Railway Station",
+      "zh": "铁路车站",
+      "topic": "生活与服务",
+      "tags": [
+        "生活与服务",
+        "综合练习"
+      ],
+      "description": "81张翻卡 · 原句中英对照 · 听说读写拓展 · 搭配逐句朗读与掌握记录",
+      "path": "reviews/2026-11-02/listening/exam/fitchton-railway-station/index.html",
+      "dateBasis": "用户提供的听力材料日期2026年11月2日",
+      "source": "用户提供听力稿与题目",
+      "aliases": [],
+      "title": "1102-听力-真题-Fitchton Railway Station 铁路车站",
+      "url": "/ielts-review-library/reviews/2026-11-02/listening/exam/fitchton-railway-station/"
+    },
+    {
+      "id": "fashion-project-on-jeans-1102",
+      "date": "2026-11-02",
+      "skill": "听力",
+      "kind": "真题",
+      "en": "Fashion Project On Jeans",
+      "zh": "牛仔裤时尚项目",
+      "topic": "艺术与文化",
+      "tags": [
+        "艺术与文化",
+        "综合练习"
+      ],
+      "description": "112张翻卡 · 原句中英对照 · 听说读写拓展 · 搭配逐句朗读与掌握记录",
+      "path": "reviews/2026-11-02/listening/exam/fashion-project-on-jeans/index.html",
+      "dateBasis": "用户提供的听力材料日期2026年11月2日",
+      "source": "用户提供听力稿与题目",
+      "aliases": [],
+      "title": "1102-听力-真题-Fashion Project On Jeans 牛仔裤时尚项目",
+      "url": "/ielts-review-library/reviews/2026-11-02/listening/exam/fashion-project-on-jeans/"
+    },
     {
       "id": "emails-buildings-1029",
       "date": "2026-10-29",
