@@ -1,8 +1,28 @@
 {
   "version": 1,
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "class-size-effects-1103",
+      "date": "2026-11-03",
+      "skill": "阅读",
+      "kind": "真题",
+      "en": "Class Size Effects",
+      "zh": "班级规模的影响",
+      "topic": "心理与学习",
+      "tags": [
+        "心理与学习",
+        "综合练习"
+      ],
+      "description": "143张五星分级词卡 · 14道题干拆解 · 10组同义替换 · 48句原文对照 · 朗读与进度保存",
+      "path": "reviews/2026-11-03/reading/exam/class-size-effects/index.html",
+      "dateBasis": "本次学习与复习页面创建日期2026年11月3日",
+      "source": "用户提供全文、题目与作答记录；本次词汇分级与解析",
+      "aliases": [],
+      "title": "1103-阅读-真题-Class Size Effects 班级规模的影响",
+      "url": "/ielts-review-library/reviews/2026-11-03/reading/exam/class-size-effects/"
+    },
     {
       "id": "university-development-1102",
       "date": "2026-11-02",
