@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated": "2026-11-03",
+  "updated": "2026-11-05",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "growing-vegetables-sports-1105",
+      "date": "2026-11-05",
+      "skill": "口语",
+      "kind": "模考",
+      "en": "Growing Vegetables & Sports",
+      "zh": "种植蔬菜与体育",
+      "topic": "口语训练",
+      "tags": [
+        "口语训练",
+        "健康与生活",
+        "心理与学习"
+      ],
+      "description": "全程模考16题 · 原回答纠错 · 6.5–7目标范例 · 32组词块翻卡 · 朗读与限时复述",
+      "path": "reviews/2026-11-05/speaking/mock/growing-vegetables-sports/index.html",
+      "dateBasis": "用户提供的2026年11月5日口语全程模拟考试转写与批改",
+      "source": "用户口语模拟转写、逐题批改与重构参考答案",
+      "aliases": [],
+      "title": "1105-口语-模考-Growing Vegetables & Sports 种植蔬菜与体育",
+      "url": "/ielts-review-library/reviews/2026-11-05/speaking/mock/growing-vegetables-sports/"
+    },
     {
       "id": "class-size-effects-1103",
       "date": "2026-11-03",
