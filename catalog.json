@@ -4,6 +4,26 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "what-the-managers-really-do-1106",
+      "date": "2026-11-06",
+      "skill": "阅读",
+      "kind": "真题",
+      "en": "What the Managers Really Do?",
+      "zh": "管理者究竟做什么？",
+      "topic": "职场与就业",
+      "tags": [
+        "职场与就业",
+        "综合练习"
+      ],
+      "description": "201张分段分级词卡 · 13题拆解与重练 · 角色对照 · 12组同义对应 · 64句原文对照 · 发音与进度保存",
+      "path": "reviews/2026-11-06/reading/exam/what-the-managers-really-do/index.html",
+      "dateBasis": "用户2026年11月6日提供并练习的阅读材料，首次用时25分钟",
+      "source": "用户上传全文、题目和答案；译文、结构提示与拓展例句为学习用途",
+      "aliases": [],
+      "title": "1106-阅读-真题-What the Managers Really Do? 管理者究竟做什么？",
+      "url": "/ielts-review-library/reviews/2026-11-06/reading/exam/what-the-managers-really-do/"
+    },
+    {
       "id": "the-seahorses-1106",
       "date": "2026-11-06",
       "skill": "听力",

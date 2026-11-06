@@ -24,6 +24,7 @@
 
 | 日期 | 科目与题型 | 标准名称与链接 |
 |---|---|---|
+| 2026-11-06 | 阅读 真题 | [1106-阅读-真题-What the Managers Really Do? 管理者究竟做什么？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/reading/exam/what-the-managers-really-do/) |
 | 2026-11-06 | 听力 真题 | [1106-听力-真题-The Seahorses 海马](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/listening/exam/the-seahorses/) |
 | 2026-11-06 | 听力 真题 | [1106-听力-真题-Organic farming 有机农业](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/listening/exam/organic-farming/) |
 | 2026-11-06 | 阅读 真题 | [1106-阅读-真题-Honeybee in trouble 陷入困境的蜜蜂](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/reading/exam/honeybee-in-trouble/) |
@@ -82,4 +83,5 @@ node scripts/build-catalog.mjs --check
 - Singing：2026年10月6日的9道Part 1问答、纠错、关键词和跟读。
 
 原网址保留为跳转入口。两库的GitHub Pages使用同一域名，模考工具继续沿用原localStorage键；页面不上传或迁入用户录音。录音仍需在刷新或关闭前导出。详见 [迁移记录](docs/speaking-migration.md)。
+
 
