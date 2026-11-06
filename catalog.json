@@ -1,8 +1,48 @@
 {
   "version": 1,
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "the-seahorses-1106",
+      "date": "2026-11-06",
+      "skill": "听力",
+      "kind": "真题",
+      "en": "The Seahorses",
+      "zh": "海马",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态",
+        "综合练习"
+      ],
+      "description": "16句逐句解析 · 7道错题重练 · 22张四技能词卡 · 首次3/10与重练进度分别保存",
+      "path": "reviews/2026-11-06/listening/exam/the-seahorses/index.html",
+      "dateBasis": "用户2026年11月6日提供并练习的两篇听力材料",
+      "source": "此前学习讲稿、用户作答记录及同版练习核对；逐句解析与自拟拓展",
+      "aliases": [],
+      "title": "1106-听力-真题-The Seahorses 海马",
+      "url": "/ielts-review-library/reviews/2026-11-06/listening/exam/the-seahorses/"
+    },
+    {
+      "id": "organic-farming-1106",
+      "date": "2026-11-06",
+      "skill": "听力",
+      "kind": "真题",
+      "en": "Organic farming",
+      "zh": "有机农业",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态",
+        "综合练习"
+      ],
+      "description": "42句逐句解析 · 7道错题重练 · 26张四技能词卡 · 首次3/10与重练进度分别保存",
+      "path": "reviews/2026-11-06/listening/exam/organic-farming/index.html",
+      "dateBasis": "用户2026年11月6日提供并练习的两篇听力材料",
+      "source": "此前学习讲稿、用户作答记录及同版练习核对；逐句解析与自拟拓展",
+      "aliases": [],
+      "title": "1106-听力-真题-Organic farming 有机农业",
+      "url": "/ielts-review-library/reviews/2026-11-06/listening/exam/organic-farming/"
+    },
     {
       "id": "growing-vegetables-sports-1105",
       "date": "2026-11-05",

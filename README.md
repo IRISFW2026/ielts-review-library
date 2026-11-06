@@ -24,6 +24,10 @@
 
 | 日期 | 科目与题型 | 标准名称与链接 |
 |---|---|---|
+| 2026-11-06 | 听力 真题 | [1106-听力-真题-The Seahorses 海马](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/listening/exam/the-seahorses/) |
+| 2026-11-06 | 听力 真题 | [1106-听力-真题-Organic farming 有机农业](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/listening/exam/organic-farming/) |
+| 2026-11-05 | 口语 模考 | [1105-口语-模考-Growing Vegetables & Sports 种植蔬菜与体育](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-05/speaking/mock/growing-vegetables-sports/) |
+| 2026-11-03 | 阅读 真题 | [1103-阅读-真题-Class Size Effects 班级规模的影响](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-03/reading/exam/class-size-effects/) |
 | 2026-11-02 | 写作 小作文 | [1102-写作-小作文-University Development 大学校园规划](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-02/writing/task-1/university-development/) |
 | 2026-11-02 | 听力 真题 | [1102-听力-真题-Fitchton Railway Station 铁路车站](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-02/listening/exam/fitchton-railway-station/) |
 | 2026-11-02 | 听力 真题 | [1102-听力-真题-Fashion Project On Jeans 牛仔裤时尚项目](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-02/listening/exam/fashion-project-on-jeans/) |
