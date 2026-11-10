@@ -206,7 +206,6 @@ function showTab(name){
   ["flash","wrong","bank","settings"].forEach(x=>$("panel-"+x).hidden=x!==name);
   if(name==="flash")renderFlash();if(name==="wrong")renderWrong();if(name==="bank")renderBank();if(name==="settings")setupSettings();
 }
-document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 ["kind","star-filter","scope"].forEach(id=>$(id).addEventListener("change",filterChanged));
 $("flip").onclick=()=>{if(current){revealed=!revealed;renderFlash()}};
 $("skip").onclick=()=>next();
@@ -239,7 +238,7 @@ function renderWrong(){
 function stopSound(){soundToken++;if(audio){audio.pause();audio=null}if("speechSynthesis"in window)speechSynthesis.cancel()}
 function voiceScore(v){return (/natural|neural|premium|enhanced/i.test(v.name)?100:0)+(!v.localService?30:0)+(/^en-GB/i.test(v.lang)?10:0)+(/Google|Microsoft|Samantha|Daniel|Serena/i.test(v.name)?5:0)}
 function loadVoices(){voices=("speechSynthesis"in window?speechSynthesis.getVoices():[]).filter(v=>/^en(?:-|_)/i.test(v.lang)).sort((a,b)=>voiceScore(b)-voiceScore(a));voiceStatus();if(!$("panel-settings").hidden)voiceOptions()}
-function selectedVoice(){return voices.find(v=>v.voiceURI===state.settings.voice)||voices[0]}
+function selectedVoice(){return voices.find(v=>v.voiceURI===state.settings.voice||v.name===state.settings.voice)||voices[0]}
 function voiceStatus(){const v=selectedVoice();$("voice-status").textContent=v?"英语音色 · "+v.name:("speechSynthesis"in window?"未检测到英语音色，请查看学习设置":"此浏览器不支持设备朗读")}
 function voiceOptions(){const sel=$("voice-select");if(!sel)return;sel.innerHTML='<option value="">自动选择 · 优先自然英语音色</option>'+voices.map(v=>'<option value="'+esc(v.voiceURI)+'">'+esc(v.name)+" · "+esc(v.lang)+'</option>').join("");sel.value=state.settings.voice||""}
 function deviceSpeech(text,rate,token){
@@ -269,7 +268,7 @@ function setupSettings(){
   $("voice-select").onchange=e=>{state.settings.voice=e.target.value;saveSettings();voiceStatus()};
   $("engine").onchange=e=>{state.settings.engine=e.target.value;saveSettings()};
   $("rate").oninput=e=>{state.settings.rate=Number(e.target.value);$("rate-label").textContent=state.settings.rate+" ×";saveSettings()};
-  $("daily").onchange=e=>{state.settings.daily=Math.max(1,Math.min(100,parseInt(e.target.value)||20));e.target.value=state.settings.daily;saveSettings();renderFlash()};
+  $("daily").onchange=e=>{state.settings.daily=Math.max(1,Math.min(100,parseInt(e.target.value)||20));e.target.value=state.settings.daily;saveSettings();sessionCount=0;buildQueue()};
   $("voice-test").onclick=()=>speak("Invasive species can cause economic or environmental harm.",false);
   $("stop-voice").onclick=stopSound;
   $("export-data").onclick=exportData;$("import-data").onclick=()=>$("import-file").click();
@@ -284,14 +283,21 @@ function exportData(){
 async function importData(e){
   const f=e.target.files&&e.target.files[0];if(!f)return;
   try{
-    const data=JSON.parse(await f.text());if(data.app!==STORE||data.version!==2||!data.state)throw new Error("invalid");
+    const data=JSON.parse(await f.text());if(data.app!==STORE||!data.state)throw new Error("invalid");
     const incoming=data.state.progress||{};
-    for(const [term,r] of Object.entries(incoming)){
-      if(!CARDS.some(c=>c.en===term)||!r||![1,2,3,4].includes(Number(r.level)))continue;
-      const old=state.progress[term];if(!old||(Number(r.updated)||0)>=(old.updated||0))state.progress[term]={level:Number(r.level),due:Number(r.level)===4?null:Number(r.due)||Date.now(),reps:Number(r.reps)||1,streak:Number(r.streak)||0,startedDay:r.startedDay||dayKey(),updated:Number(r.updated)||Date.now()};
+    for(const [key,value] of Object.entries(incoming)){
+      const card=/^\d+$/.test(key)?CARDS[Number(key)]:CARDS.find(c=>c.en===key);if(!card)continue;
+      let r=value;
+      if(typeof value==="string"){
+        const levels={unknown:1,vague:2,known:3,mastered:4},level=levels[value];if(!level)continue;
+        const now=Date.now();r={level,due:level===4?null:now+(level===1?60000:level===2?600000:86400000),reps:1,streak:level===3?1:0,startedDay:dayKey(),updated:now};
+      }
+      if(!r||![1,2,3,4].includes(Number(r.level)))continue;
+      const term=card.en,old=state.progress[term];
+      if(!old||(Number(r.updated)||0)>=(old.updated||0))state.progress[term]={level:Number(r.level),due:Number(r.level)===4?null:Number(r.due)||Date.now(),reps:Number(r.reps)||1,streak:Number(r.streak)||0,startedDay:r.startedDay||dayKey(),updated:Number(r.updated)||Date.now()};
     }
     state.wrongDone=[...new Set([...(state.wrongDone||[]),...(data.state.wrongDone||[])])];
-    state.settings={...state.settings,...(data.state.settings||{})};save();buildQueue();renderWrong();$("settings-status").textContent="学习记录已导入，并按最后更新时间合并。";
+    state.settings={...state.settings,...(data.state.settings||data.settings||{})};save();sessionCount=0;buildQueue();renderWrong();$("settings-status").textContent="学习记录已导入，并按最后更新时间合并。";
   }catch(err){$("settings-status").textContent="文件无法识别，请选择本页面导出的有效 JSON。"}
   e.target.value="";
 }
