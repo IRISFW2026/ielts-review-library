@@ -65,14 +65,12 @@
 <select id="scope" aria-label="复习范围"><option value="due">按计划 · 到期复习＋每日新词</option><option value="all">提前练习 · 当前筛选内未熟练词</option></select>
 </div>
 <p class="study-filter-note" id="study-note">五星优先 · 到期词优先 · 每日新词默认 20 条</p>
-<div class="flash-wrap">
-<section class="flash-study-card">
+<div class="flash-wrap"><div class="flash-study-card">
 <div class="cardtop"><span class="tag" id="flash-status">未学</span><span class="counter" id="flash-session">本轮已完成 0 次</span></div>
 <div id="flash-content" class="flash-content" aria-live="polite"></div>
 <div id="grade-area" class="grades" hidden></div>
-<div class="bottom"><span>按记忆间隔复习 · 熟练词退出自动复习</span><button class="btn" id="skip">暂时跳过</button></div>
-</section>
-</div></section>
+<div class="bottom"><span>按记忆间隔复习 · 熟练词退出自动复习</span><div class="flash-actions"><button class="btn primary" id="flip">揭晓释义</button><button class="btn" id="skip">暂时跳过</button></div></div>
+</div></div></section>
 <section class="panel" id="panel-wrong" hidden><div class="panel-head"><h2>错题重听</h2><span class="badge">6 道错题 · Q33–40</span></div><p class="muted">每题先回到题干定位，再播放本次对话中上传的原始录音，听到对应句后填写一个答案。提交后查看错误原因和定位线索。</p><div class="audio-note"><strong>原录音说明：</strong>原始 MP4 目前保留在本次 ChatGPT 对话附件中，尚未复制到公开 GitHub Pages。请在对话附件中播放原录音，再使用本页的逐题定位与答案核对；下方“朗读定位句”是设备语音合成，不冒充原始录音。</div><div id="wrong-list"></div></section>
 <section class="panel" id="panel-bank" hidden><div class="panel-head"><h2>全部词库</h2><span class="badge">158 条 · 按重要性排序</span></div><p class="muted">覆盖录音正文、题干和错题答案中的核心单词、短语、固定搭配与语块。五星优先；同星级按词汇与语块顺序整理。</p><div class="species-grid">
 <article class="species"><img src="https://botanikus.de/fileadmin/Bilder/Giftpflanzen/Pflanzen/Ginster/Besenginster2-gr.jpg" alt="Scotch broom yellow flowers"><div class="species-info"><strong>Common Broom / Scotch Broom</strong><small>金雀花类 · 黄色蝶形花</small><a href="https://www.botanikus.de/informatives/giftpflanzen/alle-giftpflanzen/ginster/" target="_blank" rel="noopener">图片来源：Botanikus</a></div></article>
@@ -160,7 +158,7 @@ function renderFlash(){
   const selected=CARDS.filter(matchesStudyFilters);
   const unmastered=selected.filter(c=>rec(c).level!==4);
   const note=starFilter==="all"?"全部星级":("仅练 "+starFilter+" 星");
-  $("study-note").textContent=note+" · "+typeName(kind==="all"?"chunk":kind)+"范围 · "+unmastered.length+" 条未熟练；到期词优先，每日新词 "+(state.settings.daily||20)+" 条。";
+  $("study-note").textContent=note+" · "+(kind==="all"?"全部类型":typeName(kind))+" · "+unmastered.length+" 条未熟练；到期词优先，每日新词 "+(state.settings.daily||20)+" 条。";
   $("flash-session").textContent="本轮已完成 "+sessionCount+" 次";
   const content=$("flash-content"),grades=$("grade-area");
   if(!current){
