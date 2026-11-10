@@ -4,6 +4,27 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "the-invasion-of-plants-1110",
+      "date": "2026-11-10",
+      "skill": "听力",
+      "kind": "真题",
+      "en": "The Invasion of Plants",
+      "zh": "植物入侵",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态",
+        "科学与技术",
+        "综合练习"
+      ],
+      "description": "六道错题重听与答案核对 · 分级翻卡 · 全文主题词汇、短语和语块词库 · 三种植物图片 · 发音与本地进度保存",
+      "path": "reviews/2026-11-10/listening/exam/the-invasion-of-plants/index.html",
+      "dateBasis": "用户2026年11月10日提供Section 4录音转写、Q31–40题目与首次作答；首次4/10",
+      "source": "用户提供英文录音转写、中文对照、题目及首次作答记录；词汇分级、释义与复听提示为学习辅助",
+      "aliases": [],
+      "title": "1110-听力-真题-The Invasion of Plants 植物入侵",
+      "url": "/ielts-review-library/reviews/2026-11-10/listening/exam/the-invasion-of-plants/"
+    },
+    {
       "id": "unlocking-the-mystery-of-dreams-1109",
       "date": "2026-11-09",
       "skill": "阅读",
