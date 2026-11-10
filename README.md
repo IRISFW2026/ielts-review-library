@@ -23,6 +23,7 @@
 ## 复习目录
 
 | 日期 | 科目与题型 | 标准名称与链接 |
+| 2026-11-10 | 听力 真题 | [1110-听力-真题-The Invasion of Plants 植物入侵](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-10/listening/exam/the-invasion-of-plants/) |
 |---|---|---|
 | 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Unlocking the Mystery of Dreams 揭开梦境之谜](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/unlocking-the-mystery-of-dreams/) |
 | 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Can Hurricanes Be Moderated or Diverted? 飓风能否被减弱或改变方向？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/can-hurricanes-be-moderated-or-diverted/) |
