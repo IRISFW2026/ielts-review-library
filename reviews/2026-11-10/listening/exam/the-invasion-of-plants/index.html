@@ -167,9 +167,9 @@ function renderFlash(){
     const complete=selected.length>0&&unmastered.length===0;
     const future=unmastered.filter(c=>rec(c).level&&rec(c).due>Date.now()).sort((a,b)=>rec(a).due-rec(b).due)[0];
     content.innerHTML='<div class="empty"><div class="big">'+(complete?"✓":"◌")+'</div><h2>'+(complete?"当前筛选内的词，你已经掌握了！":unmastered.length===0?"当前筛选没有词条":"本轮复习已完成")+'</h2><p>本轮已完成 '+sessionCount+' 次。'+(future?"下一次复习："+esc(new Date(rec(future).due).toLocaleString()):"到期词会在下次打开时进入复习队列。")+'</p><p>可以结束本轮，或提前练习当前筛选内尚未熟练的词。</p><div class="controls"><button class="btn primary" data-action="refresh">检查到期复习</button><button class="btn" data-action="early">提前练习</button></div></div>';
-    grades.hidden=true;grades.innerHTML="";$("skip").hidden=true;return;
+    grades.hidden=true;grades.innerHTML="";$("skip").hidden=true;$("flip").hidden=true;return;
   }
-  $("skip").hidden=false;
+  $("skip").hidden=false;$("flip").hidden=false;$("flip").textContent=revealed?"收起释义":"揭晓释义";
   const r=rec(current);
   $("flash-status").textContent=(current.type==="word"?"WORD · 单词":current.type==="phrase"?"PHRASE · 短语":"CHUNK · 语块")+" / "+statusName(r.level);
   let body="";
