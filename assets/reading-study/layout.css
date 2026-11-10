@@ -1,0 +1,173 @@
+/* Shared sidebar and practice controls based on the Manatees review page. */
+body.reading-study {
+  --ink: #183b3a;
+  --muted: #526e66;
+  --sub: #526e66;
+  --green: #17685c;
+  --accent: #17685c;
+  --blue: #17685c;
+  --line: #dce7e1;
+  --paper: #f4f7f2;
+  --bg: #f4f7f2;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.reading-study .reading-shell {
+  display: grid;
+  grid-template-columns: 246px minmax(0, 1fr);
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 0;
+}
+
+.reading-study .reading-sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  width: auto;
+  height: auto;
+  min-height: min(100vh, 860px);
+  max-height: 100vh;
+  overflow: auto;
+  padding: 28px 22px;
+  background: #e9f0e9;
+  border-right: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.reading-brand { font-size: 22px; font-weight: 800; }
+.reading-brand span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .18em;
+}
+.reading-study .reading-book {
+  margin: 22px 0;
+  padding: 15px;
+  border-radius: 16px;
+  background: #dae9dd;
+}
+.reading-book small { color: var(--muted); font-size: 11px; }
+.reading-book h2 { margin: 5px 0; font: 700 19px/1.35 Georgia, serif; }
+.reading-book p { margin: 0; color: var(--muted); font-size: 13px; }
+.reading-study .reading-back {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.reading-study .reading-nav {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+.reading-study .reading-nav button {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: left;
+  color: var(--ink);
+  background: transparent;
+}
+.reading-study .reading-nav button:hover { border-color: #8bb6a6; }
+.reading-study .reading-nav button.active,
+.reading-study .reading-nav button[aria-pressed="true"][data-drill] {
+  color: white;
+  background: var(--green);
+  border-color: var(--green);
+}
+.reading-study .reading-main { min-width: 0; padding: 30px 36px; }
+.reading-study .reading-main h1 { overflow-wrap: anywhere; }
+.reading-study .reading-main .stat {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+}
+.reading-study .reading-main .primary { background: var(--green); border-color: var(--green); color: white; }
+.reading-study .reading-main :is(.study-card, .reviewcard, .cardface) {
+  border-color: var(--line);
+  border-radius: 20px;
+  background: white;
+}
+.reading-study .reading-main .reading-module-count { margin: 12px 0; }
+
+.reading-study .reading-drills[hidden], .reading-drills [hidden] { display: none; }
+.reading-study.drill-open .reading-main > :is(.module, .panel, .reading-module-count, .filters, .roundbar, .stars-note, #extra, #study, #library) {
+  display: none;
+}
+.reading-study.drill-open .reading-nav button.active:not([data-drill]) {
+  color: var(--ink);
+  background: transparent;
+  border-color: transparent;
+}
+.reading-study .reading-drills {
+  margin: 16px 0;
+  padding: clamp(16px, 4vw, 35px);
+  border: 1px solid var(--line);
+  border-radius: 23px;
+  background: white;
+}
+.reading-drills h2 { margin: 0 0 8px; }
+.reading-drills .drill-filters, .reading-drills .drill-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: end;
+  margin: 16px 0;
+}
+.reading-drills .drill-inputs { display: grid; gap: 12px; }
+.reading-drills label { display: grid; gap: 5px; font-size: 13px; }
+.reading-drills :is(input,textarea,select,button) {
+  min-height: 42px;
+  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  background: white;
+  font: inherit;
+}
+.reading-drills textarea { resize: vertical; }
+.reading-drills .drill-prompt {
+  margin: 16px 0;
+  font: 700 clamp(22px, 3vw, 34px)/1.35 Georgia, serif;
+  overflow-wrap: anywhere;
+}
+.reading-drills .drill-solution {
+  padding: 14px;
+  border-radius: 12px;
+  background: #edf5ef;
+  overflow-wrap: anywhere;
+}
+.reading-drills :is(.drill-help, .drill-position) { color: var(--muted); }
+.reading-drills button:disabled { opacity: .5; cursor: not-allowed; }
+
+@media (max-width: 900px) {
+  .reading-study .reading-shell { grid-template-columns: minmax(0, 1fr); }
+  .reading-study .reading-sidebar {
+    position: static;
+    min-height: 0;
+    max-height: none;
+    padding: 15px 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .reading-brand span, .reading-study .reading-book { display: none; }
+  .reading-study .reading-nav {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 12px;
+    padding-bottom: 4px;
+  }
+  .reading-study .reading-nav button { flex: none; white-space: nowrap; }
+  .reading-study .reading-main { padding: 20px 16px; }
+}
