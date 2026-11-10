@@ -367,24 +367,94 @@
       "dateBasis": "页面创建日期"
     },
     {
-      "id": "five-task1-types",
+      "id": "young-population-and-residence",
       "date": "2026-10-24",
       "skill": "写作",
       "kind": "小作文",
-      "en": "Five Task 1 Types",
-      "zh": "五类图表题",
-      "topic": "综合练习",
+      "en": "Young Population and Where They Live",
+      "zh": "混合图 · 年轻人口与居住分布",
+      "topic": "人口与城市",
       "tags": [
-        "综合练习",
         "人口与城市"
       ],
-      "description": "表格、地图、流程、混合图、饼图 · 46句范文",
-      "title": "1024-写作-小作文-Five Task 1 Types 五类图表题",
-      "path": "reviews/2026-10-24/writing/task-1/five-task1-types/index.html",
-      "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/five-task1-types/",
-      "source": "1024-小作文-五类题型-思路批改与七分范文.html",
-      "aliases": [],
-      "dateBasis": "材料文件名1024 页面于10月25日创建"
+      "description": "混合图 · 年轻人口 · 题目与思路批改 · 9 句范文默写 · 5 个词汇与语块",
+      "path": "reviews/2026-10-24/writing/task-1/young-population-and-residence/index.html",
+      "dateBasis": "原五类题型练习的材料文件名 1024",
+      "title": "1024-写作-小作文-Young Population and Where They Live 混合图 · 年轻人口与居住分布",
+      "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/young-population-and-residence/",
+      "aliases": []
+    },
+    {
+      "id": "university-student-commuting",
+      "date": "2026-10-24",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "University Student Commuting",
+      "zh": "饼图 · 大学生通勤",
+      "topic": "人口与城市",
+      "tags": [
+        "人口与城市"
+      ],
+      "description": "饼图 · 大学生通勤 · 题目与思路批改 · 9 句范文默写 · 6 个词汇与语块",
+      "path": "reviews/2026-10-24/writing/task-1/university-student-commuting/index.html",
+      "dateBasis": "原五类题型练习的材料文件名 1024",
+      "title": "1024-写作-小作文-University Student Commuting 饼图 · 大学生通勤",
+      "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/university-student-commuting/",
+      "aliases": []
+    },
+    {
+      "id": "tv-centre-layout",
+      "date": "2026-10-24",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "TV Centre Layout",
+      "zh": "地图 · 电视中心布局",
+      "topic": "人口与城市",
+      "tags": [
+        "人口与城市"
+      ],
+      "description": "地图 · 电视中心 · 题目与思路批改 · 9 句范文默写 · 11 个词汇与语块",
+      "path": "reviews/2026-10-24/writing/task-1/tv-centre-layout/index.html",
+      "dateBasis": "原五类题型练习的材料文件名 1024",
+      "title": "1024-写作-小作文-TV Centre Layout 地图 · 电视中心布局",
+      "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/tv-centre-layout/",
+      "aliases": []
+    },
+    {
+      "id": "plastic-bottle-recycling",
+      "date": "2026-10-24",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "Plastic Bottle Recycling",
+      "zh": "流程图 · 塑料瓶回收",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态"
+      ],
+      "description": "流程图 · 塑料瓶回收 · 题目与思路批改 · 10 句范文默写 · 11 个词汇与语块",
+      "path": "reviews/2026-10-24/writing/task-1/plastic-bottle-recycling/index.html",
+      "dateBasis": "原五类题型练习的材料文件名 1024",
+      "title": "1024-写作-小作文-Plastic Bottle Recycling 流程图 · 塑料瓶回收",
+      "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/plastic-bottle-recycling/",
+      "aliases": []
+    },
+    {
+      "id": "course-ratings",
+      "date": "2026-10-24",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "Course Ratings",
+      "zh": "表格 · 课程评价",
+      "topic": "综合练习",
+      "tags": [
+        "综合练习"
+      ],
+      "description": "表格 · 课程评价 · 题目与思路批改 · 9 句范文默写 · 9 个词汇与语块",
+      "path": "reviews/2026-10-24/writing/task-1/course-ratings/index.html",
+      "dateBasis": "原五类题型练习的材料文件名 1024",
+      "title": "1024-写作-小作文-Course Ratings 表格 · 课程评价",
+      "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/course-ratings/",
+      "aliases": []
     },
     {
       "id": "town-population",
@@ -429,30 +499,6 @@
       "displayTitle": "口语模考，Speaking Studio"
     },
     {
-      "id": "four-listening-topics",
-      "date": "2026-10-22",
-      "skill": "听力",
-      "kind": "合集",
-      "en": "Four Listening Topics",
-      "zh": "四篇听力主题",
-      "topic": "综合练习",
-      "tags": [
-        "综合练习",
-        "心理与学习",
-        "自然与生态",
-        "职场与就业"
-      ],
-      "description": "婴幼儿学习 · 加拿大枫糖浆 · 果园求职 · 假期工作",
-      "title": "1022-听力-合集-Four Listening Topics 四篇听力主题",
-      "path": "reviews/2026-10-22/listening/collection/four-listening-topics/index.html",
-      "url": "/ielts-review-library/reviews/2026-10-22/listening/collection/four-listening-topics/",
-      "source": "IELTS-Listening-Babies-Learning-Canadian-Maple-Syrup-Nature-Farm-Vacation-Jobs-2026-10-22.html",
-      "aliases": [
-        "IELTS-Listening-Four-Topics-Context-Collocations-Review.html"
-      ],
-      "dateBasis": "合集标题日期 单篇材料日期可能不同"
-    },
-    {
       "id": "australia-employment",
       "date": "2026-10-22",
       "skill": "写作",
@@ -475,6 +521,60 @@
       "dateBasis": "该页面首次发布日期 材料学习日期未标注"
     },
     {
+      "id": "vacation-jobs",
+      "date": "2026-10-21",
+      "skill": "听力",
+      "kind": "Part 2",
+      "en": "Vacation Jobs",
+      "zh": "假期工作",
+      "topic": "职场与就业",
+      "tags": [
+        "职场与就业"
+      ],
+      "description": "102 个词汇与语块 · 49 句原文 · 搭配听写、听词理解与整句精听",
+      "path": "reviews/2026-10-21/listening/part-2/vacation-jobs/index.html",
+      "dateBasis": "原合集页底部标注的单篇讲义日期 2026-10-21",
+      "title": "1021-听力-Part 2-Vacation Jobs 假期工作",
+      "url": "/ielts-review-library/reviews/2026-10-21/listening/part-2/vacation-jobs/",
+      "aliases": []
+    },
+    {
+      "id": "nature-farm",
+      "date": "2026-10-21",
+      "skill": "听力",
+      "kind": "Part 1",
+      "en": "Nature Farm",
+      "zh": "果园求职",
+      "topic": "职场与就业",
+      "tags": [
+        "职场与就业"
+      ],
+      "description": "109 个词汇与语块 · 75 句原文 · 搭配听写、听词理解与整句精听",
+      "path": "reviews/2026-10-21/listening/part-1/nature-farm/index.html",
+      "dateBasis": "原合集页底部标注的单篇讲义日期 2026-10-21",
+      "title": "1021-听力-Part 1-Nature Farm 果园求职",
+      "url": "/ielts-review-library/reviews/2026-10-21/listening/part-1/nature-farm/",
+      "aliases": []
+    },
+    {
+      "id": "canadian-maple-syrup",
+      "date": "2026-10-21",
+      "skill": "听力",
+      "kind": "Part 4",
+      "en": "Canadian Maple Syrup",
+      "zh": "加拿大枫糖浆",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态"
+      ],
+      "description": "122 个词汇与语块 · 60 句原文 · 搭配听写、听词理解与整句精听",
+      "path": "reviews/2026-10-21/listening/part-4/canadian-maple-syrup/index.html",
+      "dateBasis": "原合集页底部标注的单篇讲义日期 2026-10-21",
+      "title": "1021-听力-Part 4-Canadian Maple Syrup 加拿大枫糖浆",
+      "url": "/ielts-review-library/reviews/2026-10-21/listening/part-4/canadian-maple-syrup/",
+      "aliases": []
+    },
+    {
       "id": "kakapo",
       "date": "2026-10-20",
       "skill": "阅读",
@@ -492,6 +592,24 @@
       "source": "Kakapo-Review.html",
       "aliases": [],
       "dateBasis": "材料日期"
+    },
+    {
+      "id": "how-babies-and-children-learn",
+      "date": "2026-10-20",
+      "skill": "听力",
+      "kind": "Part 3",
+      "en": "How Babies and Children Learn",
+      "zh": "婴幼儿如何学习",
+      "topic": "心理与学习",
+      "tags": [
+        "心理与学习"
+      ],
+      "description": "92 个词汇与语块 · 104 句原文 · 搭配听写、听词理解与整句精听",
+      "path": "reviews/2026-10-20/listening/part-3/how-babies-and-children-learn/index.html",
+      "dateBasis": "原合集页底部标注的单篇讲义日期 2026-10-20",
+      "title": "1020-听力-Part 3-How Babies and Children Learn 婴幼儿如何学习",
+      "url": "/ielts-review-library/reviews/2026-10-20/listening/part-3/how-babies-and-children-learn/",
+      "aliases": []
     },
     {
       "id": "davies-sisters",
@@ -612,27 +730,58 @@
       "url": "/ielts-review-library/reviews/2026-10-06/speaking/part-1/singing/"
     },
     {
-      "id": "three-reading-topics",
+      "id": "survivors-story",
       "date": "2026-09-30",
       "skill": "阅读",
-      "kind": "合集",
-      "en": "Three Reading Topics",
-      "zh": "三篇阅读主题",
-      "topic": "综合练习",
+      "kind": "模考",
+      "en": "Survivor’s Story",
+      "zh": "幸存者的故事",
+      "topic": "自然与生态",
       "tags": [
-        "综合练习",
-        "科技与体育",
         "自然与生态"
       ],
-      "description": "How they move · Humans and Food · Survivor’s Story",
-      "title": "0930-阅读-合集-Three Reading Topics 三篇阅读主题",
-      "path": "reviews/2026-09-30/reading/collection/three-reading-topics/index.html",
-      "url": "/ielts-review-library/reviews/2026-09-30/reading/collection/three-reading-topics/",
-      "source": "index.html",
-      "aliases": [
-        "IELTS-Reading-Review-Preview.html"
+      "description": "104 个词汇与语块 · 42 句原文 · 翻卡、听写、看词写义与句子精听",
+      "path": "reviews/2026-09-30/reading/practice/survivors-story/index.html",
+      "dateBasis": "沿用原三篇阅读材料日期 2026-09-30",
+      "title": "0930-阅读-模考-Survivor’s Story 幸存者的故事",
+      "url": "/ielts-review-library/reviews/2026-09-30/reading/practice/survivors-story/",
+      "aliases": []
+    },
+    {
+      "id": "humans-and-food",
+      "date": "2026-09-30",
+      "skill": "阅读",
+      "kind": "模考",
+      "en": "Humans and Food",
+      "zh": "人类与食物",
+      "topic": "健康与生活",
+      "tags": [
+        "健康与生活"
       ],
-      "dateBasis": "原始合集材料日期"
+      "description": "88 个词汇与语块 · 37 句原文 · 翻卡、听写、看词写义与句子精听",
+      "path": "reviews/2026-09-30/reading/practice/humans-and-food/index.html",
+      "dateBasis": "沿用原三篇阅读材料日期 2026-09-30",
+      "title": "0930-阅读-模考-Humans and Food 人类与食物",
+      "url": "/ielts-review-library/reviews/2026-09-30/reading/practice/humans-and-food/",
+      "aliases": []
+    },
+    {
+      "id": "how-they-move",
+      "date": "2026-09-30",
+      "skill": "阅读",
+      "kind": "模考",
+      "en": "How they move",
+      "zh": "过山车如何运行",
+      "topic": "科技与体育",
+      "tags": [
+        "科技与体育"
+      ],
+      "description": "85 个词汇与语块 · 40 句原文 · 翻卡、听写、看词写义与句子精听",
+      "path": "reviews/2026-09-30/reading/practice/how-they-move/index.html",
+      "dateBasis": "沿用原三篇阅读材料日期 2026-09-30",
+      "title": "0930-阅读-模考-How they move 过山车如何运行",
+      "url": "/ielts-review-library/reviews/2026-09-30/reading/practice/how-they-move/",
+      "aliases": []
     }
   ]
 }

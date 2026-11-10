@@ -18,13 +18,13 @@
 
 `catalog.json` 是目录数据，记录日期依据、主题、路径和旧入口；首页使用同一份数据生成的内嵌快照，直接打开也能浏览。
 
-根目录旧 HTML 文件保留为跳转入口；不再作为独立专题重复展示。旧书签的查询参数与章节锚点继续传递。原首页的三篇阅读移入2026年9月30日的阅读合集；旧首页文章锚点自动转至该合集。
+根目录旧 HTML 文件保留为跳转入口。三篇阅读、四篇听力及五道小作文均按材料独立归档，原合集网址保留为篇目导航。可识别的旧篇目链接直接打开相应页面，并继续传递查询参数和章节锚点。
 
 ## 复习目录
 
 | 日期 | 科目与题型 | 标准名称与链接 |
-| 2026-11-10 | 听力 真题 | [1110-听力-真题-The Invasion of Plants 植物入侵](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-10/listening/exam/the-invasion-of-plants/) |
 |---|---|---|
+| 2026-11-10 | 听力 真题 | [1110-听力-真题-The Invasion of Plants 植物入侵](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-10/listening/exam/the-invasion-of-plants/) |
 | 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Unlocking the Mystery of Dreams 揭开梦境之谜](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/unlocking-the-mystery-of-dreams/) |
 | 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Can Hurricanes Be Moderated or Diverted? 飓风能否被减弱或改变方向？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/can-hurricanes-be-moderated-or-diverted/) |
 | 2026-11-06 | 阅读 真题 | [1106-阅读-真题-What the Managers Really Do? 管理者究竟做什么？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/reading/exam/what-the-managers-really-do/) |
@@ -42,19 +42,28 @@
 | 2026-10-26 | 阅读 真题 | [1026-阅读-真题-Why don’t we sleep 我们为什么不睡觉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/reading/exam/why-dont-we-sleep/) |
 | 2026-10-26 | 听力 Part 1 | [1026-听力-Part 1-Second-hand Cars 二手车咨询](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/listening/part-1/second-hand-cars/) |
 | 2026-10-26 | 听力 Part 3 | [1026-听力-Part 3-Drama & Voice Coaching 戏剧声音指导](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-26/listening/part-3/drama-voice-coaching/) |
-| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Five Task 1 Types 五类图表题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/five-task1-types/) |
+| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Young Population and Where They Live 混合图 · 年轻人口与居住分布](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/young-population-and-residence/) |
+| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-University Student Commuting 饼图 · 大学生通勤](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/university-student-commuting/) |
+| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-TV Centre Layout 地图 · 电视中心布局](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/tv-centre-layout/) |
+| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Plastic Bottle Recycling 流程图 · 塑料瓶回收](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/plastic-bottle-recycling/) |
+| 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Course Ratings 表格 · 课程评价](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/course-ratings/) |
 | 2026-10-23 | 写作 小作文 | [1023-写作-小作文-Town Population 英国小镇人口](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/writing/task-1/town-population/) |
 | 2026-10-23 | 口语 模考 | [口语模考，Speaking Studio](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/) |
-| 2026-10-22 | 听力 合集 | [1022-听力-合集-Four Listening Topics 四篇听力主题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/listening/collection/four-listening-topics/) |
 | 2026-10-22 | 写作 小作文 | [1022-写作-小作文-Australia Employment 澳大利亚就业占比](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/writing/task-1/australia-employment/) |
+| 2026-10-21 | 听力 Part 2 | [1021-听力-Part 2-Vacation Jobs 假期工作](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-2/vacation-jobs/) |
+| 2026-10-21 | 听力 Part 1 | [1021-听力-Part 1-Nature Farm 果园求职](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-1/nature-farm/) |
+| 2026-10-21 | 听力 Part 4 | [1021-听力-Part 4-Canadian Maple Syrup 加拿大枫糖浆](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-4/canadian-maple-syrup/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Kākāpō 鸮鹦鹉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/kakapo/) |
+| 2026-10-20 | 听力 Part 3 | [1020-听力-Part 3-How Babies and Children Learn 婴幼儿如何学习](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/listening/part-3/how-babies-and-children-learn/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Davies Sisters 戴维斯姐妹](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/davies-sisters/) |
 | 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Robot Umpires 机器人裁判](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/robot-umpires/) |
 | 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Procrastination 拖延](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/procrastination/) |
 | 2026-10-16 | 阅读 模考 | [1016-阅读-模考-Manatees 海牛](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-16/reading/practice/manatees/) |
 | 2026-10-11 | 阅读 精读 | [1011-阅读-精读-Termite Mounds 白蚁丘](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-11/reading/close-reading/termite-mounds/) |
 | 2026-10-06 | 口语 Part 1 | [1006-口语-Part 1-Singing 唱歌](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-06/speaking/part-1/singing/) |
-| 2026-09-30 | 阅读 合集 | [0930-阅读-合集-Three Reading Topics 三篇阅读主题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-09-30/reading/collection/three-reading-topics/) |
+| 2026-09-30 | 阅读 模考 | [0930-阅读-模考-Survivor’s Story 幸存者的故事](https://irisfw2026.github.io/ielts-review-library/reviews/2026-09-30/reading/practice/survivors-story/) |
+| 2026-09-30 | 阅读 模考 | [0930-阅读-模考-Humans and Food 人类与食物](https://irisfw2026.github.io/ielts-review-library/reviews/2026-09-30/reading/practice/humans-and-food/) |
+| 2026-09-30 | 阅读 模考 | [0930-阅读-模考-How they move 过山车如何运行](https://irisfw2026.github.io/ielts-review-library/reviews/2026-09-30/reading/practice/how-they-move/) |
 
 ## 更新约定
 
@@ -86,6 +95,7 @@ node scripts/build-catalog.mjs --check
 - Singing：2026年10月6日的9道Part 1问答、纠错、关键词和跟读。
 
 原网址保留为跳转入口。两库的GitHub Pages使用同一域名，模考工具继续沿用原localStorage键；页面不上传或迁入用户录音。录音仍需在刷新或关闭前导出。详见 [迁移记录](docs/speaking-migration.md)。
+
 
 
 
