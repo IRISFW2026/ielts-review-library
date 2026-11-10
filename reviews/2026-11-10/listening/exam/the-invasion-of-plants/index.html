@@ -118,7 +118,7 @@ function loadState(){
   });
   return {progress,wrongDone:Array.isArray(raw.wrongDone)?raw.wrongDone:[],settings:{...DEFAULTS.settings,...(raw.settings||{})}};
 }
-let state=loadState(),kind="all",scope="due",starFilter="all",queue=[],current=null,revealed=false,sessionCount=0,voices=[],audio=null,soundToken=0;
+let state=loadState(),kind="all",scope="due",starFilter="all",queue=[],current=null,revealed=false,sessionCount=0,voices=[],audio=null,soundToken=0,activeTab="flash";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const LABELS={new:"未学",1:"不认识",2:"模糊",3:"认识",4:"熟练"};
@@ -202,6 +202,7 @@ function filterChanged(){
   sessionCount=0;buildQueue();
 }
 function showTab(name){
+  activeTab=name;
   document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===name));
   ["flash","wrong","bank","settings"].forEach(x=>$("panel-"+x).hidden=x!==name);
   if(name==="flash")renderFlash();if(name==="wrong")renderWrong();if(name==="bank")renderBank();if(name==="settings")setupSettings();
@@ -321,4 +322,5 @@ document.addEventListener("change",e=>{
 function toast(t){const el=$("toast");el.textContent=t;el.hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.hidden=true,4500)}
 if("speechSynthesis"in window){speechSynthesis.onvoiceschanged=loadVoices;loadVoices();setTimeout(loadVoices,800)}else voiceStatus();
 renderWrong();setupSettings();buildQueue();renderBank();renderStats();
+setInterval(()=>{renderStats();if(activeTab==="flash"&&scope==="due"&&!current){const dueNow=candidates().map(c=>c.en);if(dueNow.length){queue=dueNow;next()}}},15000);
 </script></body></html>
