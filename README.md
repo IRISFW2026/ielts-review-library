@@ -24,6 +24,7 @@
 
 | 日期 | 科目与题型 | 标准名称与链接 |
 |---|---|---|
+| 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Can Hurricanes Be Moderated or Diverted? 飓风能否被减弱或改变方向？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/can-hurricanes-be-moderated-or-diverted/) |
 | 2026-11-06 | 阅读 真题 | [1106-阅读-真题-What the Managers Really Do? 管理者究竟做什么？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/reading/exam/what-the-managers-really-do/) |
 | 2026-11-06 | 听力 真题 | [1106-听力-真题-The Seahorses 海马](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/listening/exam/the-seahorses/) |
 | 2026-11-06 | 听力 真题 | [1106-听力-真题-Organic farming 有机农业](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/listening/exam/organic-farming/) |
