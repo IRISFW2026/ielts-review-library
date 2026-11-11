@@ -4,6 +4,27 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "doctor-in-australia-1111",
+      "date": "2026-11-11",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "Doctor in Australia",
+      "zh": "澳大利亚医生人数、性别与出生地",
+      "topic": "人口与城市",
+      "tags": [
+        "人口与城市",
+        "职场与就业",
+        "综合练习"
+      ],
+      "description": "10句中文默写（无提示）· 24张词汇短语翻卡 · 完整范文逐句朗读 · 8组Task 1常用句式及24个迁移例句 · 进度本地保存",
+      "path": "reviews/2026-11-11/writing/task-1/doctor-in-australia/index.html",
+      "dateBasis": "用户2026年11月11日提供图表并完成写作讨论",
+      "source": "用户提供图表数据与初稿；范文和迁移句式依据本次讨论整理",
+      "aliases": [],
+      "title": "1111-写作-Doctor in Australia 澳大利亚医生人数、性别与出生地",
+      "url": "/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/"
+    },
+    {
       "id": "global-warming-in-new-zealand-1111",
       "date": "2026-11-11",
       "skill": "阅读",
