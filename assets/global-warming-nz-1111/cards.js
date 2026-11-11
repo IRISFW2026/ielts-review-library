@@ -28,7 +28,7 @@ function saveQuiz(){try{localStorage.setItem(KEY+'-quiz',JSON.stringify(quizAtte
 let mode='cards',type='all',scope='all',priority='5',search='',queue=[],index=0,revealed=false,voices=[],utterance=null,sequence=0,gap=null,toastTimer=null,shuffled=false;
 function rec(c){return records[c.id]||{level:0,due:0,reps:0,favourite:false,lastSeen:0}}
 function notify(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4500)}
-function persist(){try{localStorage.setItem(KEY,JSON.stringify({version:1,records,settings,view:{...savedView,[material.id]:{id:queue[index]?.id,mode,type,scope,priority,search,focusedQuestion}}}))}catch{notify('进度未能保存，请导出复习记录备份。')}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify({version:1,records,settings,view:{...savedView,[material.id]:{id:queue[index]?.id,mode,paragraph,type,scope,priority,search,focusedQuestion}}}))}catch{notify('进度未能保存，请导出复习记录备份。')}}
 function stop(){sequence++;clearTimeout(gap);if(window.speechSynthesis)window.speechSynthesis.cancel();utterance=null;$('audio-status').textContent='朗读已停止';}
 function speak(texts,slow=false,repeats=settings.repeats){
  stop();if(!window.speechSynthesis||typeof SpeechSynthesisUtterance==='undefined'){notify('当前浏览器不支持合成朗读，请使用支持英语朗读的浏览器。');return}
@@ -110,7 +110,7 @@ document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
  if(b.dataset.qscope){document.querySelectorAll('[data-wrong]').forEach(n=>n.hidden=b.dataset.qscope==='wrong'&&n.dataset.wrong!=='true');}
  if(b.dataset.goParagraph){mode='cards';paragraph=b.dataset.goParagraph;$('paragraph').value=paragraph;type='all';scope='all';priority='all';search='';for(const [id,val] of Object.entries({paragraph,type,scope,priority,search}))$(id).value=val;rebuild();return;}
- if(b.dataset.openq){const q=DATA.questions.find(q=>q.no===Number(b.dataset.openq));mode='cards';type='all';scope='all';priority='all';search='';focusedQuestion=q.no;for(const [id,val] of Object.entries({type,scope,priority,search}))$(id).value=val;rebuild();notify('已显示第'+q.no+'题相关词汇；更改筛选后返回完整词库。');return;}
+ if(b.dataset.openq){const q=DATA.questions.find(q=>q.no===Number(b.dataset.openq));mode='cards';type='all';scope='all';priority='all';search='';focusedQuestion=q.no;for(const [id,val] of Object.entries({paragraph,type,scope,priority,search}))$(id).value=val;rebuild();notify('已显示第'+q.no+'题相关词汇；更改筛选后返回完整词库。');return;}
  if(b.dataset.checkQ){
   const q=DATA.questions.find(q=>q.no===Number(b.dataset.checkQ));const node=document.querySelector('[data-question="'+q.no+'"]');let value='';
   if(q.type==='fill')value=node.querySelector('[data-q-fill]').value.trim();
@@ -127,6 +127,7 @@ document.addEventListener('click',e=>{
 });
 const previous=savedView[material.id]||{};
 if(['cards','library','questions','pairs','passage','overview','table'].includes(previous.mode))mode=previous.mode;
+if(['all','A','B','C','D','E','F','G','H','I','J','Q'].includes(previous.paragraph))paragraph=previous.paragraph;
 if(['all','word','phrase','collocation'].includes(previous.type))type=previous.type;
 if(['all','new','due','weak','mastered','favourites'].includes(previous.scope))scope=previous.scope;
 if(['all','1','2','3','4','5','4plus','weakq'].includes(previous.priority))priority=previous.priority;
