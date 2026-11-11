@@ -43,182 +43,184 @@
 @media(max-width:900px){.wordrow{grid-template-columns:minmax(120px,1fr) 90px minmax(130px,1fr) 75px 100px}.flash-study-card{padding:25px 20px}}
 @media(max-width:680px){.hero .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero .stats>div{padding:10px}.hero .stats b{font-size:21px}.study-filters{display:grid;grid-template-columns:1fr 1fr}.study-filters select:last-child{grid-column:1/-1}.flash-study-card{padding:21px 14px;border-radius:18px}.flash-content{min-height:210px}.flash-content .term{font-size:29px}.flash-content .meaning{font-size:19px}.grades{gap:5px}.grades button{font-size:12px;padding:12px 4px}.grades small{font-size:10px}.flash-study-card .bottom{align-items:flex-start}.wordrow{grid-template-columns:minmax(0,1fr) 75px 90px;gap:6px;padding:11px 9px}.wordrow .example{grid-column:1/-1;grid-row:2}.wordrow .level-select{grid-column:3;grid-row:1}.wordrow .type{font-size:10px}}
 </style>
-<style id="lavender-listening-theme">
-:root{
- --ink:#382e48;--muted:#8b8298;--green:#80609b;--green2:#f1eafa;
- --line:#e9e0f0;--bg:#faf8fc;--paper:#fff;--gold:#b58a43;
- --red:#a65b73;--softred:#f8eff5;
-}
-*{box-sizing:border-box}
-body{background:#faf8fc;color:#382e48}
+<style id="manatees-layout-lavender">
+:root{--ink:#382e48;--muted:#897f96;--green:#80609b;--green2:#f1eafa;--line:#e8e0ee;--paper:#faf8fc;--gold:#b58a43;--red:#a65b73;--softred:#f8eff5}
+body{background:#faf8fc;color:var(--ink)}
 a{color:#80609b}
-button:focus-visible,input:focus-visible,select:focus-visible{outline-color:#c5addb}
-.app{width:100%;max-width:1720px;min-height:100vh;grid-template-columns:270px minmax(0,1fr);margin:0 auto}
-.side{min-width:0;padding:34px 24px;background:#f1ebf8;border-right:1px solid #e9e0f0}
-.brand{color:#40334f}
-.book{margin:30px 0 27px;padding:17px;background:#e9def4;border:1px solid #e2d5ef;border-radius:16px}
-.book small{color:#89739e}.book h3{color:#443653}.book p{color:#8a789b}
-.book svg path:first-of-type{stroke:#9273ae!important}
-.book svg path:last-of-type{stroke:#c6b1dc!important}
-.nav{gap:8px}
-.nav button{min-height:48px;border-radius:11px;padding:12px 13px;color:#574966}
-.nav button.active,.nav button.active:hover{background:#80609b!important;color:#fff!important}
-.side-note{color:#9388a0}
-.main{width:100%;max-width:none;min-width:0;padding:32px clamp(24px,3vw,50px) 36px}
-.header{display:block;margin-bottom:18px}
-.header-topline{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-bottom:10px;border-bottom:1px solid #ebe4f0}
-.top-back{color:#80609b;font-size:12px;font-weight:650;text-decoration:none}
-.header-mainline{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:14px}
-.kicker{color:#9b8da8}
-h1{color:#3c304c;font-size:clamp(24px,2.3vw,31px);line-height:1.35}
-.subtitle,.date,.voice-status{color:#8b8298}
-.hero{margin:22px 0 16px;padding:0;background:transparent;border:0}
-.hero .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0}
-.hero .stats>div{min-width:0;padding:14px 17px;border:1px solid #e9e0f0;border-radius:13px;background:#fff}
-.hero .stats b{display:block;color:#3c304c;font-size:24px;line-height:1.3}
-.hero .stats small{color:#8b8298;font-size:11px}
-.progressline{color:#887b95}
-.mastery-bar,.progress{background:#eee8f3}
-.mastery-bar i,.progress>span{background:#9a7bb5}
-.panel{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c8b3dc;outline-offset:3px}
+.shell{max-width:1400px;margin:auto;display:grid;grid-template-columns:246px minmax(0,1fr);min-height:100vh}
+.sidebar{min-width:0;padding:35px 24px;background:#f1ebf8;border-right:1px solid #e8e0ee}
+.brand{font-size:22px;font-weight:800;letter-spacing:-1px;color:#443653}
+.brand span{font-size:13px;display:block;letter-spacing:3px;font-weight:500;color:var(--muted)}
+.book{margin:45px 0 28px;padding:17px;background:#e9def4;border:1px solid #e2d5ef;border-radius:16px}
+.book small{color:#89739e;font-size:11px;letter-spacing:2px}
+.book h3{font-size:23px;line-height:1.35;margin:7px 0 0;color:#443653}
+.book p{margin:0;color:#8a789b;font-size:13px}
+.book svg{width:100%;height:65px;margin-top:8px}
+.nav{display:grid;gap:8px}
+.nav button{text-align:left;background:transparent;border:1px solid transparent;color:#574966;border-radius:10px;padding:12px 13px}
+.nav button.active{background:#80609b!important;color:#fff!important;border-color:#80609b!important;font-weight:650}
+.sidebar .note{font-size:12px;color:var(--muted);margin-top:32px;line-height:1.9}
+.main{padding:34px 44px;min-width:0;width:100%}
+.catalog-return{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 18px;padding:0 0 12px;border-bottom:1px solid var(--line);font:13px/1.6 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.catalog-return a{color:#80609b;text-decoration:none;font-weight:650}
+.catalog-return span{color:var(--muted)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:0}
+.eyebrow{font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:700}
+h1{font-size:31px;line-height:1.4;letter-spacing:-1px;margin:6px 0;color:#3f334e}
+h2{margin:10px 0;font-size:24px}
+.sub,.muted{color:var(--muted)}
+.sub{margin-top:0}
+.soundstatus{font-size:11px;color:var(--muted);max-width:240px;text-align:right}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:25px 0}
+.stat{border-radius:15px;border:1px solid var(--line);background:#fff;padding:15px 20px;min-width:0}
+.stat b{font-size:27px;display:block;line-height:1.3;color:#3f334e}
+.stat span{color:var(--muted);font-size:12px}
+.progressline{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.bar{height:6px;background:#eee8f3;border-radius:8px;overflow:hidden;margin:10px 0 26px}
+.bar i{display:block;height:100%;background:#9a7bb5;transition:width .3s;width:0}
+.panel{background:transparent;border:0;border-radius:0;padding:0;margin-bottom:20px;box-shadow:none}
 .panel[hidden]{display:none}
-.panel-head{margin:0 0 14px}
-.badge{background:#f0e8f7;color:#80609b;border:1px solid #e8dcf1}
-.study-filters{display:flex;justify-content:flex-start;gap:9px;margin:12px 0 8px}
-.study-filters select{min-width:175px;padding:10px 13px;border:1px solid #e6dced;border-radius:10px;background:#fff;color:#4c405b}
-.study-filter-note,.study-prompt{color:#8b8298}
-.study-filter-note{margin:8px 0 9px;font-size:12px}
-.study-prompt{margin:0 0 13px;font-size:12px}
-.flash-wrap{width:100%;max-width:none;margin:0 auto}
-.flash-study-card{
- width:100%;min-height:690px;padding:30px clamp(24px,3.5vw,52px) 28px;
- border:1px solid #e8dff0;border-radius:23px;background:#fff;
- box-shadow:0 8px 30px rgba(83,57,108,.045);
-}
-.cardtop{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#8b8298}
-.tag{background:#f1eafa;color:#80609b;border-radius:7px}
-.counter{color:#8b8298}
-.flash-content{width:100%;max-width:850px;min-height:430px;margin:10px auto 0;text-align:center}
-.flash-content .term,.term-wrap>.term{
- color:#3a2e4a;font-family:Georgia,"Times New Roman",serif;
- font-size:clamp(32px,3.4vw,48px);font-weight:600;line-height:1.3;
- letter-spacing:-.5px;overflow-wrap:anywhere
-}
-.flash-content .word-meta,.term-wrap>.word-meta{display:flex;justify-content:center;align-items:center;gap:10px 14px;flex-wrap:wrap;margin:10px 0 14px}
-.flash-content .pos,.term-wrap .pos{padding:4px 9px;border-radius:6px;background:#f0edf7;color:#6f6289;font-size:12px}
-.flash-content .ipa,.term-wrap .ipa{font-family:"Lucida Sans Unicode","Segoe UI",sans-serif;color:#82768f;font-size:17px}
-.flash-content .stars,.term-wrap .stars{color:#b58a43;font-size:16px;letter-spacing:1px}
-.flash-content .star-label,.term-wrap .star-label{font:11px system-ui;color:#9389a0;letter-spacing:0}
-.flash-content .speaker,.term-wrap>.speaker{
- display:inline-flex;align-items:center;gap:7px;margin:5px auto 17px;
- padding:10px 16px;border:1px solid #e8dcf1;border-radius:11px;
- background:#f2ebf8;color:#765990
-}
-.flash-content .meaning,.term-wrap>.meaning{margin:12px 0 18px;color:#80609b;font-size:22px;font-weight:650;line-height:1.6}
-.context-meaning{color:#80609b;font-weight:650}
-.context-badge{display:inline-block;margin-left:7px;border:1px solid #e5d8ef;border-radius:5px;padding:0 6px;font:11px/1.7 system-ui;vertical-align:middle;color:#80609b;background:#f7f2fb}
-.term-wrap{width:100%;max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center}
-.term-wrap>.muted{margin:0 auto 17px;color:#92879e}
-.flash-detail,.term-wrap .flash-detail{
- width:100%;max-width:760px;margin:14px auto 0;padding:17px 20px;
- border:1px solid #eee7f3;border-radius:13px;background:#faf8fc;
- color:#453a54;text-align:left;font-size:14px
-}
-.flash-detail strong,.term-wrap .flash-detail strong{display:block;margin:0 0 8px;color:#79658f;font-size:12px;font-weight:700}
-.flash-detail p,.term-wrap .flash-detail p{margin:7px 0;line-height:1.8;overflow-wrap:anywhere}
-.flash-detail .small,.term-wrap .flash-detail .small{color:#91869c;font-size:12px}
-.term-wrap .flash-detail .speaker{margin:8px 0 0;padding:8px 12px;border:1px solid #e7dcf0;border-radius:9px;background:#f3edf8;color:#80609b;font-size:12px}
-.flash-example,.term-wrap .flash-example{border-color:#eee7f3;background:#fff}
-.term-wrap .memory-panel{
- width:100%;max-width:760px;margin:19px auto 0;padding:18px 20px;
- border:1px solid #e7dcef;border-radius:13px;background:#f5effa;text-align:left
-}
-.term-wrap .memory-panel h3{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 0 11px;color:#72558c;font-size:14px}
-.term-wrap .memory-label{display:inline-block;padding:3px 8px;border-radius:5px;background:#ece2f4;color:#80699a;font-size:10px;font-weight:600}
-.term-wrap .memory-panel p{margin:8px 0;color:#51455f;font-size:13px;line-height:1.85;overflow-wrap:anywhere}
-.term-wrap .memory-panel p b{color:#806b94;font-weight:650}
-.term-wrap .memory-family{padding-top:8px;border-top:1px solid #e7dcef;color:#897d94!important}
-.term-wrap .memory-panel a{display:inline-block;margin-top:5px;color:#80609b;font-size:11px}
-.flash-under{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:17px 0 0;color:#91869c;font-size:12px}
-.btn{border:1px solid #e7dcef;border-radius:10px;background:#fff;color:#554761}
-.btn.primary{background:#80609b!important;border-color:#80609b!important;color:#fff!important}
-.btn.soft{background:#f2ebf8!important;border-color:#e8dcf1!important;color:#765990!important}
-.btn.danger{background:#f8eff5;border-color:#eedce8;color:#a65b73}
-.reveal-btn{display:block;margin:15px auto 0;padding:11px 22px;border-radius:11px}
-.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:890px;margin:22px auto 0}
-.grades button{padding:14px 9px;border:1px solid #e8dff0;border-radius:12px;background:#fff;color:#51455f}
+.panel:not(#panel-flash){background:#fff;border:1px solid var(--line);border-radius:23px;padding:30px;box-shadow:0 10px 35px rgba(83,57,108,.035)}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.panel h2{font-size:19px;margin:0}
+.badge{display:inline-flex;align-items:center;border-radius:6px;padding:3px 8px;background:#f0e8f7;color:#80609b;border:1px solid #e8dcf1;font-size:11px;font-weight:650}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0}
+.controls select,.controls input,.settings select{padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--ink);min-width:0}
+.controls input{flex:1}
+.study-filters{justify-content:flex-start;margin:16px 0 10px;gap:10px}
+.study-filters select{min-width:185px;min-height:44px}
+.study-filter-note{font-size:12px;color:var(--muted);margin:0 0 12px}
+.small{font-size:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:23px;padding:35px;min-height:390px;box-shadow:0 10px 35px rgba(83,57,108,.035)}
+.cardtop{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tag{font-size:11px;background:#f1eafa;padding:4px 10px;border-radius:8px;color:#80609b}
+.counter{font-size:12px;color:var(--muted)}
+.center{text-align:center;margin:28px auto;max-width:690px}
+.term{font-family:Georgia,serif;font-size:clamp(28px,4vw,48px);line-height:1.35;margin:15px 0;overflow-wrap:anywhere;color:#3c304c}
+.word-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 12px}
+.center .word-meta{justify-content:center}
+.ipa{font-family:"Lucida Sans Unicode","Segoe UI",sans-serif;color:#82768f;font-size:18px}
+.stars{color:#b58a43;font-size:17px;letter-spacing:2px;white-space:nowrap}
+.star-label{font:12px system-ui;letter-spacing:0;color:var(--muted)}
+.pos{font-size:12px;background:#f0edf7;color:#6f6289;border-radius:6px;padding:3px 8px;letter-spacing:0}
+.speaker{background:#f1eafa;color:#765990;border:1px solid #e8dcf1;display:inline-flex;gap:7px;align-items:center;padding:9px 15px;border-radius:12px}
+.speaker svg{width:20px;height:20px}
+.speaker.small{font-size:12px;padding:7px 11px}
+.meaning{font-size:21px;color:#c53535;margin:20px 0}
+.context-meaning{color:#c53535;font-weight:650}
+.context-badge{display:inline-block;margin-left:7px;border:1px solid #efd1d1;border-radius:5px;padding:0 5px;font:11px/1.7 system-ui;vertical-align:middle;color:#b72d2d;background:#fff6f5}
+.example{border-top:1px solid var(--line);padding-top:20px;margin-top:23px;text-align:left}
+.example p{margin:6px 0;line-height:1.75}
+.example .small,.example small{font-size:12px;color:var(--muted)}
+.memory-panel{margin:20px 0;padding:18px 0 0;border-top:1px solid var(--line);text-align:left;background:transparent;border-radius:0;border-left:0;border-right:0;border-bottom:0}
+.memory-panel h3{font-size:15px;margin:0 0 10px;color:#72558c}
+.memory-panel p{font-size:14px;margin:8px 0;line-height:1.85;color:#51455f}
+.memory-label{font-size:11px;color:#89739e;font-weight:600;background:#f1eafa;padding:3px 8px;border-radius:6px}
+.memory-panel a{font-size:12px;color:#80609b}
+.memory-family{color:#897f96}
+.hint{padding:12px 0;color:var(--muted);font-size:12px}
+.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:24px}
+.grades button{padding:13px 6px;border:1px solid var(--line);background:#fff;border-radius:12px;color:var(--ink)}
+.grades b,.grades small{display:block}
+.grades small{font-size:11px;color:var(--muted);font-weight:400}
 .grades button:nth-child(1){background:#f8eff5;border-color:#eedce8}
-.grades button:nth-child(2){background:#f4eff9;border-color:#e8ddf1}
-.grades button:nth-child(3){background:#f0eff8;border-color:#e1e1f0}
-.grades button:nth-child(4){background:#eee8f6;border-color:#dfd3ed}
-.grades small{display:block;color:#92869e}
-.filters input,.filters select,.settings-grid input,.settings-grid select,.answerbox input{border-color:#e7dcef;background:#fff;color:#4c405b}
-.wordlist,.wordrow,.species,.qcard{border-color:#e9e0f0}
+.grades button:nth-child(2){background:#f5effa;border-color:#e8ddf1}
+.grades button:nth-child(3){background:#f1edf8;border-color:#e3d9ef}
+.grades button:nth-child(4){background:#ece5f5;border-color:#ddd0eb}
+.grades button:hover{border-color:#bda5d3;transform:translateY(-1px)}
+.bottom{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:20px 0;color:var(--muted);font-size:12px}
+.btn{border:1px solid var(--line);border-radius:9px;padding:9px 14px;background:#fff;font-size:13px;color:var(--ink)}
+.btn.primary,.primary{background:#80609b!important;color:#fff!important;border-color:#80609b!important}
+.btn.soft{background:#f1eafa;border-color:#e8dcf1;color:#765990}
+.btn.danger{color:var(--red);background:var(--softred);border-color:#eedce8}
+.filters{display:grid;grid-template-columns:minmax(180px,1fr) 170px 150px 130px;gap:8px;margin:16px 0}
+.filters input,.filters select,.settings-grid input,.settings-grid select,.answerbox input{width:100%;min-width:0;border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:#fff;color:var(--ink)}
+.wordlist{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.wordrow{border-color:var(--line);background:#fff}
 .wordrow:nth-child(even){background:#fcfaff}
 .wordrow button{color:#80609b}
-.qhead{background:#f7f3fa}
-.quote{background:#f5eff9;border-left-color:#a48abe}
-.qrow .correct{color:#80609b}
-.qrow .wrong{color:#a65b73}
-.audio-note{background:#f5eff9;border-color:#e7dcef;color:#69567f}
-.settings-grid label,.feedback,footer,.footnote{color:#8b8298}
-.settings-grid input[type=range]{accent-color:#80609b}
-.species img{background:#f2edf7}
-footer{border-color:#e9e0f0}
-@media(min-width:1500px){
- .app{max-width:1720px}
- .main{padding-left:48px;padding-right:48px}
-}
-@media(max-width:1100px){
- .app{grid-template-columns:230px minmax(0,1fr)}
- .main{padding:28px 26px}
- .flash-study-card{min-height:620px}
- .flash-content{min-height:390px}
- .study-filters select{min-width:0;flex:1}
+.species-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:15px 0 20px}
+.species{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.species img{width:100%;height:165px;object-fit:cover;display:block;background:#f2edf7}
+.species .species-info{padding:12px}
+.species strong{display:block;font-size:13px}
+.species small{display:block;color:var(--muted);font-size:11px}
+.species a{font-size:10px}
+.qcard{border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 15px;background:#f7f3fa}
+.qbody{padding:15px}
+.qprompt{font-size:14px;font-weight:650;margin:0 0 8px}
+.qrow{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;margin:6px 0}
+.qrow .wrong{color:#a65b73}.qrow .correct{color:#80609b}
+.quote{margin:12px 0;padding:13px 15px;background:#f5eff9;border-left:3px solid #a48abe;border-radius:0 8px 8px 0;font-size:14px}
+.quote small{display:block;color:var(--muted);margin-top:6px}
+.qactions,.answerbox{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.answerbox input{flex:1;min-width:130px}
+.feedback{font-size:12px;margin-top:8px;color:var(--muted)}
+.audio-note{padding:13px 15px;border-radius:10px;background:#f5eff9;border:1px solid #e7dcef;color:#69567f;font-size:12px;margin:12px 0}
+.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.settings-grid label{display:block;font-size:12px;color:var(--muted)}
+.settings-grid select,.settings-grid input{display:block;margin-top:6px}
+.settings-grid input[type=range]{padding:0;accent-color:#80609b}
+.setting-block{padding:16px 0;border-top:1px solid var(--line)}
+.setting-block:first-child{border-top:0}
+.setting-actions{display:flex;gap:8px;flex-wrap:wrap}
+.rules{font-size:13px;color:var(--muted)}
+.footnote,footer{font-size:11px;color:var(--muted);line-height:1.8}
+footer{border-top:1px solid var(--line);padding-top:18px;margin-top:28px}
+footer a{text-decoration:none}
+@media(max-width:900px){
+ .shell{grid-template-columns:1fr}
+ .sidebar{padding:15px 20px;border-right:0;border-bottom:1px solid var(--line)}
+ .brand span,.sidebar .note,.book{display:none}
+ .brand{font-size:18px}
+ .nav{display:flex;overflow:auto;margin-top:12px;gap:5px}
+ .nav button{white-space:nowrap;font-size:13px;padding:8px 12px}
+ .main{padding:23px 18px}
+ .top{align-items:flex-start}
+ h1{font-size:26px}
+ .stats{gap:8px}
+ .stat{padding:12px}
+ .card{padding:23px 18px;border-radius:18px}
+ .grades{gap:5px}
+ .grades button{font-size:13px}
+ .soundstatus{max-width:140px}
+ .bottom{align-items:flex-start}
+ .controls select{flex:1}
+ .controls input{min-width:160px}
+ .filters{grid-template-columns:1fr 1fr}
+ .wordrow{grid-template-columns:minmax(130px,1fr) 100px minmax(130px,1fr) 55px}
 }
 @media(max-width:680px){
- .app{display:block;max-width:100%}
- .side{padding:17px 15px 12px;border-right:0;border-bottom:1px solid #e9e0f0}
- .brand{font-size:18px}.book{display:none}.back,.side-note{display:none}
- .nav{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:10px}
- .nav button{padding:9px 4px;text-align:center;font-size:11px;min-height:45px}
- .main{padding:19px 14px 25px}
- .header-topline{padding-bottom:8px}.header-mainline{display:block;margin-top:11px}
- h1{font-size:23px}.date{font-size:10px}.voice-status{padding-top:6px;white-space:normal}
- .hero .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- .hero .stats>div{padding:10px}.hero .stats b{font-size:21px}
- .study-filters{display:grid;grid-template-columns:1fr 1fr;gap:7px}
- .study-filters select{width:100%;min-width:0;padding:9px 8px;font-size:11px}
+ .main{padding:21px 14px 25px}
+ .top{display:block}
+ h1{font-size:23px}
+ .soundstatus{max-width:none;text-align:left;margin-top:6px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .stats .stat{padding:10px}
+ .stat b{font-size:21px}
+ .study-filters{display:grid;grid-template-columns:1fr 1fr}
+ .study-filters select{min-width:0;width:100%;padding:9px 8px;font-size:11px}
  .study-filters select:last-child{grid-column:1/-1}
- .flash-study-card{min-height:560px;padding:20px 14px;border-radius:17px}
- .cardtop{font-size:11px}
- .flash-content{min-height:360px;margin-top:8px}
- .flash-content .term,.term-wrap>.term{font-size:30px}
- .flash-content .meaning,.term-wrap>.meaning{font-size:19px}
- .term-wrap .flash-detail,.term-wrap .memory-panel{padding:14px 13px}
- .term-wrap .flash-detail p,.term-wrap .memory-panel p{font-size:12px}
- .grades{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:17px}
- .grades button{padding:12px 6px;font-size:12px}
+ .card{padding:22px 15px;min-height:360px}
+ .center{margin:23px auto}
+ .term{font-size:30px}
+ .meaning{font-size:19px}
+ .grades{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .grades button{padding:12px 6px}
  .grades small{font-size:10px}
- .flash-under{align-items:flex-start}
- .panel{margin-bottom:14px}
  .species-grid{grid-template-columns:1fr}
  .species{display:grid;grid-template-columns:118px minmax(0,1fr)}
  .species img{height:100%;min-height:118px}
  .filters{grid-template-columns:1fr 1fr}
  .wordrow{grid-template-columns:minmax(0,1fr) 75px 90px;gap:6px;padding:11px 9px}
  .wordrow .example{grid-column:1/-1;grid-row:2}
- .wordrow .level-select{grid-column:3;grid-row:1}
  .settings-grid{grid-template-columns:1fr}
 }
-
-.flash-content .empty .big{color:#9a7bb5}
-.flash-content .hint{color:#9386a0}
-button:hover{border-color:#cdb9dd}
-
 </style></head>
-<body><div class="app">
-<aside class="side">
+<body><div class="shell">
+<aside class="sidebar">
 <div class="brand">拾词 <span style="display:block;font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:500">WORD BY WORD</span></div>
 <div class="book">
 <small>LISTENING COLLECTION · 1110</small>
@@ -234,27 +236,20 @@ button:hover{border-color:#cdb9dd}
 <button data-tab="bank">▤　全部词库</button>
 <button data-tab="settings">⚙　学习设置</button>
 </nav>
-<p class="side-note">每天一点，记得更久。<br>熟练的词会退出自动复习，<br>其余的词按记忆间隔再见。</p>
+<p class="note">每天一点，记得更久。<br>熟练的词会退出自动复习，<br>其余的词按记忆间隔再见。</p>
 </aside>
-<main class="main"><header class="header">
-<div class="header-topline"><a class="top-back" href="/ielts-review-library/index.html?skill=听力">← 复习总览</a><span class="date">2026-11-10 · 听力 · 真题</span></div>
-<div class="header-mainline">
-<div><div class="kicker">YOUR PERSONAL LISTENING COLLECTION</div>
-<h1>1110-听力-真题-The Invasion of Plants</h1>
-<p class="subtitle">The Invasion of Plants · 植物入侵 / 翻卡复习</p></div>
-<div class="voice-status" id="voice-status">正在载入英语语音…</div>
-</div>
-</header>
-<section class="hero">
-<div class="stats">
-<div><b id="due-count">0</b><small>到期复习</small></div>
-<div><b id="fresh-count">0</b><small>尚未学习</small></div>
-<div><b id="learning-count">0</b><small>正在巩固</small></div>
-<div><b id="mastered-count">0</b><small>已经熟练</small></div>
+<main class="main">
+<nav class="catalog-return" aria-label="复习库导航"><a href="/ielts-review-library/index.html?skill=听力">← 复习总览</a><span>2026-11-10 · 听力 · 真题</span></nav>
+<header class="top"><div><div class="eyebrow">YOUR PERSONAL WORD COLLECTION</div><h1>1110-听力-真题-The Invasion of Plants</h1><p class="sub" id="subtitle">The Invasion of Plants · 植物入侵 / 翻卡复习</p></div><div class="soundstatus" id="voice-status" aria-live="polite">正在载入英语语音…</div></header>
+<div class="stats" id="stats">
+<div class="stat"><b id="due-count">0</b><span>到期复习</span></div>
+<div class="stat"><b id="fresh-count">0</b><span>尚未学习</span></div>
+<div class="stat"><b id="learning-count">0</b><span>正在巩固</span></div>
+<div class="stat"><b id="mastered-count">0</b><span>已经熟练</span></div>
 </div>
 <div class="progressline"><span>熟练进度</span><span id="progress-label">0 / 158</span></div>
-<div class="bar mastery-bar"><i id="mastery-progress"></i></div>
-</section>
+<div class="bar"><i id="mastery-progress"></i></div>
+
 
 <section class="panel" id="panel-flash">
 <div class="controls study-filters">
@@ -263,16 +258,7 @@ button:hover{border-color:#cdb9dd}
 <select id="scope" aria-label="复习范围"><option value="due">按计划 · 到期 + 新词</option><option value="all">提前练习 · 全部未熟练词</option></select>
 </div>
 <p class="study-filter-note" id="study-note">全部星级 · 到期词优先 · 每日新词默认 20 条</p>
-<p class="study-prompt">先回忆，再揭晓。每一次主动回忆，都在加深记忆。</p>
-<div class="flash-wrap">
-<div class="flash-study-card">
-<div class="cardtop"><span class="tag" id="flash-status">未学</span><span class="counter" id="flash-session">本轮已完成 0 次</span></div>
-<div id="flash-content" class="flash-content" aria-live="polite"></div>
-<button class="btn primary reveal-btn" id="flip">揭晓释义</button>
-<div id="grade-area" class="grades" hidden></div>
-</div>
-<div class="flash-under"><span>间隔复习 · 优先复习到期词</span><button class="btn" id="skip">暂时跳过</button></div>
-</div>
+<div id="flash-training" aria-live="polite"></div>
 </section>
 <section class="panel" id="panel-wrong" hidden><div class="panel-head"><h2>错题重听</h2><span class="badge">6 道错题 · Q33–40</span></div><p class="muted">每题先回到题干定位，再播放本次对话中上传的原始录音，听到对应句后填写一个答案。提交后查看错误原因和定位线索。</p><div class="audio-note"><strong>原录音说明：</strong>原始 MP4 目前保留在本次 ChatGPT 对话附件中，尚未复制到公开 GitHub Pages。请在对话附件中播放原录音，再使用本页的逐题定位与答案核对；下方“朗读定位句”是设备语音合成，不冒充原始录音。</div><div id="wrong-list"></div></section>
 <section class="panel" id="panel-bank" hidden><div class="panel-head"><h2>全部词库</h2><span class="badge">158 条 · 按重要性排序</span></div><p class="muted">覆盖录音正文、题干和错题答案中的核心单词、短语、固定搭配与语块。按重要性由高到低排序；五星词条优先复习，同星级保留原有内容顺序。</p><div class="species-grid">
@@ -349,8 +335,8 @@ function wordMeta(c){
 function memoryHtml(c){
   if(!c.memory)return '';
   const m=c.memory;
-  return '<section class="memory-panel" aria-label="'+esc(c.en)+'的记忆拆解">'+
-    '<h3>词汇记忆拆解 <span class="memory-label">'+esc(m.method)+'</span></h3>'+
+  return '<section class="memory-panel" aria-label="'+esc(c.en)+'的词根记忆法">'+
+    '<h3>词根与构词记忆 <span class="memory-label">'+esc(m.method)+'</span></h3>'+
     '<p><b>拆分／来源：</b>'+esc(m.parts)+'</p>'+
     '<p><b>这样记：</b>'+esc(m.tip)+'</p>'+
     '<p class="memory-family"><b>一起记：</b>'+esc(m.family)+'</p>'+
@@ -367,47 +353,57 @@ function renderStats(){
   $("mastery-progress").style.width=(mastered/CARDS.length*100)+"%";
 }
 function meaningHtml(c){return '<span class="context-meaning">'+esc(c.zh)+'<span class="context-badge">本文义</span></span>'}
-function playButton(text,label){return '<button class="speaker" data-say="'+esc(text)+'" aria-label="'+esc(label)+'">♫ '+esc(label)+'</button>'}
+const speakerIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM16 8q5 4 0 8M19 5q8 7 0 14"/></svg>';
+function playButton(text,label="朗读",small=false){
+  return '<button class="speaker'+(small?' small':'')+'" data-say="'+esc(text)+'" aria-label="'+esc(label)+'">'+speakerIcon+'<span>'+esc(label)+'</span></button>';
+}
 function renderFlash(){
   renderStats();
   const selected=CARDS.filter(matchesStudyFilters);
   const unmastered=selected.filter(c=>rec(c).level!==4);
-  const note=starFilter==="all"?"全部重要性":("仅练 "+starFilter+" 星");
+  const note=starFilter==="all"?"全部重要性":("仅练重要性 "+starFilter+" 星");
   $("study-note").textContent=note+" · "+(kind==="all"?"全部类型":typeName(kind))+" · "+unmastered.length+" 条未熟练；到期词优先，每日新词 "+(state.settings.daily||20)+" 条。";
-  $("flash-session").textContent="本轮已完成 "+sessionCount+" 次";
-  const content=$("flash-content"),grades=$("grade-area");
-  content.classList.toggle("is-revealed",revealed);
+  const host=$("flash-training");
   if(!current){
     const complete=selected.length>0&&unmastered.length===0;
     const future=unmastered.filter(c=>rec(c).level&&rec(c).due>Date.now()).sort((a,b)=>rec(a).due-rec(b).due)[0];
-    content.innerHTML='<div class="empty"><div class="big">'+(complete?"✓":"◌")+'</div><h2>'+(complete?"当前筛选内的词，你已经掌握了！":unmastered.length===0?"当前筛选没有词条":"本轮复习已完成")+'</h2><p>本轮已完成 '+sessionCount+' 次。'+(future?"下一次复习："+esc(new Date(rec(future).due).toLocaleString()):"到期词会在下次打开时进入复习队列。")+'</p><p>可以结束本轮，或提前练习当前筛选内尚未熟练的词。</p><div class="controls"><button class="btn primary" data-action="refresh">检查到期复习</button><button class="btn" data-action="early">提前练习</button></div></div>';
-    grades.hidden=true;grades.innerHTML="";$("skip").hidden=true;$("flip").hidden=true;return;
+    host.innerHTML='<p class="small muted">先回忆，再揭晓。每一次主动回忆，都在加深记忆。</p>'+
+      '<section class="card empty"><div class="big">'+(complete?"✓":"◌")+'</div>'+
+      '<h2>'+(complete?"当前筛选内的词，你已经掌握了！":!selected.length?"当前筛选没有词条":"当前筛选的学习计划已完成")+'</h2>'+
+      '<p class="muted">本轮已完成 '+sessionCount+' 次。'+(future?"下一次复习："+esc(new Date(rec(future).due).toLocaleString()):"可以在全部词库查看学习情况。")+'</p>'+
+      '<p class="small muted">'+(complete?"熟练词不会自动出现，可在词库改回其他等级。":"不认识的 1 分钟后、模糊的 10 分钟后回来；认识的按天复习。新词每天默认 20 个。")+'</p>'+
+      '<button class="primary" data-action="refresh">检查到期复习</button> <button data-action="early">提前练习当前筛选</button></section>';
+    return;
   }
-  $("skip").hidden=false;$("flip").hidden=false;$("flip").textContent=revealed?"收起释义":"揭晓释义";
   const r=rec(current);
-  $("flash-status").textContent=(current.type==="word"?"WORD · 单词":current.type==="phrase"?"PHRASE · 短语":"CHUNK · 语块")+" / "+statusName(r.level);
-  let body="";
+  let html='<p class="small muted">先回忆，再揭晓。每一次主动回忆，都在加深记忆。</p>'+
+    '<section class="card"><div class="cardtop"><span class="tag">'+
+    (current.type==="word"?"WORD · 单词":current.type==="phrase"?"PHRASE · 短语":"CHUNK · 语块")+
+    " / "+statusName(r.level)+'</span><span class="counter">本轮已完成 '+sessionCount+' · 待练 '+(queue.length+1)+'</span></div>'+
+    '<div class="center">';
+  html+='<div class="term">'+esc(current.en)+'</div>'+wordMeta(current)+playButton(current.en,"播放读音");
   if(!revealed){
-    body='<div class="term">'+esc(current.en)+'</div>'+wordMeta(current)+
-      '<p class="muted">'+esc(typeName(current.type))+" · "+esc(current.cat)+'</p>'+
-      playButton(current.en,"播放英文")+
-      '<p class="hint">先回忆中文意思，再揭晓答案。</p>';
+    html+='<p style="margin-top:25px"><button class="primary" data-reveal>揭晓释义</button></p>';
   }else{
-    body='<div class="term">'+esc(current.en)+'</div>'+wordMeta(current)+
-      playButton(current.en,"播放读音")+
-      '<div class="meaning">'+meaningHtml(current)+'</div>'+
-      '<p class="muted">'+esc(typeName(current.type))+" · "+esc(current.cat)+'</p>'+
-      (current.source?'<div class="flash-detail"><strong>录音中的表达</strong><p>'+esc(current.source)+'</p>'+playButton(current.source,"朗读录音表达")+'</div>':'')+
-      '<div class="flash-detail flash-example"><strong>学习例句</strong><p>'+esc(current.ex)+'</p><p class="small">'+esc(current.exzh)+'</p>'+playButton(current.ex,"朗读例句")+'</div>'+
-      memoryHtml(current);
+    html+='<div class="meaning">'+meaningHtml(current)+'</div>';
+    html+='<div class="example">';
+    if(current.source){
+      html+='<p class="small muted">录音中的表达</p><p>'+esc(current.source)+'</p>'+playButton(current.source,"录音表达朗读",true);
+    }
+    html+='<p class="small muted" style="margin-top:16px">学习例句</p><p>'+esc(current.ex)+'</p><p class="small muted">'+esc(current.exzh)+'</p>'+playButton(current.ex,"例句朗读",true);
+    html+='</div>'+memoryHtml(current);
   }
-  content.innerHTML='<div class="term-wrap">'+body+'</div>';
-  grades.hidden=!revealed;
-  grades.innerHTML=revealed?
-    '<button data-grade="1"><b>不认识</b><small>1 分钟后再出现</small></button>'+
-    '<button data-grade="2"><b>模糊</b><small>10 分钟后再出现</small></button>'+
-    '<button data-grade="3"><b>认识</b><small>1 / 3 / 7 / 14 / 30 天</small></button>'+
-    '<button data-grade="4"><b>熟练</b><small>退出自动复习</small></button>':'';
+  html+='</div>';
+  if(revealed){
+    html+='<div class="grades">'+
+      '<button data-grade="1"><b>不认识</b><small>1 分钟后再出现</small></button>'+
+      '<button data-grade="2"><b>模糊</b><small>10 分钟后再出现</small></button>'+
+      '<button data-grade="3"><b>认识</b><small>1 / 3 / 7 / 14 / 30 天</small></button>'+
+      '<button data-grade="4"><b>熟练</b><small>退出自动复习</small></button>'+
+      '</div><p class="hint">根据回忆表现选择等级。只有主动标记“熟练”，才会退出自动复习。</p>';
+  }
+  html+='</section><div class="bottom"><span>间隔复习 · 优先复习到期词</span><button data-skip>暂时跳过</button></div>';
+  host.innerHTML=html;
 }
 function grade(level){
   if(!current||!revealed)return;
@@ -427,8 +423,6 @@ function showTab(name){
   if(name==="flash")renderFlash();if(name==="wrong")renderWrong();if(name==="bank")renderBank();if(name==="settings")setupSettings();
 }
 ["kind","star-filter","scope"].forEach(id=>$(id).addEventListener("change",filterChanged));
-$("flip").onclick=()=>{if(current){revealed=!revealed;renderFlash()}};
-$("skip").onclick=()=>next();
 function renderBank(){
   const q=$("bank-search").value.trim().toLowerCase(),category=$("bank-cat").value,type=$("bank-type").value,stars=$("bank-stars").value,status=$("bank-status").value;
   const rows=CARDS.map((c,i)=>({...c,idx:i})).filter(c=>
@@ -523,6 +517,8 @@ async function importData(e){
 }
 function resetData(){if(!confirm("确定重置本页所有掌握记录和错题重听进度？"))return;state={progress:{},wrongDone:[],settings:{...DEFAULTS.settings}};save();sessionCount=0;buildQueue();renderWrong();$("settings-status").textContent="本页进度已重置。"}
 document.addEventListener("click",e=>{
+  const revealBtn=e.target.closest("[data-reveal]");if(revealBtn){revealed=true;renderFlash();return}
+  const skipBtn=e.target.closest("[data-skip]");if(skipBtn){next();return}
   const gradeBtn=e.target.closest("[data-grade]");if(gradeBtn){grade(Number(gradeBtn.dataset.grade));return}
   const say=e.target.closest("[data-say]");if(say){const t=say.dataset.say;speak(t,CARDS.some(c=>c.en===t));return}
   const tab=e.target.closest("[data-tab]");if(tab){stopSound();showTab(tab.dataset.tab);return}
