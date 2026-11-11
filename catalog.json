@@ -4,27 +4,6 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
-      "id": "doctor-in-australia-1111",
-      "date": "2026-11-11",
-      "skill": "写作",
-      "kind": "小作文",
-      "en": "Doctor in Australia",
-      "zh": "澳大利亚医生人数、性别与出生地",
-      "topic": "人口与城市",
-      "tags": [
-        "人口与城市",
-        "职场与就业",
-        "综合练习"
-      ],
-      "description": "10句中文默写（无提示）· 24张词汇短语翻卡 · 完整范文逐句朗读 · 8组Task 1常用句式及24个迁移例句 · 进度本地保存",
-      "path": "reviews/2026-11-11/writing/task-1/doctor-in-australia/index.html",
-      "dateBasis": "用户2026年11月11日提供图表并完成写作讨论",
-      "source": "用户提供图表数据与初稿；范文和迁移句式依据本次讨论整理",
-      "aliases": [],
-      "title": "1111-写作-Doctor in Australia 澳大利亚医生人数、性别与出生地",
-      "url": "/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/"
-    },
-    {
       "id": "global-warming-in-new-zealand-1111",
       "date": "2026-11-11",
       "skill": "阅读",
@@ -46,6 +25,49 @@
       "aliases": [],
       "title": "1111-阅读-真题-Global Warming in New Zealand 新西兰的全球变暖",
       "url": "/ielts-review-library/reviews/2026-11-11/reading/exam/global-warming-in-new-zealand/"
+    },
+    {
+      "id": "doctor-in-australia-1111",
+      "date": "2026-11-11",
+      "skill": "写作",
+      "kind": "小作文",
+      "en": "Doctor in Australia",
+      "zh": "澳大利亚医生人数、性别与出生地",
+      "topic": "人口与城市",
+      "tags": [
+        "人口与城市",
+        "职场与就业",
+        "综合练习"
+      ],
+      "description": "10句中文默写（无提示）· 24张词汇短语翻卡 · 完整范文逐句朗读 · 8组Task 1常用句式及24个迁移例句 · 进度本地保存",
+      "path": "reviews/2026-11-11/writing/task-1/doctor-in-australia/index.html",
+      "dateBasis": "用户2026年11月11日提供图表并完成写作讨论",
+      "source": "用户提供图表数据与初稿；范文和迁移句式依据本次讨论整理",
+      "aliases": [],
+      "title": "1111-写作-小作文-Doctor in Australia 澳大利亚医生人数、性别与出生地",
+      "url": "/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/"
+    },
+    {
+      "id": "computer-labs-part-3-1111",
+      "date": "2026-11-11",
+      "skill": "听力",
+      "kind": "Part 3",
+      "en": "Computer Labs",
+      "zh": "大学电脑机房",
+      "topic": "校园与教育",
+      "tags": [
+        "校园与教育",
+        "大学生活",
+        "生活与服务",
+        "综合练习"
+      ],
+      "description": "40张重要性分级词汇与语块翻卡 · 六列表完整词库 · 15句重点原文朗读 · 四技能迁移例句 · 英语发音与本地进度保存",
+      "path": "reviews/2026-11-11/listening/part-3/computer-labs/index.html",
+      "dateBasis": "用户于2026年11月11日提供并练习本篇Section 3材料，首次正确率2/10",
+      "source": "用户提供University Computer Facilities完整听力转写、Questions 21–30、标准答案及首次作答；词汇释义、重要等级与迁移例句为学习辅助",
+      "aliases": [],
+      "title": "1111-听力-Part 3-Computer Labs 大学电脑机房",
+      "url": "/ielts-review-library/reviews/2026-11-11/listening/part-3/computer-labs/"
     },
     {
       "id": "the-invasion-of-plants-1110",
