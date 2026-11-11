@@ -1,8 +1,31 @@
 {
   "version": 1,
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "global-warming-in-new-zealand-1111",
+      "date": "2026-11-11",
+      "skill": "阅读",
+      "kind": "真题",
+      "en": "Global Warming in New Zealand",
+      "zh": "新西兰的全球变暖",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态",
+        "气候变化",
+        "农业与环境",
+        "科学与技术",
+        "综合练习"
+      ],
+      "description": "227张五星分级词卡 · A–J全文47句对照 · 14题交互重练（7道历史错题）· 26组同义替换 · 六列表格 · 听写、看词写义、句子精听 · 发音与进度保存",
+      "path": "reviews/2026-11-11/reading/exam/global-warming-in-new-zealand/index.html",
+      "dateBasis": "首次发布日期（原材料未标注学习日期）",
+      "source": "用户提供A–J全文、27–40题目、首次作答及答案解析；词汇释义、分级和拓展例句为复习辅助",
+      "aliases": [],
+      "title": "1111-阅读-真题-Global Warming in New Zealand 新西兰的全球变暖",
+      "url": "/ielts-review-library/reviews/2026-11-11/reading/exam/global-warming-in-new-zealand/"
+    },
     {
       "id": "the-invasion-of-plants-1110",
       "date": "2026-11-10",
