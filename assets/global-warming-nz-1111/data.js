@@ -103,7 +103,9 @@ window.GLOBAL_WARMING_DATA = (() => {
     const id="gwnz-"+String(cards.length+1).padStart(3,"0");
     const paragraph=/^[A-J]/.test(sourceId)?sourceId[0]:"Q";
     const wrong=[29,31,35,37,38,39,40];
-    cards.push({id,material:"global-warming",en,zh,stars,type,pos:type==="word"?"词汇":type==="phrase"?"短语":"固定搭配",origin,priority:questions.some(q=>wrong.includes(q)),paragraph,sourceId,ipa,questions,exampleGroup:group,note,collocations:collocations.map(x=>({en:x[0],zh:x[1]}))});
+    const kind=["word","phrase","collocation"].includes(type)?type:(["proper","modal verb"].includes(type)?"word":"phrase");
+    const posMap={word:"词汇",phrase:"短语",collocation:"固定搭配",idiom:"习语",proper:"专有名词",measurement:"数值表达","modal verb":"情态动词",prep:"介词"};
+    cards.push({id,material:"global-warming",en,zh,stars,type:kind,pos:posMap[type]||"表达",origin,priority:questions.some(q=>wrong.includes(q)),paragraph,sourceId,ipa,questions,exampleGroup:group,note,collocations:collocations.map(x=>({en:x[0],zh:x[1]}))});
   };
   const c=(en,zh)=>[en,zh];
   // ★★★★★ 核心掌握
