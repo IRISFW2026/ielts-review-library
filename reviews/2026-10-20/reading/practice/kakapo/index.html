@@ -33,7 +33,40 @@
 .library-actions{display:flex;align-items:center;gap:12px;margin:15px 0 8px;flex-wrap:wrap}
 .library-action-label{font-size:12px;color:var(--muted)}
 .library-entry .library-actions select{font-size:13px;padding:8px 11px;border-radius:9px}
-.library-entry details.library-example{margin:16px 0 0 54px;padding-top:14px;border-top:1px solid var(--line)}
+.library-entry details.library-example{
+ margin:16px 0 0 54px;
+ width:calc(100% - 54px);
+ max-width:calc(100% - 54px);
+ min-width:0;
+ box-sizing:border-box;
+ padding-top:14px;
+ border-top:1px solid var(--line)
+}
+.library-entry .library-example .example-item,
+.library-entry .library-example .example-line,
+.library-entry .library-example .example-en{min-width:0;max-width:100%}
+.library-entry .library-example .example-line{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 94px;
+ align-items:start;
+ gap:12px;
+ width:100%;
+ max-width:100%;
+ box-sizing:border-box
+}
+.library-entry .library-example .example-line .speaker{
+ display:inline-flex;
+ width:94px;
+ max-width:94px;
+ min-width:0;
+ box-sizing:border-box;
+ align-items:center;
+ justify-content:center;
+ justify-self:end;
+ white-space:nowrap;
+ padding:9px 8px;
+ margin:0
+}
 .library-entry details.library-example summary{font-size:14px;font-weight:600}
 .review-actions{justify-content:flex-end;margin:24px 0 0}
 .review-actions button{min-width:130px}
@@ -45,6 +78,10 @@
  .library-main-meaning{font-size:16px}
  .library-headings .word-meta,.library-entry .library-secondary-meaning,.library-entry .library-note,.library-entry .memory-panel,.library-entry details.library-example{margin-left:51px}
  .library-entry .memory-panel{max-width:calc(100% - 51px);padding:13px 12px}
+ .library-entry details.library-example{margin-left:0;width:100%;max-width:100%;min-width:0}
+ .library-entry .library-example .example-line{grid-template-columns:minmax(0,1fr) 44px;gap:8px}
+ .library-entry .library-example .example-line .speaker{width:44px;max-width:44px;min-width:44px;height:44px;padding:8px;margin:0}
+ .library-entry .library-example .example-line .speaker span{display:none}
  .review-actions button{flex:1}
 }.context-badge{display:inline-block;margin-left:7px;border:1px solid #efd1d1;border-radius:5px;padding:0 5px;font:11px/1.7 system-ui;vertical-align:middle;color:#b72d2d;background:#fff6f5}.study-filter-note{font-size:12px;color:var(--muted);margin:0 0 12px}.pos{font-size:12px;background:#eef1f8;color:#4e5f7b;border-radius:6px;padding:3px 8px;letter-spacing:0}.memory-panel{margin:20px 0;padding:18px 0 0;border-top:1px solid var(--line);text-align:left}.memory-panel h3{font-size:15px;margin:0 0 10px;color:#225f52}.memory-panel p{font-size:14px;margin:8px 0;line-height:1.85}.memory-label{font-size:11px;color:#698579;font-weight:600}.memory-panel a{font-size:12px}.memory-family{color:#6d7d76}.pos-legend{font-size:12px;color:var(--muted)}</style><style id="iphone16-mobile-ui">
 /* iPhone 16 and compact touch screens: mobile-ui-20261022-v1 */
@@ -196,8 +233,9 @@ function formatIPA(s){return s.split('；').map(p=>{let m=p.match(/^([^（]+)(.*
 function wordMeta(x){return `<div class="word-meta">${x.pos?`<span class="pos">${escapeHTML(x.pos)}</span>`:""}${x.ipa?`<span class="ipa" lang="en-GB">${formatIPA(x.ipa)}</span>`:''}<span class="stars" role="img" aria-label="雅思重要程度 ${x.stars} 星，共 5 星">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)} <span class="star-label">重要 ${x.stars}/5</span></span></div>`}
 function memoryHtml(x){if(!x.memory)return '';let m=x.memory;return `<section class="memory-panel" aria-label="${escapeHTML(x.term)}的词根记忆法"><h3>词根与构词记忆 <span class="memory-label">${escapeHTML(m.method)}</span></h3><p><b>拆分／来源：</b>${escapeHTML(m.parts)}</p><p><b>这样记：</b>${escapeHTML(m.tip)}</p><p class="memory-family"><b>一起记：</b>${escapeHTML(m.family)}</p>${m.source?`<a href="${escapeHTML(m.source)}" target="_blank" rel="noopener noreferrer">查看词源参考 · Etymonline</a>`:''}</section>`}
 function libraryMeanings(x){let senses=x.zh.split('；'),selected=x.contextSenses||[0];return {main:senses.filter((v,i)=>selected.includes(i)).join('；')||senses[0],other:senses.filter((v,i)=>!selected.includes(i)).join('；')}}
+function libraryExamplePlay(e){const label=e.source==='original'?'朗读原文例句':'朗读补充例句';return `<button class="speaker small example-speaker" type="button" data-say="${escapeHTML(e.en)}" aria-label="${label}" title="${label}">${icon}<span>朗读</span></button>`}
 function libraryPronounce(x){return `<button class="speaker library-pronounce" data-say="${escapeHTML(x.audioTerm||x.term)}" type="button" title="朗读 ${escapeHTML(x.term)}" aria-label="朗读 ${escapeHTML(x.term)}">${icon}</button>`}
-function library(){let rows=DATA.items.filter(x=>(kind==='all'||kind===x.type)&&(starFilter==='all'||String(x.stars)===starFilter)&&(x.term+' '+x.zh+' '+(x.ipa||'')+' '+(x.pos||'')).toLowerCase().includes(search.trim().toLowerCase())).sort((a,b)=>b.stars-a.stars||((a.type==='word'?0:1)-(b.type==='word'?0:1))||(a.term.localeCompare(b.term)));if(!rows.some(x=>x.id===activeLibraryId))activeLibraryId=rows[0]?.id||null;return `<label class="library-search" for="search">搜索全部词库</label><div class="controls"><input id="search" type="search" aria-label="搜索词库" placeholder="输入英文、中文或音标，例如：habitat / 栖息地 / 动词" value="${escapeHTML(search)}"><select id="kind"><option value="all">全部类型</option><option value="word">单词</option><option value="phrase">短语</option></select><select id="star-filter" aria-label="按五星重要程度筛选"><option value="all">全部重要程度</option>${[5,4,3,2,1].map(n=>`<option value="${n}">${"★".repeat(n)} · ${n} 星</option>`).join('')}</select></div><p class="search-help">支持英文、中文、音标实时搜索。点击词条选中，按空格键播放该词读音；输入搜索内容时空格键照常使用。</p><p class="small muted">共 ${rows.length} 条，按雅思重要程度降序排列。</p><section class="card">${rows.map(x=>`<article class="list-item library-entry${activeLibraryId===x.id?' is-current':''}" data-library-id="${escapeHTML(x.id)}" tabindex="0" aria-label="${escapeHTML(x.term)}：空格键播放读音"><div class="library-word-head"><div class="library-headings"><div class="library-title-line">${libraryPronounce(x)}<span class="library-title-content"><b class="library-term">${escapeHTML(x.term)}</b><span class="library-main-meaning">${escapeHTML(libraryMeanings(x).main)} <span class="context-badge">本文义</span></span></span></div>${wordMeta(x)}</div></div>${libraryMeanings(x).other?`<p class="library-secondary-meaning">其他常见义：${escapeHTML(libraryMeanings(x).other)}</p>`:''}${x.note?`<p class="library-note">${escapeHTML(x.note)}</p>`:""}${memoryHtml(x)}${x.examples.length?`<details class="example library-example"><summary>查看例句 · ${x.examples.length} 条</summary>${x.examples.map(e=>`<div class="example-item"><div class="example-line"><p class="example-en">${e.source==='original'?'<span class="example-source example-source-original">原文例句</span>':'<span class="example-source example-source-supplemental">补充例句</span>'}${escapeHTML(e.en)}</p>${playButton(e.en,e.source==='original'?'原文例句朗读':'补充例句朗读',true)}</div><p class="example-zh">${escapeHTML(e.zh)}${e.sense?`<span class="example-sense">${escapeHTML(e.sense)}</span>`:''}</p></div>`).join('')}</details>`:''}</article>`).join('')||'<p>没有匹配的词条。</p>'}</section>`}
+function library(){let rows=DATA.items.filter(x=>(kind==='all'||kind===x.type)&&(starFilter==='all'||String(x.stars)===starFilter)&&(x.term+' '+x.zh+' '+(x.ipa||'')+' '+(x.pos||'')).toLowerCase().includes(search.trim().toLowerCase())).sort((a,b)=>b.stars-a.stars||((a.type==='word'?0:1)-(b.type==='word'?0:1))||(a.term.localeCompare(b.term)));if(!rows.some(x=>x.id===activeLibraryId))activeLibraryId=rows[0]?.id||null;return `<label class="library-search" for="search">搜索全部词库</label><div class="controls"><input id="search" type="search" aria-label="搜索词库" placeholder="输入英文、中文或音标，例如：habitat / 栖息地 / 动词" value="${escapeHTML(search)}"><select id="kind"><option value="all">全部类型</option><option value="word">单词</option><option value="phrase">短语</option></select><select id="star-filter" aria-label="按五星重要程度筛选"><option value="all">全部重要程度</option>${[5,4,3,2,1].map(n=>`<option value="${n}">${"★".repeat(n)} · ${n} 星</option>`).join('')}</select></div><p class="search-help">支持英文、中文、音标实时搜索。点击词条选中，按空格键播放该词读音；输入搜索内容时空格键照常使用。</p><p class="small muted">共 ${rows.length} 条，按雅思重要程度降序排列。</p><section class="card">${rows.map(x=>`<article class="list-item library-entry${activeLibraryId===x.id?' is-current':''}" data-library-id="${escapeHTML(x.id)}" tabindex="0" aria-label="${escapeHTML(x.term)}：空格键播放读音"><div class="library-word-head"><div class="library-headings"><div class="library-title-line">${libraryPronounce(x)}<span class="library-title-content"><b class="library-term">${escapeHTML(x.term)}</b><span class="library-main-meaning">${escapeHTML(libraryMeanings(x).main)} <span class="context-badge">本文义</span></span></span></div>${wordMeta(x)}</div></div>${libraryMeanings(x).other?`<p class="library-secondary-meaning">其他常见义：${escapeHTML(libraryMeanings(x).other)}</p>`:''}${x.note?`<p class="library-note">${escapeHTML(x.note)}</p>`:""}${memoryHtml(x)}${x.examples.length?`<details class="example library-example"><summary>查看例句 · ${x.examples.length} 条</summary>${x.examples.map(e=>`<div class="example-item"><div class="example-line"><p class="example-en">${e.source==='original'?'<span class="example-source example-source-original">原文例句</span>':'<span class="example-source example-source-supplemental">补充例句</span>'}${escapeHTML(e.en)}</p>${libraryExamplePlay(e)}</div><p class="example-zh">${escapeHTML(e.zh)}${e.sense?`<span class="example-sense">${escapeHTML(e.sense)}</span>`:''}</p></div>`).join('')}</details>`:''}</article>`).join('')||'<p>没有匹配的词条。</p>'}</section>`}
 function sentences(){return `<p class="muted">${DATA.sentences.length} 个原文句子 · ${DATA.examples.length} 个补充例句。先听，再展开中文。</p><div class="controls"><input id="sentence-search" placeholder="搜索原文或例句" aria-label="搜索句子" value="${escapeHTML(search)}"><select id="sentence-type"><option value="original">原文句子</option><option value="examples">补充例句</option></select></div><section class="card" id="sentence-list"></section>`}
 let sentenceType='original';
 function sentenceList(){if(!$('sentence-list'))return;let rows=(sentenceType==='original'?DATA.sentences:DATA.examples).filter(x=>(x.en+x.zh).toLowerCase().includes(search.toLowerCase()));$('sentence-list').innerHTML=rows.map((x,i)=>`<article class="list-item"><span class="tag">${String(i+1).padStart(2,'0')}</span> <span class="example-source ${sentenceType==='original'?'example-source-original':'example-source-supplemental'}">${sentenceType==='original'?'原文例句':'补充例句'}</span><p style="font-size:18px">${escapeHTML(x.en)}</p>${playButton(x.en,'朗读整句',true)}<details><summary>查看中文</summary><p>${escapeHTML(x.zh)}</p></details></article>`).join('')||'<p>没有匹配的句子。</p>'}
