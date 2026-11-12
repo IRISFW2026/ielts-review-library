@@ -140,7 +140,7 @@ function training(){let intro={cards:'先回忆，再揭晓。每一次主动回
 let x=current,r=rec(x);html+=`<p class="small muted">${intro[view]}</p><section class="card"><div class="cardtop"><span class="tag">${x.type==='word'?'WORD · 单词':'PHRASE · 短语'} / ${LABELS[r.level]||'未学'}</span><span class="counter">本轮已完成 ${sessionCount} · 待练 ${queue.length+1}</span></div><div class="center">`;
 if(view==='dictation'&&!revealed){html+=`<div class="term">Listen & recall</div><p class="muted small">点击小喇叭，听清后填写答案</p><button id="listen" class="speaker">${icon} 播放英文</button> <button id="slow" class="speaker small">慢速再听</button>`}else html+=`<div class="term">${escapeHTML(x.term)}</div>${wordMeta(x)}${playButton(x.audioTerm||x.term,'播放读音')}`;
 if(view!=='cards'&&!revealed)html+=`<div class="practice-input">${view==='dictation'?'<label>英文单词或短语<input id="en-answer" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="输入你听到的英文"></label>':''}<label>中文释义<textarea id="zh-answer" placeholder="写出你理解的中文意思"></textarea></label></div>`;
-if(!revealed)html+=`<p style="margin-top:25px"><button id="reveal" class="primary">${view==='cards'?'揭晓释义':'核对答案'}</button></p>`;
+if(!revealed)html+=`<p style="margin-top:25px"><button id="reveal" class="primary">${view==='cards'?'揭晓释义 · Enter ↵':'核对答案'}</button></p>`;
 else{html+=`<div class="meaning">${contextMeaningHtml(x)}</div>`;if(x.note&&x.note!==x.term)html+=`<p class="small muted">文档用法：${escapeHTML(x.note)}</p>`;
 if(view!=='cards'){html+=`<div class="answer">${view==='dictation'?`<p class="${spellingCorrect()?'ok':'warning'}">${spellingCorrect()?'✓ 英文拼写正确':'请再记一次：'+escapeHTML(x.term)}</p><p>你的英文：${escapeHTML(answerEN)||'（未填写）'}</p>`:''}<p>你的中文：${escapeHTML(answerZH)||'（未填写）'}</p><label><input id="meaning-ok" type="checkbox" ${meaningOK?'checked':''}> 我已对照，中文意思基本正确</label><p class="small muted">中文接受同义表达，由你自评；英文忽略大小写、标点和多余空格。</p></div>`}
 if(x.examples.length){html+=`<div class="example">${x.examples.slice(0,3).map(e=>`<p>${escapeHTML(e.en)}</p><p class="small muted">${escapeHTML(e.zh)}</p>${playButton(e.en,e.added?'补充例句朗读':'例句朗读',true)}`).join('<div style="height:15px"></div>')}</div>`}}
@@ -175,7 +175,19 @@ function deviceSpeech(text,rate,token){if(token!==soundToken)return;if(!('speech
 function speak(text,isTerm=false,rate=settings.rate){stopSound();const token=soundToken;let spoken=text.replace(/\bA\b/g,'A').replace(/…/g,' ').replace(/[＋+]/g,' ');if(settings.engine==='dictionary'&&isTerm){audio=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(spoken)+'&type=1');audio.playbackRate=rate;let finished=false;const fallback=()=>{if(finished||token!==soundToken)return;finished=true;if(audio)audio.pause();toast('在线发音不可用，已切换设备音色。');deviceSpeech(spoken,rate,token)};const timer=setTimeout(fallback,7000);audio.onplaying=()=>{finished=true;clearTimeout(timer)};audio.onerror=fallback;audio.play().catch(fallback);return}deviceSpeech(spoken,rate,token)}
 function exportData(){let blob=new Blob([JSON.stringify({app:KEY,version:2,exportedAt:new Date().toISOString(),state,settings},null,2)],{type:'application/json'});let a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download='Kakapo-progress-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 async function importData(e){let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());if(d.app!==KEY||![1,2].includes(d.version)||!d.state||typeof d.state!=='object'||Array.isArray(d.state))throw Error();let valid=new Set(DATA.items.map(x=>x.id)),incoming={};for(let [id,r]of Object.entries(d.state)){if(!valid.has(id))continue;if(!r||![1,2,3,4].includes(r.level)||!Number.isFinite(r.updated)||!Number.isFinite(r.reps)||r.reps<0||(r.level!==4&&!Number.isFinite(r.due)))throw Error();incoming[id]={...r,intervalDays:Number.isFinite(r.intervalDays)?r.intervalDays:(r.level===4?30:Math.max(1/1440,(r.due-r.updated)/DAY)),easeFactor:Number.isFinite(r.easeFactor)?r.easeFactor:2.4,lapses:Number.isFinite(r.lapses)?r.lapses:0,due:Number.isFinite(r.due)?r.due:Date.now()+7*DAY,startedDay:typeof r.startedDay==='string'?r.startedDay:dayKey()}}for(let[id,r]of Object.entries(incoming))if(!state[id]||r.updated>=(state[id].updated||0))state[id]=r;save();buildQueue();toast('进度已导入：按最后更新时间合并，旧版熟练词也将参与低频复习。')}catch{toast('导入失败：请选择本页面导出的有效进度文件。')}finally{if($('import'))$('import').value=''}}
-document.addEventListener('keydown',e=>{if(!current||!revealed||!['1','2','3','4'].includes(e.key)||e.ctrlKey||e.metaKey||e.altKey||/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName||''))return;e.preventDefault();grade(Number(e.key))});
+document.addEventListener('keydown',e=>{
+  if(!current||e.repeat||e.isComposing||e.ctrlKey||e.metaKey||e.altKey)return;
+  const tag=document.activeElement?.tagName||'';
+  if(e.key==='Enter'&&view==='cards'&&!revealed){
+    if(/^(INPUT|TEXTAREA|SELECT|BUTTON|A)$/.test(tag)||document.activeElement?.isContentEditable)return;
+    e.preventDefault();
+    reveal();
+    return;
+  }
+  if(!revealed||!['1','2','3','4'].includes(e.key)||/^(INPUT|TEXTAREA|SELECT)$/.test(tag)||document.activeElement?.isContentEditable)return;
+  e.preventDefault();
+  grade(Number(e.key));
+});
 window.addEventListener('hashchange',()=>{let v=location.hash.slice(1);if(v!==view&&['cards','dictation','meaning','sentences','library','settings'].includes(v))navigate(v)});
 if('speechSynthesis'in window){speechSynthesis.onvoiceschanged=loadVoices;loadVoices();setTimeout(loadVoices,1200)}else voiceStatus();
 setInterval(()=>{renderStats();if(['cards','dictation','meaning'].includes(view)&&!current&&!document.querySelector('#en-answer')){let ids=candidates().map(x=>x.id);if(ids.length){queue=ids;next()}}},15000);
