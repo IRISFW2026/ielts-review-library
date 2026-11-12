@@ -10,7 +10,7 @@
   cfg = Object.assign({repo:DEFAULT_REPO, auto:true, remember:true, enabled:false},cfg);
   var app = null, token = "", connected = false, busy = false, queued = false;
   var pending = false, syncTimer = null, lastSynced = 0, lastPull = 0, inFlight = null;
-  var suppressChanges = false, message = "未连接：学习记录仍保存在当前浏览器。";
+  var suppressChanges = false, statusIsError=false, message = "未连接：学习记录仍保存在当前浏览器。";
   var ids = new Set(), lastRemoteSha = null;
 
   function readJSON(key,fallback) { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (_) { return fallback; } }
@@ -83,10 +83,12 @@
     }
     return out;
   }
-  function equal(a,b){return JSON.stringify(a)===JSON.stringify(b);}
+  function equal(a,b){var aa=Object.keys(a).sort(),bb=Object.keys(b).sort();return aa.length===bb.length && aa.every(function(k,i){return k===bb[i] && JSON.stringify(a[k])===JSON.stringify(b[k]);});}
   function currentState(){return cleanState(app.getState());}
   function updateStatus(text,isError) {
-    message=text;
+    message=text;statusIsError=!!isError;
+    var mini=document.getElementById("cloud-mini-status");
+    if(mini){mini.textContent=isError?"云端同步失败 · 请检查设置":busy?"云端同步中…":connected?"云端已连接 · "+(lastSynced?new Date(lastSynced).toLocaleTimeString():"等待同步"):"进度仅本地保存";mini.classList.toggle("cloud-error",!!isError);}
     var el=document.getElementById("cloud-status");
     if(el){el.textContent=text;el.classList.toggle("cloud-error",!!isError);}
     var b=document.getElementById("cloud-sync-now");
@@ -227,17 +229,19 @@
     if(a)a.onchange=function(){cfg.auto=a.checked;writeConfig();if(cfg.auto&&connected&&pending)requestSync(300);};
     var remember=document.getElementById("cloud-remember");
     if(remember)remember.onchange=function(){cfg.remember=remember.checked;writeConfig();saveSession();};
-    updateStatus(message,false);
+    updateStatus(message,statusIsError);
   }
   function init(config) {
     if(app)return;
     app=config;ids=new Set(config.ids||[]);
     var style=document.createElement("style");
     style.textContent=".cloud-settings{padding:18px;border:1px solid #cbded1;background:#f2f8f3;border-radius:16px;display:grid;gap:12px}.cloud-settings h2{margin:0;font-size:20px}.cloud-settings label:not(.cloud-check){display:grid;gap:6px;font-size:13px}.cloud-settings input[type=text],.cloud-settings input[type=password]{width:100%;min-width:0;padding:10px 12px;border:1px solid #b8cec0;border-radius:9px;background:#fff;color:var(--ink);font:inherit}.cloud-check{display:flex!important;gap:10px!important;align-items:flex-start;line-height:1.5;font-size:13px}.cloud-check input{margin-top:4px}.cloud-actions{display:flex;flex-wrap:wrap;gap:8px}.cloud-actions button{padding:9px 13px}.cloud-status{color:#377257}.cloud-status.cloud-error{color:#a5443c}.cloud-settings details{font-size:13px}.cloud-settings li{margin:9px 0}.cloud-settings code{overflow-wrap:anywhere}";
+    style.textContent+=".cloud-mini{font-size:11px;line-height:1.65;margin:14px 7px 0;padding:8px 11px;border:1px solid #ccdcd2;border-radius:10px;color:#4b7462;background:#f0f7f0}.cloud-mini.cloud-error{color:#a0443b;background:#fff2ee;border-color:#ebc0b8}";
     document.head.appendChild(style);
     token=cfg.enabled?readSession():"";
     if(cfg.enabled && token) { setTimeout(function(){connect(true);},100); }
     else if(cfg.enabled) message="尚未连接：当前标签页没有令牌，请在学习设置中重新输入。";
+    updateStatus(message,false);
     window.addEventListener("focus",function(){if(connected&&cfg.auto&&Date.now()-lastPull>45000)syncNow();});
     document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible"&&connected&&cfg.auto&&Date.now()-lastPull>45000)syncNow();});
     setInterval(function(){if(connected&&cfg.auto&&document.visibilityState==="visible"&&Date.now()-lastPull>90000)syncNow();},90000);
