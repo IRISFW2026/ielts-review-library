@@ -12,6 +12,8 @@
   var pending = false, syncTimer = null, lastSynced = 0, lastPull = 0, inFlight = null;
   var suppressChanges = false, statusIsError=false, message = "未连接：学习记录仍保存在当前浏览器。";
   var ids = new Set(), lastRemoteSha = null;
+  var SENTENCE_FLAG_PREFIX = '__sentenceDifficulty__:';
+  var SENTENCE_REASON_IDS = new Set(['structure','translation','logic','misread','other']);
 
   function readJSON(key,fallback) { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (_) { return fallback; } }
   function writeConfig() { try { localStorage.setItem(CLOUD_CONFIG_KEY,JSON.stringify(cfg)); } catch (_) {} }
@@ -58,12 +60,24 @@
     if(typeof r.startedDay==="string" && /^\d{4}-\d{2}-\d{2}$/.test(r.startedDay))record.startedDay=r.startedDay;
     return record;
   }
+  function cleanSentenceFlag(id,r) {
+    var match=/^__sentenceDifficulty__:(\d{1,4})$/.exec(id);
+    if(!match||Number(match[1])<1||Number(match[1])>1000||!r||typeof r!=="object"||Array.isArray(r))return null;
+    if(!Number.isFinite(r.updated)||r.updated<0)return null;
+    var reasons=Array.isArray(r.reasons)?Array.from(new Set(r.reasons.filter(function(x){return SENTENCE_REASON_IDS.has(x)}))).slice(0,5):[];
+    return {updated:r.updated,createdAt:Number.isFinite(r.createdAt)&&r.createdAt>=0?r.createdAt:r.updated,removed:r.removed===true,reasons:reasons,note:typeof r.note==="string"?r.note.slice(0,2000):""};
+  }
   function cleanState(input) {
     if(input==null)return {};
     if(typeof input!=="object"||Array.isArray(input))throw Error("云端进度文件结构无效，已停止同步，避免覆盖数据。");
     var out={},keys=Object.keys(input);
     if(keys.length>5000)throw Error("云端记录数量异常，已停止同步。");
     for(var id of keys) {
+      if(id.indexOf(SENTENCE_FLAG_PREFIX)===0) {
+        var flag=cleanSentenceFlag(id,input[id]);
+        if(!flag)throw Error("云端难点句记录无效："+id+"。已停止同步。");
+        out[id]=flag;continue;
+      }
       if(!ids.has(id))continue;
       var x=cleanRecord(id,input[id]);
       if(!x)throw Error("云端词卡记录无效："+id+"。已停止同步。");
@@ -121,11 +135,11 @@
     var data=await res.json(),parsed;
     if(data.type!=="file"||typeof data.content!=="string"||!data.sha)throw Error("云端文件不是有效的进度文件。");
     try { parsed=JSON.parse(base64ToContent(data.content)); } catch(e){throw Error("云端文件无法解析。已停止同步，防止覆盖。");}
-    if(parsed.app!==app.appKey||parsed.schema!==1)throw Error("云端文件属于不同的复习页或版本，已停止同步。");
+    if(parsed.app!==app.appKey||![1,2].includes(parsed.schema))throw Error("云端文件属于不同的复习页或版本，已停止同步。");
     return {sha:data.sha,state:cleanState(parsed.state)};
   }
   async function putRemote(sha,records) {
-    var payload={app:app.appKey,schema:1,updatedAt:new Date().toISOString(),state:records};
+    var payload={app:app.appKey,schema:2,updatedAt:new Date().toISOString(),state:records};
     var body={message:"Sync private Kakapo review progress",content:contentToBase64(JSON.stringify(payload))};
     if(sha)body.sha=sha;
     var res=await fetch(filenameUrl(),{method:"PUT",headers:Object.assign({"Content-Type":"application/json"},apiHeaders()),body:JSON.stringify(body),cache:"no-store"});
