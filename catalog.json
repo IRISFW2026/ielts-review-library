@@ -764,6 +764,29 @@
       "dateBasis": "材料日期"
     },
     {
+      "id": "dar-es-salaam-1020",
+      "date": "2026-10-20",
+      "skill": "阅读",
+      "kind": "模考",
+      "en": "The problems of getting around the city of Dar es Salaam",
+      "zh": "达累斯萨拉姆的城市交通问题",
+      "topic": "人口与城市",
+      "tags": [
+        "人口与城市",
+        "城市交通",
+        "公共交通",
+        "词汇复习"
+      ],
+      "description": "200项词汇与语块 · 五星重要程度 · 四级翻卡 · A–J原文40句与难点标记",
+      "path": "reviews/2026-10-20/reading/practice/dar-es-salaam/index.html",
+      "dateBasis": "用户指定1020",
+      "displayTitle": "1020-阅读-模考-The problems of getting around the city of Dar es Salaam",
+      "source": "用户提供10个自然段全文及已确认的顺序词汇表；例句均采用原文；未提供题目。",
+      "aliases": [],
+      "title": "1020-阅读-模考-The problems of getting around the city of Dar es Salaam",
+      "url": "/ielts-review-library/reviews/2026-10-20/reading/practice/dar-es-salaam/"
+    },
+    {
       "id": "robot-umpires",
       "date": "2026-10-19",
       "skill": "阅读",
