@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#edf5ec">
+<title>1123-阅读-The Brassica Family</title>
+<style>
+:root{color-scheme:light;--ink:#18372c;--green:#255c46;--muted:#50695f;--line:#cadbd0;--paper:#fff;--soft:#edf5ec}
+*{box-sizing:border-box}
+body{margin:0;background:var(--soft);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
+main{max-width:1120px;margin:auto;padding:24px clamp(16px,4vw,44px) 54px}
+a{color:var(--green);text-underline-offset:4px}
+header{padding:28px 0 18px}
+h1{font:600 clamp(2.1rem,6vw,4.1rem)/1.1 Georgia,serif;margin:8px 0 12px}
+h2,h3,p{margin:0 0 12px}
+.muted,small{color:var(--muted)}
+nav,.controls,.ratings{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+button,select,input{font:inherit;color:inherit;background:white;border:1px solid var(--line);border-radius:9px;padding:9px 13px}
+button,select,summary{cursor:pointer}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #568c70;outline-offset:2px}
+button[aria-pressed=true],button.primary{background:var(--green);color:white;border-color:var(--green)}
+.panel,.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,4vw,34px);margin-top:14px}
+.card{max-width:720px;margin:18px auto;text-align:center}
+.card h2{font:600 clamp(1.7rem,4vw,2.7rem)/1.2 Georgia,serif;overflow-wrap:anywhere}
+.answer{padding-top:18px;margin-top:18px;border-top:1px solid var(--line);text-align:left}
+.ratings{justify-content:center}
+.stars{color:#8a5d16;white-space:nowrap}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;min-width:825px;border-collapse:collapse;text-align:left}
+th,td{padding:11px;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#e3f0e4}
+td:first-child{min-width:175px}
+td:nth-child(2){min-width:110px}
+td button{padding:1px 6px;margin-left:4px}
+mark{background:#e0efe0;color:inherit;padding:2px 5px;border-radius:4px}
+.ipa{color:var(--muted);display:block;font-size:1rem}
+fieldset{border:1px solid var(--line);border-radius:12px;margin:12px 0 18px;padding:14px 18px}
+legend{font-weight:700}
+blockquote{margin:10px 0;padding:8px 14px;border-left:3px solid var(--green);background:var(--soft)}
+[hidden]{display:none!important}
+@media(max-width:550px){main{padding-top:16px}nav button{flex:1 1 42%}.controls label{width:100%}.controls input,.controls select{max-width:100%}}
+</style>
+</head>
+<body>
+<main>
+<a href="/ielts-review-library/index.html">返回雅思复习库</a>
+<header><div class="muted">1123 · 阅读</div><h1>The Brassica Family</h1><p class="muted">A–H 段词汇与语块 · 第 4、6 题重练</p></header>
+<nav aria-label="复习模块">
+<button data-tab="cards" aria-pressed="true">翻卡练习</button>
+<button data-tab="bank" aria-pressed="false">全部词库</button>
+<button data-tab="quiz" aria-pressed="false">错题重练</button>
+<button data-tab="settings" aria-pressed="false">学习设置</button>
+</nav>
+<section id="cards" class="panel">
+<div id="progress" class="muted" aria-live="polite"></div>
+<article id="card" class="card"></article>
+<div id="shortcuts" class="muted">Enter 揭晓释义 · Space 发音 · 1–4 评定熟练度</div>
+</section>
+<section id="bank" class="panel" hidden>
+<h2>全部词库</h2>
+<div class="controls">
+<label>搜索 <input id="query" type="search" placeholder="英文、中文或搭配"></label>
+<label>段落 <select id="paragraph"><option value="">全部</option></select></label>
+<label>排序 <select id="order"><option value="source">原文顺序</option><option value="stars">重要性优先</option></select></label>
+</div>
+<p class="muted" id="count" aria-live="polite"></p>
+<div class="table-wrap" tabindex="0" aria-label="词汇表，可横向滚动"><table><thead><tr><th>英文词汇／语块</th><th>本句义</th><th>词性或结构</th><th>原文／题干摘录</th><th>搭配／同义替换</th><th>重要性</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+<section id="quiz" class="panel" hidden>
+<h2>错题重练</h2>
+<form id="quiz-form"></form>
+<button id="reset-quiz" type="button">重新作答</button>
+</section>
+<section id="settings" class="panel" hidden>
+<h2>学习设置</h2>
+<form id="settings-form">
+<label for="limit">每日新词上限</label>
+<input id="limit" type="number" min="1" max="109" step="1" required>
+<button type="submit" class="primary">保存</button>
+</form>
+<p class="muted" id="settings-status" aria-live="polite">进度保存在当前浏览器。</p>
+</section>
+</main>
+<script>
+const words = [{"id":0,"p":"A","w":"be surprised to learn that","i":"","m":"得知……感到惊讶","e":"Many people are surprised to learn that …","c":"be surprised to find out that","s":3,"t":"结构／语块","zh":"许多人得知……感到惊讶"},{"id":1,"p":"A","w":"cabbage","i":"ˈkæbɪdʒ","m":"卷心菜","e":"cabbage, broccoli, cauliflower","c":"wild cabbage 野生甘蓝","s":2,"t":"名词","zh":"卷心菜、西兰花、花椰菜"},{"id":2,"p":"A","w":"broccoli","i":"ˈbrɒkəli","m":"西兰花","e":"cabbage, broccoli, cauliflower","c":"flower buds 花芽","s":3,"t":"名词","zh":"卷心菜、西兰花、花椰菜"},{"id":3,"p":"A","w":"cauliflower","i":"ˈkɒlɪflaʊə","m":"花椰菜","e":"cabbage, broccoli, cauliflower","c":"flower clusters 花簇","s":3,"t":"名词","zh":"卷心菜、西兰花、花椰菜"},{"id":4,"p":"A","w":"kale","i":"keɪl","m":"羽衣甘蓝","e":"kale, Brussels sprouts and kohlrabi","c":"leafy vegetable 叶菜","s":2,"t":"名词","zh":"羽衣甘蓝、抱子甘蓝和苤蓝"},{"id":5,"p":"A","w":"Brussels sprouts","i":"","m":"抱子甘蓝","e":"kale, Brussels sprouts and kohlrabi","c":"side buds 侧芽","s":2,"t":"短语","zh":"羽衣甘蓝、抱子甘蓝和苤蓝"},{"id":6,"p":"A","w":"kohlrabi","i":"ˌkəʊlˈrɑːbi","m":"苤蓝","e":"kale, Brussels sprouts and kohlrabi","c":"swollen stem 膨大的茎","s":2,"t":"名词","zh":"羽衣甘蓝、抱子甘蓝和苤蓝"},{"id":7,"p":"A","w":"belong to","i":"","m":"属于","e":"all belong to the same plant family","c":"belong to the same species 属于同一物种","s":5,"t":"短语","zh":"都属于同一个植物科"},{"id":8,"p":"A","w":"differ greatly in","i":"","m":"在……方面差异很大","e":"differ greatly in appearance, taste and texture","c":"vary considerably in 在……方面差异显著","s":5,"t":"短语","zh":"在外观、味道和口感上差别很大"},{"id":9,"p":"A","w":"appearance","i":"əˈpɪərəns","m":"外观","e":"in appearance, taste and texture","c":"visual appearance 外观","s":4,"t":"名词","zh":"在外观、味道和口感方面"},{"id":10,"p":"A","w":"taste","i":"teɪst","m":"味道","e":"in appearance, taste and texture","c":"characteristic taste 特有味道","s":3,"t":"名词","zh":"在外观、味道和口感方面"},{"id":11,"p":"A","w":"texture","i":"ˈtekstʃə","m":"质地，口感","e":"in appearance, taste and texture","c":"smooth texture 细腻口感","s":4,"t":"名词","zh":"在外观、味道和口感方面"},{"id":12,"p":"A","w":"originate from","i":"","m":"源于","e":"they all originated from a single wild plant","c":"trace their origins to 追溯到","s":5,"t":"短语","zh":"它们都源于同一种野生植物"},{"id":13,"p":"A","w":"species","i":"ˈspiːʃiːz","m":"物种，单复数同形","e":"This species, commonly known as wild cabbage or wild mustard","c":"the same species 同一物种","s":5,"t":"名词","zh":"这个物种通常被称为野生甘蓝或野生芥菜"},{"id":14,"p":"A","w":"commonly known as","i":"","m":"通常被称为","e":"commonly known as wild cabbage or wild mustard","c":"also known as 也叫","s":4,"t":"短语","zh":"通常被称为野生甘蓝或野生芥菜"},{"id":15,"p":"A","w":"wild cabbage / wild mustard","i":"","m":"野生甘蓝／野生芥菜","e":"wild cabbage or wild mustard","c":"wild plant 野生植物","s":2,"t":"组合语块","zh":"野生甘蓝或野生芥菜"},{"id":16,"p":"A","w":"grow naturally along rocky coastlines","i":"","m":"沿岩石海岸自然生长","e":"has grown naturally along the rocky coastlines of Europe","c":"rocky shores 岩石海岸","s":3,"t":"短语","zh":"一直沿欧洲的岩石海岸自然生长"},{"id":17,"p":"A","w":"through careful human selection","i":"","m":"通过人类的精心选育","e":"Through careful human selection","c":"through selective breeding 通过选择性育种","s":4,"t":"结构／语块","zh":"通过人类的精心选育"},{"id":18,"p":"A","w":"gradually develop into","i":"","m":"逐渐演变成","e":"it has gradually developed into many of the vegetables","c":"evolve into 演化成","s":5,"t":"短语","zh":"它逐渐演变成了许多这样的蔬菜"},{"id":19,"p":"A","w":"be commonly found in","i":"","m":"常见于","e":"vegetables that are commonly found in supermarkets today","c":"be common in 常见于","s":4,"t":"结构／语块","zh":"如今在超市常见的蔬菜"},{"id":20,"p":"B","w":"transformation","i":"ˌtrænsfəˈmeɪʃən","m":"转变，演变","e":"The transformation of Brassica oleracea did not happen by chance.","c":"undergo a transformation 经历转变","s":4,"t":"名词","zh":"甘蓝的演变并非偶然。"},{"id":21,"p":"B","w":"happen by chance","i":"","m":"偶然发生","e":"did not happen by chance","c":"occur by chance 偶然发生","s":4,"t":"短语","zh":"并非偶然发生"},{"id":22,"p":"B","w":"be the result of","i":"","m":"是……的结果","e":"It was the result of a process known as selective breeding","c":"result from 由……引起","s":5,"t":"结构／语块","zh":"这是选择性育种过程的结果"},{"id":23,"p":"B","w":"selective breeding","i":"","m":"选择性育种","e":"a process known as selective breeding","c":"plant breeding 植物育种","s":4,"t":"短语","zh":"一种称为选择性育种的过程"},{"id":24,"p":"B","w":"in which","i":"","m":"在其中，在这个过程中","e":"in which farmers repeatedly chose plants with desirable characteristics","c":"a system in which 在该系统中","s":5,"t":"结构／语块","zh":"在这个过程中，农民反复挑选具有理想性状的植株"},{"id":25,"p":"B","w":"repeatedly","i":"rɪˈpiːtɪdli","m":"反复地","e":"farmers repeatedly chose plants","c":"repeated selection 反复挑选","s":4,"t":"副词","zh":"农民反复挑选植株"},{"id":26,"p":"B","w":"desirable characteristics","i":"","m":"理想性状","e":"plants with desirable characteristics","c":"desirable traits 理想性状","s":4,"t":"短语","zh":"具有理想性状的植株"},{"id":27,"p":"B","w":"produce the next generation","i":"","m":"繁育下一代","e":"used them to produce the next generation","c":"offspring 后代","s":4,"t":"短语","zh":"用这些植株繁育下一代"},{"id":28,"p":"B","w":"unlike","i":"ʌnˈlaɪk","m":"与……不同","e":"Unlike modern genetic engineering","c":"in contrast to 与……形成对比","s":4,"t":"介词","zh":"与现代基因工程不同"},{"id":29,"p":"B","w":"genetic engineering","i":"","m":"基因工程","e":"Unlike modern genetic engineering","c":"genetic modification 基因改造","s":4,"t":"短语","zh":"与现代基因工程不同"},{"id":30,"p":"B","w":"involve doing something","i":"","m":"涉及做某事","e":"does not involve changing a plant’s DNA in a laboratory","c":"involve collecting data 涉及收集数据","s":5,"t":"短语","zh":"不涉及在实验室改变植物的 DNA"},{"id":31,"p":"B","w":"instead","i":"ɪnˈsted","m":"相反，转而","e":"Instead, it relies on naturally occurring genetic variation","c":"instead of 代替","s":5,"t":"副词","zh":"它所依靠的是自然存在的遗传变异"},{"id":32,"p":"B","w":"rely on","i":"","m":"依靠","e":"it relies on naturally occurring genetic variation","c":"depend on 依赖","s":5,"t":"短语","zh":"依靠自然存在的遗传变异"},{"id":33,"p":"B","w":"naturally occurring genetic variation","i":"","m":"自然存在的遗传变异","e":"naturally occurring genetic variation that already exists within a species","c":"genetic differences 遗传差异","s":4,"t":"短语","zh":"同一物种内部已经存在的自然遗传变异"},{"id":34,"p":"C","w":"some … than others","i":"","m":"有些……比其他的更……","e":"some wild Brassica plants had larger leaves, thicker stems or more compact flower buds than others","c":"some individuals … than others 有些个体比其他个体更……","s":5,"t":"结构／语块","zh":"有些野生甘蓝植株的叶片更大、茎更粗或花芽比其他植株更紧密"},{"id":35,"p":"C","w":"stem","i":"stem","m":"茎","e":"thicker stems","c":"thick stem 粗壮的茎","s":3,"t":"名词","zh":"更粗的茎"},{"id":36,"p":"C","w":"compact","i":"kəmˈpækt","m":"紧密的","e":"more compact flower buds","c":"compact structure 紧凑结构","s":3,"t":"形容词","zh":"更紧密的花芽"},{"id":37,"p":"C","w":"flower bud","i":"","m":"花芽","e":"more compact flower buds","c":"side bud 侧芽","s":3,"t":"短语","zh":"更紧密的花芽"},{"id":38,"p":"C","w":"save seeds","i":"","m":"留种","e":"By saving seeds only from those preferred plants","c":"by selecting 通过挑选","s":4,"t":"短语","zh":"通过只从那些选中的植株留种"},{"id":39,"p":"C","w":"preferred plants","i":"","m":"受青睐的植株","e":"those preferred plants","c":"preferred option 首选方案","s":3,"t":"短语","zh":"那些受青睐的植株"},{"id":40,"p":"C","w":"increase the frequency of","i":"","m":"提高……的出现频率","e":"they gradually increased the frequency of these characteristics","c":"become more common 变得更常见","s":5,"t":"短语","zh":"他们逐渐提高了这些性状出现的频率"},{"id":41,"p":"C","w":"over many generations","i":"","m":"经过许多代","e":"over many generations","c":"over time 随着时间推移","s":4,"t":"结构／语块","zh":"经过许多代"},{"id":42,"p":"C","w":"as a result","i":"","m":"因此","e":"As a result, different vegetables began to emerge.","c":"consequently 因此","s":5,"t":"结构／语块","zh":"因此，不同的蔬菜开始出现。"},{"id":43,"p":"C","w":"emerge","i":"ɪˈmɜːdʒ","m":"出现，显现","e":"different vegetables began to emerge","c":"a pattern emerges 一个规律显现","s":5,"t":"动词","zh":"不同的蔬菜开始出现"},{"id":44,"p":"C","w":"be developed for","i":"","m":"为获得……而培育","e":"Cabbage was developed for its large terminal leaves","c":"be bred for a particular trait 为特定性状而培育","s":5,"t":"结构／语块","zh":"卷心菜是为获得较大的顶生叶而培育的"},{"id":45,"p":"C","w":"terminal leaves","i":"","m":"顶生叶","e":"its large terminal leaves","c":"terminal 位于末端或顶端的","s":3,"t":"短语","zh":"它较大的顶生叶"},{"id":46,"p":"C","w":"undeveloped flower clusters","i":"","m":"未发育成熟的花簇","e":"cauliflower for its undeveloped flower clusters","c":"cluster 簇、团","s":3,"t":"短语","zh":"花椰菜是为获得未发育成熟的花簇而培育的"},{"id":47,"p":"C","w":"side buds / loose leaves / swollen stem","i":"","m":"侧芽／松散的叶片／膨大的茎","e":"Brussels sprouts for its side buds, kale for its loose leaves and kohlrabi for its swollen stem","c":"swell 膨胀","s":3,"t":"组合语块","zh":"抱子甘蓝培育的是侧芽，羽衣甘蓝培育的是松散的叶片，苤蓝培育的是膨大的茎"},{"id":48,"p":"D","w":"genetically similar","i":"","m":"在遗传上相似","e":"Although these vegetables look very different, scientists have discovered that they are genetically very similar.","c":"be genetically closely related 亲缘关系密切","s":5,"t":"短语","zh":"这些蔬菜看起来差别很大，但科学家发现它们在遗传上非常相似。"},{"id":49,"p":"D","w":"be capable of interbreeding","i":"","m":"能够相互杂交繁殖","e":"they are still capable of interbreeding under suitable conditions","c":"be capable of doing sth. 能够做某事","s":5,"t":"结构／语块","zh":"在适宜条件下，它们仍能相互杂交繁殖"},{"id":50,"p":"D","w":"under suitable conditions","i":"","m":"在适宜条件下","e":"under suitable conditions","c":"under favourable conditions 在有利条件下","s":4,"t":"结构／语块","zh":"在适宜条件下"},{"id":51,"p":"D","w":"close genetic relationship","i":"","m":"密切的遗传关系","e":"This close genetic relationship explains why","c":"share a common ancestor 拥有共同祖先","s":4,"t":"短语","zh":"这种密切的遗传关系解释了为什么……"},{"id":52,"p":"D","w":"plant breeders","i":"","m":"植物育种人员","e":"plant breeders can continue to develop new varieties","c":"plant breeding 植物育种","s":4,"t":"短语","zh":"植物育种人员可以继续培育新品种"},{"id":53,"p":"D","w":"develop new varieties","i":"","m":"培育新品种","e":"develop new varieties with improved qualities","c":"crop varieties 作物品种","s":4,"t":"短语","zh":"培育性状更优的新品种"},{"id":54,"p":"D","w":"nutritional value","i":"","m":"营养价值","e":"higher nutritional value","c":"nutritious 有营养的","s":5,"t":"短语","zh":"更高的营养价值"},{"id":55,"p":"D","w":"resistance to disease","i":"","m":"抗病性","e":"greater resistance to disease","c":"be resistant to disease 有抗病性","s":5,"t":"短语","zh":"更强的抗病性"},{"id":56,"p":"E","w":"be well known for","i":"","m":"因……而广为人知","e":"is also well known for its impressive nutritional benefits","c":"be noted for 以……著称","s":4,"t":"结构／语块","zh":"也以其显著的营养益处而闻名"},{"id":57,"p":"E","w":"nutritional benefits","i":"","m":"营养益处","e":"its impressive nutritional benefits","c":"health benefits 健康益处","s":4,"t":"短语","zh":"其显著的营养益处"},{"id":58,"p":"E","w":"contain large amounts of","i":"","m":"含有大量……","e":"contain large amounts of vitamins C and K","c":"be rich in 富含","s":5,"t":"短语","zh":"含有大量维生素 C 和 K"},{"id":59,"p":"E","w":"dietary fibre","i":"","m":"膳食纤维","e":"dietary fibre and important minerals such as potassium and calcium","c":"high in fibre 富含纤维","s":4,"t":"短语","zh":"膳食纤维和钾、钙等重要矿物质"},{"id":60,"p":"E","w":"mineral","i":"ˈmɪnərəl","m":"矿物质","e":"important minerals such as potassium and calcium","c":"mineral intake 矿物质摄入","s":4,"t":"名词","zh":"钾和钙等重要矿物质"},{"id":61,"p":"E","w":"potassium","i":"pəˈtæsiəm","m":"钾","e":"potassium and calcium","c":"potassium intake 钾摄入量","s":2,"t":"名词","zh":"钾和钙"},{"id":62,"p":"E","w":"calcium","i":"ˈkælsiəm","m":"钙","e":"potassium and calcium","c":"rich in calcium 富含钙","s":3,"t":"名词","zh":"钾和钙"},{"id":63,"p":"E","w":"natural plant chemicals","i":"","m":"天然植物化学物质","e":"natural plant chemicals called glucosinolates","c":"plant compounds 植物化合物","s":3,"t":"短语","zh":"叫作硫苷的天然植物化学物质"},{"id":64,"p":"E","w":"glucosinolate","i":"ˌɡluːkəʊˈsɪnəleɪt","m":"硫代葡萄糖苷，简称硫苷","e":"natural plant chemicals called glucosinolates","c":"naturally occurring compounds 天然存在的化合物","s":3,"t":"名词","zh":"叫作硫苷的天然植物化学物质"},{"id":65,"p":"E","w":"give something its distinctive flavour","i":"","m":"赋予某物独特风味","e":"which give these vegetables their distinctive flavour","c":"characteristic taste 特有味道","s":4,"t":"短语","zh":"这些物质赋予蔬菜独特的风味"},{"id":66,"p":"E","w":"chew","i":"tʃuː","m":"咀嚼","e":"When a Brassica vegetable is cut or chewed","c":"chew food 咀嚼食物","s":3,"t":"动词","zh":"在这类蔬菜被切开或咀嚼时"},{"id":67,"p":"E","w":"compound","i":"ˈkɒmpaʊnd","m":"化合物","e":"these compounds are converted into other substances","c":"chemical compound 化合物","s":5,"t":"名词","zh":"这些化合物被转化为其他物质"},{"id":68,"p":"E","w":"be converted into","i":"","m":"被转化为","e":"these compounds are converted into other substances","c":"be transformed into 被转化为","s":5,"t":"结构／语块","zh":"这些化合物被转化为其他物质"},{"id":69,"p":"E","w":"substance","i":"ˈsʌbstəns","m":"物质","e":"other substances that may help protect the body","c":"natural substance 天然物质","s":4,"t":"名词","zh":"其他可能有助于保护身体的物质"},{"id":70,"p":"E","w":"may help protect … from …","i":"","m":"可能有助于保护……免受……","e":"may help protect the body from certain diseases","c":"protect … against … 保护……免受……","s":5,"t":"短语","zh":"可能有助于保护身体免受某些疾病的侵害"},{"id":71,"p":"E","w":"investigate","i":"ɪnˈvestɪɡeɪt","m":"研究，调查","e":"researchers continue to investigate these effects","c":"examine the effects of 研究……的影响","s":4,"t":"动词","zh":"研究人员仍在研究这些影响"},{"id":72,"p":"E","w":"recommend doing","i":"","m":"建议做……","e":"many health experts recommend eating a variety of Brassica vegetables","c":"recommend that … 建议……","s":5,"t":"短语","zh":"许多健康专家建议食用多种芸薹类蔬菜"},{"id":73,"p":"E","w":"a variety of","i":"","m":"多种","e":"a variety of Brassica vegetables","c":"a range of 多种","s":5,"t":"短语","zh":"多种芸薹类蔬菜"},{"id":74,"p":"E","w":"as part of a balanced diet","i":"","m":"作为均衡饮食的一部分","e":"as part of a balanced diet","c":"maintain a balanced diet 保持均衡饮食","s":5,"t":"结构／语块","zh":"作为均衡饮食的一部分"},{"id":75,"p":"F","w":"present challenges for","i":"","m":"给……带来挑战","e":"growing Brassica crops presents several challenges for farmers","c":"pose challenges for 给……带来挑战","s":5,"t":"短语","zh":"种植芸薹类作物给农民带来若干挑战"},{"id":76,"p":"F","w":"be closely related","i":"","m":"亲缘关系密切","e":"many members of the family are closely related","c":"be genetically related 有遗传上的亲缘关系","s":4,"t":"结构／语块","zh":"这一类群的许多成员亲缘关系密切"},{"id":77,"p":"F","w":"be vulnerable to","i":"","m":"易受……侵害或影响","e":"they are vulnerable to similar insects and plant diseases","c":"be susceptible to 易受……影响","s":5,"t":"结构／语块","zh":"它们易受类似的虫害和植物病害侵袭"},{"id":78,"p":"F","w":"clubroot disease","i":"","m":"根肿病","e":"One of the most serious problems is clubroot disease","c":"root damage 根部损伤","s":4,"t":"短语","zh":"根肿病是最严重的问题之一"},{"id":79,"p":"F","w":"attack the roots","i":"","m":"侵害根部","e":"which attacks the roots and reduces plant growth","c":"affect the roots 影响根部","s":5,"t":"短语","zh":"这种病害侵袭根部，并抑制植物生长"},{"id":80,"p":"F","w":"reduce plant growth","i":"","m":"抑制植物生长","e":"which attacks the roots and reduces plant growth","c":"inhibit plant growth 抑制植物生长","s":4,"t":"短语","zh":"这种病害侵袭根部，并抑制植物生长"},{"id":81,"p":"F","w":"reduce risks by doing","i":"","m":"通过做……降低风险","e":"Farmers often reduce these risks by rotating crops","c":"lower the risk of 降低……风险","s":5,"t":"短语","zh":"农民通常通过轮作降低这些风险"},{"id":82,"p":"F","w":"rotate crops","i":"","m":"轮作","e":"by rotating crops, improving soil conditions","c":"crop rotation 作物轮作","s":4,"t":"短语","zh":"通过作物轮作和改善土壤条件……"},{"id":83,"p":"F","w":"improve soil conditions","i":"","m":"改善土壤条件","e":"improving soil conditions","c":"soil quality 土壤质量","s":4,"t":"短语","zh":"改善土壤条件"},{"id":84,"p":"F","w":"resistant varieties / breeding programmes","i":"","m":"抗性品种／育种计划","e":"developing resistant varieties through breeding programmes","c":"disease-resistant varieties 抗病品种","s":4,"t":"组合语块","zh":"通过育种计划培育抗性品种"},{"id":85,"p":"G","w":"combine A with B","i":"","m":"将 A 与 B 结合","e":"combine traditional breeding methods with advanced genetic techniques","c":"integrate A with B 将 A 与 B 整合","s":5,"t":"短语","zh":"将传统育种方法与先进遗传技术相结合"},{"id":86,"p":"G","w":"identify genes responsible for","i":"","m":"找出影响……的基因","e":"identify genes responsible for useful characteristics","c":"genes associated with 与……相关的基因","s":5,"t":"短语","zh":"找出影响有用性状的基因"},{"id":87,"p":"G","w":"drought tolerance","i":"","m":"耐旱性","e":"drought tolerance, faster growth or resistance to pests","c":"drought-tolerant crops 耐旱作物","s":4,"t":"短语","zh":"耐旱性、更快的生长速度或抗虫害能力"},{"id":88,"p":"G","w":"resistance to pests","i":"","m":"抗虫害能力","e":"resistance to pests","c":"pest resistance 抗虫性","s":4,"t":"短语","zh":"抗虫害能力"},{"id":89,"p":"G","w":"pest","i":"pest","m":"害虫，有害生物","e":"resistance to pests","c":"pest control 害虫防治","s":4,"t":"名词","zh":"抗虫害能力"},{"id":90,"p":"G","w":"enable somebody to do something","i":"","m":"使某人能够做某事","e":"This knowledge enables breeders to produce improved crops more efficiently","c":"allow somebody to do sth. 使某人能够做某事","s":5,"t":"短语","zh":"这些知识使育种人员能够更高效地培育改良作物"},{"id":91,"p":"G","w":"efficiently","i":"ɪˈfɪʃəntli","m":"高效地","e":"produce improved crops more efficiently","c":"operate efficiently 高效运作","s":4,"t":"副词","zh":"更高效地培育改良作物"},{"id":92,"p":"G","w":"while still relying on","i":"","m":"同时仍依靠……","e":"while still relying on natural breeding methods","c":"while maintaining 同时保持","s":4,"t":"结构／语块","zh":"同时仍采用自然育种方法"},{"id":93,"p":"G","w":"preserve wild populations","i":"","m":"保护野生种群","e":"Scientists are also preserving wild Brassica populations","c":"conserve wild populations 保护野生种群","s":4,"t":"短语","zh":"科学家也在保护芸薹类植物的野生种群"},{"id":94,"p":"G","w":"genetic diversity","i":"","m":"遗传多样性","e":"they contain valuable genetic diversity","c":"preserve genetic diversity 保护遗传多样性","s":4,"t":"短语","zh":"这些野生种群拥有宝贵的遗传多样性"},{"id":95,"p":"G","w":"adapt to","i":"","m":"适应","e":"adapt to climate change and new diseases","c":"adjust to 适应","s":5,"t":"短语","zh":"适应气候变化和新出现的病害"},{"id":96,"p":"H","w":"demonstrate the influence of A on B","i":"","m":"展示 A 对 B 的影响","e":"demonstrates the remarkable influence of human agriculture on plant evolution","c":"illustrate the impact of A on B 说明 A 对 B 的影响","s":5,"t":"短语","zh":"展示人类农业对植物演化的显著影响"},{"id":97,"p":"H","w":"remarkable","i":"rɪˈmɑːkəbəl","m":"显著的，非凡的","e":"the remarkable influence of human agriculture","c":"remarkable progress 显著进展","s":4,"t":"形容词","zh":"人类农业的显著影响"},{"id":98,"p":"H","w":"plant evolution / coastal plant","i":"","m":"植物演化／海岸植物","e":"From one wild coastal plant","c":"coastal areas 沿海地区","s":3,"t":"组合语块","zh":"从一种生长在海岸的野生植物出发"},{"id":99,"p":"H","w":"centuries of careful selection","i":"","m":"数百年的精心选育","e":"centuries of careful selection have produced a wide range of vegetables","c":"generations of selection 多代选育","s":4,"t":"短语","zh":"数百年的精心选育培育出多种蔬菜"},{"id":100,"p":"H","w":"a wide range of","i":"","m":"多种多样的","e":"a wide range of vegetables with different shapes, colours and uses","c":"a wide variety of 多种多样的","s":5,"t":"短语","zh":"形状、颜色和用途各不相同的多种蔬菜"},{"id":101,"p":"H","w":"be grown throughout the world","i":"","m":"在世界各地种植","e":"Brassica crops are grown throughout the world","c":"be widely cultivated 被广泛栽培","s":4,"t":"结构／语块","zh":"芸薹类作物在世界各地都有种植"},{"id":102,"p":"H","w":"play an important role in","i":"","m":"在……中发挥重要作用","e":"play an important role in both human nutrition and global agriculture","c":"play a key role in 在……中发挥关键作用","s":5,"t":"短语","zh":"在人类营养和全球农业中都发挥着重要作用"},{"id":103,"p":"H","w":"provide a clear example of how","i":"","m":"清楚地说明……是如何发生的","e":"Their development provides a clear example of how small genetic differences","c":"illustrate how 说明……如何发生","s":5,"t":"短语","zh":"它们的演变清楚地说明了微小的遗传差异是如何……"},{"id":104,"p":"H","w":"guided by human choice","i":"","m":"受人类选择引导","e":"small genetic differences, guided by human choice","c":"be shaped by human decisions 受人类决定塑造","s":4,"t":"结构／语块","zh":"受人类选择引导的微小遗传差异"},{"id":105,"p":"H","w":"while maintaining a common biological origin","i":"","m":"同时保有共同的生物学起源","e":"create extraordinary diversity while maintaining a common biological origin","c":"share a common origin 拥有共同起源","s":4,"t":"结构／语块","zh":"产生惊人的多样性，同时保有共同的生物学起源"},{"id":106,"p":"题","w":"be developed from / be developed for","i":"","m":"从……培育而来／为获得……而培育","e":"were developed from different wild species","c":"from 接来源，for 接目标性状","s":5,"t":"组合语块","zh":"由不同的野生物种培育而来"},{"id":107,"p":"题","w":"different wild species / some wild plants","i":"","m":"不同野生物种／一些野生植株","e":"different wild species","c":"species 是物种，plant 可指个体","s":5,"t":"组合语块","zh":"不同的野生物种"},{"id":108,"p":"题","w":"mainly damage","i":"","m":"主要损害","e":"mainly damages the roots","c":"mainly ≈ primarily 主要地","s":5,"t":"短语","zh":"主要损害根部"}];
+const questions = [
+ {id:4, prompt:"Broccoli and cauliflower were developed from different wild species.", correct:"FALSE", quote:"Although these vegetables differ greatly in appearance, taste and texture, they all originated from a single wild plant called Brassica oleracea.", explanation:"A 段的 all 和 a single 给出共同来源，紧接着的 This species 确认讨论的是物种。C 段的 some wild Brassica plants 指一些植株，同一个物种可以有许多不同个体。developed from 问来源，developed for 问培育性状。"},
+ {id:6, prompt:"Clubroot disease mainly damages the roots of Brassica plants.", correct:"TRUE", quote:"One of the most serious problems is clubroot disease, which attacks the roots and reduces plant growth.", explanation:"题库答案为 TRUE。根部是原文唯一明确指出的直接攻击部位，生长受抑是整体后果。原文没有明确比较不同部位受损的主次，你选 NOT GIVEN 有文本依据。这一题按有争议处理。"}
+];
+const byId = id => document.getElementById(id);
+const key = "ielts-review-brassica-1123-v1";
+let state = {limit:15, cards:{}, answers:{}};
+try {const saved=JSON.parse(localStorage.getItem(key));if(saved) state={...state,...saved};} catch {}
+let storageAvailable = true;
+function save() {
+ try { localStorage.setItem(key,JSON.stringify(state)); }
+ catch { storageAvailable = false; byId("settings-status").textContent="当前浏览器无法保存进度。"; }
+}
+const escape = text => String(text).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[char]);
+const stars = value => '<span class="stars" aria-label="'+value+' 星">'+'★'.repeat(value)+'</span>';
+const ipa = word => word.i ? '<span class="ipa">/'+escape(word.i)+'/</span>' : '';
+const sourceLabel = word => word.p==="题" ? "题干" : word.p+" 段原文";
+const day = () => new Date().toLocaleDateString("sv-SE");
+const dayMs = 86400000;
+let activeTab = "cards";
+let current = null;
+let revealed = false;
+let waiting = [];
+const grades = ["Again","Hard","Good","Easy"];
+function speak(word) {
+ if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+  byId("progress").textContent="当前浏览器不支持发音。";
+  return;
+ }
+ const voice = new SpeechSynthesisUtterance(word.replaceAll("…"," ").replaceAll("/"," or "));
+ voice.lang = "en-GB";
+ const british = speechSynthesis.getVoices().find(option=>option.lang.toLowerCase()==="en-gb");
+ if (british) voice.voice = british;
+ speechSynthesis.cancel();
+ speechSynthesis.speak(voice);
+}
+function buildQueue() {
+ const used = Object.values(state.cards).filter(card=>card.first===day()).length;
+ const due = words.filter(word=>state.cards[word.id]?.due<=Date.now());
+ const fresh = words.filter(word=>!state.cards[word.id]).slice(0,Math.max(0,state.limit-used));
+ waiting = [...due,...fresh];
+ current = waiting.shift()??null;
+ revealed = false;
+ renderCard();
+}
+function renderCard() {
+ const card = byId("card");
+ const learned = Object.values(state.cards).filter(value=>value.first===day()).length;
+ byId("progress").textContent = "今日新词 "+learned+" / "+state.limit+" · 本轮剩余 "+(waiting.length+Number(Boolean(current)));
+ byId("shortcuts").hidden = !current;
+ if (!current) {
+  card.innerHTML='<h2>本轮复习完成</h2><p class="muted">到期词卡会进入下一轮。</p><button type="button" id="refresh">检查待复习词卡</button>';
+  byId("refresh").onclick=buildQueue;
+  return;
+ }
+ card.innerHTML='<p class="muted">'+sourceLabel(current)+' · '+stars(current.s)+'</p><h2 lang="en">'+escape(current.w)+'</h2>'+ipa(current)+'<button type="button" id="speak-card" aria-label="发音">🔊 发音</button>'+
+ (revealed ? '<div class="answer"><h3>'+escape(current.m)+'</h3><p class="muted">'+sourceLabel(current)+'</p><blockquote lang="en">'+escape(current.e)+'</blockquote><p>'+escape(current.zh)+'</p><p>搭配／同义替换　'+escape(current.c)+'</p></div><div class="ratings">'+grades.map((grade,index)=>'<button type="button" data-grade="'+index+'">'+(index+1)+' '+grade+'</button>').join("")+'</div>' : ' <button type="button" id="reveal" class="primary">揭晓释义</button>');
+ byId("speak-card").onclick=()=>speak(current.w);
+ if (revealed) card.querySelectorAll("[data-grade]").forEach(button=>button.onclick=()=>grade(Number(button.dataset.grade)));
+ else byId("reveal").onclick=reveal;
+}
+function reveal() {if(!current||revealed) return; revealed=true;renderCard();}
+function grade(index) {
+ if(!current||!revealed) return;
+ const review = state.cards[current.id];
+ const intervals = [0,1,3,7];
+ const days = index>1 ? Math.max(intervals[index],Math.round((review?.days??0)*(index===2?1.6:2.4))) : intervals[index];
+ state.cards[current.id]={first:review?.first??day(),days,due:Date.now()+days*dayMs,grade:grades[index]};
+ save();
+ if(index===0) waiting.push(current);
+ current=waiting.shift()??null;
+ revealed=false;
+ renderCard();
+}
+function renderBank() {
+ const search=byId("query").value.trim().toLowerCase();
+ const paragraph=byId("paragraph").value;
+ const result=words.filter(word=>(!paragraph||word.p===paragraph)&&[word.w,word.m,word.c].join(" ").toLowerCase().includes(search));
+ if(byId("order").value==="stars") result.sort((a,b)=>b.s-a.s||a.id-b.id);
+ byId("count").textContent=result.length+" 项";
+ byId("rows").innerHTML=result.map(word=>'<tr><td><strong lang="en">'+escape(word.w)+'</strong><button type="button" data-speak="'+word.id+'" aria-label="'+escape(word.w)+' 发音">🔊</button>'+ipa(word)+'<small>'+sourceLabel(word)+'</small></td><td>'+escape(word.m)+'</td><td>'+word.t+'</td><td><span lang="en">'+escape(word.e)+'</span><br><small>'+escape(word.zh)+'</small></td><td>'+escape(word.c)+'</td><td>'+stars(word.s)+'</td></tr>').join("");
+}
+function renderQuiz() {
+ byId("quiz-form").innerHTML=questions.map(question=>{
+  const picked=state.answers[question.id];
+  const feedback=picked ? '<p><strong>'+ (question.id===6 ? "题库答案："+question.correct+"（有争议）" : picked===question.correct ? "正确 · FALSE" : "答案：FALSE")+'</strong> · 你选 '+escape(picked)+'</p><blockquote lang="en">'+escape(question.quote)+'</blockquote><p>'+escape(question.explanation)+'</p>' : '';
+  return '<fieldset><legend>第 '+question.id+' 题</legend><p lang="en">'+escape(question.prompt)+'</p><div class="controls">'+["TRUE","FALSE","NOT GIVEN"].map(label=>'<label><input type="radio" name="'+question.id+'" value="'+label+'" '+(label===picked?"checked":"")+'> '+label+'</label>').join("")+'</div><div aria-live="polite">'+feedback+'</div></fieldset>';
+ }).join("");
+}
+document.querySelectorAll("[data-tab]").forEach(button=>button.onclick=()=>{
+ activeTab=button.dataset.tab;
+ document.querySelectorAll("[data-tab]").forEach(tab=>{
+  byId(tab.dataset.tab).hidden=tab!==button;
+  tab.setAttribute("aria-pressed",String(tab===button));
+ });
+});
+document.addEventListener("keydown",event=>{
+ if(activeTab!=="cards"||!current||event.altKey||event.ctrlKey||event.metaKey||event.repeat||event.target.closest("input,select,textarea,a")) return;
+ if(event.key==="Enter"&&!revealed&&(!event.target.closest("button")||event.target.id==="reveal")) {event.preventDefault();reveal();}
+ if(event.code==="Space"&&!event.target.closest("button")) {event.preventDefault();speak(current.w);}
+ if(revealed&&/^[1-4]$/.test(event.key)) grade(Number(event.key)-1);
+});
+for(const letter of "ABCDEFGH题") byId("paragraph").add(new Option(letter==="题"?"错题补充":letter+" 段",letter));
+byId("query").addEventListener("input",renderBank);
+byId("paragraph").addEventListener("change",renderBank);
+byId("order").addEventListener("change",renderBank);
+byId("rows").addEventListener("click",event=>{const button=event.target.closest("[data-speak]");if(button) speak(words[button.dataset.speak].w);});
+byId("quiz-form").addEventListener("change",event=>{
+ const {name,value}=event.target;
+ state.answers[name]=value;
+ save();
+ renderQuiz();
+ byId("quiz-form").querySelector('input[name="'+name+'"]:checked')?.focus();
+});
+byId("reset-quiz").onclick=()=>{state.answers={};save();renderQuiz();};
+byId("limit").value=state.limit;
+byId("settings-form").addEventListener("submit",event=>{
+ event.preventDefault();
+ state.limit=Number(byId("limit").value);
+ save();
+ buildQueue();
+ if(storageAvailable) byId("settings-status").textContent="已保存。进度保存在当前浏览器。";
+});
+buildQueue();
+renderBank();
+renderQuiz();
+</script>
+</body>
+</html>

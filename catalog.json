@@ -1,8 +1,29 @@
 {
   "version": 1,
-  "updated": "2026-11-11",
+  "updated": "2026-11-23",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "the-brassica-family-1123",
+      "date": "2026-11-23",
+      "skill": "阅读",
+      "kind": "练习",
+      "en": "The Brassica Family",
+      "zh": "芸薹类植物",
+      "topic": "自然与生态",
+      "tags": [
+        "自然与生态",
+        "农业与环境",
+        "词汇复习"
+      ],
+      "description": "A–H 段词汇与语块 · 英式音标与五级重要性 · 四级翻卡 · 第 4、6 题错题重练",
+      "path": "reviews/2026-11-23/reading/practice/the-brassica-family/index.html",
+      "dateBasis": "用户指定 1123",
+      "displayTitle": "1123-阅读-The Brassica Family",
+      "aliases": [],
+      "title": "1123-阅读-The Brassica Family",
+      "url": "/ielts-review-library/reviews/2026-11-23/reading/practice/the-brassica-family/"
+    },
     {
       "id": "global-warming-in-new-zealand-1111",
       "date": "2026-11-11",
