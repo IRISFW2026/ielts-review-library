@@ -464,10 +464,7 @@ function analysisPage() {
   else if (questions.length) html += '<p class="muted">题目答案、原文依据与复盘笔记</p>';
   if (questions.length) html += '<details '+(!wrong.length?'open':'')+'><summary>全部 '+questions.length+' 题参考解析</summary>'+questions.map(questionHTML).join('')+'</details>';
   if (!questions.length) html += '<p>本篇现有资料包含词库与原文，逐题答案和错因资料待补。</p>';
-  for (const reference of DATA.references || []) {
-    html += '<details><summary>'+escapeHTML(reference.title)+'</summary>'
-      +(reference.rows?reference.rows.map(row=>'<p>'+referenceValue(row)+'</p>').join(''):referenceValue(reference.content))+'</details>';
-  }
+
   return html+'</section>';
 }
 
