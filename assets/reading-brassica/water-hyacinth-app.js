@@ -6,6 +6,7 @@ const KEY=CONFIG.storageKey, SETTINGKEY=KEY+'-settings';
 const LABELS={new:'未学',1:'不熟悉',2:'有点吃力',3:'基本掌握',4:'熟练掌握'};
 const CARD_LABELS={new:'未学',1:'Again · 重来',2:'Hard · 吃力',3:'Good · 记得',4:'Easy · 轻松'};
 const FAMILIARITY_OPTIONS=[[1,'不熟悉'],[2,'有点吃力'],[3,'基本掌握'],[4,'熟练掌握']];
+const STUDY_STAGE_OPTIONS=[['all','全部状态'],['due','到期复习'],['new','尚未学习'],['learning','正在巩固'],['mature','长间隔复习']];
 const SENTENCE_FLAG_PREFIX=CONFIG.flagPrefix;
 const SENTENCE_REASON_OPTIONS=[['structure','句子结构看不懂'],['translation','单词认识，但整句翻译困难'],['logic','逻辑关系或指代关系不清楚'],['misread','自己的理解与原文意思不符'],['other','其他']];
 const $=id=>document.getElementById(id),escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -14,7 +15,7 @@ const loadedReview=loadReview();
 let state=loadedReview.records, settings=loadedReview.settings;
 let savedRecords=copyRecords(state), savedSettings={...settings};
 let libraryOrder='source';
-let view=initialView(),kind='all',scope='due',queue=[],current=null,revealed=false,voices=[],sessionCount=0,answerEN='',answerZH='',meaningOK=false,search='',statusFilter='all',starFilter='all',activeLibraryId=null;
+let view=initialView(),kind='all',scope='due',studyStage='all',queue=[],current=null,revealed=false,voices=[],sessionCount=0,answerEN='',answerZH='',meaningOK=false,search='',statusFilter='all',starFilter='all',activeLibraryId=null;
 const icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM16 8q5 4 0 8M19 5q8 7 0 14"/></svg>';
 
 function toast(t){$('toast').textContent=t;$('toast').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').hidden=true,4500)}
@@ -24,8 +25,45 @@ function eligible(x,now=Date.now()){let r=rec(x);return !r.level||!Number.isFini
 function dayKey(){return new Date().toLocaleDateString('en-CA')}
 function todayNew(){return DATA.items.filter(item=>state[item.id]?.startedDay===dayKey()).length}
 function dailyRemaining(limit=settings.daily){return Math.max(0,Math.max(1,Math.min(100,Number(limit)||20))-todayNew())}
-function dailyProgressText(limit=settings.daily){const used=todayNew(),cap=Math.max(1,Math.min(100,Number(limit)||20));return scope==='all'?`提前练习模式：本次包含全部词条，不受每日新词上限限制。今日已接触新词 ${used} 个。`:`今日新词：${used} / ${cap} 个，剩余 ${dailyRemaining(cap)} 个（到期复习不占用新词额度）。`}
+function dailyProgressText(limit=settings.daily){
+ const used=todayNew(),cap=Math.max(1,Math.min(100,Number(limit)||20));
+ if(view==='cards'&&studyStage==='due')return '仅复习已到期词条，不占用每日新词额度。';
+ if(view==='cards'&&(studyStage==='learning'||studyStage==='mature'))return '显示该阶段全部匹配词条，可提前复习，不占用每日新词额度。';
+ return scope==='all'&&!(view==='cards'&&studyStage==='new')?`提前练习模式：本次包含全部词条，不受每日新词上限限制。今日已接触新词 ${used} 个。`:`今日新词：${used} / ${cap} 个，剩余 ${dailyRemaining(cap)} 个（到期复习不占用新词额度）。`;
+}
 function matchesStudyFilters(x){return (kind==='all'||x.type===kind)&&(starFilter==='all'||String(x.stars)===starFilter)}
+function matchesStudyStage(x,stage=studyStage,now=Date.now()){
+ const r=rec(x);
+ if(stage==='due')return !!r.level&&eligible(x,now);
+ if(stage==='new')return !r.level;
+ if(stage==='learning')return !!r.level&&!(r.intervalDays>=21);
+ if(stage==='mature')return !!r.level&&r.intervalDays>=21;
+ return true;
+}
+function studyStageCounts(items=DATA.items){
+ const now=Date.now(),counts={all:items.length,due:0,new:0,learning:0,mature:0};
+ for(const x of items)for(const stage of ['due','new','learning','mature'])if(matchesStudyStage(x,stage,now))counts[stage]++;
+ return counts;
+}
+function studyStageControls(){
+ const counts=studyStageCounts(DATA.items.filter(matchesStudyFilters));
+ return `<fieldset class="study-stage-filter"><legend>学习状态</legend><div class="study-stage-options">${STUDY_STAGE_OPTIONS.map(([value,label])=>`<button type="button" data-study-stage="${value}" aria-pressed="${studyStage===value}" aria-label="${label}，${counts[value]}条"><span>${label}</span><span class="study-stage-count" data-stage-count="${value}" aria-hidden="true">${counts[value]}</span></button>`).join('')}</div></fieldset>`;
+}
+function updateStudyStageCounts(){
+ const counts=studyStageCounts(DATA.items.filter(matchesStudyFilters));
+ document.querySelectorAll('[data-study-stage]').forEach(button=>{
+  const value=button.dataset.studyStage,label=STUDY_STAGE_OPTIONS.find(option=>option[0]===value)?.[1];
+  const count=button.querySelector('[data-stage-count]');if(count)count.textContent=counts[value];
+  if(label)button.setAttribute('aria-label',`${label}，${counts[value]}条`);
+ });
+}
+function studyStageEmpty(){
+ const selected=DATA.items.filter(matchesStudyFilters).filter(x=>matchesStudyStage(x));
+ const label=STUDY_STAGE_OPTIONS.find(option=>option[0]===studyStage)[1];
+ const title=selected.length?`本轮${label}已完成`:`当前筛选下没有${label}词条`;
+ const note=studyStage==='new'&&selected.length?'今日新词额度已用完；可在学习设置中调整每日数量，或切换到其他学习状态。':'可以切换学习状态，或调整单词／短语与星级筛选。';
+ return `<section class="card empty"><div class="big">${selected.length?'✓':'◌'}</div><h2>${title}</h2><p class="muted">本轮已完成 ${sessionCount} 次。${note}</p><button id="refresh" class="primary">重新检查</button> <button id="reset-study-stage">返回全部状态</button></section>`;
+}
 function scheduleRecord(old,level,now=Date.now()){
  const previous=Number(old.intervalDays)||0, ease=Math.max(1.6,Math.min(2.85,Number(old.easeFactor)||2.4));
  const wasLearning=previous<1, again=level===1;
@@ -35,16 +73,30 @@ function scheduleRecord(old,level,now=Date.now()){
 }
 function formatDelay(days){let minutes=Math.round(days*1440);if(minutes<60)return Math.max(1,minutes)+' 分钟后';if(minutes<1440)return Math.round(minutes/60)+' 小时后';let d=days>=10?Math.round(days):Math.round(days*10)/10;return d+' 天后'}
 
-function candidates(){let all=DATA.items.filter(matchesStudyFilters);if(scope==='all')return all.slice().sort((a,b)=>(rec(a).level||0)-(rec(b).level||0)||b.stars-a.stars);let due=all.filter(x=>rec(x).level&&eligible(x)).sort((a,b)=>rec(a).level-rec(b).level||b.stars-a.stars||rec(a).due-rec(b).due);let introduced=all.filter(x=>!rec(x).level&&rec(x).startedDay===dayKey());let fresh=all.filter(x=>!rec(x).level&&rec(x).startedDay!==dayKey()).sort((a,b)=>b.stars-a.stars||((a.type==='word'?0:1)-(b.type==='word'?0:1))).slice(0,dailyRemaining());return [...due,...introduced,...fresh]}
+function candidates(){
+ const all=DATA.items.filter(matchesStudyFilters).filter(x=>matchesStudyStage(x));
+ const reviewOrder=(a,b)=>Number(eligible(b))-Number(eligible(a))||rec(a).level-rec(b).level||b.stars-a.stars||rec(a).due-rec(b).due;
+ if(studyStage==='due'||studyStage==='learning'||studyStage==='mature')return all.slice().sort(reviewOrder);
+ if(studyStage==='all'&&scope==='all')return all.slice().sort((a,b)=>(rec(a).level||0)-(rec(b).level||0)||b.stars-a.stars);
+ const due=all.filter(x=>rec(x).level&&eligible(x)).sort(reviewOrder);
+ const introduced=all.filter(x=>!rec(x).level&&rec(x).startedDay===dayKey());
+ const fresh=all.filter(x=>!rec(x).level&&rec(x).startedDay!==dayKey()).sort((a,b)=>b.stars-a.stars||((a.type==='word'?0:1)-(b.type==='word'?0:1))).slice(0,dailyRemaining());
+ return [...due,...introduced,...fresh];
+}
 function buildQueue(){queue=candidates().map(x=>x.id);next()}
 function next(){const id=queue.shift();current=DATA.items.find(x=>x.id===id)||null;if(current&&!rec(current).level&&rec(current).startedDay!==dayKey()){state[current.id]={...rec(current),startedDay:dayKey(),introducedAt:Date.now()};save()}revealed=false;answerEN='';answerZH='';meaningOK=false;render()}
 function navigate(v){if(!['cards','sentences','library','quiz','settings'].includes(v))v='cards';view=v;location.hash=v;if(v==='cards')buildQueue();else render()}
-function renderStats(){const rs=DATA.items.map(rec),due=rs.filter(r=>r.level&&(!Number.isFinite(r.due)||r.due<=Date.now())).length,fresh=rs.filter(r=>!r.level).length,mature=rs.filter(r=>r.level&&r.intervalDays>=21).length,learning=rs.length-fresh-mature;
+function renderStats(){const counts=studyStageCounts(),due=counts.due,fresh=counts.new,mature=counts.mature,learning=counts.learning;
+updateStudyStageCounts();
 $('stats').innerHTML=`<div class="stat"><b>${due}</b><span>到期复习</span></div><div class="stat"><b>${fresh}</b><span>尚未学习</span></div><div class="stat"><b>${learning}</b><span>正在巩固</span></div><div class="stat"><b>${mature}</b><span>长间隔复习</span></div>`;
 $('progress').style.width=(mature/DATA.items.length*100)+'%';$('progress-label').textContent=`${mature} / ${DATA.items.length}`}
 function starSelect(){return `<select id="star-filter" aria-label="按五星重要程度筛选学习"><option value="all">雅思重要程度 · 全部星级</option>${[5,4,3,2,1].map(n=>`<option value="${n}">${'★'.repeat(n)}${'☆'.repeat(5-n)} · 只学 ${n} 星</option>`).join('')}</select>`}
 function contextMeaningHtml(x){let selected=x.contextSenses||[0];return x.zh.split('；').map((sense,i)=>selected.includes(i)?`<span class="context-meaning">${escapeHTML(sense)}<span class="context-badge">本文义</span></span>`:escapeHTML(sense)).join('；')}
-function filterControls(){return `<div class="controls"><select id="kind" aria-label="词条类型"><option value="all">全部 · 单词与短语</option><option value="word">只练单词</option><option value="phrase">只练短语</option></select>${starSelect()}<select id="scope" aria-label="练习范围"><option value="due">按计划 · 到期＋新词</option><option value="all">提前练习 · 当前筛选内全部词条</option></select></div><p class="study-filter-note">${starFilter==='all'?'全部星级':'仅练 '+starFilter+' 星'} · ${DATA.items.filter(matchesStudyFilters).length} 条词汇。可叠加单词／短语筛选；红色释义为本文义。</p><p class="study-filter-note daily-quota-note" aria-live="polite">${dailyProgressText()}</p>`}
+function filterControls(){
+ const range=studyStage==='all'?'<select id="scope" aria-label="练习范围"><option value="due">按计划 · 到期＋新词</option><option value="all">提前练习 · 当前筛选内全部词条</option></select>':`<span class="study-mode-note">${studyStage==='due'?'仅到期词条':studyStage==='new'?'按每日新词额度':'当前阶段 · 可提前复习'}</span>`;
+ const count=DATA.items.filter(matchesStudyFilters).filter(x=>matchesStudyStage(x)).length;
+ return `${studyStageControls()}<div class="controls"><select id="kind" aria-label="词条类型"><option value="all">全部 · 单词与短语</option><option value="word">只练单词</option><option value="phrase">只练短语</option></select>${starSelect()}${range}</div><p class="study-filter-note">${starFilter==='all'?'全部星级':'仅练 '+starFilter+' 星'} · ${count} 条词汇。可叠加学习状态、单词／短语与星级筛选；红色释义为本文义。</p><p class="study-filter-note daily-quota-note" aria-live="polite">${dailyProgressText()}</p>`;
+}
 function playButton(text,label='朗读',small=false,shortcut=false){return `<button class="speaker${small?' small':''}" data-say="${escapeHTML(text)}" aria-label="${escapeHTML(label)}${shortcut?'，空格键快捷播放':''}">${icon}<span>${label}${shortcut?' · Space':''}</span></button>`}
 function norm(s){return s.normalize('NFKC').toLowerCase().replace(/[’‘]/g,"'").replace(/[.,!?;:…“”"()\[\]]/g,'').replace(/\s+/g,' ').trim()}
 function spellingCorrect(){return current&&[current.term,...(current.acceptedSpellings||[])].some(t=>norm(answerEN)===norm(t))}
@@ -56,7 +108,7 @@ function grade(level){
  sessionCount++;
  next();
 }
-function training(){let intro={cards:'先回忆，再揭晓。每一次主动回忆，都在加深记忆。',dictation:'先听英文，再写拼写和中文意思。答案在核对前保持隐藏。',meaning:'看到英文，主动写出中文意思，再对照自评。'};let html=filterControls();if(!current){let selected=DATA.items.filter(matchesStudyFilters);let future=selected.filter(x=>rec(x).level&&rec(x).due>Date.now()).sort((a,b)=>rec(a).due-rec(b).due)[0];let complete=selected.length>0&&selected.every(x=>rec(x).level&&rec(x).due>Date.now());html+=`<section class="card empty"><div class="big">${complete?'✓':'◌'}</div><h2>${complete?'当前筛选内今天没有到期词':!selected.length?'当前筛选没有词条':'当前筛选的学习计划已完成'}</h2><p class="muted">本轮已完成 ${sessionCount} 次。${future?'下一次复习：'+escapeHTML(new Date(rec(future).due).toLocaleString()):'可以在全部词库查看学习情况。'}</p><p class="small muted">${complete?'已复习词条会根据熟练度再次出现；今天可以结束。':'新词每天默认 20 个；越不熟悉的词，复习越频繁。'}</p><button id="refresh" class="primary">检查到期复习</button> <button id="early">提前练习当前星级</button></section>`;return html}
+function training(){let intro={cards:'先回忆，再揭晓。每一次主动回忆，都在加深记忆。',dictation:'先听英文，再写拼写和中文意思。答案在核对前保持隐藏。',meaning:'看到英文，主动写出中文意思，再对照自评。'};let html=filterControls();if(!current&&studyStage!=='all')return html+studyStageEmpty();if(!current){let selected=DATA.items.filter(matchesStudyFilters);let future=selected.filter(x=>rec(x).level&&rec(x).due>Date.now()).sort((a,b)=>rec(a).due-rec(b).due)[0];let complete=selected.length>0&&selected.every(x=>rec(x).level&&rec(x).due>Date.now());html+=`<section class="card empty"><div class="big">${complete?'✓':'◌'}</div><h2>${complete?'当前筛选内今天没有到期词':!selected.length?'当前筛选没有词条':'当前筛选的学习计划已完成'}</h2><p class="muted">本轮已完成 ${sessionCount} 次。${future?'下一次复习：'+escapeHTML(new Date(rec(future).due).toLocaleString()):'可以在全部词库查看学习情况。'}</p><p class="small muted">${complete?'已复习词条会根据熟练度再次出现；今天可以结束。':'新词每天默认 20 个；越不熟悉的词，复习越频繁。'}</p><button id="refresh" class="primary">检查到期复习</button> <button id="early">提前练习当前星级</button></section>`;return html}
 let x=current,r=rec(x);html+=`<p class="small muted">${intro[view]}</p><section class="card"><div class="cardtop"><span class="tag">${x.type==='word'?'WORD · 单词':'PHRASE · 短语'} / ${CARD_LABELS[r.level]||'未学'}</span><span class="counter">本轮已完成 ${sessionCount} · 待练 ${queue.length+1}</span></div><div class="center">`;
 if(view==='dictation'&&!revealed){html+=`<div class="term">Listen & recall</div><p class="muted small">点击小喇叭，听清后填写答案</p><button id="listen" class="speaker">${icon} 播放英文</button> <button id="slow" class="speaker small">慢速再听</button>`}else html+=`<div class="term">${escapeHTML(x.term)}</div>${wordMeta(x)}${playButton(x.audioTerm||x.term,'播放读音')}`;
 if(view!=='cards'&&!revealed)html+=`<div class="practice-input">${view==='dictation'?'<label>英文单词或短语<input id="en-answer" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="输入你听到的英文"></label>':''}<label>中文释义<textarea id="zh-answer" placeholder="写出你理解的中文意思"></textarea></label></div>`;
@@ -147,6 +199,8 @@ function settingsPage(){return `<section class="card settings"><h2>让学习适�
 function render(){renderStats();document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));$('subtitle').textContent={cards:CONFIG.title+' / 翻卡复习',sentences:'在句子里，听懂每一个词。',library:CONFIG.title+' / 全部词库',quiz:'题目依据与错因复盘',settings:'学习偏好与进度管理'}[view];$('app').innerHTML=view==='cards'?training():view==='library'?library():view==='sentences'?sentences():view==='quiz'?analysisPage():settingsPage();
 if($('library-order')){$('library-order').value=libraryOrder;$('library-order').onchange=e=>{libraryOrder=e.target.value;render()}}
 if($('kind')){$('kind').value=kind;$('kind').onchange=e=>{kind=e.target.value;if(view==='library')render();else buildQueue()}}if($('scope')){$('scope').value=scope;$('scope').onchange=e=>{scope=e.target.value;buildQueue()}}
+document.querySelectorAll('[data-study-stage]').forEach(button=>{button.onclick=()=>{studyStage=button.dataset.studyStage;buildQueue();document.querySelector(`[data-study-stage="${studyStage}"]`)?.focus()}});
+if($('reset-study-stage'))$('reset-study-stage').onclick=()=>{studyStage='all';buildQueue()};
 if($('reveal'))$('reveal').onclick=reveal;if($('listen'))$('listen').onclick=()=>speak(current.audioTerm||current.term,true);if($('slow'))$('slow').onclick=()=>speak(current.audioTerm||current.term,true,0.65);if($('meaning-ok'))$('meaning-ok').onchange=e=>{meaningOK=e.target.checked;render()};if($('skip'))$('skip').onclick=()=>{next()};if($('refresh'))$('refresh').onclick=buildQueue;if($('early'))$('early').onclick=()=>{scope='all';buildQueue()};
 if($('star-filter')){$('star-filter').value=starFilter;$('star-filter').onchange=e=>{starFilter=e.target.value;if(view==='cards')buildQueue();else render()}}if($('search'))$('search').oninput=e=>{search=e.target.value;render();$('search').focus()};
 if(view==='sentences'){$('sentence-search').oninput=e=>{search=e.target.value;sentenceList()};sentenceList()}
@@ -515,4 +569,5 @@ async function importData(event) {
     if ($('import')) $('import').value='';
   }
 }
+
 

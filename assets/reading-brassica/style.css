@@ -272,3 +272,19 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-bottom:c
  .topic-mobile-figure .topic-caption{font-size:13px}
  .topic-mobile-figure .topic-credit{font-size:11px}
 }
+
+/* Card practice: independent learning-stage filters with wrapping controls. */
+.study-stage-filter{min-width:0;margin:0 0 14px;padding:0;border:0}
+.study-stage-filter legend{font-size:14px;font-weight:650;margin-bottom:9px;color:var(--ink)}
+.study-stage-options{display:flex;flex-wrap:wrap;gap:8px}
+.study-stage-options button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:44px;padding:9px 13px;border:1px solid #d2e1d8;border-radius:11px;background:#fff;color:#385d50;font:inherit;font-size:14px;font-weight:500;line-height:1.5;cursor:pointer}
+.study-stage-options button[aria-pressed="true"]{background:#186b5b;border-color:#186b5b;color:#fff}
+.study-stage-options button:focus-visible{outline:3px solid #75ad98;outline-offset:3px}
+.study-stage-count{min-width:21px;padding:1px 5px;border-radius:6px;background:#edf5ef;color:#4d7162;font-size:12px;font-variant-numeric:tabular-nums}
+.study-stage-options button[aria-pressed="true"] .study-stage-count{background:rgba(255,255,255,.18);color:#fff}
+.study-mode-note{font-size:13px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
+@media(max-width:600px){
+ .study-stage-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .study-stage-options button{width:100%;padding:9px 8px;justify-content:space-between;font-size:14px}
+ .controls>.study-mode-note{grid-column:1/-1}
+}
