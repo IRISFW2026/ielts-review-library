@@ -1,0 +1,1818 @@
+[
+  {
+    "id": "gwnz-001",
+    "term": "stem from",
+    "origin": "原文词汇",
+    "sentenceId": "A4",
+    "form": "stem from",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-002",
+    "term": "result in",
+    "origin": "原文词汇",
+    "sentenceId": "B2",
+    "form": "resulted in",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-003",
+    "term": "turn out to be",
+    "origin": "原文词汇",
+    "sentenceId": "B3",
+    "form": "turn out to be",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-004",
+    "term": "moisture deficit",
+    "origin": "原文词汇",
+    "sentenceId": "C1",
+    "form": "moisture deficit",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-005",
+    "term": "gap between A and B",
+    "origin": "原文词汇",
+    "sentenceId": "C2",
+    "form": "gap between the water plants need during the growing season and the water the earth can offer",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-006",
+    "term": "water loss from soil",
+    "origin": "原文词汇",
+    "sentenceId": "B3",
+    "form": "water loss from soil",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-007",
+    "term": "growing season",
+    "origin": "原文词汇",
+    "sentenceId": "C2",
+    "form": "growing season",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-008",
+    "term": "crucial growth stage",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "crucial growth stage",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-009",
+    "term": "grain yield",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "grain yield",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-010",
+    "term": "reduction in",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "reduction in",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-011",
+    "term": "as opposed to",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "as opposed to",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-012",
+    "term": "at an alarming rate",
+    "origin": "原文词汇",
+    "sentenceId": "D2",
+    "form": "at an alarming rate",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-013",
+    "term": "be accompanied by",
+    "origin": "原文词汇",
+    "sentenceId": "D3",
+    "form": "is accompanied by",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-014",
+    "term": "tide over tough periods",
+    "origin": "原文词汇",
+    "sentenceId": "D5",
+    "form": "tide over tough periods",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-015",
+    "term": "cumulative changes",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "cumulative changes",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-016",
+    "term": "mass balance",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "mass balance",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-017",
+    "term": "volume and thickness",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "volume and thickness",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-018",
+    "term": "internal deformation",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "internal deformation",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-019",
+    "term": "basal sliding",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "basal sliding",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-020",
+    "term": "lead to",
+    "origin": "原文词汇",
+    "sentenceId": "E5",
+    "form": "leads to",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-021",
+    "term": "pose a threat to",
+    "origin": "同义替换",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-022",
+    "term": "groundwater system",
+    "origin": "原文词汇",
+    "sentenceId": "G2",
+    "form": "groundwater system",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-023",
+    "term": "agricultural production",
+    "origin": "原文词汇",
+    "sentenceId": "G2",
+    "form": "agricultural production",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-024",
+    "term": "coastal boundaries",
+    "origin": "原文词汇",
+    "sentenceId": "G4",
+    "form": "coastal boundaries",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-025",
+    "term": "upgrade and redefine",
+    "origin": "原文词汇",
+    "sentenceId": "G4",
+    "form": "upgraded and redefined",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-026",
+    "term": "tackle a problem",
+    "origin": "原文词汇",
+    "sentenceId": "H4",
+    "form": "tackle the problems",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-027",
+    "term": "long-term, multi-generational approach",
+    "origin": "原文词汇",
+    "sentenceId": "H3",
+    "form": "long term, multi-generational approach",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-028",
+    "term": "adapt ... according to ...",
+    "origin": "同义替换",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-029",
+    "term": "adaptation to",
+    "origin": "原文词汇",
+    "sentenceId": "I2",
+    "form": "adaptation to",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-030",
+    "term": "play a vital role",
+    "origin": "原文词汇",
+    "sentenceId": "I5",
+    "form": "plays a vital role",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-031",
+    "term": "account for",
+    "origin": "原文词汇",
+    "sentenceId": "J2",
+    "form": "accounts for",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-032",
+    "term": "a tip of the iceberg",
+    "origin": "原文词汇",
+    "sentenceId": "J3",
+    "form": "a tip of the iceberg",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-033",
+    "term": "impact on",
+    "origin": "原文词汇",
+    "sentenceId": "J1",
+    "form": "impact on",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-034",
+    "term": "vulnerable to",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-035",
+    "term": "diminish the effect",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-036",
+    "term": "cause a reduction in",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "cause about 22% reduction in",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-037",
+    "term": "in the long run",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-038",
+    "term": "as a result of",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-039",
+    "term": "in response to",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-040",
+    "term": "take a long-term approach",
+    "origin": "原文词汇",
+    "sentenceId": "H3",
+    "form": "taking a long term, multi-generational approach",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-041",
+    "term": "maintain a balance between A and B",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-042",
+    "term": "make joint efforts",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-043",
+    "term": "address environmental challenges",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-044",
+    "term": "environmentalist",
+    "origin": "原文词汇",
+    "sentenceId": "A1",
+    "form": "environmentalists",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-045",
+    "term": "maintain an upward trend",
+    "origin": "原文词汇",
+    "sentenceId": "A2",
+    "form": "maintained an upward trend",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-046",
+    "term": "average temperature",
+    "origin": "原文词汇",
+    "sentenceId": "A2",
+    "form": "average temperature",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-047",
+    "term": "surrounding ocean",
+    "origin": "原文词汇",
+    "sentenceId": "A4",
+    "form": "surrounding ocean",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-048",
+    "term": "act like",
+    "origin": "原文词汇",
+    "sentenceId": "A4",
+    "form": "acts like",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-049",
+    "term": "comparatively fortunate",
+    "origin": "原文词汇",
+    "sentenceId": "A5",
+    "form": "comparatively fortunate",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-050",
+    "term": "Southern Annular Mode (SAM)",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "SAM (Southern Annular Mode)",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-051",
+    "term": "wind belt",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "wind belt",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-052",
+    "term": "circle",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "circles",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-053",
+    "term": "weakening of moisture",
+    "origin": "原文词汇",
+    "sentenceId": "B2",
+    "form": "weakening of moisture",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-054",
+    "term": "rainfall in other seasons",
+    "origin": "原文词汇",
+    "sentenceId": "B2",
+    "form": "rainfall in other seasons",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-055",
+    "term": "heavier droughts",
+    "origin": "原文词汇",
+    "sentenceId": "B3",
+    "form": "heavier droughts",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-056",
+    "term": "agricultural activities",
+    "origin": "原文词汇",
+    "sentenceId": "B3",
+    "form": "agricultural activities",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-057",
+    "term": "calamity",
+    "origin": "原文词汇",
+    "sentenceId": "C1",
+    "form": "calamities",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-058",
+    "term": "rank first",
+    "origin": "原文词汇",
+    "sentenceId": "C1",
+    "form": "ranks the first",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-059",
+    "term": "ecological analyses",
+    "origin": "原文词汇",
+    "sentenceId": "C4",
+    "form": "ecological analyses",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-060",
+    "term": "measures of moisture deficit",
+    "origin": "原文词汇",
+    "sentenceId": "C3",
+    "form": "Measures of moisture deficit",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-061",
+    "term": "vegetative phase",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "vegetative phase",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-062",
+    "term": "snow pack",
+    "origin": "原文词汇",
+    "sentenceId": "D2",
+    "form": "snow pack",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-063",
+    "term": "snow line",
+    "origin": "原文词汇",
+    "sentenceId": "D3",
+    "form": "snow line",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-064",
+    "term": "glacier",
+    "origin": "原文词汇",
+    "sentenceId": "D2",
+    "form": "glaciers",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-065",
+    "term": "put a strain on",
+    "origin": "原文词汇",
+    "sentenceId": "D2",
+    "form": "putting another strain on",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-066",
+    "term": "skiing industry",
+    "origin": "原文词汇",
+    "sentenceId": "D3",
+    "form": "skiing industry",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-067",
+    "term": "come into a crisis",
+    "origin": "原文词汇",
+    "sentenceId": "D3",
+    "form": "comes into a crisis",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-068",
+    "term": "quantities of snowfall",
+    "origin": "原文词汇",
+    "sentenceId": "D5",
+    "form": "quantities of snowfall",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-069",
+    "term": "favourable",
+    "origin": "原文词汇",
+    "sentenceId": "D5",
+    "form": "favourable",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-070",
+    "term": "glacier region",
+    "origin": "原文词汇",
+    "sentenceId": "E2",
+    "form": "glacier region",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-071",
+    "term": "complex chain of processes",
+    "origin": "原文词汇",
+    "sentenceId": "E3",
+    "form": "complex chain of processes",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-072",
+    "term": "over time periods of",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "Over time periods of",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-073",
+    "term": "several decades",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "several decades",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-074",
+    "term": "flow of ice",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "flow of ice",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-075",
+    "term": "glacier tongues",
+    "origin": "原文词汇",
+    "sentenceId": "E5",
+    "form": "glacier tongues",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-076",
+    "term": "dynamic reaction",
+    "origin": "原文词汇",
+    "sentenceId": "E5",
+    "form": "dynamic reaction",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-077",
+    "term": "advance or retreat",
+    "origin": "原文词汇",
+    "sentenceId": "E5",
+    "form": "advance or retreat",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-078",
+    "term": "annual atmospheric conditions",
+    "origin": "原文词汇",
+    "sentenceId": "E6",
+    "form": "annual atmospheric conditions",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-079",
+    "term": "glacier front",
+    "origin": "原文词汇",
+    "sentenceId": "F4",
+    "form": "glacier front",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-080",
+    "term": "melt lake",
+    "origin": "原文词汇",
+    "sentenceId": "F3",
+    "form": "melt lake",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-081",
+    "term": "retreat at a uniform rate",
+    "origin": "原文词汇",
+    "sentenceId": "F4",
+    "form": "retreat at a rather uniform rate",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-082",
+    "term": "glacier bed",
+    "origin": "原文词汇",
+    "sentenceId": "F5",
+    "form": "glacier bed",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-083",
+    "term": "high tides",
+    "origin": "原文词汇",
+    "sentenceId": "G1",
+    "form": "high tides",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-084",
+    "term": "sea level rise",
+    "origin": "原文词汇",
+    "sentenceId": "G1",
+    "form": "sea level rise",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-085",
+    "term": "hyper-saline groundwater",
+    "origin": "原文词汇",
+    "sentenceId": "G2",
+    "form": "hyper-saline groundwater",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-086",
+    "term": "longer-term view",
+    "origin": "原文词汇",
+    "sentenceId": "G3",
+    "form": "longer-term view",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-087",
+    "term": "joint efforts",
+    "origin": "原文词汇",
+    "sentenceId": "H2",
+    "form": "joint efforts",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-088",
+    "term": "breeds and species",
+    "origin": "原文词汇",
+    "sentenceId": "H3",
+    "form": "breeds and species",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-089",
+    "term": "agriculturist",
+    "origin": "原文词汇",
+    "sentenceId": "H4",
+    "form": "Agriculturists",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-090",
+    "term": "systemic resilience",
+    "origin": "原文词汇",
+    "sentenceId": "H5",
+    "form": "systemic resilience",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-091",
+    "term": "ecosystem",
+    "origin": "原文词汇",
+    "sentenceId": "H5",
+    "form": "ecosystem",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-092",
+    "term": "unconventional adaptation",
+    "origin": "原文词汇",
+    "sentenceId": "I2",
+    "form": "unconventional adaptation",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-093",
+    "term": "further research",
+    "origin": "原文词汇",
+    "sentenceId": "I4",
+    "form": "Further researches",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-094",
+    "term": "sex ratio",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-095",
+    "term": "nest temperature",
+    "origin": "原文词汇",
+    "sentenceId": "I5",
+    "form": "temperature of the nest",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-096",
+    "term": "records show",
+    "origin": "原文词汇",
+    "sentenceId": "J1",
+    "form": "records show",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-097",
+    "term": "various regions",
+    "origin": "原文词汇",
+    "sentenceId": "J1",
+    "form": "various regions",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-098",
+    "term": "carbon dioxide emissions",
+    "origin": "原文词汇",
+    "sentenceId": "J2",
+    "form": "emission of carbon dioxide",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-099",
+    "term": "meet governmental standards",
+    "origin": "原文词汇",
+    "sentenceId": "J2",
+    "form": "met the governmental standard",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-100",
+    "term": "ambiguous future",
+    "origin": "原文词汇",
+    "sentenceId": "J4",
+    "form": "ambiguous future",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-101",
+    "term": "different pictures of temperature",
+    "origin": "原文词汇",
+    "sentenceId": "A4",
+    "form": "different pictures of temperature",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-102",
+    "term": "in the next century",
+    "origin": "原文词汇",
+    "sentenceId": "A3",
+    "form": "in the next century",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-103",
+    "term": "go up",
+    "origin": "原文词汇",
+    "sentenceId": "A3",
+    "form": "go up",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-104",
+    "term": "polar region",
+    "origin": "原文词汇",
+    "sentenceId": "A3",
+    "form": "polar region",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-105",
+    "term": "air conditioner",
+    "origin": "原文词汇",
+    "sentenceId": "A4",
+    "form": "air conditioner",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-106",
+    "term": "temperature phenomenon",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "temperature phenomenon",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-107",
+    "term": "scientifically speaking",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "Scientifically speaking",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-108",
+    "term": "originate from",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "originated from",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-109",
+    "term": "refer to",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "refers to",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-110",
+    "term": "recent work has revealed",
+    "origin": "原文词汇",
+    "sentenceId": "B2",
+    "form": "recent work has revealed",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-111",
+    "term": "including",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "including",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-112",
+    "term": "moisture",
+    "origin": "原文词汇",
+    "sentenceId": "B2",
+    "form": "moisture",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-113",
+    "term": "more rainfall",
+    "origin": "原文词汇",
+    "sentenceId": "B2",
+    "form": "more rainfall",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-114",
+    "term": "before winter",
+    "origin": "原文词汇",
+    "sentenceId": "B3",
+    "form": "before winter",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-115",
+    "term": "arrive too late to rescue",
+    "origin": "原文词汇",
+    "sentenceId": "B3",
+    "form": "arrives too late to rescue",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-116",
+    "term": "measure",
+    "origin": "原文词汇",
+    "sentenceId": "C3",
+    "form": "Measures",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-117",
+    "term": "at their highest since",
+    "origin": "原文词汇",
+    "sentenceId": "C3",
+    "form": "at their highest since",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-118",
+    "term": "impose",
+    "origin": "原文词汇",
+    "sentenceId": "C4",
+    "form": "imposed",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-119",
+    "term": "growth stage",
+    "origin": "原文词汇",
+    "sentenceId": "C4",
+    "form": "growth stage",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-120",
+    "term": "occur around",
+    "origin": "原文词汇",
+    "sentenceId": "C5",
+    "form": "occurs around",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-121",
+    "term": "agriculture production",
+    "origin": "原文词汇",
+    "sentenceId": "D1",
+    "form": "agriculture production",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-122",
+    "term": "due to",
+    "origin": "原文词汇",
+    "sentenceId": "D2",
+    "form": "due to",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-123",
+    "term": "local skiing industry",
+    "origin": "原文词汇",
+    "sentenceId": "D3",
+    "form": "local skiing industry",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-124",
+    "term": "snow at the bottom",
+    "origin": "原文词汇",
+    "sentenceId": "D4",
+    "form": "snow at the bottom",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-125",
+    "term": "land covered by ice and snow",
+    "origin": "原文词汇",
+    "sentenceId": "E2",
+    "form": "land covered by ice and snow",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-126",
+    "term": "involve",
+    "origin": "原文词汇",
+    "sentenceId": "E3",
+    "form": "involves",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-127",
+    "term": "via",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "via",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-128",
+    "term": "altered",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "altered",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-129",
+    "term": "finally",
+    "origin": "原文词汇",
+    "sentenceId": "E5",
+    "form": "finally",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-130",
+    "term": "signal",
+    "origin": "原文词汇",
+    "sentenceId": "E6",
+    "form": "signal",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-131",
+    "term": "undoubtedly",
+    "origin": "原文词汇",
+    "sentenceId": "E6",
+    "form": "Undoubtedly",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-132",
+    "term": "latest research result",
+    "origin": "原文词汇",
+    "sentenceId": "F1",
+    "form": "latest research result",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-133",
+    "term": "further losses of ice",
+    "origin": "原文词汇",
+    "sentenceId": "F2",
+    "form": "Further losses of ice",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-134",
+    "term": "sector",
+    "origin": "原文词汇",
+    "sentenceId": "F3",
+    "form": "sector",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-135",
+    "term": "melt down",
+    "origin": "原文词汇",
+    "sentenceId": "F3",
+    "form": "melted down",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-136",
+    "term": "at a rate of",
+    "origin": "原文词汇",
+    "sentenceId": "F4",
+    "form": "at a rate of",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-137",
+    "term": "rather",
+    "origin": "原文词汇",
+    "sentenceId": "F4",
+    "form": "rather",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-138",
+    "term": "continue to grow",
+    "origin": "原文词汇",
+    "sentenceId": "F5",
+    "form": "continue to grow",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-139",
+    "term": "direct result",
+    "origin": "原文词汇",
+    "sentenceId": "G1",
+    "form": "direct result",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-140",
+    "term": "serve as",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-141",
+    "term": "main factor",
+    "origin": "原文词汇",
+    "sentenceId": "G1",
+    "form": "main factor",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-142",
+    "term": "trend of sea level rise",
+    "origin": "原文词汇",
+    "sentenceId": "G2",
+    "form": "trend of sea level rise",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-143",
+    "term": "pose a possibility",
+    "origin": "原文词汇",
+    "sentenceId": "G2",
+    "form": "pose a possibility",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-144",
+    "term": "counter a trend",
+    "origin": "原文词汇",
+    "sentenceId": "G3",
+    "form": "counter this trend",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-145",
+    "term": "change in sea levels",
+    "origin": "原文词汇",
+    "sentenceId": "G3",
+    "form": "sea level change",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-146",
+    "term": "emphasis on",
+    "origin": "原文词汇",
+    "sentenceId": "H2",
+    "form": "emphasis on",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-147",
+    "term": "conquer a tough period",
+    "origin": "原文词汇",
+    "sentenceId": "H2",
+    "form": "conquer the tough period",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-148",
+    "term": "adjust",
+    "origin": "原文词汇",
+    "sentenceId": "H3",
+    "form": "adjust",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-149",
+    "term": "in broad terms",
+    "origin": "原文词汇",
+    "sentenceId": "H5",
+    "form": "In broad terms",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-150",
+    "term": "going forward",
+    "origin": "原文词汇",
+    "sentenceId": "H5",
+    "form": "going forward",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-151",
+    "term": "resilience",
+    "origin": "原文词汇",
+    "sentenceId": "H5",
+    "form": "resilience",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-152",
+    "term": "realise",
+    "origin": "原文词汇",
+    "sentenceId": "I2",
+    "form": "realised",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-153",
+    "term": "a study has looked at",
+    "origin": "原文词汇",
+    "sentenceId": "I3",
+    "form": "A study has looked at",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-154",
+    "term": "according to",
+    "origin": "原文词汇",
+    "sentenceId": "I3",
+    "form": "according to",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-155",
+    "term": "try to find out",
+    "origin": "原文词汇",
+    "sentenceId": "I4",
+    "form": "try to find out",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-156",
+    "term": "sex reversal",
+    "origin": "原文词汇",
+    "sentenceId": "I4",
+    "form": "sex reversal",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-157",
+    "term": "in their growth",
+    "origin": "原文词汇",
+    "sentenceId": "I4",
+    "form": "in their growth",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-158",
+    "term": "close relation",
+    "origin": "同义替换",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-159",
+    "term": "tackle the problems",
+    "origin": "原文词汇",
+    "sentenceId": "J1",
+    "form": "Tackling the problems",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-160",
+    "term": "slow process",
+    "origin": "原文词汇",
+    "sentenceId": "J1",
+    "form": "slow process",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-161",
+    "term": "world issue",
+    "origin": "原文词汇",
+    "sentenceId": "J4",
+    "form": "world issue",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-162",
+    "term": "so far",
+    "origin": "原文词汇",
+    "sentenceId": "J4",
+    "form": "So far",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-163",
+    "term": "hang in an ambiguous future",
+    "origin": "原文词汇",
+    "sentenceId": "J4",
+    "form": "hangs in an ambiguous future",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-164",
+    "term": "main idea",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-165",
+    "term": "one effect",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-166",
+    "term": "effect",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-167",
+    "term": "affect",
+    "origin": "原文词汇",
+    "sentenceId": "D1",
+    "form": "affecting",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-168",
+    "term": "close location",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-169",
+    "term": "air condition",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-170",
+    "term": "maintain",
+    "origin": "原文词汇",
+    "sentenceId": "A2",
+    "form": "maintained",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-171",
+    "term": "high quality",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-172",
+    "term": "hotter months",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-173",
+    "term": "soil water",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-174",
+    "term": "growing condition",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-175",
+    "term": "tough",
+    "origin": "原文词汇",
+    "sentenceId": "D5",
+    "form": "tough",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-176",
+    "term": "determine",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-177",
+    "term": "huge gap",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-178",
+    "term": "lowest production",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-179",
+    "term": "skiing station",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-180",
+    "term": "altitude",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-181",
+    "term": "move to the north",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-182",
+    "term": "make a profit",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-183",
+    "term": "cumulative",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "cumulative",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-184",
+    "term": "alteration",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-185",
+    "term": "faster changes",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-186",
+    "term": "bigger length",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-187",
+    "term": "mention",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-188",
+    "term": "particular example",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-189",
+    "term": "emphasize",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-190",
+    "term": "severity",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-191",
+    "term": "alarm",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-192",
+    "term": "melting speed",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-193",
+    "term": "disappear",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-194",
+    "term": "reach",
+    "origin": "原文词汇",
+    "sentenceId": "F5",
+    "form": "reaches",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-195",
+    "term": "connected with",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-196",
+    "term": "increase in sea level",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-197",
+    "term": "underground water system",
+    "origin": "同义替换",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-198",
+    "term": "destruction",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-199",
+    "term": "high probability",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-200",
+    "term": "improve",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-201",
+    "term": "less responsive to",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-202",
+    "term": "conservative",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-203",
+    "term": "agricultural sector",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-204",
+    "term": "deal with",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-205",
+    "term": "agree with",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-206",
+    "term": "claim",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-207",
+    "term": "statement",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-208",
+    "term": "emission",
+    "origin": "原文词汇",
+    "sentenceId": "J2",
+    "form": "emission",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-209",
+    "term": "must",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-210",
+    "term": "cut emissions",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-211",
+    "term": "solve the problem",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-212",
+    "term": "different effects",
+    "origin": "题干／选项",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "题目释义"
+  },
+  {
+    "id": "gwnz-213",
+    "term": "northern",
+    "origin": "原文词汇",
+    "sentenceId": "I3",
+    "form": "northern",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-214",
+    "term": "latest",
+    "origin": "原文词汇",
+    "sentenceId": "F1",
+    "form": "latest",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-215",
+    "term": "further",
+    "origin": "原文词汇",
+    "sentenceId": "F2",
+    "form": "Further",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-216",
+    "term": "several",
+    "origin": "原文词汇",
+    "sentenceId": "E4",
+    "form": "several",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-217",
+    "term": "major factor",
+    "origin": "同义替换",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-218",
+    "term": "rather than",
+    "origin": "同义替换",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  },
+  {
+    "id": "gwnz-219",
+    "term": "South Polar Region",
+    "origin": "原文词汇",
+    "sentenceId": "A2",
+    "form": "South Polar Region",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-220",
+    "term": "Antarctica",
+    "origin": "原文词汇",
+    "sentenceId": "B1",
+    "form": "Antarctica",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-221",
+    "term": "National Institute of Water and Atmospheric Research (NIWA)",
+    "origin": "原文词汇",
+    "sentenceId": "F1",
+    "form": "National Institute of Water and Atmospheric (NIWA) Research",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-222",
+    "term": "Mt. Cook Region",
+    "origin": "原文词汇",
+    "sentenceId": "F2",
+    "form": "Mt. Cook Region",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-223",
+    "term": "Hooker Lake",
+    "origin": "原文词汇",
+    "sentenceId": "F3",
+    "form": "Hooker Lake",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-224",
+    "term": "14 km long",
+    "origin": "原文词汇",
+    "sentenceId": "F3",
+    "form": "14 km long",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-225",
+    "term": "40 m/yr",
+    "origin": "原文词汇",
+    "sentenceId": "F4",
+    "form": "40 m/yr",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-226",
+    "term": "0.5%",
+    "origin": "原文词汇",
+    "sentenceId": "J2",
+    "form": "0.5%",
+    "contextLabel": "本文义"
+  },
+  {
+    "id": "gwnz-227",
+    "term": "sex determination",
+    "origin": "拓展词汇",
+    "sentenceId": null,
+    "form": null,
+    "contextLabel": "拓展释义"
+  }
+]
