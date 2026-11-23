@@ -253,3 +253,22 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-bottom:c
 .top>div:first-child{flex:1 1 28rem;min-width:0;max-width:100%}
 .top .soundstatus{flex:0 1 220px;min-width:0;max-width:100%;overflow-wrap:anywhere}
 @media(max-width:600px),(max-width:950px) and (hover:none) and (pointer:coarse){.top>div:first-child,.top .soundstatus{flex:0 1 auto}}
+
+
+/* Compact, uncropped article photos; reading controls retain their own space. */
+.topic-figure{margin:16px 0 0;min-width:0;max-width:100%}
+.topic-image-link{display:block;min-width:0;max-width:100%;border-radius:10px;overflow:hidden;background:rgba(255,255,255,.48)}
+.topic-image-link:focus-visible{outline:3px solid #28796a;outline-offset:3px}
+.topic-photo{display:block;width:100%;height:132px;max-width:100%;object-fit:contain}
+.topic-figure figcaption{margin-top:7px;min-width:0;line-height:1.5;overflow-wrap:anywhere}
+.topic-caption{display:block;font-size:12px;font-weight:650;color:#365e52}
+.topic-credit{display:block;margin-top:3px;font-size:10px;color:#627c72}
+.topic-credit a{color:inherit;text-decoration:underline;text-decoration-color:#a8bfb2;text-underline-offset:2px}
+.topic-mobile-figure{display:none}
+@media(max-width:900px){
+ .topic-mobile-figure{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:12px;margin:0 0 22px}
+ .topic-mobile-figure .topic-photo{height:84px}
+ .topic-mobile-figure figcaption{margin:0}
+ .topic-mobile-figure .topic-caption{font-size:13px}
+ .topic-mobile-figure .topic-credit{font-size:11px}
+}
