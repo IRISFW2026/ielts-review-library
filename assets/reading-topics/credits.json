@@ -313,5 +313,20 @@
     "imageWidth": 330,
     "imageHeight": 248,
     "bytes": 39381
+  },
+  {
+    "id": "do-animals-dream-1020",
+    "caption": "章鱼｜主题配图",
+    "alt": "自然环境中的章鱼，可见头部与腕；章鱼主题配图",
+    "title": "File:Octopus vulgaris 2.jpg",
+    "author": "Albert Kok",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Octopus_vulgaris_2.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Octopus_vulgaris_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "assets/reading-topics/do-animals-dream-1020.jpg",
+    "imageWidth": 330,
+    "imageHeight": 241,
+    "bytes": 38704
   }
 ]

@@ -62,6 +62,7 @@
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Rethinking the Past](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/rethinking-the-past/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Kākāpō 鸮鹦鹉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/kakapo/) |
 | 2026-10-20 | 听力 Part 3 | [1020-听力-Part 3-How Babies and Children Learn 婴幼儿如何学习](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/listening/part-3/how-babies-and-children-learn/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Do animals dream?](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/do-animals-dream/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Davies Sisters 戴维斯姐妹](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/davies-sisters/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The problems of getting around the city of Dar es Salaam](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/dar-es-salaam/) |
 | 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Robot Umpires 机器人裁判](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/robot-umpires/) |
