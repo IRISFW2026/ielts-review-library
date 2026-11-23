@@ -298,5 +298,20 @@
     "imageWidth": 330,
     "imageHeight": 440,
     "bytes": 42396
+  },
+  {
+    "id": "rethinking-the-past-1020",
+    "caption": "史前洞穴壁画｜主题配图",
+    "alt": "阿根廷手洞岩壁上的史前手印壁画，作为考古与史前艺术主题配图",
+    "title": "File:Cueva de las manos - detalle.jpg",
+    "author": "Suzko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cueva_de_las_manos_-_detalle.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Cueva_de_las_manos_-_detalle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "assets/reading-topics/rethinking-the-past-1020.jpg",
+    "imageWidth": 330,
+    "imageHeight": 248,
+    "bytes": 39381
   }
 ]
