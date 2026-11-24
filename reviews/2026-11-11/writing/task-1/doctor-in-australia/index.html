@@ -198,6 +198,67 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
   #library .word-meta,#library .library-note,#library .library-example{margin-left:40px}
   #library .library-example{width:calc(100% - 40px)}
 }
+</style><style>:root{--paper:#f5f7f4;--line:#dce6df;--muted:#59706a}
+.shell{max-width:1440px;grid-template-columns:180px minmax(0,1fr)}
+.sidebar{padding:24px 14px;background:#eaf0ea}
+.brand{font-size:19px;letter-spacing:0}
+.brand span{font-size:10px;letter-spacing:2px;margin-top:2px}
+.sidebar .book{margin:18px 0 15px;padding:10px 11px;background:#dfeae1;border-radius:10px}
+.sidebar .book h3{font-size:13px;letter-spacing:0;line-height:1.45;margin-bottom:3px}
+.sidebar .book p{font-size:11px}
+.nav{gap:4px}
+.nav button{min-height:36px;padding:7px 9px;font-size:13px;border-radius:8px}
+.main{padding:19px clamp(18px,2.6vw,36px)}
+.catalog-return{padding-bottom:7px;margin-bottom:12px}
+.top{align-items:baseline;margin-bottom:15px}
+.main .top h1{font-size:clamp(21px,2.25vw,30px);margin:0 0 4px}
+.top .sub{font-size:12px}
+.top .soundstatus{font-size:11px}
+.study-layout.show-question{grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:17px}
+.study-content>.panel,.question{padding:clamp(13px,1.6vw,21px);border-radius:13px}
+.question{background:#fff;border-color:var(--line);top:12px}
+.panel h2{font-size:19px;line-height:1.4}
+.panel h3{font-size:15px;margin:15px 0 6px}
+.prompt{font-size:13px;line-height:1.5;margin:4px 0 7px}
+.chart-switch{margin:8px 0;background:#edf3ee}
+.chart-switch button{min-height:32px}
+.chart-detail{display:grid;place-items:center;min-height:0;padding:5px}
+.chart-detail img{width:auto;max-width:100%;max-height:clamp(200px,calc(100dvh - 230px),390px);object-fit:contain}
+.chart-detail img[data-chart-image="0"]{width:100%}
+.takeaway{padding:10px 13px;margin:8px 0 13px}
+.takeaway h3{margin:0 0 4px}
+.takeaway li{margin:2px 0}
+#focus table th,#focus table td{padding:6px;font-size:13px}
+#focus table th:first-child,#focus table td:first-child{width:92px}
+#focus .data-line{margin-top:1px}
+.checks li{margin:5px 0}
+.essay-en{font-size:17px;line-height:1.65}
+.essay-paragraph{margin-top:15px}
+.essay-paragraph h3{margin:0 0 4px}
+#cards,#library,#dictation,#patterns,#settings{width:min(100%,900px);margin-inline:auto}
+#cards .study-card{border-radius:15px;margin-top:9px}
+#cards .study-card .center{margin-block:14px 8px}
+#cards .study-filter-note,#library .study-filter-note{margin-bottom:7px}
+#library .library-entry{padding:12px 0}
+#dictation .drill{margin-top:8px;padding:12px}
+#dictation .controls{margin:9px 0}
+#dictation .dict-comparison .answer{margin-top:8px;padding:12px}
+#patterns .pattern{margin-top:12px;padding-top:3px}
+#patterns .example{padding-top:6px;margin-top:6px}
+#settings .stats{margin:12px 0 18px;gap:8px}
+#settings .stat{padding:9px 11px;border-radius:10px}
+#settings .stat b{font-size:21px}
+#settings .audio-bar{margin:8px 0;gap:9px}
+footer{margin-top:16px}
+@media(max-width:900px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .sidebar{padding:12px 14px}
+  .nav{margin-top:8px}
+  .main{padding:14px 15px}
+  .top{align-items:flex-start;flex-wrap:wrap;gap:4px}
+  .top .soundstatus{text-align:left;max-width:none}
+  .chart-detail img{max-height:340px}
+}
 </style></head>
 <body><div class="shell"><aside class="sidebar"><div class="brand">雅思写作 <span>IELTS WRITING</span></div><div class="book"><h3 lang="en">Doctors in Australia</h3><p>雅思写作 Task 1 · 1111</p></div><nav class="nav" aria-label="学习模块"><button type="button" data-tab="focus"><span aria-hidden="true">☑</span>考察要点</button><button type="button" data-tab="cards"><span aria-hidden="true">◫</span>翻卡复习</button><button type="button" data-tab="library"><span aria-hidden="true">▤</span>全部词库</button><button type="button" data-tab="essay"><span aria-hidden="true">☷</span>完整全文</button><button type="button" data-tab="dictation"><span aria-hidden="true">✎</span>句子默写</button><button type="button" data-tab="patterns"><span aria-hidden="true">▤</span>可迁移句子</button><button type="button" data-tab="settings"><span aria-hidden="true">⚙</span>学习设置</button></nav></aside>
 <main class="main"><nav class="catalog-return" aria-label="复习库导航"><a href="https://irisfw2026.github.io/ielts-review-library/index.html">← 复习总览</a><span>2026-11-11 · 写作</span></nav><header class="top"><div><h1>Doctors in Australia｜澳大利亚医生</h1><div class="sub">Task 1 · 混合图表</div></div><div class="soundstatus" id="voice-summary" role="status"></div></header>
