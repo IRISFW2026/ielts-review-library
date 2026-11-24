@@ -70,7 +70,7 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
 .main h1{line-height:1.25;margin:0 0 6px}
 .top{margin-bottom:20px}
 .study-layout.show-question{grid-template-columns:minmax(0,44fr) minmax(0,56fr);gap:18px}
-.study-layout:not(.show-question) .study-content{max-width:900px}
+
 .panel h2{font-size:22px}
 .question .prompt{margin-bottom:8px}
 .full-chart{padding:6px 0;border:0;color:var(--green);font-weight:650;font-size:13px}
@@ -159,7 +159,7 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
 #library .library-actions button{padding:5px 10px;font-size:12px}
 #library .example-line{padding-top:10px}
 @media(max-width:600px){#cards .example-line .speaker span{display:none}.top .soundstatus{text-align:right;font-size:10px}}
-</style><style>#cards,#library{width:min(100%,820px);margin-inline:auto}
+</style><style>
 #cards .study-stage-options{gap:6px}
 #cards .study-stage-options button{min-height:38px;padding:6px 10px}
 #cards .controls,#library .controls{margin:11px 0;gap:8px}
@@ -199,7 +199,7 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
   #library .library-example{width:calc(100% - 40px)}
 }
 </style><style>:root{--paper:#f5f7f4;--line:#dce6df;--muted:#59706a}
-.shell{max-width:1440px;grid-template-columns:180px minmax(0,1fr)}
+.shell{max-width:none;grid-template-columns:180px minmax(0,1fr)}
 .sidebar{padding:24px 14px;background:#eaf0ea}
 .brand{font-size:19px;letter-spacing:0}
 .brand span{font-size:10px;letter-spacing:2px;margin-top:2px}
@@ -208,7 +208,7 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
 .sidebar .book p{font-size:11px}
 .nav{gap:4px}
 .nav button{min-height:36px;padding:7px 9px;font-size:13px;border-radius:8px}
-.main{padding:19px clamp(18px,2.6vw,36px)}
+.main{padding:19px clamp(16px,1.8vw,28px)}
 .catalog-return{padding-bottom:7px;margin-bottom:12px}
 .top{align-items:baseline;margin-bottom:15px}
 .main .top h1{font-size:clamp(21px,2.25vw,30px);margin:0 0 4px}
@@ -235,7 +235,7 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
 .essay-en{font-size:17px;line-height:1.65}
 .essay-paragraph{margin-top:15px}
 .essay-paragraph h3{margin:0 0 4px}
-#cards,#library,#dictation,#patterns,#settings{width:min(100%,900px);margin-inline:auto}
+
 #cards .study-card{border-radius:15px;margin-top:9px}
 #cards .study-card .center{margin-block:14px 8px}
 #cards .study-filter-note,#library .study-filter-note{margin-bottom:7px}
