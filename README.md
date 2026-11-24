@@ -25,7 +25,7 @@
 | 日期 | 科目与题型 | 标准名称与链接 |
 |---|---|---|
 | 2026-11-24 | 阅读 模考 | [1124-阅读-模考-Mapungubwe 马蓬古布韦王国](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/reading/practice/mapungubwe/) |
-| 2026-11-24 | 听力 Part 1 表格填空 | [1124-听力-Part 1 表格填空-Guitar Group 吉他学习小组](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/listening/part-1/guitar-group/) |
+| 2026-11-24 | 听力 Part 1 | [1124-听力-Guitar Group 吉他学习小组](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/listening/part-1/guitar-group/) |
 | 2026-11-23 | 阅读 真题 | [1123-阅读-真题-The Brassica Family 芸薹类植物](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-23/reading/practice/the-brassica-family/) |
 | 2026-11-11 | 阅读 真题 | [1111-阅读-真题-Global Warming in New Zealand 新西兰的全球变暖](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/reading/exam/global-warming-in-new-zealand/) |
 | 2026-11-11 | 写作 小作文 | [1111-写作-小作文-Doctor in Australia 澳大利亚医生人数、性别与出生地](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/) |
