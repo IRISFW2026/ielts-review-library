@@ -358,5 +358,20 @@
     "imageWidth": 500,
     "imageHeight": 602,
     "bytes": 49745
+  },
+  {
+    "id": "ambergris-1024",
+    "caption": "Ambergris｜龙涎香实物",
+    "alt": "容器中呈灰白色与灰褐色不规则块状的龙涎香实物",
+    "title": "File:Ambergris.jpg",
+    "author": "Peter Kaminski；裁剪：Jacek Halicki",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Ambergris.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Ambergris.jpg",
+    "file": "assets/reading-topics/ambergris-1024.jpg",
+    "imageWidth": 640,
+    "imageHeight": 507,
+    "bytes": 102396
   }
 ]

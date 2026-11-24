@@ -587,6 +587,28 @@
       "url": "/ielts-review-library/reviews/2026-10-24/reading/practice/artificial-intelligence/"
     },
     {
+      "id": "ambergris-1024",
+      "date": "2026-10-24",
+      "skill": "阅读",
+      "kind": "模考",
+      "en": "Ambergris",
+      "zh": "龙涎香",
+      "topic": "自然与环境",
+      "tags": [
+        "自然与环境",
+        "海洋生物",
+        "历史文化",
+        "词汇复习"
+      ],
+      "description": "213项词汇与语块 · 对应原文例句 · 四项学习状态筛选 · A–E原文30句与难点标记",
+      "path": "reviews/2026-10-24/reading/practice/ambergris/index.html",
+      "dateBasis": "用户指定1024",
+      "source": "用户提供A–E五段全文及213项词汇表；所有例句采用对应原文；未提供题目。",
+      "aliases": [],
+      "title": "1024-阅读-模考-Ambergris 龙涎香",
+      "url": "/ielts-review-library/reviews/2026-10-24/reading/practice/ambergris/"
+    },
+    {
       "id": "town-population",
       "date": "2026-10-23",
       "skill": "写作",
