@@ -2,6 +2,7 @@
 
 window.ListeningStudy = {
   player(recording, description = '') {
+    if (!recording) return '<p class="muted">本篇未附原录音。可用逐句按钮朗读原文。</p>';
     return `<section class="original-player" aria-labelledby="original-player-title">
       <h2 id="original-player-title">听力原录音</h2>
       <audio controls preload="metadata" aria-label="播放完整原录音" src="${escapeHTML(recording)}"></audio>

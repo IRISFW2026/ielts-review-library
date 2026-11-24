@@ -4,6 +4,26 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "recycling-footwear-1124",
+      "date": "2026-11-24",
+      "skill": "听力",
+      "kind": "Part 3",
+      "displayTitle": "1124-听力-单选与配对-Recycling Footwear 鞋类回收",
+      "en": "Recycling Footwear",
+      "zh": "鞋类回收",
+      "topic": "环境与可持续发展",
+      "tags": [
+        "回收利用",
+        "单选与配对"
+      ],
+      "description": "103 条单词与短语 · 双语听力原文与逐句朗读 · Q23、Q29、Q30 错题解析",
+      "path": "reviews/2026-11-24/listening/part-3/recycling-footwear/index.html",
+      "dateBasis": "用户于2026年11月24日提供听力原文、题目与作答记录",
+      "aliases": [],
+      "title": "1124-听力-单选与配对-Recycling Footwear 鞋类回收",
+      "url": "/ielts-review-library/reviews/2026-11-24/listening/part-3/recycling-footwear/"
+    },
+    {
       "id": "mapungubwe-1124",
       "date": "2026-11-24",
       "skill": "阅读",
