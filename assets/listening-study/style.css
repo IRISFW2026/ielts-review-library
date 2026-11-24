@@ -140,3 +140,22 @@ body.listening-study {
   .listening-study .sentence-row > details { grid-column: 1; }
   .listening-study .listening-sentence-meta { min-height: 22px; }
 }
+.listening-study .library-entry .library-pronounce,
+.listening-study .library-entry .library-familiarity select {
+  color: #543d78;
+  border-color: #dacbea;
+  background-color: #faf6fd;
+}
+.listening-study .library-entry .library-pronounce:hover {
+  border-color: #9475bb;
+  background-color: #eee3f8;
+}
+.listening-study .library-entry .library-familiarity[data-level="1"] select { background-color: #f7f1fc; }
+.listening-study .library-entry .library-familiarity[data-level="2"] select { background-color: #f0e6f9; }
+.listening-study .library-entry .library-familiarity[data-level="3"] select { background-color: #e9dbf6; }
+.listening-study .library-entry .library-familiarity[data-level="4"] select { background-color: #e0cef1; }
+.listening-study .library-entry .level-next,
+.listening-study .library-entry .star-label { color: var(--muted); }
+.listening-study .library-entry:focus-visible,
+.listening-study .library-entry .library-pronounce:focus-visible,
+.listening-study .library-entry .library-familiarity select:focus-visible { outline: 2px solid #694d97; }
