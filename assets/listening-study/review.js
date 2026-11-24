@@ -13,6 +13,10 @@ window.ListeningStudy = {
     const wrong = questions.filter(question => question.wrong);
     const questionCard = question => `<article class="list-item question-priority">
       <h3>Q${question.number} · <span lang="en">${escapeHTML(question.question)}</span></h3>
+      ${question.choices?.length ? `<details class="question-options">
+        <summary>查看选项</summary>
+        <ul lang="en">${question.choices.map(choice => '<li>' + escapeHTML(choice) + '</li>').join('')}</ul>
+      </details>` : ''}
       <p class="question-answer">你的作答 <del>${escapeHTML(question.chosen)}</del> · 正确答案 <strong>${escapeHTML(question.answer)}</strong></p>
       <p><b>考查重点</b>　${escapeHTML(question.focus)}</p>
       <p><b>错因</b>　${escapeHTML(question.mistake)}</p>
