@@ -202,13 +202,13 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
 .shell{max-width:none;grid-template-columns:235px minmax(0,1fr)}
 @media(min-width:901px) and (max-width:1000px){.shell{grid-template-columns:190px minmax(0,1fr)}}
 .sidebar{padding:24px 14px;background:#eaf0ea}
-.brand{font-size:19px;letter-spacing:0}
-.brand span{font-size:10px;letter-spacing:2px;margin-top:2px}
+.brand{font-size:23px;letter-spacing:-.5px}
+.brand span{font-size:10px;letter-spacing:2.3px;margin-top:5px}
 .sidebar .book{margin:18px 0 15px;padding:10px 11px;background:#dfeae1;border-radius:10px}
-.sidebar .book h3{font-size:13px;letter-spacing:0;line-height:1.45;margin-bottom:3px}
-.sidebar .book p{font-size:11px}
+.sidebar .book h3{font-size:15px;letter-spacing:0;line-height:1.45;margin-bottom:3px}
+.sidebar .book p{font-size:12px}
 .nav{gap:4px}
-.nav button{min-height:36px;padding:7px 9px;font-size:13px;border-radius:8px}
+.nav button{min-height:36px;padding:7px 9px;font-size:15px;border-radius:8px}
 .main{padding:19px clamp(16px,1.8vw,28px)}
 .catalog-return{padding-bottom:7px;margin-bottom:12px}
 .top{align-items:baseline;margin-bottom:15px}
@@ -254,6 +254,8 @@ footer{margin-top:16px}
 @media(max-width:900px){
   .shell{grid-template-columns:minmax(0,1fr)}
   .sidebar{padding:12px 14px}
+  .sidebar .brand{font-size:20px}
+  .sidebar .nav button{font-size:13px}
   .nav{margin-top:8px}
   .main{padding:14px 15px}
   .top{align-items:flex-start;flex-wrap:wrap;gap:4px}
