@@ -89,6 +89,7 @@ body.listening-study {
   gap: 4px 14px;
   font-size: 13px;
 }
+.listening-study .listening-sentence-tools > details { margin: 0; }
 .listening-study .listening-sentence-tools summary { padding: 5px 0; }
 .listening-study .listening-sentence-tools > details[open] { flex-basis: 100%; }
 .listening-study .listening-sentence-tools .sentence-actions { margin: 0; }
