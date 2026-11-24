@@ -92,6 +92,9 @@ body.listening-study {
 .listening-study .listening-sentence-meta .tag { padding: 2px 5px; }
 .listening-study .listening-sentence-meta .listening-speaker { margin: 0; }
 .listening-study #sentence-list .sentence-text {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   margin: 0;
   font-size: 17px;
   line-height: 1.5;
@@ -100,7 +103,7 @@ body.listening-study {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
+  flex: 0 0 32px;
   min-width: 32px;
   min-height: 32px;
   padding: 0;
@@ -128,7 +131,7 @@ body.listening-study {
   color: #543d78;
 }
 .listening-study #sentence-list .listening-sentence-tools summary { border: 1px solid transparent; }
-.listening-study #sentence-list .listening-sentence-tools .sentence-actions { margin: 0; }
+.listening-study #sentence-list .listening-sentence-tools .sentence-actions { margin: 0; order: -1; }
 .listening-study .listening-sentence-tools .sentence-flag-toggle { background: #f8f3fd; border-color: #dfd1ee; }
 .listening-study .listening-sentence-tools .sentence-flag-panel { flex-basis: 100%; margin-top: 2px; }
 .listening-study .sentence-row > details { grid-column: 2; }

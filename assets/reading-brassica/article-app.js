@@ -195,7 +195,7 @@ function sentenceList(){
   let content;
   if(listening){
    content='<div class="listening-sentence-meta"><span class="tag">'+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+escapeHTML(x.speaker)+'</span></div>'
-    +'<p class="sentence-text"><span lang="en">'+escapeHTML(x.en)+'</span> '+playButton(x.en,'朗读整句',true)+'</p>'
+    +'<p class="sentence-text">'+playButton(x.en,'朗读整句',true)+'<span lang="en">'+escapeHTML(x.en)+'</span></p>'
     +'<div class="listening-sentence-tools">'+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
