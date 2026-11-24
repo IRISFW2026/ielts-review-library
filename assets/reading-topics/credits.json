@@ -328,5 +328,20 @@
     "imageWidth": 330,
     "imageHeight": 241,
     "bytes": 38704
+  },
+  {
+    "id": "mapungubwe-1124",
+    "caption": "马蓬古布韦山丘遗址",
+    "alt": "马蓬古布韦的砂岩台地与周围平原，展示文中山顶与山下聚落的地形关系",
+    "title": "File:MapungubweHill.jpg",
+    "author": "JJ van Zyl / Laura SA；色彩修正 Creysmon07",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:MapungubweHill.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/MapungubweHill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "assets/reading-topics/mapungubwe-1124.jpg",
+    "imageWidth": 800,
+    "imageHeight": 532,
+    "bytes": 153973
   }
 ]

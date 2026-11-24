@@ -2,7 +2,7 @@
 
 const CONFIG=window.READING_REVIEW_CONFIG;
 const DATA=window.READING_REVIEW_DATA;
-const PARAGRAPH_RANGE=DATA.sentences[0].paragraph+'–'+DATA.sentences[DATA.sentences.length-1].paragraph;
+const PARAGRAPH_RANGE=CONFIG.paragraphRange||(DATA.sentences[0].paragraph+'–'+DATA.sentences[DATA.sentences.length-1].paragraph);
 const KEY=CONFIG.storageKey, SETTINGKEY=KEY+'-settings';
 const LABELS={new:'未学',1:'不熟悉',2:'有点吃力',3:'基本掌握',4:'熟练掌握'};
 const CARD_LABELS={new:'未学',1:'Again · 重来',2:'Hard · 吃力',3:'Good · 记得',4:'Easy · 轻松'};
@@ -570,6 +570,3 @@ async function importData(event) {
     if ($('import')) $('import').value='';
   }
 }
-
-
-

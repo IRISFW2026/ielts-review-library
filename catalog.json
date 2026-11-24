@@ -1,8 +1,30 @@
 {
   "version": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "mapungubwe-1124",
+      "date": "2026-11-24",
+      "skill": "阅读",
+      "kind": "练习",
+      "en": "Mapungubwe",
+      "zh": "马蓬古布韦王国",
+      "topic": "历史与文化",
+      "tags": [
+        "历史与文化",
+        "考古与人类进化",
+        "贸易与社会",
+        "词汇复习"
+      ],
+      "description": "207项词汇与语块 · 原文例句 · 四项学习状态筛选 · A–G正文35句与导语 · 难点标记",
+      "path": "reviews/2026-11-24/reading/practice/mapungubwe/index.html",
+      "dateBasis": "原材料未标注学习日期，采用首次制作日期2026-11-24",
+      "source": "用户提供导语、A–G七段全文及207项词汇表；只用所给原文例句；未提供题目。",
+      "aliases": [],
+      "title": "1124-阅读-练习-Mapungubwe 马蓬古布韦王国",
+      "url": "/ielts-review-library/reviews/2026-11-24/reading/practice/mapungubwe/"
+    },
     {
       "id": "the-brassica-family-1123",
       "date": "2026-11-23",
