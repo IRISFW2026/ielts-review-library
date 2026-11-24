@@ -55,6 +55,7 @@ body.listening-study {
 .listening-study .sentence-row.is-flagged,
 .listening-study .library-entry.is-current,
 .listening-study .example { background: #f8f3fd; border-color: #e3d8f1; }
+.listening-study .library-entry.is-current { box-shadow: inset 3px 0 #694d97; }
 .listening-study .sentence-flag-panel,
 .listening-study .study-stage-selected { background: #f4ecfb; border-color: #e1d4ef; }
 .listening-study .question-evidence { border-left: 3px solid #ded0ed; padding-left: 1rem; margin: 1rem 0; }
