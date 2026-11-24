@@ -1,0 +1,52 @@
+body.listening-study {
+  --bg: #f7f3fc;
+  --panel: #fff;
+  --ink: #332748;
+  --muted: #655879;
+  --sea: #654995;
+  --sea2: #694da0;
+  --teal: #694da0;
+  --mint: #eee5fa;
+  --pale: #f6f0fc;
+  --line: #e3d8f1;
+  background: var(--bg);
+}
+.listening-study .sidebar { background: #ede4f8; border-color: #e1d5ed; }
+.listening-study .nav button.active,
+.listening-study button.primary { background: #694d97; color: white; }
+.listening-study .bar i { background: #9475bb; }
+.listening-study .book,
+.listening-study .tag,
+.listening-study .context-badge,
+.listening-study .example-source-original,
+.listening-study .sentence-collection {
+  background: #f1e9fa; color: #543d78; border-color: #dfd1ee;
+}
+.listening-study .original-player audio { width: min(100%, 560px); display: block; }
+.listening-study .question-answer { font-weight: 700; color: #543d78; }
+.listening-study .question-priority h3 { color: #8c3558; }
+.listening-study .question-details { margin-top: 1rem; }
+.listening-study .listening-speaker { margin-left: .5rem; color: var(--muted); }
+body.listening-study {
+  --green: #694da0;
+  --paper: #f7f3fc;
+}
+.listening-study .book h3,
+.listening-study .book p { color: #543d78; }
+.listening-study .meaning,
+.listening-study .speaker,
+.listening-study .paragraph-heading,
+.listening-study .library-term,
+.listening-study .library-main-meaning { color: #543d78; }
+.listening-study .sentence-row.is-flagged,
+.listening-study .library-entry.is-current,
+.listening-study .example { background: #f8f3fd; border-color: #e3d8f1; }
+.listening-study .sentence-flag-panel,
+.listening-study .study-stage-selected { background: #f4ecfb; border-color: #e1d4ef; }
+.listening-study .question-evidence { border-left: 3px solid #ded0ed; padding-left: 1rem; margin: 1rem 0; }
+.listening-study .study-stage-options button[aria-pressed="true"] { background: #694d97; border-color: #694d97; }
+.listening-study .study-stage-count,
+.listening-study .sentence-collection-count,
+.listening-study .sentence-flag-toggle.is-flagged { background: #ede3f7; color: #543d78; border-color: #d6c4ea; }
+.listening-study .sentence-reason-option { color: #543d78; }
+.listening-study .sentence-reason-option input { accent-color: #694d97; }
