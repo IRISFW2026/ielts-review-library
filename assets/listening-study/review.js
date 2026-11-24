@@ -27,8 +27,9 @@ window.ListeningStudy = {
       </details>
     </article>`;
     return `<section class="card wrong-review">
-      <h2>错题解析 · ${wrong.length} 题</h2>
+      <h2>错题解析</h2>
+      ${this.player(recording)}
       ${wrong.map(questionCard).join('')}
-    </section>${this.player(recording)}`;
+    </section>`;
   }
 };
