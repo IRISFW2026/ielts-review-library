@@ -22,7 +22,21 @@ body.listening-study {
 .listening-study .sentence-collection {
   background: #f1e9fa; color: #543d78; border-color: #dfd1ee;
 }
-.listening-study .original-player audio { width: min(100%, 560px); display: block; }
+.listening-study .original-player {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  margin: 12px 0;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.listening-study .original-player h2 { margin: 0; font-size: 15px; }
+.listening-study .original-player audio { display: block; width: min(100%, 460px); height: 42px; }
+.listening-study .original-player p { flex-basis: 100%; margin: 0; font-size: 12px; }
+.listening-study .wrong-review { min-height: 0; padding: clamp(14px, 2vw, 24px); }
 .listening-study .question-answer { font-weight: 700; color: #543d78; }
 .listening-study .question-priority h3 { color: #8c3558; }
 .listening-study .question-details { margin-top: 1rem; }
