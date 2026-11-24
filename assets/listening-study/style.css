@@ -64,39 +64,78 @@ body.listening-study {
 .listening-study .sentence-flag-toggle.is-flagged { background: #ede3f7; color: #543d78; border-color: #d6c4ea; }
 .listening-study .sentence-reason-option { color: #543d78; }
 .listening-study .sentence-reason-option input { accent-color: #694d97; }
-.listening-study #sentence-list { min-height: 0; padding: clamp(12px, 2vw, 24px); }
-.listening-study #sentence-list .paragraph-heading { font-size: 19px; margin: 18px 0 4px; }
+/* Keep the transcript on the same reading column as the section headings. */
+.listening-study #sentence-list { min-height: 0; padding: clamp(14px, 2vw, 24px); }
+.listening-study #sentence-list .paragraph-heading { font-size: 19px; margin: 20px 0 4px; }
 .listening-study #sentence-list .paragraph-heading:first-child { margin-top: 0; }
-.listening-study #sentence-list .sentence-row { padding: 8px 4px; }
-.listening-study .listening-sentence-meta { font-size: 12px; }
-.listening-study .sentence-row .sentence-text { margin: 2px 0; font-size: 17px; line-height: 1.55; }
+.listening-study #sentence-list .sentence-row {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: start;
+  gap: 3px 14px;
+  padding: 10px 0;
+}
+.listening-study #sentence-list .sentence-row.is-flagged {
+  border-left: 0;
+  box-shadow: inset 3px 0 #9475bb;
+  background: #f8f3fd;
+}
+.listening-study .listening-sentence-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  font-size: 12px;
+}
+.listening-study .listening-sentence-meta .tag { padding: 2px 5px; }
+.listening-study .listening-sentence-meta .listening-speaker { margin: 0; }
+.listening-study #sentence-list .sentence-text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
 .listening-study .sentence-text .speaker {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  min-width: 34px;
-  min-height: 34px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
   padding: 0;
   vertical-align: middle;
   background: #f1e9fa;
 }
 .listening-study .sentence-text .speaker span { display: none; }
 .listening-study .listening-sentence-tools {
+  grid-column: 2;
   display: flex;
   flex-wrap: wrap;
-  align-items: start;
-  gap: 4px 14px;
-  font-size: 13px;
+  align-items: flex-start;
+  gap: 4px 8px;
 }
-.listening-study .listening-sentence-tools > details { margin: 0; }
-.listening-study .listening-sentence-tools summary { padding: 5px 0; }
-.listening-study .listening-sentence-tools > details[open] { flex-basis: 100%; }
-.listening-study .listening-sentence-tools .sentence-actions { margin: 0; }
-.listening-study .listening-sentence-tools .sentence-flag-toggle {
-  padding: 4px 8px;
-  background: #f8f3fd;
-  border-color: #dfd1ee;
+.listening-study #sentence-list .listening-sentence-tools > details { margin: 0; }
+.listening-study #sentence-list .listening-sentence-tools > details[open] { flex-basis: 100%; }
+.listening-study #sentence-list .listening-sentence-tools summary,
+.listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle {
+  box-sizing: border-box;
+  min-height: 32px;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 18px;
   color: #543d78;
 }
+.listening-study #sentence-list .listening-sentence-tools summary { border: 1px solid transparent; }
+.listening-study #sentence-list .listening-sentence-tools .sentence-actions { margin: 0; }
+.listening-study .listening-sentence-tools .sentence-flag-toggle { background: #f8f3fd; border-color: #dfd1ee; }
 .listening-study .listening-sentence-tools .sentence-flag-panel { flex-basis: 100%; margin-top: 2px; }
+.listening-study .sentence-row > details { grid-column: 2; }
+.listening-study .transcript-toolbar { margin: 12px 0; }
+.listening-study .transcript-toolbar .original-player { margin: 0 0 8px; }
+.listening-study .transcript-toolbar .controls { margin: 0; }
+@media (max-width: 540px) {
+  .listening-study #sentence-list .sentence-row { grid-template-columns: minmax(0, 1fr); }
+  .listening-study .listening-sentence-tools,
+  .listening-study .sentence-row > details { grid-column: 1; }
+  .listening-study .listening-sentence-meta { min-height: 22px; }
+}
