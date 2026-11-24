@@ -190,11 +190,18 @@ function sentenceList(){
  const rows=source.map(function(x,index){return {sentence:x,index:index}}).filter(function(entry){return (entry.sentence.en+entry.sentence.zh).toLowerCase().includes(search.toLowerCase())});
  $('sentence-list').innerHTML=rows.map(function(entry){
   const x=entry.sentence,number=entry.index+1,isOriginal=sentenceType==='original',flag=isOriginal?sentenceFlag(number):null;
-  let html='<article class="list-item sentence-row'+(flag?' is-flagged':'')+'" id="sentence-row-'+number+'" data-sentence-row="'+number+'"><span class="tag">'+escapeHTML(x.paragraph)+(listening?' · ':' 段 · ')+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'+(listening&&x.speaker?'<span class="listening-speaker">'+escapeHTML(x.speaker)+'</span>':'')+'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+'<details><summary>查看中文</summary><p>'+escapeHTML(x.zh)+'</p></details>';
-  if(isOriginal){
-   html+=sentenceFlagControls(number);
+  const opening='<article class="list-item sentence-row'+(flag?' is-flagged':'')+'" id="sentence-row-'+number+'" data-sentence-row="'+number+'">';
+  const translation='<details><summary>查看中文</summary><p>'+escapeHTML(x.zh)+'</p></details>';
+  let content;
+  if(listening){
+   content='<div class="listening-sentence-meta"><span class="tag">'+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+escapeHTML(x.speaker)+'</span></div>'
+    +'<p class="sentence-text"><span lang="en">'+escapeHTML(x.en)+'</span> '+playButton(x.en,'朗读整句',true)+'</p>'
+    +'<div class="listening-sentence-tools">'+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
+  }else{
+   content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
+    +'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+translation+(isOriginal?sentenceFlagControls(number):'');
   }
-  return (entry===rows[0]||rows[rows.indexOf(entry)-1].sentence.paragraph!==x.paragraph?'<h2 class="paragraph-heading" aria-label="'+escapeHTML(x.paragraph)+' 段">'+escapeHTML(x.paragraph)+'</h2>':'')+html+sentenceNotes(x)+'</article>';
+  return (entry===rows[0]||rows[rows.indexOf(entry)-1].sentence.paragraph!==x.paragraph?'<h2 class="paragraph-heading" aria-label="'+escapeHTML(x.paragraph)+' 段">'+escapeHTML(x.paragraph)+'</h2>':'')+opening+content+sentenceNotes(x)+'</article>';
  }).join('')||'<p>没有匹配的句子。</p>';
  renderSentenceCollection();
 }

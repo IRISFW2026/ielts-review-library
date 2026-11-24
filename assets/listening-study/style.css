@@ -64,3 +64,38 @@ body.listening-study {
 .listening-study .sentence-flag-toggle.is-flagged { background: #ede3f7; color: #543d78; border-color: #d6c4ea; }
 .listening-study .sentence-reason-option { color: #543d78; }
 .listening-study .sentence-reason-option input { accent-color: #694d97; }
+.listening-study #sentence-list { min-height: 0; padding: clamp(12px, 2vw, 24px); }
+.listening-study #sentence-list .paragraph-heading { font-size: 19px; margin: 18px 0 4px; }
+.listening-study #sentence-list .paragraph-heading:first-child { margin-top: 0; }
+.listening-study #sentence-list .sentence-row { padding: 8px 4px; }
+.listening-study .listening-sentence-meta { font-size: 12px; }
+.listening-study .sentence-row .sentence-text { margin: 2px 0; font-size: 17px; line-height: 1.55; }
+.listening-study .sentence-text .speaker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  vertical-align: middle;
+  background: #f1e9fa;
+}
+.listening-study .sentence-text .speaker span { display: none; }
+.listening-study .listening-sentence-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 4px 14px;
+  font-size: 13px;
+}
+.listening-study .listening-sentence-tools summary { padding: 5px 0; }
+.listening-study .listening-sentence-tools > details[open] { flex-basis: 100%; }
+.listening-study .listening-sentence-tools .sentence-actions { margin: 0; }
+.listening-study .listening-sentence-tools .sentence-flag-toggle {
+  padding: 4px 8px;
+  background: #f8f3fd;
+  border-color: #dfd1ee;
+  color: #543d78;
+}
+.listening-study .listening-sentence-tools .sentence-flag-panel { flex-basis: 100%; margin-top: 2px; }
