@@ -24,8 +24,8 @@
 
 | 日期 | 科目与题型 | 标准名称与链接 |
 |---|---|---|
-| 2026-11-24 | 阅读 练习 | [1124-阅读-练习-Mapungubwe 马蓬古布韦王国](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/reading/practice/mapungubwe/) |
-| 2026-11-23 | 阅读 练习 | [1123-阅读-The Brassica Family](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-23/reading/practice/the-brassica-family/) |
+| 2026-11-24 | 阅读 模考 | [1124-阅读-模考-Mapungubwe 马蓬古布韦王国](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/reading/practice/mapungubwe/) |
+| 2026-11-23 | 阅读 真题 | [1123-阅读-真题-The Brassica Family 芸薹类植物](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-23/reading/practice/the-brassica-family/) |
 | 2026-11-11 | 阅读 真题 | [1111-阅读-真题-Global Warming in New Zealand 新西兰的全球变暖](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/reading/exam/global-warming-in-new-zealand/) |
 | 2026-11-11 | 写作 小作文 | [1111-写作-小作文-Doctor in Australia 澳大利亚医生人数、性别与出生地](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/) |
 | 2026-11-11 | 听力 Part 3 | [1111-听力-Part 3-Computer Labs 大学电脑机房](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/listening/part-3/computer-labs/) |
@@ -58,7 +58,7 @@
 | 2026-10-21 | 听力 Part 2 | [1021-听力-Part 2-Vacation Jobs 假期工作](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-2/vacation-jobs/) |
 | 2026-10-21 | 听力 Part 1 | [1021-听力-Part 1-Nature Farm 果园求职](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-1/nature-farm/) |
 | 2026-10-21 | 听力 Part 4 | [1021-听力-Part 4-Canadian Maple Syrup 加拿大枫糖浆](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-4/canadian-maple-syrup/) |
-| 2026-10-20 | 阅读 练习 | [1020-阅读-The Spread of the Water Hyacinth](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/the-spread-of-the-water-hyacinth/) |
+| 2026-10-20 | 阅读 真题 | [1020-阅读-真题-The Spread of the Water Hyacinth 水葫芦的蔓延](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/the-spread-of-the-water-hyacinth/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Saving the saiga](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/saving-the-saiga/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Rethinking the Past](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/rethinking-the-past/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Kākāpō 鸮鹦鹉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/kakapo/) |
@@ -105,3 +105,4 @@ node scripts/build-catalog.mjs --check
 - Singing：2026年10月6日的9道Part 1问答、纠错、关键词和跟读。
 
 原网址保留为跳转入口。两库的GitHub Pages使用同一域名，模考工具继续沿用原localStorage键；页面不上传或迁入用户录音。录音仍需在刷新或关闭前导出。详见 [迁移记录](docs/speaking-migration.md)。
+

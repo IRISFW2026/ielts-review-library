@@ -7,7 +7,7 @@
       "id": "mapungubwe-1124",
       "date": "2026-11-24",
       "skill": "阅读",
-      "kind": "练习",
+      "kind": "模考",
       "en": "Mapungubwe",
       "zh": "马蓬古布韦王国",
       "topic": "历史与文化",
@@ -22,14 +22,14 @@
       "dateBasis": "原材料未标注学习日期，采用首次制作日期2026-11-24",
       "source": "用户提供导语、A–G七段全文及207项词汇表；只用所给原文例句；未提供题目。",
       "aliases": [],
-      "title": "1124-阅读-练习-Mapungubwe 马蓬古布韦王国",
+      "title": "1124-阅读-模考-Mapungubwe 马蓬古布韦王国",
       "url": "/ielts-review-library/reviews/2026-11-24/reading/practice/mapungubwe/"
     },
     {
       "id": "the-brassica-family-1123",
       "date": "2026-11-23",
       "skill": "阅读",
-      "kind": "练习",
+      "kind": "真题",
       "en": "The Brassica Family",
       "zh": "芸薹类植物",
       "topic": "自然与生态",
@@ -41,9 +41,8 @@
       "description": "109 项分级词汇与语块 · 四级翻卡与统一快捷键 · 32 句原文与难点标记 · 错题与答案解析",
       "path": "reviews/2026-11-23/reading/practice/the-brassica-family/index.html",
       "dateBasis": "用户指定 1123",
-      "displayTitle": "1123-阅读-The Brassica Family",
       "aliases": [],
-      "title": "1123-阅读-The Brassica Family",
+      "title": "1123-阅读-真题-The Brassica Family 芸薹类植物",
       "url": "/ielts-review-library/reviews/2026-11-23/reading/practice/the-brassica-family/"
     },
     {
@@ -687,9 +686,9 @@
       "id": "the-spread-of-the-water-hyacinth-1020",
       "date": "2026-10-20",
       "skill": "阅读",
-      "kind": "练习",
+      "kind": "真题",
       "en": "The Spread of the Water Hyacinth",
-      "zh": "水葫芦的传播、危害与利用",
+      "zh": "水葫芦的蔓延",
       "topic": "自然与生态",
       "tags": [
         "自然与生态",
@@ -700,10 +699,9 @@
       "description": "203项词汇与语块 · 五星重要程度 · 四级翻卡 · 39句原文与难点标记",
       "path": "reviews/2026-10-20/reading/practice/the-spread-of-the-water-hyacinth/index.html",
       "dateBasis": "用户指定1020",
-      "displayTitle": "1020-阅读-The Spread of the Water Hyacinth",
       "source": "用户提供完整文章及已确认的A–H顺序词汇表；例句均来自所提供原文；未提供题目。",
       "aliases": [],
-      "title": "1020-阅读-The Spread of the Water Hyacinth",
+      "title": "1020-阅读-真题-The Spread of the Water Hyacinth 水葫芦的蔓延",
       "url": "/ielts-review-library/reviews/2026-10-20/reading/practice/the-spread-of-the-water-hyacinth/"
     },
     {
