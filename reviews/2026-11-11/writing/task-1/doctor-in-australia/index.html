@@ -159,6 +159,45 @@ th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-a
 #library .library-actions button{padding:5px 10px;font-size:12px}
 #library .example-line{padding-top:10px}
 @media(max-width:600px){#cards .example-line .speaker span{display:none}.top .soundstatus{text-align:right;font-size:10px}}
+</style><style>#cards,#library{width:min(100%,820px);margin-inline:auto}
+#cards .study-stage-options{gap:6px}
+#cards .study-stage-options button{min-height:38px;padding:6px 10px}
+#cards .controls,#library .controls{margin:11px 0;gap:8px}
+#cards .controls select,#library .controls select,#library .controls input{padding:8px 10px}
+#cards .study-card{min-height:0;margin:14px 0 0;padding:22px clamp(16px,3vw,30px)}
+#cards .study-card .center{margin:19px auto 13px}
+#cards .study-card .term{font-size:clamp(29px,4vw,44px);line-height:1.2;margin:0 0 9px}
+#cards .study-card .word-meta{margin:0 0 13px;gap:8px}
+#cards .study-card .reveal-row{margin:12px 0 0}
+#cards .study-card .meaning{margin:13px 0 5px}
+#cards .study-card .center .muted{margin:0}
+#cards .study-card .example{padding-top:13px;margin-top:15px}
+#cards .study-card .example-item{margin-top:12px;padding:8px 0 0}
+#cards .study-card .example-item p{margin:0}
+#cards .grades{margin-top:14px}
+#cards .grades button{min-height:67px}
+#cards .bottom{margin:11px 0}
+#library .library-search{margin:9px 0 0}
+#library .library-entry{margin:0;padding:16px 0;border-radius:0}
+#library .library-entry:last-child{border-bottom:0}
+#library .library-title-line{grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:10px}
+#library .library-title-line .library-pronounce{width:38px;min-width:38px;height:38px;min-height:38px;margin:0;padding:8px}
+#library .library-title-content{align-items:baseline;column-gap:11px}
+#library .library-title-content .library-term{font-size:clamp(20px,2.6vw,26px)}
+#library .library-main-meaning{font-size:15px}
+#library .library-jump{padding:5px 9px;font-size:12px;white-space:nowrap}
+#library .word-meta,#library .library-note,#library .library-example{margin-left:48px}
+#library .library-note{margin-top:4px}
+#library .library-example{margin-top:8px;padding-top:0;border-top:0;width:calc(100% - 48px);max-width:none}
+@media(max-width:600px){
+  #cards .study-stage-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #cards .controls select,#library .controls select{max-width:100%;min-width:0}
+  #library .library-title-line{grid-template-columns:34px minmax(0,1fr) auto;gap:6px}
+  #library .library-title-line .library-pronounce{width:34px;min-width:34px;height:36px;min-height:36px}
+  #library .library-jump{min-width:0;padding:5px 6px}
+  #library .word-meta,#library .library-note,#library .library-example{margin-left:40px}
+  #library .library-example{width:calc(100% - 40px)}
+}
 </style></head>
 <body><div class="shell"><aside class="sidebar"><div class="brand">雅思写作 <span>IELTS WRITING</span></div><div class="book"><h3 lang="en">Doctors in Australia</h3><p>雅思写作 Task 1 · 1111</p></div><nav class="nav" aria-label="学习模块"><button type="button" data-tab="focus"><span aria-hidden="true">☑</span>考察要点</button><button type="button" data-tab="cards"><span aria-hidden="true">◫</span>翻卡复习</button><button type="button" data-tab="library"><span aria-hidden="true">▤</span>全部词库</button><button type="button" data-tab="essay"><span aria-hidden="true">☷</span>完整全文</button><button type="button" data-tab="dictation"><span aria-hidden="true">✎</span>句子默写</button><button type="button" data-tab="patterns"><span aria-hidden="true">▤</span>可迁移句子</button><button type="button" data-tab="settings"><span aria-hidden="true">⚙</span>学习设置</button></nav></aside>
 <main class="main"><nav class="catalog-return" aria-label="复习库导航"><a href="https://irisfw2026.github.io/ielts-review-library/index.html">← 复习总览</a><span>2026-11-11 · 写作</span></nav><header class="top"><div><h1>Doctors in Australia｜澳大利亚医生</h1><div class="sub">Task 1 · 混合图表</div></div><div class="soundstatus" id="voice-summary" role="status"></div></header>
@@ -481,8 +520,8 @@ function renderStudy() {
   const shown = revealed
     ? '<div class="meaning context-meaning">'+escapeText(card[2])+' <span class="context-badge">本题义</span></div><p class="small muted">搭配／同义替换：'+escapeText(card[4])+'</p>'
     : '<p class="reveal-row"><button data-study-action="reveal" class="primary">揭晓释义 · Enter ↵</button></p>';
-  const answer = revealed ? '<div class="example">'+sourceHtml(i)+'<div class="example-item"><p><span class="example-source example-source-supplemental">迁移例句</span>'+escapeText(card[5])+'</p></div></div><div class="grades">'+grades.map(([en,zh],g)=>'<button class="grade-'+en.toLowerCase()+'" data-grade="'+(g+1)+'"><b>'+en+'</b><span>'+zh+'</span><small>'+formatDelay(scheduleRecord(rec(i),g+1).intervalDays)+'</small></button>').join('')+'</div><p class="small muted">Enter 揭晓释义 · Space 发音 · 1 Again · 2 Hard · 3 Good · 4 Easy</p>':'';
-  studyPane.insertAdjacentHTML('beforeend','<section class="card" tabindex="-1"><div class="cardtop"><span class="tag">'+(isWord(i)?'WORD · 单词':'PHRASE · 语块')+' / '+label+'</span><span class="counter">本轮已完成 '+completed+' · 待练 '+(queue.length+1)+'</span></div><div class="center"><div class="term" lang="en">'+escapeText(card[0])+'</div><div class="word-meta">'+wordMetadata(i)+'</div>'+speaker('say-term',i,'播放读音')+shown+'</div>'+answer+'</section><div class="bottom"><span>间隔复习 · 到期词优先，五星重要词先学</span><button data-study-action="skip">暂时跳过</button></div>');
+  const answer = revealed ? '<div class="example">'+sourceHtml(i)+'<div class="example-item"><p><span class="example-source example-source-supplemental">迁移例句</span>'+escapeText(card[5])+'</p></div></div><div class="grades">'+grades.map(([en,zh],g)=>'<button class="grade-'+en.toLowerCase()+'" data-grade="'+(g+1)+'"><b>'+en+'</b><span>'+zh+'</span><small>'+formatDelay(scheduleRecord(rec(i),g+1).intervalDays)+'</small></button>').join('')+'</div>':'';
+  studyPane.insertAdjacentHTML('beforeend','<section class="card study-card'+(revealed?' is-revealed':'')+'" tabindex="-1"><div class="cardtop"><span class="tag">'+(isWord(i)?'WORD · 单词':'PHRASE · 语块')+' / '+label+'</span><span class="counter">本轮已完成 '+completed+' · 待练 '+(queue.length+1)+'</span></div><div class="center"><div class="term" lang="en">'+escapeText(card[0])+'</div><div class="word-meta">'+wordMetadata(i)+'</div><div class="study-pronunciation">'+speaker('say-term',i,'播放读音')+'</div>'+shown+'</div>'+answer+'</section><div class="bottom"><span>Enter 揭晓释义 · Space 发音 · 1–4 评估熟练度</span><button data-study-action="skip">暂时跳过</button></div>');
 }
 function speakEntry(button) {
   if(button.dataset.sayTerm!==undefined) speak(cards[Number(button.dataset.sayTerm)][0]);
@@ -543,7 +582,7 @@ function renderLibrary() {
   document.getElementById('vocab-count').textContent=found.length+' / '+cards.length+' 条词汇';
   document.getElementById('vocab-list').innerHTML=found.map(i=>{
     const [term,,meaning,,collocations,example]=cards[i];
-    return '<article class="library-entry"><div class="library-headings"><div class="library-title-line"><button class="speaker library-pronounce" data-say-term="'+i+'" aria-label="朗读 '+escapeText(term)+'">'+audioIcon+'</button><div class="library-title-content"><span class="library-term" lang="en">'+escapeText(term)+'</span><span class="library-main-meaning">'+escapeText(meaning)+' <span class="context-badge">本题义</span></span></div></div><div class="word-meta">'+wordMetadata(i)+'</div><p class="library-note">搭配／同义替换：'+escapeText(collocations)+'</p></div><details class="library-example example"><summary>范文例句与迁移例句</summary>'+sourceHtml(i)+'<p class="example-zh"><span class="example-source example-source-supplemental">迁移例句</span>'+escapeText(example)+'</p></details><div class="library-actions"><button data-vocab-card="'+i+'">去翻卡</button></div></article>';
+    return '<article class="library-entry"><div class="library-headings"><div class="library-title-line"><button class="speaker library-pronounce" data-say-term="'+i+'" aria-label="朗读 '+escapeText(term)+'">'+audioIcon+'</button><div class="library-title-content"><span class="library-term" lang="en">'+escapeText(term)+'</span><span class="library-main-meaning">'+escapeText(meaning)+' <span class="context-badge">本题义</span></span></div><button class="library-jump" data-vocab-card="'+i+'">去翻卡 <span aria-hidden="true">→</span></button></div><div class="word-meta">'+wordMetadata(i)+'</div><p class="library-note">搭配／同义替换：'+escapeText(collocations)+'</p></div><details class="library-example example"><summary>范文例句与迁移例句</summary>'+sourceHtml(i)+'<p class="example-zh"><span class="example-source example-source-supplemental">迁移例句</span>'+escapeText(example)+'</p></details></article>';
   }).join('')||'<p class="muted">没有匹配的词汇。</p>';
 }
 libraryPane.oninput=event=>{if(event.target.id==='vocab-search')renderLibrary();};
