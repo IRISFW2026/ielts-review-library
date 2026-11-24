@@ -343,5 +343,20 @@
     "imageWidth": 800,
     "imageHeight": 532,
     "bytes": 153973
+  },
+  {
+    "id": "artificial-intelligence-1024",
+    "caption": "神经网络｜AI主题示意",
+    "alt": "以不同颜色区分输入层、隐藏层和输出层的人工神经网络示意图，并非人脑结构照片",
+    "title": "File:Colored neural network.svg",
+    "author": "Glosser.ca",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Colored_neural_network.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "file": "assets/reading-topics/artificial-intelligence-1024.png",
+    "imageWidth": 500,
+    "imageHeight": 602,
+    "bytes": 49745
   }
 ]

@@ -52,6 +52,7 @@
 | 2026-10-24 | 写作 小作文 | [1024-写作-小作文-TV Centre Layout 地图 · 电视中心布局](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/tv-centre-layout/) |
 | 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Plastic Bottle Recycling 流程图 · 塑料瓶回收](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/plastic-bottle-recycling/) |
 | 2026-10-24 | 写作 小作文 | [1024-写作-小作文-Course Ratings 表格 · 课程评价](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/writing/task-1/course-ratings/) |
+| 2026-10-24 | 阅读 模考 | [1024-阅读-模考-Artificial Intelligence 人工智能](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-24/reading/practice/artificial-intelligence/) |
 | 2026-10-23 | 写作 小作文 | [1023-写作-小作文-Town Population 英国小镇人口](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/writing/task-1/town-population/) |
 | 2026-10-23 | 口语 模考 | [口语模考，Speaking Studio](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-23/speaking/mock/speaking-studio/) |
 | 2026-10-22 | 写作 小作文 | [1022-写作-小作文-Australia Employment 澳大利亚就业占比](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-22/writing/task-1/australia-employment/) |
@@ -105,5 +106,3 @@ node scripts/build-catalog.mjs --check
 - Singing：2026年10月6日的9道Part 1问答、纠错、关键词和跟读。
 
 原网址保留为跳转入口。两库的GitHub Pages使用同一域名，模考工具继续沿用原localStorage键；页面不上传或迁入用户录音。录音仍需在刷新或关闭前导出。详见 [迁移记录](docs/speaking-migration.md)。
-
-

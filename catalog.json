@@ -565,6 +565,28 @@
       "aliases": []
     },
     {
+      "id": "artificial-intelligence-1024",
+      "date": "2026-10-24",
+      "skill": "阅读",
+      "kind": "模考",
+      "en": "Artificial Intelligence",
+      "zh": "人工智能",
+      "topic": "科学与技术",
+      "tags": [
+        "科学与技术",
+        "人工智能",
+        "科技与社会",
+        "词汇复习"
+      ],
+      "description": "201项词汇与语块 · 对应原文例句 · 四项学习状态筛选 · A–M原文41句与难点标记",
+      "path": "reviews/2026-10-24/reading/practice/artificial-intelligence/index.html",
+      "dateBasis": "用户指定1024",
+      "source": "用户提供13个自然段全文及201项词汇表；所有例句采用对应原文；未提供题目。",
+      "aliases": [],
+      "title": "1024-阅读-模考-Artificial Intelligence 人工智能",
+      "url": "/ielts-review-library/reviews/2026-10-24/reading/practice/artificial-intelligence/"
+    },
+    {
       "id": "town-population",
       "date": "2026-10-23",
       "skill": "写作",
