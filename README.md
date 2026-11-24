@@ -59,13 +59,13 @@
 | 2026-10-21 | 听力 Part 1 | [1021-听力-Part 1-Nature Farm 果园求职](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-1/nature-farm/) |
 | 2026-10-21 | 听力 Part 4 | [1021-听力-Part 4-Canadian Maple Syrup 加拿大枫糖浆](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-21/listening/part-4/canadian-maple-syrup/) |
 | 2026-10-20 | 阅读 真题 | [1020-阅读-真题-The Spread of the Water Hyacinth 水葫芦的蔓延](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/the-spread-of-the-water-hyacinth/) |
-| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Saving the saiga](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/saving-the-saiga/) |
-| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Rethinking the Past](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/rethinking-the-past/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Saving the saiga 拯救高鼻羚羊](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/saving-the-saiga/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Rethinking the Past 重新审视史前历史](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/rethinking-the-past/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Kākāpō 鸮鹦鹉](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/kakapo/) |
 | 2026-10-20 | 听力 Part 3 | [1020-听力-Part 3-How Babies and Children Learn 婴幼儿如何学习](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/listening/part-3/how-babies-and-children-learn/) |
-| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Do animals dream?](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/do-animals-dream/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-Do animals dream? 动物会做梦吗](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/do-animals-dream/) |
 | 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The Davies Sisters 戴维斯姐妹](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/davies-sisters/) |
-| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The problems of getting around the city of Dar es Salaam](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/dar-es-salaam/) |
+| 2026-10-20 | 阅读 模考 | [1020-阅读-模考-The problems of getting around the city of Dar es Salaam 达累斯萨拉姆的城市交通问题](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-20/reading/practice/dar-es-salaam/) |
 | 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Robot Umpires 机器人裁判](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/robot-umpires/) |
 | 2026-10-19 | 阅读 模考 | [1019-阅读-模考-Procrastination 拖延](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-19/reading/practice/procrastination/) |
 | 2026-10-16 | 阅读 模考 | [1016-阅读-模考-Manatees 海牛](https://irisfw2026.github.io/ielts-review-library/reviews/2026-10-16/reading/practice/manatees/) |
@@ -105,4 +105,5 @@ node scripts/build-catalog.mjs --check
 - Singing：2026年10月6日的9道Part 1问答、纠错、关键词和跟读。
 
 原网址保留为跳转入口。两库的GitHub Pages使用同一域名，模考工具继续沿用原localStorage键；页面不上传或迁入用户录音。录音仍需在刷新或关闭前导出。详见 [迁移记录](docs/speaking-migration.md)。
+
 
