@@ -37,7 +37,14 @@ for(const [material,slug,total,sentenceCount] of [['seahorses','the-seahorses',2
  b.events.get('sentence-list:change')({target:{dataset:{seen:material+'-s1'},checked:true}});assert.equal(b.element('sentence-progress').textContent,'1 / '+sentenceCount);
  b=boot(material);assert.equal(b.element('sentence-progress').textContent,'1 / '+sentenceCount);
  const html=await read('reviews/2026-11-06/listening/exam/'+slug+'/index.html');const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,'IDs must be unique');
- for(const required of ['quiz-panel','sentences-panel','cards-panel','voice','export','import-file'])assert.ok(ids.includes(required));
+ for(const required of ['title','voice-status','stats','app','toast'])assert.ok(ids.includes(required));
+ for(const view of ['cards','sentences','quiz','library','settings'])assert.ok(html.includes('data-view="'+view+'"'));
+ const migrated=vm.createContext({window:{}});
+ vm.runInContext(await read('reviews/2026-11-06/listening/exam/'+slug+'/data.js'),migrated);
+ const page=migrated.window.READING_REVIEW_DATA;
+ assert.deepEqual(Array.from(page.items,c=>c.id),Array.from(b.D.cards.filter(c=>c.material===material),c=>c.id));
+ assert.equal(page.sentences.length,sentenceCount);
+ assert.deepEqual(Array.from(page.questions,c=>[c.number,c.answer,c.wrong]),Array.from(q.filter(c=>c.wrong),c=>[c.n,c.answer,true]));
  assert.ok(html.includes('/ielts-review-library/index.html'));
  console.log('PASS',material,'grading; number/spelling normalization; one-missed retry; all-questions mode; history/draft/sentence persistence; complete cards; HTML structure; both scripts in one context');
 }

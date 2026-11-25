@@ -135,7 +135,7 @@ function libraryFamiliarity(x){const r=rec(x),level=[1,2,3,4].includes(r.level)?
 function libraryPronounce(x){return `<button class="speaker library-pronounce" data-say="${escapeHTML(x.audioTerm||x.term)}" type="button" title="朗读 ${escapeHTML(x.term)}" aria-label="朗读 ${escapeHTML(x.term)}">${icon}</button>`}
 function library(){let rows=DATA.items.filter(x=>(kind==='all'||kind===x.type)&&(starFilter==='all'||String(x.stars)===starFilter)&&(x.term+' '+x.zh+' '+(x.ipa||'')+' '+(x.pos||'')).toLowerCase().includes(search.trim().toLowerCase())).sort((a,b)=>libraryOrder==='source'?a.sourceOrder-b.sourceOrder:b.stars-a.stars||a.sourceOrder-b.sourceOrder);if(!rows.some(x=>x.id===activeLibraryId))activeLibraryId=rows[0]?.id||null;return `<label class="library-search" for="search">搜索全部词库</label><div class="controls"><input id="search" type="search" aria-label="搜索词库" placeholder="输入英文、中文或音标，例如：species / 物种 / 名词" value="${escapeHTML(search)}"><select id="kind"><option value="all">全部类型</option><option value="word">单词</option><option value="phrase">短语</option></select><select id="star-filter" aria-label="按五星重要程度筛选"><option value="all">全部重要程度</option>${[5,4,3,2,1].map(n=>`<option value="${n}">${"★".repeat(n)} · ${n} 星</option>`).join('')}</select></div><p class="search-help">支持英文、中文、音标实时搜索。右侧可设置四档熟练度，自动影响翻卡出现时间。点击词条选中后，按空格键播放读音；在搜索框输入时空格键照常使用。</p><div class="controls"><label>词库顺序 <select id="library-order"><option value="source">${listening?'材料首次出现顺序':PARAGRAPH_RANGE+' 段落与首次出现顺序'}</option><option value="priority">五星重要程度优先</option></select></label></div><p class="small muted">共 ${rows.length} 条；${libraryOrder==='source'?listening?'按材料首次出现顺序排列':'按'+PARAGRAPH_RANGE+'自然段与段内首次出现顺序排列':'按重要程度排列'}。</p><section class="card">${rows.map(x=>`<article class="list-item library-entry${activeLibraryId===x.id?' is-current':''}" data-library-id="${escapeHTML(x.id)}" tabindex="0" aria-label="${escapeHTML(x.term)}：空格键播放读音"><div class="library-word-head"><div class="library-headings"><div class="library-title-line">${libraryPronounce(x)}<span class="library-title-content"><span class="tag">${escapeHTML(x.paragraph)}${listening?'':' 段'}</span><b class="library-term">${escapeHTML(x.term)}</b><span class="library-main-meaning">${escapeHTML(libraryMeanings(x).main)} <span class="context-badge">本文义</span></span></span>${libraryFamiliarity(x)}</div>${wordMeta(x)}</div></div>${libraryMeanings(x).other?`<p class="library-secondary-meaning">其他常见义：${escapeHTML(libraryMeanings(x).other)}</p>`:''}${x.note?`<p class="library-note">${escapeHTML(x.note)}</p>`:""}${memoryHtml(x)}${x.examples.length?`<details class="example library-example"><summary>查看例句 · ${x.examples.length} 条</summary>${x.examples.map(e=>`<div class="example-item"><div class="example-line"><p class="example-en"><span class="example-source ${e.source==='original'?'example-source-original':'example-source-supplemental'}">${sourceLabel(e)}</span>${escapeHTML(e.en)}</p>${libraryExamplePlay(e)}</div><p class="example-zh">${escapeHTML(e.zh)}${e.sense?`<span class="example-sense">${escapeHTML(e.sense)}</span>`:''}${e.skill?`<span class="example-sense">${escapeHTML(e.skill)}迁移例句</span>`:''}</p></div>`).join('')}</details>`:''}</article>`).join('')||'<p>没有匹配的词条。</p>'}</section>`}
 function sentences(){
- if(listening)return '<div class="transcript-toolbar">'+listening.player(CONFIG.recording)+'<div class="controls"><input id="sentence-search" placeholder="搜索英文或中文" aria-label="搜索句子" value="'+escapeHTML(search)+'"></div></div><section class="card" id="sentence-list"></section><div id="sentence-collection"></div>';
+ if(listening)return '<div class="transcript-toolbar">'+listening.player(CONFIG.recording)+(CONFIG.transcriptNotice?'<p class="muted">'+escapeHTML(CONFIG.transcriptNotice)+'</p>':'')+'<div class="controls"><input id="sentence-search" placeholder="搜索英文或中文" aria-label="搜索句子" value="'+escapeHTML(search)+'"></div></div><section class="card" id="sentence-list"></section><div id="sentence-collection"></div>';
  return '<p class="muted">'+DATA.sentences.length+' 个原文句子。阅读时遇到理解障碍，直接在句子下方标记；读完整篇后，在页面底部集中查看并导出解析清单。</p><div class="controls"><input id="sentence-search" placeholder="搜索原文或例句" aria-label="搜索句子" value="'+escapeHTML(search)+'"></div><section class="card" id="sentence-list"></section><div id="sentence-collection"></div>'}
 let sentenceType='original';
 function sentenceFlagKey(number){return SENTENCE_FLAG_PREFIX+number}
@@ -363,6 +363,16 @@ function decodeStoredReview(raw) {
   let records = {};
   if (CONFIG.storageFormat === 'flat') records = {...raw};
   if (CONFIG.storageFormat === 'deck') records = {...objectValue(raw.records)};
+  if (CONFIG.storageFormat === 'listening-progress') {
+    const grades = {unknown:1, vague:2, known:3, mastered:4};
+    for (const [key, value] of Object.entries(objectValue(raw.progress))) {
+      const id = /^\d+$/.test(key) ? DATA.items[Number(key)]?.id : key;
+      const level = typeof value === 'string' ? grades[value] : Number(value?.level);
+      if (id && [1,2,3,4].includes(level)) {
+        records[id] = {...(typeof value === 'object' ? value : {}), level, due:value?.due || 0, reps:value?.reps || 1};
+      }
+    }
+  }
   if (CONFIG.storageFormat === 'dream') {
     for (const [id, record] of Object.entries(objectValue(raw.v))) {
       const level = record.s === 'master' ? 4 : record.s === 'weak' ? 1 : 0;
@@ -486,7 +496,7 @@ function initialView() {
   const fragment = location.hash.slice(1);
   const hash = fragment.split('/').at(-1);
   if (fragment.startsWith('paragraph-')) return 'sentences';
-  const aliases = {vocab:'cards',vocabulary:'library',reading:'sentences',passage:'sentences',questions:'quiz',review:'quiz',pairs:'quiz',mini:'quiz',dictation:'cards',meaning:'cards',overview:'cards',collocations:'library'};
+  const aliases = {flash:'cards',wrong:'quiz',transcript:'sentences',original:'sentences',vocab:'cards',vocabulary:'library',reading:'sentences',passage:'sentences',questions:'quiz',review:'quiz',pairs:'quiz',mini:'quiz',dictation:'cards',meaning:'cards',overview:'cards',collocations:'library'};
   return ['cards','sentences','library','quiz','settings'].includes(hash) ? hash : (aliases[hash] || 'cards');
 }
 
@@ -507,7 +517,7 @@ function referenceValue(value) {
 }
 
 function analysisPage() {
-  if (listening) return listening.questions({questions:DATA.questions, recording:CONFIG.recording});
+  if (listening) return listening.questions({questions:DATA.questions, recording:CONFIG.recording, notice:CONFIG.questionNotice});
   if (DATA.analysisHtml) return DATA.analysisHtml;
   const questions = DATA.questions || [];
   const wrong = questions.filter(question => question.wrong);
