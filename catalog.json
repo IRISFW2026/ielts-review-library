@@ -241,9 +241,9 @@
       "id": "doctor-in-australia-1111",
       "date": "2026-11-11",
       "skill": "写作",
-      "kind": "小作文",
-      "en": "Doctor in Australia",
-      "zh": "澳大利亚医生人数、性别与出生地",
+      "kind": "Task 1",
+      "en": "Doctors in Australia",
+      "zh": "澳大利亚医生",
       "topic": "人口与城市",
       "tags": [
         "人口与城市",
@@ -255,7 +255,7 @@
       "dateBasis": "用户2026年11月11日提供图表并完成写作讨论",
       "source": "用户提供图表数据与初稿；范文和迁移句式依据本次讨论整理",
       "aliases": [],
-      "title": "1111-写作-小作文-Doctor in Australia 澳大利亚医生人数、性别与出生地",
+      "title": "1111-写作-Task 1-Doctors in Australia 澳大利亚医生",
       "url": "/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/"
     },
     {
@@ -471,7 +471,7 @@
       "id": "university-development-1102",
       "date": "2026-11-02",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "University Development",
       "zh": "大学校园规划",
       "topic": "人口与城市",
@@ -479,13 +479,14 @@
         "人口与城市",
         "综合练习"
       ],
-      "description": "地图题 · 6.5—7分目标范文11句解析 · 12条纠错 · 24张发音翻卡 · 中译英与复写",
+      "description": "地图题 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "path": "reviews/2026-11-02/writing/task-1/university-development/index.html",
       "dateBasis": "用户提供的地图题与写作练习日期2026年11月2日",
       "source": "用户提供地图、原稿及本次批改与目标范文",
       "aliases": [],
-      "title": "1102-写作-小作文-University Development 大学校园规划",
-      "url": "/ielts-review-library/reviews/2026-11-02/writing/task-1/university-development/"
+      "title": "1102-写作-Task 1-University Development 大学校园规划",
+      "url": "/ielts-review-library/reviews/2026-11-02/writing/task-1/university-development/",
+      "displayTitle": "1102-写作-Task 1-University Development 大学校园规划"
     },
     {
       "id": "fitchton-railway-station-1102",
@@ -563,13 +564,14 @@
         "职场与就业",
         "心理与学习"
       ],
-      "description": "两篇范文 · 31句默写 · 词汇与对应论证",
+      "description": "Task 2 · 问题与解决办法 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "title": "1027-写作-大作文-Work-life balance 工作与生活平衡",
       "path": "reviews/2026-10-27/writing/task-2/work-life-balance/index.html",
       "url": "/ielts-review-library/reviews/2026-10-27/writing/task-2/work-life-balance/",
       "source": "Work-Life-Balance-Review.html",
       "aliases": [],
-      "dateBasis": "材料日期"
+      "dateBasis": "材料日期",
+      "displayTitle": "1027-写作-大作文-Work-life balance 工作与生活平衡"
     },
     {
       "id": "aa-property-rentals",
@@ -656,91 +658,96 @@
       "id": "young-population-and-residence",
       "date": "2026-10-24",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "Young Population and Where They Live",
-      "zh": "混合图 · 年轻人口与居住分布",
+      "zh": "年轻人口与居住分布",
       "topic": "人口与城市",
       "tags": [
         "人口与城市"
       ],
-      "description": "混合图 · 年轻人口 · 题目与思路批改 · 9 句范文默写 · 5 个词汇与语块",
+      "description": "混合图表 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "path": "reviews/2026-10-24/writing/task-1/young-population-and-residence/index.html",
       "dateBasis": "原五类题型练习的材料文件名 1024",
-      "title": "1024-写作-小作文-Young Population and Where They Live 混合图 · 年轻人口与居住分布",
+      "title": "1024-写作-Task 1-Young Population and Where They Live 年轻人口与居住分布",
       "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/young-population-and-residence/",
-      "aliases": []
+      "aliases": [],
+      "displayTitle": "1024-写作-Task 1-Young Population and Where They Live 年轻人口与居住分布"
     },
     {
       "id": "university-student-commuting",
       "date": "2026-10-24",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "University Student Commuting",
-      "zh": "饼图 · 大学生通勤",
+      "zh": "大学生通勤",
       "topic": "人口与城市",
       "tags": [
         "人口与城市"
       ],
-      "description": "饼图 · 大学生通勤 · 题目与思路批改 · 9 句范文默写 · 6 个词汇与语块",
+      "description": "饼图 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "path": "reviews/2026-10-24/writing/task-1/university-student-commuting/index.html",
       "dateBasis": "原五类题型练习的材料文件名 1024",
-      "title": "1024-写作-小作文-University Student Commuting 饼图 · 大学生通勤",
+      "title": "1024-写作-Task 1-University Student Commuting 大学生通勤",
       "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/university-student-commuting/",
-      "aliases": []
+      "aliases": [],
+      "displayTitle": "1024-写作-Task 1-University Student Commuting 大学生通勤"
     },
     {
       "id": "tv-centre-layout",
       "date": "2026-10-24",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "TV Centre Layout",
-      "zh": "地图 · 电视中心布局",
+      "zh": "电视中心布局",
       "topic": "人口与城市",
       "tags": [
         "人口与城市"
       ],
-      "description": "地图 · 电视中心 · 题目与思路批改 · 9 句范文默写 · 11 个词汇与语块",
+      "description": "地图题 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "path": "reviews/2026-10-24/writing/task-1/tv-centre-layout/index.html",
       "dateBasis": "原五类题型练习的材料文件名 1024",
-      "title": "1024-写作-小作文-TV Centre Layout 地图 · 电视中心布局",
+      "title": "1024-写作-Task 1-TV Centre Layout 电视中心布局",
       "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/tv-centre-layout/",
-      "aliases": []
+      "aliases": [],
+      "displayTitle": "1024-写作-Task 1-TV Centre Layout 电视中心布局"
     },
     {
       "id": "plastic-bottle-recycling",
       "date": "2026-10-24",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "Plastic Bottle Recycling",
-      "zh": "流程图 · 塑料瓶回收",
+      "zh": "塑料瓶回收",
       "topic": "自然与生态",
       "tags": [
         "自然与生态"
       ],
-      "description": "流程图 · 塑料瓶回收 · 题目与思路批改 · 10 句范文默写 · 11 个词汇与语块",
+      "description": "流程图 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "path": "reviews/2026-10-24/writing/task-1/plastic-bottle-recycling/index.html",
       "dateBasis": "原五类题型练习的材料文件名 1024",
-      "title": "1024-写作-小作文-Plastic Bottle Recycling 流程图 · 塑料瓶回收",
+      "title": "1024-写作-Task 1-Plastic Bottle Recycling 塑料瓶回收",
       "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/plastic-bottle-recycling/",
-      "aliases": []
+      "aliases": [],
+      "displayTitle": "1024-写作-Task 1-Plastic Bottle Recycling 塑料瓶回收"
     },
     {
       "id": "course-ratings",
       "date": "2026-10-24",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "Course Ratings",
-      "zh": "表格 · 课程评价",
+      "zh": "课程评价",
       "topic": "综合练习",
       "tags": [
         "综合练习"
       ],
-      "description": "表格 · 课程评价 · 题目与思路批改 · 9 句范文默写 · 9 个词汇与语块",
+      "description": "表格题 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
       "path": "reviews/2026-10-24/writing/task-1/course-ratings/index.html",
       "dateBasis": "原五类题型练习的材料文件名 1024",
-      "title": "1024-写作-小作文-Course Ratings 表格 · 课程评价",
+      "title": "1024-写作-Task 1-Course Ratings 课程评价",
       "url": "/ielts-review-library/reviews/2026-10-24/writing/task-1/course-ratings/",
-      "aliases": []
+      "aliases": [],
+      "displayTitle": "1024-写作-Task 1-Course Ratings 课程评价"
     },
     {
       "id": "artificial-intelligence-1024",
@@ -790,20 +797,21 @@
       "id": "town-population",
       "date": "2026-10-23",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "Town Population",
       "zh": "英国小镇人口",
       "topic": "人口与城市",
       "tags": [
         "人口与城市"
       ],
-      "description": "柱状图 · 1951至2011年人口 · 范文与表达",
-      "title": "1023-写作-小作文-Town Population 英国小镇人口",
+      "description": "柱状图 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
+      "title": "1023-写作-Task 1-Town Population 英国小镇人口",
       "path": "reviews/2026-10-23/writing/task-1/town-population/index.html",
       "url": "/ielts-review-library/reviews/2026-10-23/writing/task-1/town-population/",
       "source": "1023-小作文-柱状图-英国小镇人口.html",
       "aliases": [],
-      "dateBasis": "材料日期"
+      "dateBasis": "材料日期",
+      "displayTitle": "1023-写作-Task 1-Town Population 英国小镇人口"
     },
     {
       "id": "speaking-studio",
@@ -832,15 +840,15 @@
       "id": "australia-employment",
       "date": "2026-10-22",
       "skill": "写作",
-      "kind": "小作文",
+      "kind": "Task 1",
       "en": "Australia Employment",
       "zh": "澳大利亚就业占比",
       "topic": "职场与就业",
       "tags": [
         "职场与就业"
       ],
-      "description": "折线图 · 1900至2000年就业比例 · 三组范文",
-      "title": "1022-写作-小作文-Australia Employment 澳大利亚就业占比",
+      "description": "折线图 · 得分点、翻卡、词库、完整范文、句子默写与迁移句",
+      "title": "1022-写作-Task 1-Australia Employment 澳大利亚就业占比",
       "path": "reviews/2026-10-22/writing/task-1/australia-employment/index.html",
       "url": "/ielts-review-library/reviews/2026-10-22/writing/task-1/australia-employment/",
       "source": "IELTS-Task1-Line-Graph-Australia-Employment-1900-2000-Review.html",
@@ -848,7 +856,8 @@
         "Task1-Writing-Review.html",
         "IELTS-Task1-Australia-Employment-1900-2000-Review.html"
       ],
-      "dateBasis": "该页面首次发布日期 材料学习日期未标注"
+      "dateBasis": "该页面首次发布日期 材料学习日期未标注",
+      "displayTitle": "1022-写作-Task 1-Australia Employment 澳大利亚就业占比"
     },
     {
       "id": "vacation-jobs",
