@@ -35,11 +35,19 @@ window.ListeningStudy = {
         ? '<strong aria-label="' + escapeHTML(part.text + '，已选对') + '">' + escapeHTML(part.text) + '</strong>'
         : '<del>' + escapeHTML(part.text) + '</del>').join(' + ')
       : '<del>' + escapeHTML(question.chosen || '未作答') + '</del>';
+    const questionTable = table => table
+      ? '<div class="syntax-table"><table lang="en"><thead><tr>'
+        + table.headers.map(label => '<th scope="col">' + escapeHTML(label) + '</th>').join('')
+        + '</tr></thead><tbody>'
+        + table.rows.map(row => '<tr>' + row.map(cell => '<td>' + escapeHTML(cell) + '</td>').join('') + '</tr>').join('')
+        + '</tbody></table></div>'
+      : '';
     const questionCard = question => `<article class="list-item question-priority">
       <h3>Q${question.number}${question.type ? ' · ' + escapeHTML(question.type) : ''} · <span lang="en">${escapeHTML(question.question)}</span></h3>
       ${question.questionNote ? '<p class="muted">' + escapeHTML(question.questionNote) + '</p>' : ''}
       ${question.image ? '<img class="question-map" src="' + escapeHTML(question.image) + '" alt="' + escapeHTML(question.imageAlt) + '" loading="lazy">' : ''}
       ${question.instruction ? '<p lang="en">' + escapeHTML(question.instruction) + '</p>' : ''}
+      ${questionTable(question.table)}
       ${question.choices?.length ? `<details class="question-options">
         <summary>查看选项</summary>
         <ul lang="en">${question.choices.map(choice => '<li>' + escapeHTML(choice) + '</li>').join('')}</ul>

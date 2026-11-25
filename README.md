@@ -39,6 +39,7 @@
 | 2026-11-11 | 写作 Task 1 | [1111-写作-Task 1-Doctors in Australia 澳大利亚医生](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/writing/task-1/doctor-in-australia/) |
 | 2026-11-11 | 听力 Part 3 | [1111-听力-Computer Labs 大学电脑机房](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-11/listening/part-3/computer-labs/) |
 | 2026-11-10 | 听力 Part 4 | [1110-听力-The Invasion of Plants 植物入侵](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-10/listening/exam/the-invasion-of-plants/) |
+| 2026-11-10 | 听力 Part 4 | [1110-听力-Pleasanton Town Market 普莱森顿镇集市](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-10/listening/part-4/pleasanton-town-market/) |
 | 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Unlocking the Mystery of Dreams 揭开梦境之谜](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/unlocking-the-mystery-of-dreams/) |
 | 2026-11-09 | 阅读 真题 | [1109-阅读-真题-Can Hurricanes Be Moderated or Diverted? 飓风能否被减弱或改变方向？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-09/reading/exam/can-hurricanes-be-moderated-or-diverted/) |
 | 2026-11-06 | 阅读 真题 | [1106-阅读-真题-What the Managers Really Do? 管理者究竟做什么？](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-06/reading/exam/what-the-managers-really-do/) |
