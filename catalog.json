@@ -4,6 +4,28 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "stanthorpe-twinning-association-1125",
+      "date": "2026-11-25",
+      "skill": "听力",
+      "kind": "Part 2",
+      "displayTitle": "1125-听力-Stanthorpe Twinning Association 斯坦索普城镇结对协会",
+      "en": "Stanthorpe Twinning Association",
+      "zh": "斯坦索普城镇结对协会",
+      "topic": "社会与文化",
+      "tags": [
+        "城镇结对",
+        "地图标注",
+        "单项选择",
+        "剑桥雅思 19"
+      ],
+      "description": "102 张词卡 · 双语原文与原录音 · Q15–Q18 错题与 Farley House 原题地图",
+      "path": "reviews/2026-11-25/listening/part-2/stanthorpe-twinning-association/index.html",
+      "dateBasis": "用户于 2026-11-25 提供听力原文、录音、原题与作答记录",
+      "aliases": [],
+      "title": "1125-听力-Stanthorpe Twinning Association 斯坦索普城镇结对协会",
+      "url": "/ielts-review-library/reviews/2026-11-25/listening/part-2/stanthorpe-twinning-association/"
+    },
+    {
       "id": "hinchingbrooke-country-park-1125",
       "date": "2026-11-25",
       "skill": "听力",

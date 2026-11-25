@@ -24,6 +24,7 @@
 
 | 日期 | 科目与题型 | 标准名称与链接 |
 |---|---|---|
+| 2026-11-25 | 听力 Part 2 | [1125-听力-Stanthorpe Twinning Association 斯坦索普城镇结对协会](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-2/stanthorpe-twinning-association/) |
 | 2026-11-25 | 听力 Part 1 | [1125-听力-Hinchingbrooke Country Park 欣钦布鲁克乡村公园](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-1/hinchingbrooke-country-park/) |
 | 2026-11-24 | 听力 Part 4 | [1124-听力-Tardigrades 水熊虫](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/listening/part-4/tardigrades/) |
 | 2026-11-24 | 听力 Part 3 | [1124-听力-Recycling Footwear 鞋类回收](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/listening/part-3/recycling-footwear/) |
