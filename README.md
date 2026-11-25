@@ -28,6 +28,7 @@
 | 2026-11-25 | 听力 Part 1 | [1125-听力-Hinchingbrooke Country Park 欣钦布鲁克乡村公园](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-1/hinchingbrooke-country-park/) |
 | 2026-11-25 | 听力 Part 3 | [1125-听力-Food Trends 食品趋势](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-3/food-trends/) |
 | 2026-11-25 | 听力 Part 4 | [1125-听力-Céide Fields 塞德田野遗址](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-4/ceide-fields/) |
+| 2026-11-25 | 听力 Part 2 | [1125-听力-Accommodation Options 住宿选择](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-2/accommodation-options/) |
 | 2026-11-24 | 听力 Part 4 | [1124-听力-Tardigrades 水熊虫](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/listening/part-4/tardigrades/) |
 | 2026-11-24 | 听力 Part 3 | [1124-听力-Recycling Footwear 鞋类回收](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/listening/part-3/recycling-footwear/) |
 | 2026-11-24 | 阅读 模考 | [1124-阅读-模考-Mapungubwe 马蓬古布韦王国](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-24/reading/practice/mapungubwe/) |
