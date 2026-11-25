@@ -4,6 +4,28 @@
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
     {
+      "id": "hinchingbrooke-country-park-1125",
+      "date": "2026-11-25",
+      "skill": "听力",
+      "kind": "Part 1",
+      "displayTitle": "1125-听力-Hinchingbrooke Country Park 欣钦布鲁克乡村公园",
+      "en": "Hinchingbrooke Country Park",
+      "zh": "欣钦布鲁克乡村公园",
+      "topic": "自然与动物",
+      "tags": [
+        "乡村公园",
+        "学校参观",
+        "笔记填空",
+        "剑桥雅思 19"
+      ],
+      "description": "99 条单词与语块 · 中英对话与逐句朗读 · Q1、Q5、Q6、Q9 错题解析",
+      "path": "reviews/2026-11-25/listening/part-1/hinchingbrooke-country-park/index.html",
+      "dateBasis": "用户于 2026-11-25 提供听力原文、题目与作答记录",
+      "aliases": [],
+      "title": "1125-听力-Hinchingbrooke Country Park 欣钦布鲁克乡村公园",
+      "url": "/ielts-review-library/reviews/2026-11-25/listening/part-1/hinchingbrooke-country-park/"
+    },
+    {
       "id": "tardigrades-1124",
       "date": "2026-11-24",
       "skill": "听力",
