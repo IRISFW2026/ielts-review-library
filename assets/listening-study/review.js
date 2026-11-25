@@ -30,6 +30,11 @@ window.ListeningStudy = {
 
   questions({questions, recording, notice}) {
     const wrong = questions.filter(question => question.wrong);
+    const chosenAnswer = question => question.chosenParts?.length
+      ? question.chosenParts.map(part => part.correct
+        ? '<strong aria-label="' + escapeHTML(part.text + '，已选对') + '">' + escapeHTML(part.text) + '</strong>'
+        : '<del>' + escapeHTML(part.text) + '</del>').join(' + ')
+      : '<del>' + escapeHTML(question.chosen || '未作答') + '</del>';
     const questionCard = question => `<article class="list-item question-priority">
       <h3>Q${question.number}${question.type ? ' · ' + escapeHTML(question.type) : ''} · <span lang="en">${escapeHTML(question.question)}</span></h3>
       ${question.questionNote ? '<p class="muted">' + escapeHTML(question.questionNote) + '</p>' : ''}
@@ -39,7 +44,7 @@ window.ListeningStudy = {
         <summary>查看选项</summary>
         <ul lang="en">${question.choices.map(choice => '<li>' + escapeHTML(choice) + '</li>').join('')}</ul>
       </details>` : ''}
-      <p class="question-answer">你的作答 <del>${escapeHTML(question.chosen || '未作答')}</del> · 正确答案 <strong>${escapeHTML(question.answer)}</strong></p>
+      <p class="question-answer">你的作答 ${chosenAnswer(question)} · 正确答案 <strong>${escapeHTML(question.answer)}</strong></p>
       <p><b>考查重点</b>　${escapeHTML(question.focus)}</p>
       <p><b>错因</b>　${escapeHTML(question.mistake)}</p>
       <p><b>重听方法</b>　${escapeHTML(question.method)}</p>
