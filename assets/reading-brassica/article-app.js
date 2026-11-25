@@ -138,7 +138,7 @@ function sentences(){
  if(listening)return '<div class="transcript-toolbar">'+listening.player(CONFIG.recording)+(CONFIG.transcriptNotice?'<p class="muted">'+escapeHTML(CONFIG.transcriptNotice)+'</p>':'')+'<div class="controls"><input id="sentence-search" placeholder="搜索英文或中文" aria-label="搜索句子" value="'+escapeHTML(search)+'"></div></div><section class="card" id="sentence-list"></section><div id="sentence-collection"></div>';
  return '<p class="muted">'+DATA.sentences.length+' 个原文句子。阅读时遇到理解障碍，直接在句子下方标记；读完整篇后，在页面底部集中查看并导出解析清单。</p><div class="controls"><input id="sentence-search" placeholder="搜索原文或例句" aria-label="搜索句子" value="'+escapeHTML(search)+'"></div><section class="card" id="sentence-list"></section><div id="sentence-collection"></div>'}
 let sentenceType='original';
-function sentenceFlagKey(number){return SENTENCE_FLAG_PREFIX+number}
+function sentenceFlagKey(number){return SENTENCE_FLAG_PREFIX+(DATA.sentences[number-1]?.flagId??number)}
 function sentenceFlag(number){const r=state[sentenceFlagKey(number)];return r&&!r.removed?r:null}
 function sentenceFlagEntries(){return DATA.sentences.map(function(sentence,index){const number=index+1,record=sentenceFlag(number);return record?{sentence:sentence,index:number,record:record}:null}).filter(Boolean)}
 function sentenceReasonNames(reasons){return (reasons||[]).map(function(code){const found=SENTENCE_REASON_OPTIONS.find(function(item){return item[0]===code});return found?found[1]:null}).filter(Boolean)}
@@ -196,7 +196,7 @@ function sentenceList(){
   if(listening){
    content='<div class="listening-sentence-meta"><span class="tag">'+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+escapeHTML(x.speaker)+'</span></div>'
     +'<p class="sentence-text">'+playButton(x.en,'朗读整句',true)+'<span lang="en">'+escapeHTML(x.en)+'</span></p>'
-    +'<div class="listening-sentence-tools">'+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
+    +'<div class="listening-sentence-tools">'+(CONFIG.recording?listening.seekButton?.(x.start)||'':'')+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
     +'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+translation+(isOriginal?sentenceFlagControls(number):'');

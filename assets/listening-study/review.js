@@ -10,6 +10,14 @@ window.ListeningStudy = {
     </section>`;
   },
 
+  seekButton(second) {
+    if (!Number.isFinite(second) || second < 0) return '';
+    const total = Math.floor(second);
+    const timestamp = Math.floor(total / 60) + ':' + String(total % 60).padStart(2, '0');
+    return '<button type="button" class="speaker small" data-original-second="' + second
+      + '">原录音 · ' + timestamp + '</button>';
+  },
+
   evidenceText(line) {
     const text = String(line.en ?? '');
     const target = String(line.highlight ?? '');
@@ -41,6 +49,7 @@ window.ListeningStudy = {
           <p lang="en">${this.evidenceText(line)}</p>
           <p class="muted">${escapeHTML(line.zh)}</p>
           ${playButton(line.en, '设备朗读', true)}
+          ${recording ? this.seekButton(line.start) : ''}
         </div>`).join('')}
       </details>` : ''}
     </article>`;
@@ -51,3 +60,19 @@ window.ListeningStudy = {
     </section>`;
   }
 };
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('button[data-original-second]');
+  if (!button) return;
+  const player = document.querySelector('.original-player audio');
+  if (!player) return;
+  const play = () => {
+    player.currentTime = Number(button.dataset.originalSecond);
+    player.play().catch(() => {
+      player.scrollIntoView({block:'nearest'});
+      player.focus();
+    });
+  };
+  if (player.readyState >= 1) play();
+  else player.addEventListener('loadedmetadata', play, {once:true});
+});
