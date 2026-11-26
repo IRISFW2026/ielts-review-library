@@ -30,46 +30,30 @@ window.ListeningStudy = {
 
   questions({questions, recording, notice}) {
     const wrong = questions.filter(question => question.wrong);
-    const chosenAnswer = question => question.chosenParts?.length
-      ? question.chosenParts.map(part => part.correct
-        ? '<strong aria-label="' + escapeHTML(part.text + '，已选对') + '">' + escapeHTML(part.text) + '</strong>'
-        : '<del>' + escapeHTML(part.text) + '</del>').join(' + ')
-      : '<del>' + escapeHTML(question.chosen || '未作答') + '</del>';
-    const questionTable = table => table
-      ? '<div class="syntax-table"><table lang="en"><thead><tr>'
-        + table.headers.map(label => '<th scope="col">' + escapeHTML(label) + '</th>').join('')
-        + '</tr></thead><tbody>'
-        + table.rows.map(row => '<tr>' + row.map(cell => '<td>' + escapeHTML(cell) + '</td>').join('') + '</tr>').join('')
-        + '</tbody></table></div>'
-      : '';
-    const questionCard = question => `<article class="list-item question-priority">
-      <h3>Q${question.number}${question.type ? ' · ' + escapeHTML(question.type) : ''} · <span lang="en">${escapeHTML(question.question)}</span></h3>
-      ${question.questionNote ? '<p class="muted">' + escapeHTML(question.questionNote) + '</p>' : ''}
-      ${question.image ? '<img class="question-map" src="' + escapeHTML(question.image) + '" alt="' + escapeHTML(question.imageAlt) + '" loading="lazy">' : ''}
-      ${question.instruction ? '<p lang="en">' + escapeHTML(question.instruction) + '</p>' : ''}
-      ${questionTable(question.table)}
-      ${question.choices?.length ? `<details class="question-options">
-        <summary>查看选项</summary>
-        <ul lang="en">${question.choices.map(choice => '<li>' + escapeHTML(choice) + '</li>').join('')}</ul>
-      </details>` : ''}
-      <p class="question-answer">你的作答 ${chosenAnswer(question)} · 正确答案 <strong>${escapeHTML(question.answer)}</strong></p>
-      <p><b>考查重点</b>　${escapeHTML(question.focus)}</p>
-      <p><b>错因</b>　${escapeHTML(question.mistake)}</p>
-      <p><b>重听方法</b>　${escapeHTML(question.method)}</p>
-      ${question.evidence.length ? `<details class="question-details" open>
-        <summary>对应听力原文</summary>
-        ${question.evidence.map(line => `<div class="question-evidence">
-          <p lang="en">${this.evidenceText(line)}</p>
-          <p class="muted">${escapeHTML(line.zh)}</p>
-          ${playButton(line.en, '设备朗读', true)}
-          ${recording ? this.seekButton(line.start) : ''}
-        </div>`).join('')}
-      </details>` : ''}
-    </article>`;
-    return `<section class="card wrong-review">
-      <h2>错题解析</h2>
+    const questionCard = question => {
+      const answer = question.chosen || '未作答';
+      const evidence = question.evidence || [];
+      const evidenceHtml = evidence.map((line,index) => `<div class="listening-evidence-item">
+        <div class="listening-evidence-meta"><span>原文依据 ${index+1} · ${escapeHTML(line.paragraph || '')}</span>${recording && Number.isFinite(line.start) ? this.seekButton(line.start) : '<span class="listening-time-pending">时间戳待校准</span>'}</div>
+        <p lang="en">${this.evidenceText(line)}</p><p class="listening-evidence-zh">${escapeHTML(line.zh)}</p>
+        ${playButton(line.en,'设备朗读',true)}
+      </div>`).join('');
+      return `<article class="listening-wrong-card">
+        <div class="listening-wrong-head"><span class="listening-question-number">Q${question.number}</span><span class="listening-question-type">${escapeHTML(question.type || '听力题')}</span></div>
+        <section class="listening-question-prompt"><h3>01 · 原题</h3><p lang="en">${escapeHTML(question.question)}</p>${question.instruction ? '<p>'+escapeHTML(question.instruction)+'</p>' : ''}</section>
+        <div class="listening-answer-grid">
+          <section class="listening-answer-correct"><span>正确答案</span><strong>${escapeHTML(question.answer)}</strong></section>
+          <section class="listening-answer-mine"><span>我的答案</span><strong>${escapeHTML(answer)}</strong></section>
+        </div>
+        <section class="listening-evidence"><h3>02 · 对应听力原文</h3>${evidenceHtml || '<p>未提供原文依据。</p>'}</section>
+        <section class="listening-analysis"><h3>03 · 错误原因</h3><p>${escapeHTML(question.mistake || '')}</p></section>
+        <section class="listening-method"><h3>04 · 听力逻辑与复盘方法</h3><p><b>考查重点</b>　${escapeHTML(question.focus || '')}</p><p><b>听题方法</b>　${escapeHTML(question.method || '')}</p></section>
+        ${question.choices?.length ? '<details class="listening-options"><summary>查看完整选项</summary><ul>'+question.choices.map(x=>'<li>'+escapeHTML(x)+'</li>').join('')+'</ul></details>' : ''}
+      </article>`;
+    };
+    return `<section class="card wrong-review listening-wrong-review"><header class="listening-review-heading"><h2>错题解析</h2><p>原题 · 答案对比 · 听力原文 · 错因诊断 · 复盘方法</p></header>
       ${this.player(recording)}
-      ${wrong.map(questionCard).join('') || (notice ? '<p class="muted">' + escapeHTML(notice) + '</p>' : '')}
+      ${wrong.map(questionCard).join('') || (notice ? '<p class="muted">'+escapeHTML(notice)+'</p>' : '')}
     </section>`;
   }
 };
