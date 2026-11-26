@@ -129,6 +129,11 @@ function formatIPA(s){return s.split('；').map(p=>{let m=p.match(/^([^（]+)(.*
 function wordMeta(x){return `<div class="word-meta">${x.pos?`<span class="pos">${escapeHTML(x.pos)}</span>`:""}${(x.type==='word'||listening&&x.ipa)?(x.ipa?`<span class="ipa" lang="en-GB">${formatIPA(x.ipa)}</span>`:listening?'':'<span class="small muted">音标待补</span>'):''}<span class="stars" role="img" aria-label="雅思重要程度 ${x.stars} 星，共 5 星">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)} <span class="star-label">重要 ${x.stars}/5</span></span></div>`}
 function memoryHtml(x){if(!x.memory)return '';let m=x.memory;return `<section class="memory-panel" aria-label="${escapeHTML(x.term)}的词根记忆法"><h3>词根与构词记忆 <span class="memory-label">${escapeHTML(m.method)}</span></h3><p><b>拆分／来源：</b>${escapeHTML(m.parts)}</p><p><b>这样记：</b>${escapeHTML(m.tip)}</p><p class="memory-family"><b>一起记：</b>${escapeHTML(m.family)}</p>${m.source?`<a href="${escapeHTML(m.source)}" target="_blank" rel="noopener noreferrer">查看词源参考 · Etymonline</a>`:''}</section>`}
 function libraryMeanings(x){let senses=x.zh.split('；'),selected=x.contextSenses||[0];return {main:senses.filter((v,i)=>selected.includes(i)).join('；')||senses[0],other:senses.filter((v,i)=>!selected.includes(i)).join('；')}}
+function originalClipButton(line, fallbackLabel){
+ if(!CONFIG.sentenceAudio||!line.audioClip)return playButton(line.en,fallbackLabel,true);
+ const [offset,length]=line.audioClip;
+ return `<button type="button" class="speaker small" data-original-clip="${offset}:${length}" aria-label="播放原录音片段" aria-pressed="false" title="播放原录音片段">${icon}<span>原录音</span></button>`;
+}
 function libraryExamplePlay(e){const label='朗读'+sourceLabel(e);return `<button class="speaker small example-speaker" type="button" data-say="${escapeHTML(e.en)}" aria-label="${label}" title="${label}">${icon}<span>朗读</span></button>`}
 function levelNextLabel(r){if(![1,2,3,4].includes(r.level))return '未安排复习';if(!Number.isFinite(r.due)||r.due<=Date.now())return '现在可复习';return '下次：'+formatDelay((r.due-Date.now())/DAY)}
 function libraryFamiliarity(x){const r=rec(x),level=[1,2,3,4].includes(r.level)?r.level:0;return `<label class="library-familiarity" data-level="${level}" title="熟练度影响翻卡出现时间"><span class="sr">${escapeHTML(x.term)} 的熟练度</span><select data-level-id="${escapeHTML(x.id)}" aria-label="${escapeHTML(x.term)} 的熟练度"><option value="0" ${level===0?'selected':''} disabled>选择熟练度</option>${FAMILIARITY_OPTIONS.map(([n,label])=>`<option value="${n}" ${level===n?'selected':''}>${label}</option>`).join('')}</select><span class="level-next">${levelNextLabel(r)}</span></label>`}
@@ -205,7 +210,7 @@ function sentenceList(){
    const english=answerQuestions?'<mark class="listening-answer-sentence">'+escapeHTML(x.en)+'</mark>':escapeHTML(x.en);
    const answerLabel=answerQuestions?'<span class="tag">答案句 '+escapeHTML(answerQuestions)+'</span>':'';
    content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲座讲者')+'</span><span class="listening-sentence-index">'+escapeHTML(timeLabel||String(number).padStart(2,'0'))+'</span>'+answerLabel+'</div>'
-    +'<div class="listening-sentence-body">'+playButton(x.en,'朗读整句',true)+'<span class="sentence-en" lang="en">'+english+'</span></div>'
+    +'<div class="listening-sentence-body">'+originalClipButton(x,'朗读整句')+'<span class="sentence-en" lang="en">'+english+'</span></div>'
     +'<div class="listening-sentence-tools">'+(timeLabel?'<span class="listening-time-chip"><span aria-hidden="true">◷</span> '+escapeHTML(timeLabel)+'</span>':'')+translation+sentenceFlagControls(number)+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
@@ -232,6 +237,7 @@ if(view==='sentences'){if($('sentence-search'))$('sentence-search').oninput=e=>{
 if(view==='settings'){voiceOptions();$('engine').value=settings.engine;$('engine').onchange=e=>{settings.engine=e.target.value;saveSettings()};$('voice-select').onchange=e=>{settings.voice=e.target.value;saveSettings();voiceStatus()};$('rate').oninput=e=>{settings.rate=Number(e.target.value);$('rate-label').textContent=settings.rate+' ×';saveSettings()};$('daily').oninput=e=>{let proposed=Math.max(1,Math.min(100,parseInt(e.target.value)||20));if($('daily-status'))$('daily-status').textContent=`设置为 ${proposed} 个；今日已接触 ${todayNew()} 个新词，剩余额度 ${Math.max(0,proposed-todayNew())} 个。`};$('daily').onchange=e=>{settings.daily=Math.max(1,Math.min(100,parseInt(e.target.value)||20));e.target.value=settings.daily;saveSettings();if($('daily-status'))$('daily-status').textContent=dailyProgressText(settings.daily)+' 返回翻卡页面后会按新额度重新安排队列。';toast(`每日新词上限已保存为 ${settings.daily} 个；到期复习不占用新词额度。`)};$('export').onclick=exportData;$('import').onchange=importData;if(CONFIG.cloudSync)window.KakapoCloudSync.bindSettings();}}
 document.addEventListener('click',e=>{
  let v=e.target.closest('[data-view]');if(v){stopSound();search='';navigate(v.dataset.view)}
+ const clip=e.target.closest('[data-original-clip]');if(clip)playOriginalClip(clip);
  let p=e.target.closest('[data-say]');if(p)speak(p.dataset.say,DATA.items.some(x=>x.term===p.dataset.say));
  let g=e.target.closest('[data-grade]');if(g)grade(Number(g.dataset.grade));
  let toggle=e.target.closest('[data-sentence-flag-toggle]');
@@ -292,8 +298,50 @@ document.addEventListener('change',e=>{
  if(wrapper){wrapper.dataset.level=String(level);const note=wrapper.querySelector('.level-next');if(note)note.textContent=levelNextLabel(state[id])}
  toast('已标记'+LABELS[level]+'；'+levelNextLabel(state[id])+'，翻卡计划已更新。');
 });
-let audio=null,soundToken=0;
-function stopSound(){soundToken++;if(audio){audio.pause();audio=null}if('speechSynthesis'in window)speechSynthesis.cancel()}
+let audio=null,soundToken=0,originalButton=null,originalClipUrl=null;
+let originalRecording=null,originalRecordingRequest=null;
+function loadOriginalRecording(){
+ if(!originalRecordingRequest){
+  originalRecordingRequest=fetch(CONFIG.sentenceAudio).then(response=>{
+   if(!response.ok)throw new Error('Recording unavailable');
+   return response.arrayBuffer();
+  }).then(buffer=>originalRecording=buffer).catch(error=>{originalRecordingRequest=null;throw error});
+ }
+ return originalRecordingRequest;
+}
+function stopSound(){
+ soundToken++;
+ if(audio){audio.pause();audio=null}
+ if(originalClipUrl){URL.revokeObjectURL(originalClipUrl);originalClipUrl=null}
+ if(originalButton){originalButton.setAttribute('aria-pressed','false');originalButton=null}
+ if('speechSynthesis'in window)speechSynthesis.cancel();
+}
+function playOriginalClip(button){
+ const selected=originalButton===button;
+ stopSound();
+ if(selected)return;
+ const token=soundToken;
+ originalButton=button;
+ button.setAttribute('aria-pressed','true');
+ const [offset,length]=button.dataset.originalClip.split(':').map(Number);
+ const fail=()=>{
+  if(token!==soundToken)return;
+  stopSound();
+  toast('原录音片段加载失败，请再试一次。');
+ };
+ const play=buffer=>{
+  if(token!==soundToken)return;
+  if(length<=0||offset<0||offset+length>buffer.byteLength){fail();return}
+  originalClipUrl=URL.createObjectURL(new Blob([buffer.slice(offset,offset+length)],{type:'audio/mpeg'}));
+  audio=new Audio(originalClipUrl);
+  audio.onended=()=>{if(token===soundToken)stopSound()};
+  audio.onerror=fail;
+  audio.play().catch(fail);
+ };
+ if(originalRecording)play(originalRecording);
+ else loadOriginalRecording().then(play).catch(fail);
+}
+if(CONFIG.sentenceAudio)loadOriginalRecording().catch(()=>{});
 function voiceScore(v){return (/natural|neural|premium|enhanced/i.test(v.name)?100:0)+(!v.localService?30:0)+(/^en-GB/i.test(v.lang)?10:0)+(/Google|Microsoft|Samantha|Daniel|Serena/i.test(v.name)?5:0)}
 function selectedVoice(){return voices.find(v=>v.voiceURI===settings.voice)||voices.find(v=>v.name===CONFIG.defaultVoice)||voices[0]}
 function loadVoices(){voices=('speechSynthesis'in window?speechSynthesis.getVoices():[]).filter(v=>/^en(?:-|_)/i.test(v.lang)).sort((a,b)=>voiceScore(b)-voiceScore(a));voiceStatus();if(view==='settings')voiceOptions()}

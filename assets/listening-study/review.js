@@ -35,7 +35,7 @@ window.ListeningStudy = {
       const evidenceHtml = evidence.map((line,index) => `<div class="listening-evidence-item">
         <div class="listening-evidence-meta"><span>原文依据 ${index+1} · ${escapeHTML(line.paragraph || '')}</span></div>
         <p lang="en">${this.evidenceText(line)}</p><p class="listening-evidence-zh">${escapeHTML(line.zh)}</p>
-        ${playButton(line.en,'设备朗读',true)}
+        ${originalClipButton(line,'设备朗读')}
       </div>`).join('');
       return `<article class="listening-wrong-card">
         <div class="listening-wrong-head"><span class="listening-question-number">Q${question.number}</span><span class="listening-question-type">${escapeHTML(question.type || '听力题')}${showAll ? status : ''}</span></div>

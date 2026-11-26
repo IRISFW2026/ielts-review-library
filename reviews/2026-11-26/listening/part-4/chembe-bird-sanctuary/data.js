@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "chembe-bird-sanctuary-1126", "title": "1126-听力-Part 4-Chembe Bird Sanctuary 钦贝鸟类保护区", "storageKey": "ielts-listening-chembe-bird-sanctuary-1126-v1", "storageFormat": "flat", "flagPrefix": "chembe-bird-sanctuary-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "根据本套模考录音转写。黄色为答案依据，时间标记对应上传录音。", "questionNotice": "", "showQuestionNotice": false};
+window.READING_REVIEW_CONFIG = {"id": "chembe-bird-sanctuary-1126", "title": "1126-听力-Part 4-Chembe Bird Sanctuary 钦贝鸟类保护区", "storageKey": "ielts-listening-chembe-bird-sanctuary-1126-v1", "storageFormat": "flat", "flagPrefix": "chembe-bird-sanctuary-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "点击原文旁的小喇叭，播放该句对应的原录音片段。黄色标出答案依据。", "questionNotice": "", "showQuestionNotice": false, "sentenceAudio": "./sentence-audio.bin?v=1"};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -810,7 +810,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 88.452,
       "end": 100.215,
-      "flagId": 1
+      "flagId": 1,
+      "audioClip": [
+        0,
+        47471
+      ]
     },
     {
       "en": "I'd like to illustrate this by telling you about some research that I've been involved in recently in the Central African country of Zambia, in the area around the Chembe Bird Sanctuary, which contains over three hundred of the listed birds of Zambia.",
@@ -819,7 +823,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 100.83,
       "end": 116.283,
-      "flagId": 2
+      "flagId": 2,
+      "audioClip": [
+        47471,
+        62159
+      ]
     },
     {
       "en": "These include a number of birds of prey, such as eagles, hawks, and owls that live by hunting and killing other birds and animals.",
@@ -828,7 +836,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 116.888,
       "end": 126.332,
-      "flagId": 3
+      "flagId": 3,
+      "audioClip": [
+        109630,
+        38159
+      ]
     },
     {
       "en": "Now, most of the people living in the local communities near to the bird sanctuary are small-scale farmers, and these birds of prey provide important social and ecological benefits to them.",
@@ -837,7 +849,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 127.01,
       "end": 139.988,
-      "flagId": 4
+      "flagId": 4,
+      "audioClip": [
+        147789,
+        52271
+      ]
     },
     {
       "en": "For example, a lot of damage can be caused to farmers' crops by rodents such as rats, which would consume the crops as they grow in the fields as well as after harvesting if they weren't hunted and killed by the birds.",
@@ -849,7 +865,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 140.588,
       "end": 154.494,
-      "flagId": 5
+      "flagId": 5,
+      "audioClip": [
+        200060,
+        56015
+      ]
     },
     {
       "en": "And the predatory habits of these birds also protect farmers in other ways.",
@@ -858,7 +878,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 155.122,
       "end": 160.237,
-      "flagId": 6
+      "flagId": 6,
+      "audioClip": [
+        256075,
+        20879
+      ]
     },
     {
       "en": "For example, a major danger to rural workers is snakes, whose bite may be dangerous or even fatal, and birds of prey have a major role in keeping their populations under control.",
@@ -870,7 +894,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 160.737,
       "end": 173.983,
-      "flagId": 7
+      "flagId": 7,
+      "audioClip": [
+        276954,
+        53327
+      ]
     },
     {
       "en": "Local people have always been aware of these benefits, and for years, even before the sanctuary was opened in nineteen seventy-three, the birds played a key role in the culture of the region.",
@@ -879,7 +907,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 174.805,
       "end": 187.237,
-      "flagId": 8
+      "flagId": 8,
+      "audioClip": [
+        330281,
+        50063
+      ]
     },
     {
       "en": "However, more recently, the sanctuary and its birds have also become increasingly important to the community in economic terms because at present, after a relatively slow start, tourism has become an important source of revenue for them.",
@@ -891,7 +923,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 187.856,
       "end": 205.814,
-      "flagId": 9
+      "flagId": 9,
+      "audioClip": [
+        380344,
+        72239
+      ]
     },
     {
       "en": "However, although these birds of prey are protected by the government, their numbers are falling.",
@@ -900,7 +936,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 206.971,
       "end": 213.32,
-      "flagId": 10
+      "flagId": 10,
+      "audioClip": [
+        452583,
+        25775
+      ]
     },
     {
       "en": "Some of these deaths are accidental.",
@@ -909,7 +949,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 213.966,
       "end": 215.954,
-      "flagId": 11
+      "flagId": 11,
+      "audioClip": [
+        478358,
+        8303
+      ]
     },
     {
       "en": "Fatalities occur when birds alight on roads to catch and eat their prey and are hit by fast-moving traffic.",
@@ -921,7 +965,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 216.429,
       "end": 223.629,
-      "flagId": 12
+      "flagId": 12,
+      "audioClip": [
+        486661,
+        29135
+      ]
     },
     {
       "en": "Drivers in Zambia have to take special care at night as birds may regard the quieter roads as safe places to sleep.",
@@ -930,7 +978,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 224.285,
       "end": 232.228,
-      "flagId": 13
+      "flagId": 13,
+      "audioClip": [
+        515796,
+        32111
+      ]
     },
     {
       "en": "Accidental deaths may also occur if these birds fly close to high-voltage power lines as they may be electrocuted.",
@@ -939,7 +991,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 233.18,
       "end": 241.146,
-      "flagId": 14
+      "flagId": 14,
+      "audioClip": [
+        547907,
+        32207
+      ]
     },
     {
       "en": "This is a particular danger in the heavy rain, which can occur in the region in the months from December to April.",
@@ -951,7 +1007,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 241.855,
       "end": 248.994,
-      "flagId": 15
+      "flagId": 15,
+      "audioClip": [
+        580114,
+        28943
+      ]
     },
     {
       "en": "And local farmers also pose a threat to these birds.",
@@ -960,7 +1020,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 250.235,
       "end": 253.787,
-      "flagId": 16
+      "flagId": 16,
+      "audioClip": [
+        609057,
+        14543
+      ]
     },
     {
       "en": "As well as growing crops, small-scale farmers in the area also rear chickens.",
@@ -969,7 +1033,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 254.57,
       "end": 259.918,
-      "flagId": 17
+      "flagId": 17,
+      "audioClip": [
+        623600,
+        21743
+      ]
     },
     {
       "en": "These provide food for the farmers' families, as well as being an important source of income.",
@@ -978,7 +1046,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 260.397,
       "end": 266.221,
-      "flagId": 18
+      "flagId": 18,
+      "audioClip": [
+        645343,
+        23663
+      ]
     },
     {
       "en": "But they're also an easy target for birds of prey, and so farmers may shoot these birds, which is illegal but understandable. Or they may poison the birds, which again is illegal and can have negative effects on the ecosystem.",
@@ -990,7 +1062,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 266.846,
       "end": 283.213,
-      "flagId": 19
+      "flagId": 19,
+      "audioClip": [
+        669006,
+        65807
+      ]
     },
     {
       "en": "So how else can farmers protect their chickens from birds of prey?",
@@ -999,7 +1075,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 288.382,
       "end": 293.06600000000003,
-      "flagId": 20
+      "flagId": 20,
+      "audioClip": [
+        734813,
+        19151
+      ]
     },
     {
       "en": "Some people believe that to prevent the predators from settling near the area where the chickens are kept, it's best to keep this area free from vegetation.",
@@ -1008,7 +1088,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 293.789,
       "end": 303.21,
-      "flagId": 21
+      "flagId": 21,
+      "audioClip": [
+        753964,
+        38063
+      ]
     },
     {
       "en": "But in fact, this is counter-productive, as it means the chickens have no cover to hide in, and they'll be easier for the birds to see.",
@@ -1017,7 +1101,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 303.825,
       "end": 312.461,
-      "flagId": 22
+      "flagId": 22,
+      "audioClip": [
+        792027,
+        34895
+      ]
     },
     {
       "en": "Another possibility would be to prevent the chickens from going outside at all and to keep them safe from predators inside a building. But this would cost far too much to be a practical solution.",
@@ -1029,7 +1117,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 313.387,
       "end": 326.219,
-      "flagId": 23
+      "flagId": 23,
+      "audioClip": [
+        826922,
+        51695
+      ]
     },
     {
       "en": "Nearly all the farmers reported that they spent a lot of time and effort trying to frighten off the birds of prey without actually harming them.",
@@ -1038,7 +1130,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 327.582,
       "end": 337.01,
-      "flagId": 24
+      "flagId": 24,
+      "audioClip": [
+        878617,
+        38063
+      ]
     },
     {
       "en": "Most of the farmers had at least one dog and said this was a big help at scaring away the predators.",
@@ -1050,7 +1146,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 337.739,
       "end": 344.457,
-      "flagId": 25
+      "flagId": 25,
+      "audioClip": [
+        916680,
+        27215
+      ]
     },
     {
       "en": "Some of the farmers also reported that during the breeding season, when the chickens were particularly vulnerable, they encouraged their children to watch over the chickens and to hit pans with a metal spoon so that the resulting noise would succeed in driving away birds that were trying to seize the young chicks.",
@@ -1062,7 +1162,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 345.331,
       "end": 364.948,
-      "flagId": 26
+      "flagId": 26,
+      "audioClip": [
+        943895,
+        78863
+      ]
     },
     {
       "en": "None of these methods was a hundred per cent effective. So as a result, the village people told us that rather than just using one method, they were forced to use a combination for them to have any effect.",
@@ -1074,7 +1178,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 365.861,
       "end": 379.389,
-      "flagId": 27
+      "flagId": 27,
+      "audioClip": [
+        1022758,
+        54479
+      ]
     },
     {
       "en": "And even so, these birds of prey remain a major threat to the chickens' survival and cause considerable economic loss to farmers.",
@@ -1083,7 +1191,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 380.15,
       "end": 389.484,
-      "flagId": 28
+      "flagId": 28,
+      "audioClip": [
+        1077237,
+        37679
+      ]
     },
     {
       "en": "So we looked at the possibility of a longer-term solution to …",
@@ -1092,7 +1204,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "讲座讲者",
       "start": 390.187,
       "end": 395.046,
-      "flagId": 29
+      "flagId": 29,
+      "audioClip": [
+        1114916,
+        19823
+      ]
     }
   ],
   "questions": [
@@ -1118,7 +1234,11 @@ window.READING_REVIEW_DATA = {
           "start": 127.01,
           "end": 139.988,
           "flagId": 4,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            147789,
+            52271
+          ]
         },
         {
           "en": "For example, a lot of damage can be caused to farmers' crops by rodents such as rats, which would consume the crops as they grow in the fields as well as after harvesting if they weren't hunted and killed by the birds.",
@@ -1131,7 +1251,11 @@ window.READING_REVIEW_DATA = {
           "start": 140.588,
           "end": 154.494,
           "flagId": 5,
-          "highlight": "rats"
+          "highlight": "rats",
+          "audioClip": [
+            200060,
+            56015
+          ]
         }
       ]
     },
@@ -1157,7 +1281,11 @@ window.READING_REVIEW_DATA = {
           "start": 155.122,
           "end": 160.237,
           "flagId": 6,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            256075,
+            20879
+          ]
         },
         {
           "en": "For example, a major danger to rural workers is snakes, whose bite may be dangerous or even fatal, and birds of prey have a major role in keeping their populations under control.",
@@ -1170,7 +1298,11 @@ window.READING_REVIEW_DATA = {
           "start": 160.737,
           "end": 173.983,
           "flagId": 7,
-          "highlight": "snakes"
+          "highlight": "snakes",
+          "audioClip": [
+            276954,
+            53327
+          ]
         }
       ]
     },
@@ -1196,7 +1328,11 @@ window.READING_REVIEW_DATA = {
           "start": 174.805,
           "end": 187.237,
           "flagId": 8,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            330281,
+            50063
+          ]
         },
         {
           "en": "However, more recently, the sanctuary and its birds have also become increasingly important to the community in economic terms because at present, after a relatively slow start, tourism has become an important source of revenue for them.",
@@ -1209,7 +1345,11 @@ window.READING_REVIEW_DATA = {
           "start": 187.856,
           "end": 205.814,
           "flagId": 9,
-          "highlight": "tourism"
+          "highlight": "tourism",
+          "audioClip": [
+            380344,
+            72239
+          ]
         }
       ]
     },
@@ -1235,7 +1375,11 @@ window.READING_REVIEW_DATA = {
           "start": 213.966,
           "end": 215.954,
           "flagId": 11,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            478358,
+            8303
+          ]
         },
         {
           "en": "Fatalities occur when birds alight on roads to catch and eat their prey and are hit by fast-moving traffic.",
@@ -1248,7 +1392,11 @@ window.READING_REVIEW_DATA = {
           "start": 216.429,
           "end": 223.629,
           "flagId": 12,
-          "highlight": "fast-moving traffic"
+          "highlight": "fast-moving traffic",
+          "audioClip": [
+            486661,
+            29135
+          ]
         },
         {
           "en": "Drivers in Zambia have to take special care at night as birds may regard the quieter roads as safe places to sleep.",
@@ -1258,7 +1406,11 @@ window.READING_REVIEW_DATA = {
           "start": 224.285,
           "end": 232.228,
           "flagId": 13,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            515796,
+            32111
+          ]
         }
       ]
     },
@@ -1284,7 +1436,11 @@ window.READING_REVIEW_DATA = {
           "start": 233.18,
           "end": 241.146,
           "flagId": 14,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            547907,
+            32207
+          ]
         },
         {
           "en": "This is a particular danger in the heavy rain, which can occur in the region in the months from December to April.",
@@ -1297,7 +1453,11 @@ window.READING_REVIEW_DATA = {
           "start": 241.855,
           "end": 248.994,
           "flagId": 15,
-          "highlight": "heavy rain"
+          "highlight": "heavy rain",
+          "audioClip": [
+            580114,
+            28943
+          ]
         }
       ]
     },
@@ -1326,7 +1486,11 @@ window.READING_REVIEW_DATA = {
           "start": 266.846,
           "end": 283.213,
           "flagId": 19,
-          "highlight": "poison"
+          "highlight": "poison",
+          "audioClip": [
+            669006,
+            65807
+          ]
         }
       ]
     },
@@ -1352,7 +1516,11 @@ window.READING_REVIEW_DATA = {
           "start": 293.789,
           "end": 303.21,
           "flagId": 21,
-          "highlight": "free from vegetation"
+          "highlight": "free from vegetation",
+          "audioClip": [
+            753964,
+            38063
+          ]
         },
         {
           "en": "But in fact, this is counter-productive, as it means the chickens have no cover to hide in, and they'll be easier for the birds to see.",
@@ -1362,7 +1530,11 @@ window.READING_REVIEW_DATA = {
           "start": 303.825,
           "end": 312.461,
           "flagId": 22,
-          "highlight": "no cover to hide in"
+          "highlight": "no cover to hide in",
+          "audioClip": [
+            792027,
+            34895
+          ]
         },
         {
           "en": "Another possibility would be to prevent the chickens from going outside at all and to keep them safe from predators inside a building. But this would cost far too much to be a practical solution.",
@@ -1375,7 +1547,11 @@ window.READING_REVIEW_DATA = {
           "start": 313.387,
           "end": 326.219,
           "flagId": 23,
-          "highlight": "inside a building"
+          "highlight": "inside a building",
+          "audioClip": [
+            826922,
+            51695
+          ]
         }
       ]
     },
@@ -1401,7 +1577,11 @@ window.READING_REVIEW_DATA = {
           "start": 327.582,
           "end": 337.01,
           "flagId": 24,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            878617,
+            38063
+          ]
         },
         {
           "en": "Most of the farmers had at least one dog and said this was a big help at scaring away the predators.",
@@ -1414,7 +1594,11 @@ window.READING_REVIEW_DATA = {
           "start": 337.739,
           "end": 344.457,
           "flagId": 25,
-          "highlight": "dog"
+          "highlight": "dog",
+          "audioClip": [
+            916680,
+            27215
+          ]
         }
       ]
     },
@@ -1443,7 +1627,11 @@ window.READING_REVIEW_DATA = {
           "start": 345.331,
           "end": 364.948,
           "flagId": 26,
-          "highlight": "resulting noise"
+          "highlight": "resulting noise",
+          "audioClip": [
+            943895,
+            78863
+          ]
         }
       ]
     },
@@ -1472,7 +1660,11 @@ window.READING_REVIEW_DATA = {
           "start": 365.861,
           "end": 379.389,
           "flagId": 27,
-          "highlight": "combination"
+          "highlight": "combination",
+          "audioClip": [
+            1022758,
+            54479
+          ]
         },
         {
           "en": "And even so, these birds of prey remain a major threat to the chickens' survival and cause considerable economic loss to farmers.",
@@ -1482,7 +1674,11 @@ window.READING_REVIEW_DATA = {
           "start": 380.15,
           "end": 389.484,
           "flagId": 28,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1077237,
+            37679
+          ]
         }
       ]
     }

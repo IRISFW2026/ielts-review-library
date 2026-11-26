@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "handwriting-1126", "title": "1126-听力-Part 3-Handwriting 手写的益处与挑战", "storageKey": "ielts-listening-handwriting-1126-v1", "storageFormat": "flat", "flagPrefix": "handwriting-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "根据本套模考录音转写。黄色为答案依据，时间标记对应上传录音。", "questionNotice": "", "showQuestionNotice": false};
+window.READING_REVIEW_CONFIG = {"id": "handwriting-1126", "title": "1126-听力-Part 3-Handwriting 手写的益处与挑战", "storageKey": "ielts-listening-handwriting-1126-v1", "storageFormat": "flat", "flagPrefix": "handwriting-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "点击原文旁的小喇叭，播放该句对应的原录音片段。黄色标出答案依据。", "questionNotice": "", "showQuestionNotice": false, "sentenceAudio": "./sentence-audio.bin?v=1"};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -770,7 +770,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 47.356,
       "end": 50.184,
-      "flagId": 1
+      "flagId": 1,
+      "audioClip": [
+        0,
+        11663
+      ]
     },
     {
       "en": "Not too bad.",
@@ -779,7 +783,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 50.854,
       "end": 51.808,
-      "flagId": 2
+      "flagId": 2,
+      "audioClip": [
+        11663,
+        4175
+      ]
     },
     {
       "en": "You know, I hadn't realised that children benefit in so many ways from learning to write.",
@@ -788,7 +796,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 52.295,
       "end": 58.072,
-      "flagId": 3
+      "flagId": 3,
+      "audioClip": [
+        15838,
+        23471
+      ]
     },
     {
       "en": "It's such an important skill, and yet most people think handwriting is less important than in the past because people hardly ever write by hand these days.",
@@ -797,7 +809,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 58.585,
       "end": 68.774,
-      "flagId": 4
+      "flagId": 4,
+      "audioClip": [
+        39309,
+        41135
+      ]
     },
     {
       "en": "Yes.",
@@ -806,7 +822,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 68.937,
       "end": 69.495,
-      "flagId": 5
+      "flagId": 5,
+      "audioClip": [
+        80444,
+        2639
+      ]
     },
     {
       "en": "And all the evidence suggests children should learn to write by hand before they learn to type, not least because it helps their memory.",
@@ -818,6 +838,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 6,
       "previousFlagIds": [
         7
+      ],
+      "audioClip": [
+        83083,
+        31919
       ]
     },
     {
@@ -827,7 +851,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 77.811,
       "end": 78.637,
-      "flagId": 8
+      "flagId": 8,
+      "audioClip": [
+        115002,
+        3695
+      ]
     },
     {
       "en": "The physical act of writing helps children to remember letters. That seems pretty obvious when you think about it.",
@@ -836,7 +864,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 78.987,
       "end": 86.458,
-      "flagId": 9
+      "flagId": 9,
+      "audioClip": [
+        118697,
+        30287
+      ]
     },
     {
       "en": "What's less obvious is how it helps develop their concentration.",
@@ -848,7 +880,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 87.28,
       "end": 90.969,
-      "flagId": 10
+      "flagId": 10,
+      "audioClip": [
+        148984,
+        15119
+      ]
     },
     {
       "en": "They have to sit still and focus on one thing.",
@@ -857,7 +893,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 91.388,
       "end": 94.267,
-      "flagId": 11
+      "flagId": 11,
+      "audioClip": [
+        164103,
+        11855
+      ]
     },
     {
       "en": "Yeah.",
@@ -866,7 +906,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 94.344,
       "end": 95.077,
-      "flagId": 12
+      "flagId": 12,
+      "audioClip": [
+        175958,
+        3311
+      ]
     },
     {
       "en": "That aspect of handwriting had never occurred to me before.",
@@ -878,7 +922,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 95.441,
       "end": 98.661,
-      "flagId": 13
+      "flagId": 13,
+      "audioClip": [
+        179269,
+        13295
+      ]
     },
     {
       "en": "Hmm, same here.",
@@ -890,7 +938,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 98.715,
       "end": 99.816,
-      "flagId": 14
+      "flagId": 14,
+      "audioClip": [
+        192564,
+        4751
+      ]
     },
     {
       "en": "I'm not sure I understand how it improves children's imagination, though.",
@@ -899,7 +951,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 100.53,
       "end": 104.723,
-      "flagId": 15
+      "flagId": 15,
+      "audioClip": [
+        197315,
+        17135
+      ]
     },
     {
       "en": "Well, there was that study which showed that primary-age children generated more ideas when they were writing by hand than using a keyboard.",
@@ -908,7 +964,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 104.929,
       "end": 114.23599999999999,
-      "flagId": 16
+      "flagId": 16,
+      "audioClip": [
+        214450,
+        37583
+      ]
     },
     {
       "en": "I would have guessed that would be the case.",
@@ -917,7 +977,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 114.875,
       "end": 116.845,
-      "flagId": 17
+      "flagId": 17,
+      "audioClip": [
+        252033,
+        8303
+      ]
     },
     {
       "en": "Hmm, yeah.",
@@ -926,7 +990,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 116.919,
       "end": 118.163,
-      "flagId": 18
+      "flagId": 18,
+      "audioClip": [
+        260336,
+        5327
+      ]
     },
     {
       "en": "I'd never associated spatial awareness with handwriting either.",
@@ -938,7 +1006,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 118.854,
       "end": 122.863,
-      "flagId": 19
+      "flagId": 19,
+      "audioClip": [
+        265663,
+        16463
+      ]
     },
     {
       "en": "I thought spatial awareness was more to do with knowing where you are in relation to objects or other people.",
@@ -947,7 +1019,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 123.506,
       "end": 129.877,
-      "flagId": 20
+      "flagId": 20,
+      "audioClip": [
+        282126,
+        25871
+      ]
     },
     {
       "en": "Mm. I thought that, too.",
@@ -959,7 +1035,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 129.943,
       "end": 131.442,
-      "flagId": 21
+      "flagId": 21,
+      "audioClip": [
+        307997,
+        6383
+      ]
     },
     {
       "en": "But good spatial awareness is essential for writing because you have to space words correctly.",
@@ -968,7 +1048,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 132.026,
       "end": 138.322,
-      "flagId": 22
+      "flagId": 22,
+      "audioClip": [
+        314380,
+        25583
+      ]
     },
     {
       "en": "It's not just fine motor skills that improve through writing as I'd always assumed.",
@@ -977,7 +1061,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 138.853,
       "end": 144.053,
-      "flagId": 23
+      "flagId": 23,
+      "audioClip": [
+        339963,
+        21167
+      ]
     },
     {
       "en": "Handwriting is so much harder for children with dyspraxia who have problems coordinating movement.",
@@ -986,7 +1074,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 145.06,
       "end": 151.237,
-      "flagId": 24
+      "flagId": 24,
+      "audioClip": [
+        361130,
+        25103
+      ]
     },
     {
       "en": "It's good there are lots of things you can do in the classroom to help them.",
@@ -995,7 +1087,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 151.776,
       "end": 154.975,
-      "flagId": 25
+      "flagId": 25,
+      "audioClip": [
+        386233,
+        13199
+      ]
     },
     {
       "en": "They need so much more support with letter formation. You need to play lots of games to help them distinguish letter shapes.",
@@ -1004,7 +1100,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 155.427,
       "end": 162.321,
-      "flagId": 26
+      "flagId": 26,
+      "audioClip": [
+        399432,
+        27983
+      ]
     },
     {
       "en": "It takes a lot of patience.",
@@ -1013,7 +1113,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 162.985,
       "end": 164.502,
-      "flagId": 27
+      "flagId": 27,
+      "audioClip": [
+        427415,
+        6479
+      ]
     },
     {
       "en": "Yeah.",
@@ -1022,7 +1126,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 164.553,
       "end": 165.06,
-      "flagId": 28
+      "flagId": 28,
+      "audioClip": [
+        433894,
+        2447
+      ]
     },
     {
       "en": "I like the idea of using one of those pens that lights up if you press too hard.",
@@ -1034,7 +1142,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 165.579,
       "end": 170.583,
-      "flagId": 29
+      "flagId": 29,
+      "audioClip": [
+        436341,
+        20399
+      ]
     },
     {
       "en": "That seems like a really simple solution.",
@@ -1043,7 +1155,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 171.106,
       "end": 173.35,
-      "flagId": 30
+      "flagId": 30,
+      "audioClip": [
+        456740,
+        9359
+      ]
     },
     {
       "en": "Yes, absolutely.",
@@ -1052,7 +1168,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 173.386,
       "end": 174.799,
-      "flagId": 31
+      "flagId": 31,
+      "audioClip": [
+        466099,
+        5999
+      ]
     },
     {
       "en": "I'm not sure there's much you can do about children with dyspraxia writing very slowly.",
@@ -1061,7 +1181,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 175.406,
       "end": 180.593,
-      "flagId": 32
+      "flagId": 32,
+      "audioClip": [
+        472098,
+        21167
+      ]
     },
     {
       "en": "It's more important to focus on accuracy, and as they get more confident, I think they eventually speed up.",
@@ -1070,7 +1194,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 181.06,
       "end": 188.478,
-      "flagId": 33
+      "flagId": 33,
+      "audioClip": [
+        493265,
+        30095
+      ]
     },
     {
       "en": "One quite simple thing you can do is to use grid paper so they write each letter in a box, and that trains them to space the letters correctly.",
@@ -1085,6 +1213,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 34,
       "previousFlagIds": [
         35
+      ],
+      "audioClip": [
+        523360,
+        40559
       ]
     },
     {
@@ -1094,7 +1226,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 198.948,
       "end": 204.281,
-      "flagId": 36
+      "flagId": 36,
+      "audioClip": [
+        563919,
+        21743
+      ]
     },
     {
       "en": "For some children, it might be better to teach them to write on a laptop rather than by hand, like children with dyslexia.",
@@ -1106,6 +1242,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 37,
       "previousFlagIds": [
         38
+      ],
+      "audioClip": [
+        585662,
+        33455
       ]
     },
     {
@@ -1115,7 +1255,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 281.192,
       "end": 285.21500000000003,
-      "flagId": 39
+      "flagId": 39,
+      "audioClip": [
+        619117,
+        16463
+      ]
     },
     {
       "en": "Yeah.",
@@ -1124,7 +1268,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 285.348,
       "end": 286.046,
-      "flagId": 40
+      "flagId": 40,
+      "audioClip": [
+        635580,
+        3215
+      ]
     },
     {
       "en": "It's not as frustrating for them if they get things wrong. On a keyboard, they can be more willing to have a go.",
@@ -1136,7 +1284,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 286.35699999999997,
       "end": 292.964,
-      "flagId": 41
+      "flagId": 41,
+      "audioClip": [
+        638795,
+        26831
+      ]
     },
     {
       "en": "But I read that developing fluency isn't any faster.",
@@ -1145,7 +1297,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 293.721,
       "end": 297.586,
-      "flagId": 42
+      "flagId": 42,
+      "audioClip": [
+        665626,
+        15887
+      ]
     },
     {
       "en": "That's right.",
@@ -1154,7 +1310,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 297.706,
       "end": 298.512,
-      "flagId": 43
+      "flagId": 43,
+      "audioClip": [
+        681513,
+        3599
+      ]
     },
     {
       "en": "Did you read that article on the benefits of teaching print rather than cursive handwriting, where the letters are joined up?",
@@ -1163,7 +1323,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 299.027,
       "end": 306.413,
-      "flagId": 44
+      "flagId": 44,
+      "audioClip": [
+        685112,
+        29903
+      ]
     },
     {
       "en": "Yes.",
@@ -1172,7 +1336,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 306.497,
       "end": 307.075,
-      "flagId": 45
+      "flagId": 45,
+      "audioClip": [
+        715015,
+        2735
+      ]
     },
     {
       "en": "Well, in the past, cursive writing was certainly considered more stylish and educated, but not anymore.",
@@ -1184,6 +1352,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 46,
       "previousFlagIds": [
         47
+      ],
+      "audioClip": [
+        717750,
+        30095
       ]
     },
     {
@@ -1196,7 +1368,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 315.648,
       "end": 327.76,
-      "flagId": 48
+      "flagId": 48,
+      "audioClip": [
+        747845,
+        48815
+      ]
     },
     {
       "en": "I agree.",
@@ -1205,7 +1381,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 327.92,
       "end": 328.757,
-      "flagId": 49
+      "flagId": 49,
+      "audioClip": [
+        796660,
+        3695
+      ]
     },
     {
       "en": "I was always worried that my poor handwriting affected my exam results, and now research shows that I was right to worry.",
@@ -1220,6 +1400,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 50,
       "previousFlagIds": [
         51
+      ],
+      "audioClip": [
+        800355,
+        33743
       ]
     },
     {
@@ -1229,7 +1413,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 338.304,
       "end": 344.598,
-      "flagId": 52
+      "flagId": 52,
+      "audioClip": [
+        834098,
+        25583
+      ]
     },
     {
       "en": "Marks are definitely affected if examiners can't read the script.",
@@ -1241,6 +1429,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 150,
       "answerQuestions": [
         "Q27"
+      ],
+      "audioClip": [
+        859681,
+        16175
       ]
     },
     {
@@ -1250,7 +1442,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 349.343,
       "end": 357.945,
-      "flagId": 53
+      "flagId": 53,
+      "audioClip": [
+        875856,
+        34799
+      ]
     },
     {
       "en": "Hmm. I can't see that changing much.",
@@ -1259,7 +1455,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 358.062,
       "end": 361.024,
-      "flagId": 54
+      "flagId": 54,
+      "audioClip": [
+        910655,
+        12239
+      ]
     },
     {
       "en": "Touch typing still isn't taught in most schools, which is a shame, but.",
@@ -1268,7 +1468,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 361.601,
       "end": 366.3,
-      "flagId": 55
+      "flagId": 55,
+      "audioClip": [
+        922894,
+        19151
+      ]
     },
     {
       "en": "maybe that won't be necessary in the future because people will also be able to write by hand on digital devices.",
@@ -1277,7 +1481,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 366.313,
       "end": 373.227,
-      "flagId": 56
+      "flagId": 56,
+      "audioClip": [
+        942045,
+        28079
+      ]
     },
     {
       "en": "Anyway, teachers understand the value of handwriting.",
@@ -1289,7 +1497,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 373.894,
       "end": 377.775,
-      "flagId": 57
+      "flagId": 57,
+      "audioClip": [
+        970124,
+        15887
+      ]
     },
     {
       "en": "It's a basic life skill.",
@@ -1301,7 +1513,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 378.019,
       "end": 379.813,
-      "flagId": 58
+      "flagId": 58,
+      "audioClip": [
+        986011,
+        7535
+      ]
     },
     {
       "en": "True. However, the fact is that people are writing by hand less and less and relying on digital devices. That does cause some problems.",
@@ -1310,7 +1526,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 380.031,
       "end": 390.412,
-      "flagId": 151
+      "flagId": 151,
+      "audioClip": [
+        993546,
+        41903
+      ]
     },
     {
       "en": "Hmm. You mean like note-taking?",
@@ -1319,7 +1539,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 390.513,
       "end": 392.868,
-      "flagId": 59
+      "flagId": 59,
+      "audioClip": [
+        1035449,
+        9839
+      ]
     },
     {
       "en": "There are lots of apps for that.",
@@ -1328,7 +1552,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 393.399,
       "end": 395.123,
-      "flagId": 60
+      "flagId": 60,
+      "audioClip": [
+        1045288,
+        7247
+      ]
     },
     {
       "en": "And for reading historical documents, apparently.",
@@ -1337,7 +1565,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 395.429,
       "end": 398.448,
-      "flagId": 61
+      "flagId": 61,
+      "audioClip": [
+        1052535,
+        12431
+      ]
     },
     {
       "en": "But my mum is shocked by my awful spelling and the fact that my punctuation is really inconsistent.",
@@ -1349,7 +1581,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 399.175,
       "end": 405.433,
-      "flagId": 62
+      "flagId": 62,
+      "audioClip": [
+        1064966,
+        25391
+      ]
     },
     {
       "en": "I think you can put that down to lack of practice.",
@@ -1358,7 +1594,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 406.044,
       "end": 408.373,
-      "flagId": 63
+      "flagId": 63,
+      "audioClip": [
+        1090357,
+        9743
+      ]
     },
     {
       "en": "I expect so.",
@@ -1367,7 +1607,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 409.082,
       "end": 410.046,
-      "flagId": 64
+      "flagId": 64,
+      "audioClip": [
+        1100100,
+        4271
+      ]
     },
     {
       "en": "Personally, I miss writing by hand.",
@@ -1379,7 +1623,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 410.709,
       "end": 413.353,
-      "flagId": 65
+      "flagId": 65,
+      "audioClip": [
+        1104371,
+        10991
+      ]
     },
     {
       "en": "I hardly ever write anything now.",
@@ -1388,7 +1636,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 413.804,
       "end": 415.679,
-      "flagId": 66
+      "flagId": 66,
+      "audioClip": [
+        1115362,
+        7919
+      ]
     },
     {
       "en": "I remember my grandparents had such beautiful handwriting, and it was so individual.",
@@ -1397,7 +1649,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 416.228,
       "end": 421.689,
-      "flagId": 67
+      "flagId": 67,
+      "audioClip": [
+        1123281,
+        22223
+      ]
     },
     {
       "en": "Nobody I know would be able to identify my handwriting now.",
@@ -1406,7 +1662,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 422.241,
       "end": 426.042,
-      "flagId": 68
+      "flagId": 68,
+      "audioClip": [
+        1145504,
+        15599
+      ]
     },
     {
       "en": "It's a shame.",
@@ -1415,7 +1675,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 426.34,
       "end": 427.083,
-      "flagId": 69
+      "flagId": 69,
+      "audioClip": [
+        1161103,
+        3311
+      ]
     },
     {
       "en": "I know.",
@@ -1424,7 +1688,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 427.29,
       "end": 427.991,
-      "flagId": 70
+      "flagId": 70,
+      "audioClip": [
+        1164414,
+        3215
+      ]
     },
     {
       "en": "I feel the same way.",
@@ -1436,7 +1704,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 428.32,
       "end": 429.64300000000003,
-      "flagId": 71
+      "flagId": 71,
+      "audioClip": [
+        1167629,
+        5711
+      ]
     },
     {
       "en": "I used to write a diary by hand, and now I do that digitally.",
@@ -1445,7 +1717,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 430.175,
       "end": 434.703,
-      "flagId": 72
+      "flagId": 72,
+      "audioClip": [
+        1173340,
+        18479
+      ]
     },
     {
       "en": "It just seems less effort to do it that way.",
@@ -1454,7 +1730,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 435.274,
       "end": 437.98,
-      "flagId": 73
+      "flagId": 73,
+      "audioClip": [
+        1191819,
+        11183
+      ]
     },
     {
       "en": "Hmm. So it's not just a problem with …",
@@ -1463,7 +1743,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "女士",
       "start": 438.031,
       "end": 440.983,
-      "flagId": 74
+      "flagId": 74,
+      "audioClip": [
+        1203002,
+        12143
+      ]
     }
   ],
   "questions": [
@@ -1495,7 +1779,11 @@ window.READING_REVIEW_DATA = {
           "start": 78.987,
           "end": 86.458,
           "flagId": 9,
-          "highlight": "pretty obvious"
+          "highlight": "pretty obvious",
+          "audioClip": [
+            118697,
+            30287
+          ]
         },
         {
           "en": "What's less obvious is how it helps develop their concentration.",
@@ -1508,7 +1796,11 @@ window.READING_REVIEW_DATA = {
           "start": 87.28,
           "end": 90.969,
           "flagId": 10,
-          "highlight": "concentration"
+          "highlight": "concentration",
+          "audioClip": [
+            148984,
+            15119
+          ]
         },
         {
           "en": "That aspect of handwriting had never occurred to me before.",
@@ -1521,7 +1813,11 @@ window.READING_REVIEW_DATA = {
           "start": 95.441,
           "end": 98.661,
           "flagId": 13,
-          "highlight": "never occurred to me"
+          "highlight": "never occurred to me",
+          "audioClip": [
+            179269,
+            13295
+          ]
         },
         {
           "en": "Hmm, same here.",
@@ -1534,7 +1830,11 @@ window.READING_REVIEW_DATA = {
           "start": 98.715,
           "end": 99.816,
           "flagId": 14,
-          "highlight": "Same here"
+          "highlight": "Same here",
+          "audioClip": [
+            192564,
+            4751
+          ]
         },
         {
           "en": "Well, there was that study which showed that primary-age children generated more ideas when they were writing by hand than using a keyboard.",
@@ -1544,7 +1844,11 @@ window.READING_REVIEW_DATA = {
           "start": 104.929,
           "end": 114.23599999999999,
           "flagId": 16,
-          "highlight": "generated more ideas"
+          "highlight": "generated more ideas",
+          "audioClip": [
+            214450,
+            37583
+          ]
         },
         {
           "en": "I would have guessed that would be the case.",
@@ -1554,7 +1858,11 @@ window.READING_REVIEW_DATA = {
           "start": 114.875,
           "end": 116.845,
           "flagId": 17,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            252033,
+            8303
+          ]
         },
         {
           "en": "I'd never associated spatial awareness with handwriting either.",
@@ -1567,7 +1875,11 @@ window.READING_REVIEW_DATA = {
           "start": 118.854,
           "end": 122.863,
           "flagId": 19,
-          "highlight": "never associated spatial awareness"
+          "highlight": "never associated spatial awareness",
+          "audioClip": [
+            265663,
+            16463
+          ]
         },
         {
           "en": "Mm. I thought that, too.",
@@ -1580,7 +1892,11 @@ window.READING_REVIEW_DATA = {
           "start": 129.943,
           "end": 131.442,
           "flagId": 21,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            307997,
+            6383
+          ]
         }
       ]
     },
@@ -1612,7 +1928,11 @@ window.READING_REVIEW_DATA = {
           "start": 155.427,
           "end": 162.321,
           "flagId": 26,
-          "highlight": "distinguish letter shapes"
+          "highlight": "distinguish letter shapes",
+          "audioClip": [
+            399432,
+            27983
+          ]
         },
         {
           "en": "It takes a lot of patience.",
@@ -1622,7 +1942,11 @@ window.READING_REVIEW_DATA = {
           "start": 162.985,
           "end": 164.502,
           "flagId": 27,
-          "highlight": "a lot of patience"
+          "highlight": "a lot of patience",
+          "audioClip": [
+            427415,
+            6479
+          ]
         },
         {
           "en": "I like the idea of using one of those pens that lights up if you press too hard.",
@@ -1635,7 +1959,11 @@ window.READING_REVIEW_DATA = {
           "start": 165.579,
           "end": 170.583,
           "flagId": 29,
-          "highlight": "press too hard"
+          "highlight": "press too hard",
+          "audioClip": [
+            436341,
+            20399
+          ]
         },
         {
           "en": "I'm not sure there's much you can do about children with dyspraxia writing very slowly.",
@@ -1645,7 +1973,11 @@ window.READING_REVIEW_DATA = {
           "start": 175.406,
           "end": 180.593,
           "flagId": 32,
-          "highlight": "not sure there's much you can do"
+          "highlight": "not sure there's much you can do",
+          "audioClip": [
+            472098,
+            21167
+          ]
         },
         {
           "en": "One quite simple thing you can do is to use grid paper so they write each letter in a box, and that trains them to space the letters correctly.",
@@ -1658,7 +1990,11 @@ window.READING_REVIEW_DATA = {
           "start": 188.856,
           "end": 198.893,
           "flagId": 34,
-          "highlight": "space the letters correctly"
+          "highlight": "space the letters correctly",
+          "audioClip": [
+            523360,
+            40559
+          ]
         },
         {
           "en": "Indeed. That's more important for legibility than trying to get them to write in a straight line.",
@@ -1668,7 +2004,11 @@ window.READING_REVIEW_DATA = {
           "start": 198.948,
           "end": 204.281,
           "flagId": 36,
-          "highlight": "write in a straight line"
+          "highlight": "write in a straight line",
+          "audioClip": [
+            563919,
+            21743
+          ]
         }
       ]
     },
@@ -1698,7 +2038,11 @@ window.READING_REVIEW_DATA = {
           "start": 281.192,
           "end": 285.21500000000003,
           "flagId": 39,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            619117,
+            16463
+          ]
         },
         {
           "en": "It's not as frustrating for them if they get things wrong. On a keyboard, they can be more willing to have a go.",
@@ -1711,7 +2055,11 @@ window.READING_REVIEW_DATA = {
           "start": 286.35699999999997,
           "end": 292.964,
           "flagId": 41,
-          "highlight": "more willing to have a go"
+          "highlight": "more willing to have a go",
+          "audioClip": [
+            638795,
+            26831
+          ]
         }
       ]
     },
@@ -1741,7 +2089,11 @@ window.READING_REVIEW_DATA = {
           "start": 299.027,
           "end": 306.413,
           "flagId": 44,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            685112,
+            29903
+          ]
         },
         {
           "en": "Well, in the past, cursive writing was certainly considered more stylish and educated, but not anymore.",
@@ -1751,7 +2103,11 @@ window.READING_REVIEW_DATA = {
           "start": 307.66,
           "end": 315.081,
           "flagId": 46,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            717750,
+            30095
+          ]
         },
         {
           "en": "Teachers' attitudes have changed because it's been proved that cursive is more difficult to learn, especially for children with learning difficulties, who find joining up letters really challenging.",
@@ -1764,7 +2120,11 @@ window.READING_REVIEW_DATA = {
           "start": 315.648,
           "end": 327.76,
           "flagId": 48,
-          "highlight": "especially for children with learning difficulties"
+          "highlight": "especially for children with learning difficulties",
+          "audioClip": [
+            747845,
+            48815
+          ]
         }
       ]
     },
@@ -1797,7 +2157,11 @@ window.READING_REVIEW_DATA = {
           "start": 329.327,
           "end": 337.668,
           "flagId": 50,
-          "highlight": "exam results"
+          "highlight": "exam results",
+          "audioClip": [
+            800355,
+            33743
+          ]
         },
         {
           "en": "I'm sure a lot of students think it's unfair that they're being judged on their handwriting, not just their knowledge.",
@@ -1807,7 +2171,11 @@ window.READING_REVIEW_DATA = {
           "start": 338.304,
           "end": 344.598,
           "flagId": 52,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            834098,
+            25583
+          ]
         },
         {
           "en": "Marks are definitely affected if examiners can't read the script.",
@@ -1820,7 +2188,11 @@ window.READING_REVIEW_DATA = {
           "answerQuestions": [
             "Q27"
           ],
-          "highlight": "Marks are definitely affected"
+          "highlight": "Marks are definitely affected",
+          "audioClip": [
+            859681,
+            16175
+          ]
         }
       ]
     },
@@ -1850,7 +2222,11 @@ window.READING_REVIEW_DATA = {
           "start": 349.343,
           "end": 357.945,
           "flagId": 53,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            875856,
+            34799
+          ]
         },
         {
           "en": "Hmm. I can't see that changing much.",
@@ -1860,7 +2236,11 @@ window.READING_REVIEW_DATA = {
           "start": 358.062,
           "end": 361.024,
           "flagId": 54,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            910655,
+            12239
+          ]
         },
         {
           "en": "Touch typing still isn't taught in most schools, which is a shame, but.",
@@ -1870,7 +2250,11 @@ window.READING_REVIEW_DATA = {
           "start": 361.601,
           "end": 366.3,
           "flagId": 55,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            922894,
+            19151
+          ]
         },
         {
           "en": "maybe that won't be necessary in the future because people will also be able to write by hand on digital devices.",
@@ -1880,7 +2264,11 @@ window.READING_REVIEW_DATA = {
           "start": 366.313,
           "end": 373.227,
           "flagId": 56,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            942045,
+            28079
+          ]
         },
         {
           "en": "Anyway, teachers understand the value of handwriting.",
@@ -1893,7 +2281,11 @@ window.READING_REVIEW_DATA = {
           "start": 373.894,
           "end": 377.775,
           "flagId": 57,
-          "highlight": "value of handwriting"
+          "highlight": "value of handwriting",
+          "audioClip": [
+            970124,
+            15887
+          ]
         },
         {
           "en": "It's a basic life skill.",
@@ -1906,7 +2298,11 @@ window.READING_REVIEW_DATA = {
           "start": 378.019,
           "end": 379.813,
           "flagId": 58,
-          "highlight": "basic life skill"
+          "highlight": "basic life skill",
+          "audioClip": [
+            986011,
+            7535
+          ]
         }
       ]
     },
@@ -1936,7 +2332,11 @@ window.READING_REVIEW_DATA = {
           "start": 395.429,
           "end": 398.448,
           "flagId": 61,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1052535,
+            12431
+          ]
         },
         {
           "en": "But my mum is shocked by my awful spelling and the fact that my punctuation is really inconsistent.",
@@ -1949,7 +2349,11 @@ window.READING_REVIEW_DATA = {
           "start": 399.175,
           "end": 405.433,
           "flagId": 62,
-          "highlight": "awful spelling"
+          "highlight": "awful spelling",
+          "audioClip": [
+            1064966,
+            25391
+          ]
         },
         {
           "en": "I think you can put that down to lack of practice.",
@@ -1959,7 +2363,11 @@ window.READING_REVIEW_DATA = {
           "start": 406.044,
           "end": 408.373,
           "flagId": 63,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1090357,
+            9743
+          ]
         }
       ]
     },
@@ -1992,7 +2400,11 @@ window.READING_REVIEW_DATA = {
           "start": 410.709,
           "end": 413.353,
           "flagId": 65,
-          "highlight": "miss writing by hand"
+          "highlight": "miss writing by hand",
+          "audioClip": [
+            1104371,
+            10991
+          ]
         },
         {
           "en": "I hardly ever write anything now.",
@@ -2002,7 +2414,11 @@ window.READING_REVIEW_DATA = {
           "start": 413.804,
           "end": 415.679,
           "flagId": 66,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1115362,
+            7919
+          ]
         },
         {
           "en": "Nobody I know would be able to identify my handwriting now.",
@@ -2012,7 +2428,11 @@ window.READING_REVIEW_DATA = {
           "start": 422.241,
           "end": 426.042,
           "flagId": 68,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1145504,
+            15599
+          ]
         },
         {
           "en": "It's a shame.",
@@ -2022,7 +2442,11 @@ window.READING_REVIEW_DATA = {
           "start": 426.34,
           "end": 427.083,
           "flagId": 69,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1161103,
+            3311
+          ]
         },
         {
           "en": "I feel the same way.",
@@ -2035,7 +2459,11 @@ window.READING_REVIEW_DATA = {
           "start": 428.32,
           "end": 429.64300000000003,
           "flagId": 71,
-          "highlight": "same way"
+          "highlight": "same way",
+          "audioClip": [
+            1167629,
+            5711
+          ]
         },
         {
           "en": "I used to write a diary by hand, and now I do that digitally.",
@@ -2045,7 +2473,11 @@ window.READING_REVIEW_DATA = {
           "start": 430.175,
           "end": 434.703,
           "flagId": 72,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1173340,
+            18479
+          ]
         },
         {
           "en": "It just seems less effort to do it that way.",
@@ -2055,7 +2487,11 @@ window.READING_REVIEW_DATA = {
           "start": 435.274,
           "end": 437.98,
           "flagId": 73,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1191819,
+            11183
+          ]
         }
       ]
     }

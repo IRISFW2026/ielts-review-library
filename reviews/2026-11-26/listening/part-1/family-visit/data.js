@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "family-visit-1126", "title": "1126-听力-Part 1-Advice on Family Visit 亲友来访建议", "storageKey": "ielts-listening-family-visit-1126-v1", "storageFormat": "flat", "flagPrefix": "family-visit-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "根据本套模考录音转写。黄色为答案依据，时间标记对应上传录音。", "questionNotice": "", "showQuestionNotice": false};
+window.READING_REVIEW_CONFIG = {"id": "family-visit-1126", "title": "1126-听力-Part 1-Advice on Family Visit 亲友来访建议", "storageKey": "ielts-listening-family-visit-1126-v1", "storageFormat": "flat", "flagPrefix": "family-visit-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "点击原文旁的小喇叭，播放该句对应的原录音片段。黄色标出答案依据。", "questionNotice": "", "showQuestionNotice": false, "sentenceAudio": "./sentence-audio.bin?v=1"};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -730,7 +730,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 51.587,
       "end": 56.947,
-      "flagId": 1
+      "flagId": 1,
+      "audioClip": [
+        0,
+        21839
+      ]
     },
     {
       "en": "Yeah, that's right.",
@@ -739,7 +743,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 57.059,
       "end": 58.271,
-      "flagId": 2
+      "flagId": 2,
+      "audioClip": [
+        21839,
+        5231
+      ]
     },
     {
       "en": "My brother and his family were here a couple of months ago.",
@@ -748,7 +756,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 58.593,
       "end": 61.546,
-      "flagId": 3
+      "flagId": 3,
+      "audioClip": [
+        27070,
+        12239
+      ]
     },
     {
       "en": "Okay, good.",
@@ -757,7 +769,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 61.725,
       "end": 62.778,
-      "flagId": 4
+      "flagId": 4,
+      "audioClip": [
+        39309,
+        4559
+      ]
     },
     {
       "en": "Well, I wanted to ask your advice. I've got my cousin and her family visiting next month, and as I don't have kids, I've no idea where to take them.",
@@ -766,7 +782,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 63.003,
       "end": 73.76,
-      "flagId": 5
+      "flagId": 5,
+      "audioClip": [
+        43868,
+        43439
+      ]
     },
     {
       "en": "Right.",
@@ -775,7 +795,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 74.081,
       "end": 74.746,
-      "flagId": 6
+      "flagId": 6,
+      "audioClip": [
+        87307,
+        3023
+      ]
     },
     {
       "en": "What about accommodation?",
@@ -784,7 +808,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 74.804,
       "end": 76.232,
-      "flagId": 7
+      "flagId": 7,
+      "audioClip": [
+        90330,
+        6095
+      ]
     },
     {
       "en": "Are they going to stay with you in your flat?",
@@ -793,7 +821,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 76.475,
       "end": 78.504,
-      "flagId": 8
+      "flagId": 8,
+      "audioClip": [
+        96425,
+        8495
+      ]
     },
     {
       "en": "No, thankfully, there wouldn't be room. My cousin wants me to recommend a hotel.",
@@ -802,7 +834,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 78.57,
       "end": 84.139,
-      "flagId": 9
+      "flagId": 9,
+      "audioClip": [
+        104920,
+        22703
+      ]
     },
     {
       "en": "Do you know anywhere?",
@@ -811,7 +847,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 84.45,
       "end": 85.507,
-      "flagId": 10
+      "flagId": 10,
+      "audioClip": [
+        127623,
+        4655
+      ]
     },
     {
       "en": "Yes, I do actually.",
@@ -820,7 +860,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 85.715,
       "end": 87.167,
-      "flagId": 11
+      "flagId": 11,
+      "audioClip": [
+        132278,
+        6191
+      ]
     },
     {
       "en": "I always recommend people stay at the Kings Hotel.",
@@ -832,7 +876,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 87.637,
       "end": 90.867,
-      "flagId": 12
+      "flagId": 12,
+      "audioClip": [
+        138469,
+        13295
+      ]
     },
     {
       "en": "Where's that near?",
@@ -841,7 +889,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 90.99,
       "end": 92.152,
-      "flagId": 13
+      "flagId": 13,
+      "audioClip": [
+        151764,
+        5039
+      ]
     },
     {
       "en": "It's about five minutes' walk from Murray Station, so nice and central.",
@@ -850,7 +902,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 92.392,
       "end": 96.527,
-      "flagId": 14
+      "flagId": 14,
+      "audioClip": [
+        156803,
+        16943
+      ]
     },
     {
       "en": "It's actually on George Street.",
@@ -859,7 +915,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 96.905,
       "end": 98.71000000000001,
-      "flagId": 15
+      "flagId": 15,
+      "audioClip": [
+        173746,
+        7631
+      ]
     },
     {
       "en": "Oh, yes, I know.",
@@ -868,7 +928,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 98.801,
       "end": 100.382,
-      "flagId": 16
+      "flagId": 16,
+      "audioClip": [
+        181377,
+        6671
+      ]
     },
     {
       "en": "I think they're on quite a tight budget. So how much roughly is it to stay there?",
@@ -877,7 +941,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 100.886,
       "end": 106.49799999999999,
-      "flagId": 17
+      "flagId": 17,
+      "audioClip": [
+        188048,
+        22799
+      ]
     },
     {
       "en": "If you book a family room, it's about £125 per night.",
@@ -889,7 +957,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 106.809,
       "end": 111.57900000000001,
-      "flagId": 18
+      "flagId": 18,
+      "audioClip": [
+        210847,
+        19439
+      ]
     },
     {
       "en": "My brother paid for two double rooms in the end, and I think that was around £95 for each room.",
@@ -898,7 +970,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 112.12,
       "end": 118.388,
-      "flagId": 19
+      "flagId": 19,
+      "audioClip": [
+        230286,
+        25487
+      ]
     },
     {
       "en": "Oh, that's not too bad.",
@@ -907,7 +983,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 118.60300000000001,
       "end": 119.925,
-      "flagId": 20
+      "flagId": 20,
+      "audioClip": [
+        255773,
+        5711
+      ]
     },
     {
       "en": "Hmm, so how old are your cousin's kids?",
@@ -916,7 +996,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 120.065,
       "end": 122.636,
-      "flagId": 21
+      "flagId": 21,
+      "audioClip": [
+        261484,
+        10703
+      ]
     },
     {
       "en": "Twelve and nine.",
@@ -925,7 +1009,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 122.717,
       "end": 123.758,
-      "flagId": 22
+      "flagId": 22,
+      "audioClip": [
+        272187,
+        4559
+      ]
     },
     {
       "en": "So I want to organise some trips while they're here.",
@@ -934,7 +1022,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 124.13,
       "end": 127.257,
-      "flagId": 23
+      "flagId": 23,
+      "audioClip": [
+        276746,
+        12911
+      ]
     },
     {
       "en": "I was thinking of doing a bus tour of the city centre, as none of them have been here before.",
@@ -943,7 +1035,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 127.815,
       "end": 133.842,
-      "flagId": 24
+      "flagId": 24,
+      "audioClip": [
+        289657,
+        24527
+      ]
     },
     {
       "en": "Those bus tours are quite expensive.",
@@ -952,7 +1048,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 134.243,
       "end": 136.297,
-      "flagId": 25
+      "flagId": 25,
+      "audioClip": [
+        314184,
+        8591
+      ]
     },
     {
       "en": "I think it's better to do a walking tour. It gives you a much better feel for the city.",
@@ -964,7 +1064,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 136.781,
       "end": 141.775,
-      "flagId": 26
+      "flagId": 26,
+      "audioClip": [
+        322775,
+        20399
+      ]
     },
     {
       "en": "There's one that starts from Carlton Square.",
@@ -976,7 +1080,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 142.526,
       "end": 144.68,
-      "flagId": 27
+      "flagId": 27,
+      "audioClip": [
+        343174,
+        8975
+      ]
     },
     {
       "en": "It takes a couple of hours and doesn't cost that much.",
@@ -985,7 +1093,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 144.939,
       "end": 147.452,
-      "flagId": 28
+      "flagId": 28,
+      "audioClip": [
+        352149,
+        10415
+      ]
     },
     {
       "en": "Sounds good.",
@@ -994,7 +1106,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 147.898,
       "end": 148.811,
-      "flagId": 29
+      "flagId": 29,
+      "audioClip": [
+        362564,
+        4079
+      ]
     },
     {
       "en": "I'll look that up. Thanks.",
@@ -1003,7 +1119,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 148.864,
       "end": 150.257,
-      "flagId": 30
+      "flagId": 30,
+      "audioClip": [
+        366643,
+        5999
+      ]
     },
     {
       "en": "If the weather's nice, one thing you could do is visit the old fort.",
@@ -1015,7 +1135,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 150.447,
       "end": 154.286,
-      "flagId": 31
+      "flagId": 31,
+      "audioClip": [
+        372642,
+        15695
+      ]
     },
     {
       "en": "You could get there by boat.",
@@ -1027,7 +1151,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 154.784,
       "end": 156.25,
-      "flagId": 32
+      "flagId": 32,
+      "audioClip": [
+        388337,
+        6287
+      ]
     },
     {
       "en": "The whole trip takes half a day.",
@@ -1036,7 +1164,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 156.502,
       "end": 158.001,
-      "flagId": 33
+      "flagId": 33,
+      "audioClip": [
+        394624,
+        6383
+      ]
     },
     {
       "en": "That's a really good idea.",
@@ -1045,7 +1177,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 158.196,
       "end": 160.209,
-      "flagId": 34
+      "flagId": 34,
+      "audioClip": [
+        401007,
+        8399
+      ]
     },
     {
       "en": "I'd like to do that myself.",
@@ -1054,7 +1190,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 160.322,
       "end": 161.887,
-      "flagId": 35
+      "flagId": 35,
+      "audioClip": [
+        409406,
+        6671
+      ]
     },
     {
       "en": "And if the weather's bad, I was thinking they could go to the Science Museum, but maybe they could do that when I'm at work.",
@@ -1066,6 +1206,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 36,
       "previousFlagIds": [
         37
+      ],
+      "audioClip": [
+        416077,
+        33551
       ]
     },
     {
@@ -1075,7 +1219,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 170.655,
       "end": 173.502,
-      "flagId": 38
+      "flagId": 38,
+      "audioClip": [
+        449628,
+        11759
+      ]
     },
     {
       "en": "They're here from Saturday for four nights, so Tuesday would be best, I think.",
@@ -1087,7 +1235,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 173.696,
       "end": 179.119,
-      "flagId": 39
+      "flagId": 39,
+      "audioClip": [
+        461387,
+        22031
+      ]
     },
     {
       "en": "Hmm, and it won't be so crowded then.",
@@ -1096,7 +1248,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 179.242,
       "end": 181.223,
-      "flagId": 40
+      "flagId": 40,
+      "audioClip": [
+        483418,
+        8303
+      ]
     },
     {
       "en": "Saturdays are terrible.",
@@ -1105,7 +1261,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 181.539,
       "end": 182.803,
-      "flagId": 41
+      "flagId": 41,
+      "audioClip": [
+        491721,
+        5423
+      ]
     },
     {
       "en": "I took my kids to the exhibition on old computers there, and it was far too crowded.",
@@ -1114,7 +1274,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 183.254,
       "end": 187.779,
-      "flagId": 42
+      "flagId": 42,
+      "audioClip": [
+        497144,
+        18479
+      ]
     },
     {
       "en": "I wanted to go back, but it's finished now.",
@@ -1123,7 +1287,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 188.399,
       "end": 190.3,
-      "flagId": 43
+      "flagId": 43,
+      "audioClip": [
+        515623,
+        8015
+      ]
     },
     {
       "en": "That's a shame.",
@@ -1132,7 +1300,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 190.34,
       "end": 191.331,
-      "flagId": 44
+      "flagId": 44,
+      "audioClip": [
+        523638,
+        4367
+      ]
     },
     {
       "en": "My cousin's kids would have enjoyed that.",
@@ -1141,7 +1313,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 191.746,
       "end": 194.247,
-      "flagId": 45
+      "flagId": 45,
+      "audioClip": [
+        528005,
+        10415
+      ]
     },
     {
       "en": "There's another one starting soon on space, which looks really good too.",
@@ -1153,7 +1329,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 194.355,
       "end": 198.401,
-      "flagId": 46
+      "flagId": 46,
+      "audioClip": [
+        538420,
+        16559
+      ]
     },
     {
       "en": "Okay, well, I'll mention that to my cousin.",
@@ -1162,7 +1342,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 198.549,
       "end": 201.042,
-      "flagId": 47
+      "flagId": 47,
+      "audioClip": [
+        554979,
+        10319
+      ]
     },
     {
       "en": "Have you thought about where to take them to eat?",
@@ -1171,7 +1355,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 237.278,
       "end": 239.781,
-      "flagId": 48
+      "flagId": 48,
+      "audioClip": [
+        565298,
+        10415
+      ]
     },
     {
       "en": "Well, I really like all the food stalls at Clacton Market.",
@@ -1180,7 +1368,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 240.362,
       "end": 244.594,
-      "flagId": 49
+      "flagId": 49,
+      "audioClip": [
+        575713,
+        17327
+      ]
     },
     {
       "en": "My cousin's vegetarian. I know it's one of the best places for that kind of food.",
@@ -1192,7 +1384,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 244.924,
       "end": 250.099,
-      "flagId": 50
+      "flagId": 50,
+      "audioClip": [
+        593040,
+        21071
+      ]
     },
     {
       "en": "Definitely, and there'll be loads of choice for the kids too.",
@@ -1201,7 +1397,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 250.182,
       "end": 253.623,
-      "flagId": 51
+      "flagId": 51,
+      "audioClip": [
+        614111,
+        14159
+      ]
     },
     {
       "en": "You need to get there quite early, though. At the weekend, most of the stalls stop serving lunch at two thirty.",
@@ -1213,7 +1413,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 254.145,
       "end": 260.012,
-      "flagId": 52
+      "flagId": 52,
+      "audioClip": [
+        628270,
+        23855
+      ]
     },
     {
       "en": "Good point.",
@@ -1222,7 +1426,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 260.048,
       "end": 261.195,
-      "flagId": 53
+      "flagId": 53,
+      "audioClip": [
+        652125,
+        4943
+      ]
     },
     {
       "en": "It's all going to need careful planning.",
@@ -1231,7 +1439,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 261.374,
       "end": 263.513,
-      "flagId": 54
+      "flagId": 54,
+      "audioClip": [
+        657068,
+        8975
+      ]
     },
     {
       "en": "My cousin said she'd love to take the kids to a show at the theatre, but tickets are so expensive.",
@@ -1240,7 +1452,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 263.972,
       "end": 270.435,
-      "flagId": 55
+      "flagId": 55,
+      "audioClip": [
+        666043,
+        26255
+      ]
     },
     {
       "en": "I know.",
@@ -1249,7 +1465,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 270.495,
       "end": 271.235,
-      "flagId": 56
+      "flagId": 56,
+      "audioClip": [
+        692298,
+        3311
+      ]
     },
     {
       "en": "But you can get some good deals if you book online with bargaintickets.com for the following day. On some seats, there's a seventy-five percent discount.",
@@ -1261,7 +1481,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 271.731,
       "end": 280.842,
-      "flagId": 57
+      "flagId": 57,
+      "audioClip": [
+        695609,
+        36815
+      ]
     },
     {
       "en": "Really?",
@@ -1270,7 +1494,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 280.861,
       "end": 281.702,
-      "flagId": 58
+      "flagId": 58,
+      "audioClip": [
+        732424,
+        3791
+      ]
     },
     {
       "en": "Mm. I must try and get some.",
@@ -1279,7 +1507,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 281.709,
       "end": 283.601,
-      "flagId": 59
+      "flagId": 59,
+      "audioClip": [
+        736215,
+        7919
+      ]
     },
     {
       "en": "Yeah. There are lots of things you can do for free as well. No need to spend a fortune.",
@@ -1288,7 +1520,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 283.65,
       "end": 288.728,
-      "flagId": 60
+      "flagId": 60,
+      "audioClip": [
+        744134,
+        20687
+      ]
     },
     {
       "en": "Like what?",
@@ -1297,7 +1533,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 288.848,
       "end": 289.586,
-      "flagId": 61
+      "flagId": 61,
+      "audioClip": [
+        764821,
+        3311
+      ]
     },
     {
       "en": "They're coming next month, right? Mm.",
@@ -1306,7 +1546,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 290.129,
       "end": 291.878,
-      "flagId": 62
+      "flagId": 62,
+      "audioClip": [
+        768132,
+        7343
+      ]
     },
     {
       "en": "Well, check and see if it's the same weekend as the Roots Music Festival in Blakewell Gardens.",
@@ -1315,7 +1559,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 292.303,
       "end": 297.94,
-      "flagId": 63
+      "flagId": 63,
+      "audioClip": [
+        775475,
+        22895
+      ]
     },
     {
       "en": "R-double O-T-S?",
@@ -1324,7 +1572,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 298.414,
       "end": 300.929,
-      "flagId": 64
+      "flagId": 64,
+      "audioClip": [
+        798370,
+        10415
+      ]
     },
     {
       "en": "Yeah. Check it out online.",
@@ -1333,7 +1585,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 301.278,
       "end": 302.86,
-      "flagId": 65
+      "flagId": 65,
+      "audioClip": [
+        808785,
+        6671
+      ]
     },
     {
       "en": "It's always a family-friendly event, and there's no entry charge.",
@@ -1342,7 +1598,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 303.342,
       "end": 306.615,
-      "flagId": 66
+      "flagId": 66,
+      "audioClip": [
+        815456,
+        13487
+      ]
     },
     {
       "en": "That sounds perfect.",
@@ -1351,7 +1611,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 306.739,
       "end": 307.988,
-      "flagId": 67
+      "flagId": 67,
+      "audioClip": [
+        828943,
+        5423
+      ]
     },
     {
       "en": "And if you're in Blakewell Gardens, climb Telegraph Hill. You'll be able to look right down on the port.",
@@ -1363,7 +1627,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 308.233,
       "end": 314.528,
-      "flagId": 68
+      "flagId": 68,
+      "audioClip": [
+        834366,
+        25583
+      ]
     },
     {
       "en": "Everyone's always really impressed because it's so huge.",
@@ -1372,7 +1640,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "Sandra",
       "start": 315.193,
       "end": 317.743,
-      "flagId": 69
+      "flagId": 69,
+      "audioClip": [
+        859949,
+        10607
+      ]
     },
     {
       "en": "Oh, yeah. I've been meaning to do that for ages.",
@@ -1381,7 +1653,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 317.816,
       "end": 321.153,
-      "flagId": 70
+      "flagId": 70,
+      "audioClip": [
+        870556,
+        13775
+      ]
     },
     {
       "en": "I've heard the view's amazing.",
@@ -1390,7 +1666,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 321.429,
       "end": 323.263,
-      "flagId": 71
+      "flagId": 71,
+      "audioClip": [
+        884331,
+        7727
+      ]
     },
     {
       "en": "Yeah, it's really worth the effort.",
@@ -1402,6 +1682,10 @@ window.READING_REVIEW_DATA = {
       "flagId": 73,
       "previousFlagIds": [
         72
+      ],
+      "audioClip": [
+        892058,
+        8015
       ]
     },
     {
@@ -1411,7 +1695,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 325.499,
       "end": 328.545,
-      "flagId": 74
+      "flagId": 74,
+      "audioClip": [
+        900073,
+        12527
+      ]
     },
     {
       "en": "Thanks so much for …",
@@ -1420,7 +1708,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "男士",
       "start": 328.609,
       "end": 329.816,
-      "flagId": 75
+      "flagId": 75,
+      "audioClip": [
+        912600,
+        5231
+      ]
     }
   ],
   "questions": [
@@ -1449,7 +1741,11 @@ window.READING_REVIEW_DATA = {
           "start": 87.637,
           "end": 90.867,
           "flagId": 12,
-          "highlight": "Kings"
+          "highlight": "Kings",
+          "audioClip": [
+            138469,
+            13295
+          ]
         }
       ]
     },
@@ -1478,7 +1774,11 @@ window.READING_REVIEW_DATA = {
           "start": 106.809,
           "end": 111.57900000000001,
           "flagId": 18,
-          "highlight": "£125"
+          "highlight": "£125",
+          "audioClip": [
+            210847,
+            19439
+          ]
         },
         {
           "en": "My brother paid for two double rooms in the end, and I think that was around £95 for each room.",
@@ -1488,7 +1788,11 @@ window.READING_REVIEW_DATA = {
           "start": 112.12,
           "end": 118.388,
           "flagId": 19,
-          "highlight": "£95"
+          "highlight": "£95",
+          "audioClip": [
+            230286,
+            25487
+          ]
         }
       ]
     },
@@ -1514,7 +1818,11 @@ window.READING_REVIEW_DATA = {
           "start": 127.815,
           "end": 133.842,
           "flagId": 24,
-          "highlight": "bus tour"
+          "highlight": "bus tour",
+          "audioClip": [
+            289657,
+            24527
+          ]
         },
         {
           "en": "Those bus tours are quite expensive.",
@@ -1524,7 +1832,11 @@ window.READING_REVIEW_DATA = {
           "start": 134.243,
           "end": 136.297,
           "flagId": 25,
-          "highlight": "quite expensive"
+          "highlight": "quite expensive",
+          "audioClip": [
+            314184,
+            8591
+          ]
         },
         {
           "en": "I think it's better to do a walking tour. It gives you a much better feel for the city.",
@@ -1537,7 +1849,11 @@ window.READING_REVIEW_DATA = {
           "start": 136.781,
           "end": 141.775,
           "flagId": 26,
-          "highlight": "walking tour"
+          "highlight": "walking tour",
+          "audioClip": [
+            322775,
+            20399
+          ]
         },
         {
           "en": "There's one that starts from Carlton Square.",
@@ -1550,7 +1866,11 @@ window.READING_REVIEW_DATA = {
           "start": 142.526,
           "end": 144.68,
           "flagId": 27,
-          "highlight": "Carlton Square"
+          "highlight": "Carlton Square",
+          "audioClip": [
+            343174,
+            8975
+          ]
         }
       ]
     },
@@ -1579,7 +1899,11 @@ window.READING_REVIEW_DATA = {
           "start": 150.447,
           "end": 154.286,
           "flagId": 31,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            372642,
+            15695
+          ]
         },
         {
           "en": "You could get there by boat.",
@@ -1592,7 +1916,11 @@ window.READING_REVIEW_DATA = {
           "start": 154.784,
           "end": 156.25,
           "flagId": 32,
-          "highlight": "boat"
+          "highlight": "boat",
+          "audioClip": [
+            388337,
+            6287
+          ]
         }
       ]
     },
@@ -1618,7 +1946,11 @@ window.READING_REVIEW_DATA = {
           "start": 170.655,
           "end": 173.502,
           "flagId": 38,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            449628,
+            11759
+          ]
         },
         {
           "en": "They're here from Saturday for four nights, so Tuesday would be best, I think.",
@@ -1631,7 +1963,11 @@ window.READING_REVIEW_DATA = {
           "start": 173.696,
           "end": 179.119,
           "flagId": 39,
-          "highlight": "Tuesday"
+          "highlight": "Tuesday",
+          "audioClip": [
+            461387,
+            22031
+          ]
         }
       ]
     },
@@ -1657,7 +1993,11 @@ window.READING_REVIEW_DATA = {
           "start": 183.254,
           "end": 187.779,
           "flagId": 42,
-          "highlight": "old computers"
+          "highlight": "old computers",
+          "audioClip": [
+            497144,
+            18479
+          ]
         },
         {
           "en": "I wanted to go back, but it's finished now.",
@@ -1667,7 +2007,11 @@ window.READING_REVIEW_DATA = {
           "start": 188.399,
           "end": 190.3,
           "flagId": 43,
-          "highlight": "finished now"
+          "highlight": "finished now",
+          "audioClip": [
+            515623,
+            8015
+          ]
         },
         {
           "en": "There's another one starting soon on space, which looks really good too.",
@@ -1680,7 +2024,11 @@ window.READING_REVIEW_DATA = {
           "start": 194.355,
           "end": 198.401,
           "flagId": 46,
-          "highlight": "starting soon on space"
+          "highlight": "starting soon on space",
+          "audioClip": [
+            538420,
+            16559
+          ]
         }
       ]
     },
@@ -1706,7 +2054,11 @@ window.READING_REVIEW_DATA = {
           "start": 240.362,
           "end": 244.594,
           "flagId": 49,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            575713,
+            17327
+          ]
         },
         {
           "en": "My cousin's vegetarian. I know it's one of the best places for that kind of food.",
@@ -1719,7 +2071,11 @@ window.READING_REVIEW_DATA = {
           "start": 244.924,
           "end": 250.099,
           "flagId": 50,
-          "highlight": "vegetarian"
+          "highlight": "vegetarian",
+          "audioClip": [
+            593040,
+            21071
+          ]
         }
       ]
     },
@@ -1748,7 +2104,11 @@ window.READING_REVIEW_DATA = {
           "start": 254.145,
           "end": 260.012,
           "flagId": 52,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            628270,
+            23855
+          ]
         }
       ]
     },
@@ -1774,7 +2134,11 @@ window.READING_REVIEW_DATA = {
           "start": 263.972,
           "end": 270.435,
           "flagId": 55,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            666043,
+            26255
+          ]
         },
         {
           "en": "But you can get some good deals if you book online with bargaintickets.com for the following day. On some seats, there's a seventy-five percent discount.",
@@ -1787,7 +2151,11 @@ window.READING_REVIEW_DATA = {
           "start": 271.731,
           "end": 280.842,
           "flagId": 57,
-          "highlight": "seventy-five percent discount"
+          "highlight": "seventy-five percent discount",
+          "audioClip": [
+            695609,
+            36815
+          ]
         }
       ]
     },
@@ -1816,7 +2184,11 @@ window.READING_REVIEW_DATA = {
           "start": 308.233,
           "end": 314.528,
           "flagId": 68,
-          "highlight": "port"
+          "highlight": "port",
+          "audioClip": [
+            834366,
+            25583
+          ]
         },
         {
           "en": "Everyone's always really impressed because it's so huge.",
@@ -1826,7 +2198,11 @@ window.READING_REVIEW_DATA = {
           "start": 315.193,
           "end": 317.743,
           "flagId": 69,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            859949,
+            10607
+          ]
         }
       ]
     }

@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "city-football-club-1126", "title": "1126-听力-Part 2-City Football Club 城市足球俱乐部", "storageKey": "ielts-listening-city-football-club-1126-v1", "storageFormat": "flat", "flagPrefix": "city-football-club-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "根据本套模考录音转写。黄色为答案依据，时间标记对应上传录音。", "questionNotice": "Q15–Q20 的个人作答未记录，保留标准答案与听力依据。", "showQuestionNotice": true};
+window.READING_REVIEW_CONFIG = {"id": "city-football-club-1126", "title": "1126-听力-Part 2-City Football Club 城市足球俱乐部", "storageKey": "ielts-listening-city-football-club-1126-v1", "storageFormat": "flat", "flagPrefix": "city-football-club-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "点击原文旁的小喇叭，播放该句对应的原录音片段。黄色标出答案依据。", "questionNotice": "Q15–Q20 的个人作答未记录，保留标准答案与听力依据。", "showQuestionNotice": true, "sentenceAudio": "./sentence-audio.bin?v=1"};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -750,7 +750,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 51.71,
       "end": 55.38,
-      "flagId": 1
+      "flagId": 1,
+      "audioClip": [
+        0,
+        15023
+      ]
     },
     {
       "en": "I'd like to give you some useful information about your visit to the stadium today, and then we'll start the tour of the areas of the stadium that are open to visitors.",
@@ -759,7 +763,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 56.036,
       "end": 66.917,
-      "flagId": 2
+      "flagId": 2,
+      "audioClip": [
+        15023,
+        43919
+      ]
     },
     {
       "en": "I can see lots of children here today, so just to let mums and dads know a few things before we start.",
@@ -768,7 +776,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 67.845,
       "end": 74.973,
-      "flagId": 3
+      "flagId": 3,
+      "audioClip": [
+        58942,
+        28847
+      ]
     },
     {
       "en": "The stadium has lots of stairs, and the players' tunnel is very dark.",
@@ -777,7 +789,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 75.565,
       "end": 80.352,
-      "flagId": 4
+      "flagId": 4,
+      "audioClip": [
+        87789,
+        19535
+      ]
     },
     {
       "en": "Please don't let your children wander off on their own, even for a minute.",
@@ -789,7 +805,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 80.742,
       "end": 85.531,
-      "flagId": 5
+      "flagId": 5,
+      "audioClip": [
+        107324,
+        19535
+      ]
     },
     {
       "en": "We don't want any accidents or anyone getting frightened.",
@@ -798,7 +818,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 85.985,
       "end": 89.696,
-      "flagId": 6
+      "flagId": 6,
+      "audioClip": [
+        126859,
+        15215
+      ]
     },
     {
       "en": "Cameras are permitted everywhere, and you can take pictures of your child shooting a penalty.",
@@ -807,7 +831,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 90.596,
       "end": 97.101,
-      "flagId": 7
+      "flagId": 7,
+      "audioClip": [
+        142074,
+        26447
+      ]
     },
     {
       "en": "Assistants are helping to organise this, and hopefully the queue won't be too long. It's very hot and sunny out on the pitch today.",
@@ -816,7 +844,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 97.952,
       "end": 107.34,
-      "flagId": 8
+      "flagId": 8,
+      "audioClip": [
+        168521,
+        37967
+      ]
     },
     {
       "en": "You can get food and drink at the café, and I really recommend the healthy lunch boxes for children.",
@@ -825,7 +857,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 108.077,
       "end": 115.562,
-      "flagId": 9
+      "flagId": 9,
+      "audioClip": [
+        206488,
+        30287
+      ]
     },
     {
       "en": "Also in the café, children are invited to do a football-themed drawing.",
@@ -837,7 +873,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 116.601,
       "end": 122.605,
-      "flagId": 10
+      "flagId": 10,
+      "audioClip": [
+        236775,
+        24431
+      ]
     },
     {
       "en": "We'll pick the best one at the end of the afternoon, so don't forget to put your name and contact details on the back.",
@@ -849,7 +889,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 123.298,
       "end": 132.371,
-      "flagId": 11
+      "flagId": 11,
+      "audioClip": [
+        261206,
+        36719
+      ]
     },
     {
       "en": "That way, if you've left the stadium before then, we'll send your prize. But sadly, we can't return drawings.",
@@ -858,7 +902,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 132.84,
       "end": 140.848,
-      "flagId": 12
+      "flagId": 12,
+      "audioClip": [
+        297925,
+        32399
+      ]
     },
     {
       "en": "I'd like to mention some features of the tour.",
@@ -867,7 +915,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 142.219,
       "end": 145.37,
-      "flagId": 13
+      "flagId": 13,
+      "audioClip": [
+        330324,
+        13007
+      ]
     },
     {
       "en": "We'll start with the three-sixty cinema experience, which has been very popular over the years. And then I'll take you to the players' dressing rooms before going outside to the seating area and the pitch.",
@@ -876,7 +928,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 145.938,
       "end": 161.797,
-      "flagId": 14
+      "flagId": 14,
+      "audioClip": [
+        343331,
+        63791
+      ]
     },
     {
       "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
@@ -888,7 +944,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 162.872,
       "end": 176.204,
-      "flagId": 15
+      "flagId": 15,
+      "audioClip": [
+        407122,
+        53711
+      ]
     },
     {
       "en": "We've only just introduced this feature and would appreciate your feedback.",
@@ -900,7 +960,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 176.786,
       "end": 182.221,
-      "flagId": 16
+      "flagId": 16,
+      "audioClip": [
+        460833,
+        22127
+      ]
     },
     {
       "en": "We're thinking of offering tours in other languages in future, so if you have any thoughts on that, we'd welcome those too.",
@@ -909,7 +973,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 183.189,
       "end": 191.927,
-      "flagId": 17
+      "flagId": 17,
+      "audioClip": [
+        482960,
+        35375
+      ]
     },
     {
       "en": "If you plan to return another time, you might like to book one of our VIP tours. We've only just started offering these, and they can be booked online.",
@@ -921,7 +989,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 192.952,
       "end": 205.068,
-      "flagId": 18
+      "flagId": 18,
+      "audioClip": [
+        518335,
+        48815
+      ]
     },
     {
       "en": "Now, the stadium you see today was built in nineteen eighty-nine as part of a three-year redevelopment project. While that project was going on, the team had to play its matches at the ground of another club. Apart from that, the club has been here on this site since eighteen seventy.",
@@ -930,7 +1002,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 256.986,
       "end": 279.228,
-      "flagId": 19
+      "flagId": 19,
+      "audioClip": [
+        567150,
+        89327
+      ]
     },
     {
       "en": "As some of you may know, that was the start of a really important decade in the history of football in this country.",
@@ -939,7 +1015,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 279.959,
       "end": 288.19100000000003,
-      "flagId": 20
+      "flagId": 20,
+      "audioClip": [
+        656477,
+        33263
+      ]
     },
     {
       "en": "For example, eighteen seventy was also the year that football teams started to include a player whose role it was to guard the goal.",
@@ -951,7 +1031,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 289.06600000000003,
       "end": 299.21,
-      "flagId": 21
+      "flagId": 21,
+      "audioClip": [
+        689740,
+        40943
+      ]
     },
     {
       "en": "It's hard to imagine what the game must have been like without someone in that position, isn't it?",
@@ -960,7 +1044,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 299.892,
       "end": 306.265,
-      "flagId": 22
+      "flagId": 22,
+      "audioClip": [
+        730683,
+        25871
+      ]
     },
     {
       "en": "In 1872 and '73, many other clubs were established both here and abroad. And the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
@@ -972,7 +1060,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 307.806,
       "end": 324.861,
-      "flagId": 23
+      "flagId": 23,
+      "audioClip": [
+        756554,
+        68591
+      ]
     },
     {
       "en": "And also in that year, teams started having to swap ends at half-time.",
@@ -984,7 +1076,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 325.587,
       "end": 331.052,
-      "flagId": 24
+      "flagId": 24,
+      "audioClip": [
+        825145,
+        22223
+      ]
     },
     {
       "en": "One fact I was interested to discover was that in early football games, the aim was for the scorer to get the ball between two flag posts and later between sticks joined at the top with a piece of tape.",
@@ -993,7 +1089,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 332.429,
       "end": 348.681,
-      "flagId": 25
+      "flagId": 25,
+      "audioClip": [
+        847368,
+        65423
+      ]
     },
     {
       "en": "In 1875, that tape was replaced with the solid crossbar that we're familiar with today. 1877 saw the founding of further new clubs, and the history books tell us that in the same year, all the clubs decided to set a limit of ninety minutes for each match.",
@@ -1006,7 +1106,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 349.296,
       "end": 372.403,
-      "flagId": 26
+      "flagId": 26,
+      "audioClip": [
+        912791,
+        92783
+      ]
     },
     {
       "en": "Before that, it was a more casual arrangement, and this sometimes caused huge arguments and sometimes fights during matches when one team called the end of the game and the other team wanted to play on to try and score a winning goal.",
@@ -1015,7 +1119,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 372.929,
       "end": 391.262,
-      "flagId": 27
+      "flagId": 27,
+      "audioClip": [
+        1005574,
+        73679
+      ]
     },
     {
       "en": "By 1878, the number of teams in the Football League increased again.",
@@ -1024,7 +1132,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 392.725,
       "end": 398.612,
-      "flagId": 28
+      "flagId": 28,
+      "audioClip": [
+        1079253,
+        23951
+      ]
     },
     {
       "en": "In addition, referees started using whistles and electric lamps were installed on certain pitches.",
@@ -1036,7 +1148,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 399.322,
       "end": 407.028,
-      "flagId": 29
+      "flagId": 29,
+      "audioClip": [
+        1103204,
+        31247
+      ]
     },
     {
       "en": "This was a significant change as games could then be played in the evenings all year round.",
@@ -1045,7 +1161,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 407.868,
       "end": 414.846,
-      "flagId": 30
+      "flagId": 30,
+      "audioClip": [
+        1134451,
+        28271
+      ]
     },
     {
       "en": "In 1880, clubs began to charge fans for admission to games, even though players were still amateurs and had other proper jobs.",
@@ -1057,7 +1177,11 @@ window.READING_REVIEW_DATA = {
       ],
       "start": 416.347,
       "end": 426.928,
-      "flagId": 31
+      "flagId": 31,
+      "audioClip": [
+        1162722,
+        42671
+      ]
     },
     {
       "en": "That's hard to imagine in the modern professional game where top players earn significant sums of money from both playing and commercial activities.",
@@ -1066,7 +1190,11 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "start": 427.716,
       "end": 437.717,
-      "flagId": 32
+      "flagId": 32,
+      "audioClip": [
+        1205393,
+        40367
+      ]
     }
   ],
   "questions": [
@@ -1101,7 +1229,11 @@ window.READING_REVIEW_DATA = {
           "start": 80.742,
           "end": 85.531,
           "flagId": 5,
-          "highlight": "wander off on their own"
+          "highlight": "wander off on their own",
+          "audioClip": [
+            107324,
+            19535
+          ]
         },
         {
           "en": "Also in the café, children are invited to do a football-themed drawing.",
@@ -1114,7 +1246,11 @@ window.READING_REVIEW_DATA = {
           "start": 116.601,
           "end": 122.605,
           "flagId": 10,
-          "highlight": "football-themed drawing"
+          "highlight": "football-themed drawing",
+          "audioClip": [
+            236775,
+            24431
+          ]
         },
         {
           "en": "We'll pick the best one at the end of the afternoon, so don't forget to put your name and contact details on the back.",
@@ -1127,7 +1263,11 @@ window.READING_REVIEW_DATA = {
           "start": 123.298,
           "end": 132.371,
           "flagId": 11,
-          "highlight": "pick the best one"
+          "highlight": "pick the best one",
+          "audioClip": [
+            261206,
+            36719
+          ]
         },
         {
           "en": "That way, if you've left the stadium before then, we'll send your prize. But sadly, we can't return drawings.",
@@ -1137,7 +1277,11 @@ window.READING_REVIEW_DATA = {
           "start": 132.84,
           "end": 140.848,
           "flagId": 12,
-          "highlight": "send your prize"
+          "highlight": "send your prize",
+          "audioClip": [
+            297925,
+            32399
+          ]
         }
       ]
     },
@@ -1172,7 +1316,11 @@ window.READING_REVIEW_DATA = {
           "start": 162.872,
           "end": 176.204,
           "flagId": 15,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            407122,
+            53711
+          ]
         },
         {
           "en": "We've only just introduced this feature and would appreciate your feedback.",
@@ -1185,7 +1333,11 @@ window.READING_REVIEW_DATA = {
           "start": 176.786,
           "end": 182.221,
           "flagId": 16,
-          "highlight": "only just introduced"
+          "highlight": "only just introduced",
+          "audioClip": [
+            460833,
+            22127
+          ]
         },
         {
           "en": "We're thinking of offering tours in other languages in future, so if you have any thoughts on that, we'd welcome those too.",
@@ -1195,7 +1347,11 @@ window.READING_REVIEW_DATA = {
           "start": 183.189,
           "end": 191.927,
           "flagId": 17,
-          "highlight": "thinking of"
+          "highlight": "thinking of",
+          "audioClip": [
+            482960,
+            35375
+          ]
         },
         {
           "en": "If you plan to return another time, you might like to book one of our VIP tours. We've only just started offering these, and they can be booked online.",
@@ -1208,7 +1364,11 @@ window.READING_REVIEW_DATA = {
           "start": 192.952,
           "end": 205.068,
           "flagId": 18,
-          "highlight": "only just started"
+          "highlight": "only just started",
+          "audioClip": [
+            518335,
+            48815
+          ]
         }
       ]
     },
@@ -1246,7 +1406,11 @@ window.READING_REVIEW_DATA = {
           "start": 289.06600000000003,
           "end": 299.21,
           "flagId": 21,
-          "highlight": "guard the goal"
+          "highlight": "guard the goal",
+          "audioClip": [
+            689740,
+            40943
+          ]
         }
       ]
     },
@@ -1284,7 +1448,11 @@ window.READING_REVIEW_DATA = {
           "start": 307.806,
           "end": 324.861,
           "flagId": 23,
-          "highlight": "send players off"
+          "highlight": "send players off",
+          "audioClip": [
+            756554,
+            68591
+          ]
         },
         {
           "en": "And also in that year, teams started having to swap ends at half-time.",
@@ -1297,7 +1465,11 @@ window.READING_REVIEW_DATA = {
           "start": 325.587,
           "end": 331.052,
           "flagId": 24,
-          "highlight": "swap ends"
+          "highlight": "swap ends",
+          "audioClip": [
+            825145,
+            22223
+          ]
         }
       ]
     },
@@ -1332,7 +1504,11 @@ window.READING_REVIEW_DATA = {
           "start": 332.429,
           "end": 348.681,
           "flagId": 25,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            847368,
+            65423
+          ]
         },
         {
           "en": "In 1875, that tape was replaced with the solid crossbar that we're familiar with today. 1877 saw the founding of further new clubs, and the history books tell us that in the same year, all the clubs decided to set a limit of ninety minutes for each match.",
@@ -1346,7 +1522,11 @@ window.READING_REVIEW_DATA = {
           "start": 349.296,
           "end": 372.403,
           "flagId": 26,
-          "highlight": "replaced with the solid crossbar"
+          "highlight": "replaced with the solid crossbar",
+          "audioClip": [
+            912791,
+            92783
+          ]
         }
       ]
     },
@@ -1385,7 +1565,11 @@ window.READING_REVIEW_DATA = {
           "start": 349.296,
           "end": 372.403,
           "flagId": 26,
-          "highlight": "set a limit of ninety minutes"
+          "highlight": "set a limit of ninety minutes",
+          "audioClip": [
+            912791,
+            92783
+          ]
         }
       ]
     },
@@ -1420,7 +1604,11 @@ window.READING_REVIEW_DATA = {
           "start": 392.725,
           "end": 398.612,
           "flagId": 28,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1079253,
+            23951
+          ]
         },
         {
           "en": "In addition, referees started using whistles and electric lamps were installed on certain pitches.",
@@ -1433,7 +1621,11 @@ window.READING_REVIEW_DATA = {
           "start": 399.322,
           "end": 407.028,
           "flagId": 29,
-          "highlight": "electric lamps"
+          "highlight": "electric lamps",
+          "audioClip": [
+            1103204,
+            31247
+          ]
         },
         {
           "en": "This was a significant change as games could then be played in the evenings all year round.",
@@ -1443,7 +1635,11 @@ window.READING_REVIEW_DATA = {
           "start": 407.868,
           "end": 414.846,
           "flagId": 30,
-          "highlight": null
+          "highlight": null,
+          "audioClip": [
+            1134451,
+            28271
+          ]
         }
       ]
     },
@@ -1481,7 +1677,11 @@ window.READING_REVIEW_DATA = {
           "start": 416.347,
           "end": 426.928,
           "flagId": 31,
-          "highlight": "charge fans for admission"
+          "highlight": "charge fans for admission",
+          "audioClip": [
+            1162722,
+            42671
+          ]
         }
       ]
     }

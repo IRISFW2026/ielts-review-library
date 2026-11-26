@@ -525,3 +525,8 @@ body.listening-study {
   background: #fbecef;
   color: #a34d68;
 }
+
+.listening-study .speaker[data-original-clip][aria-pressed="true"] {
+  outline: 2px solid #8260a8;
+  outline-offset: 1px;
+}
