@@ -186,7 +186,7 @@ function sentenceList(){
  const rows=source.map(function(x,index){return {sentence:x,index:index}}).filter(function(entry){return (entry.sentence.en+entry.sentence.zh).toLowerCase().includes(search.toLowerCase())});
  $('sentence-list').innerHTML=rows.map(function(entry){
   const x=entry.sentence,number=entry.index+1,isOriginal=sentenceType==='original',flag=isOriginal?sentenceFlag(number):null;
-  let html='<article class="list-item sentence-row'+(flag?' is-flagged':'')+'" id="sentence-row-'+number+'" data-sentence-row="'+number+'"><span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span><p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+'<details><summary>查看中文</summary><p>'+escapeHTML(x.zh)+'</p></details>';
+  let html='<article class="list-item sentence-row'+(flag?' is-flagged':'')+'" id="sentence-row-'+number+'" data-sentence-row="'+number+'"><span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span><div class="sentence-audio-line">'+playButton(x.en,'朗读整句',true)+'<p class="sentence-text">'+escapeHTML(x.en)+'</p></div><details><summary>查看中文</summary><p>'+escapeHTML(x.zh)+'</p></details>';
   if(isOriginal){
    html+=sentenceFlagControls(number);
   }
