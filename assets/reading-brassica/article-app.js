@@ -140,7 +140,11 @@ function sentences(){
 
 let sentenceType='original';
 function sentenceFlagKey(number){return SENTENCE_FLAG_PREFIX+(DATA.sentences[number-1]?.flagId??number)}
-function sentenceFlag(number){const r=state[sentenceFlagKey(number)];return r&&!r.removed?r:null}
+function sentenceFlag(number){
+ const aliases=DATA.sentences[number-1]?.previousFlagIds||[];
+ const r=state[sentenceFlagKey(number)]||aliases.map(id=>state[SENTENCE_FLAG_PREFIX+id]).find(record=>record&&!record.removed);
+ return r&&!r.removed?r:null;
+}
 function sentenceFlagEntries(){return DATA.sentences.map(function(sentence,index){const number=index+1,record=sentenceFlag(number);return record?{sentence:sentence,index:number,record:record}:null}).filter(Boolean)}
 function sentenceReasonNames(reasons){return (reasons||[]).map(function(code){const found=SENTENCE_REASON_OPTIONS.find(function(item){return item[0]===code});return found?found[1]:null}).filter(Boolean)}
 function renderSentenceCollection(){
@@ -527,7 +531,7 @@ function referenceValue(value) {
 }
 
 function analysisPage() {
-  if (listening) return listening.questions({questions:DATA.questions, notice:CONFIG.questionNotice, showAll:CONFIG.showAllQuestions});
+  if (listening) return listening.questions({questions:DATA.questions, notice:CONFIG.questionNotice, showAll:CONFIG.showAllQuestions, showNotice:CONFIG.showQuestionNotice});
   if (DATA.analysisHtml) return DATA.analysisHtml;
   const questions = DATA.questions || [];
   const wrong = questions.filter(question => question.wrong);
@@ -574,12 +578,14 @@ async function importData(event) {
     const input = data.state || (data.records?decodeStoredReview(data):legacy?decodeStoredReview(data.data):null);
     if (!input || typeof input!=='object' || Array.isArray(input)) throw Error('记录格式不正确');
     const valid = new Set(CONFIG.sharedItemIds || DATA.items.map(item=>item.id));
+    const validSentenceFlags = new Set(DATA.sentences.flatMap(
+      (sentence,index) => [sentenceFlagKey(index+1), ...(sentence.previousFlagIds||[]).map(id=>SENTENCE_FLAG_PREFIX+id)]
+    ));
     const incoming = {};
     for (const [id,record] of Object.entries(input)) {
       if (!record || typeof record!=='object' || Array.isArray(record)) throw Error('记录内容不正确');
       if (id.startsWith(SENTENCE_FLAG_PREFIX)) {
-        const number = Number(id.slice(SENTENCE_FLAG_PREFIX.length));
-        if (!Number.isInteger(number) || number<1 || number>DATA.sentences.length || !Number.isFinite(record.updated)) throw Error('难点句记录不正确');
+        if (!validSentenceFlags.has(id) || !Number.isFinite(record.updated)) throw Error('难点句记录不正确');
         incoming[id] = {...record,reasons:(record.reasons || []).filter(reason=>SENTENCE_REASON_OPTIONS.some(option=>option[0]===reason)),note:String(record.note || '').slice(0,2000)};
       } else if (valid.has(id)) {
         if (![0,1,2,3,4].includes(record.level)) throw Error('熟练度不正确');

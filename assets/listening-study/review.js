@@ -14,10 +14,21 @@ window.ListeningStudy = {
       + escapeHTML(text.slice(at + target.length));
   },
 
-  questions({questions, notice, showAll = false}) {
+  answerCells(question) {
+    const answer = question.chosen || '未作答';
+    if (question.type !== '双选' || !/^[A-Z](?:\+[A-Z])+$/.test(answer)) {
+      return `<section class="listening-answer-mine${question.wrong ? '' : ' is-correct'}"><span>我的答案</span><strong>${escapeHTML(answer)}</strong></section>`;
+    }
+    const correct = new Set(question.answer.split('+'));
+    const cells = answer.split('+').map(choice =>
+      `<strong class="listening-answer-choice${correct.has(choice) ? ' is-correct' : ''}" aria-label="${choice}，${correct.has(choice) ? '正确' : '错误'}">${choice}</strong>`
+    ).join('');
+    return `<section class="listening-answer-mine is-split"><span>我的答案</span><div class="listening-answer-choices">${cells}</div></section>`;
+  },
+
+  questions({questions, notice, showAll = false, showNotice = false}) {
     const visible = showAll ? questions : questions.filter(question => question.wrong);
     const questionCard = question => {
-      const answer = question.chosen || '未作答';
       const status = question.status === '✓' ? ' · 正确' : question.wrong ? ' · 有误' : '';
       const analysisLabel = !showAll || question.wrong ? '错误原因' : '答案解析';
       const evidence = question.evidence || [];
@@ -31,7 +42,7 @@ window.ListeningStudy = {
         <section class="listening-question-prompt"><h3>01 · 原题</h3><p lang="en">${escapeHTML(question.question)}</p>${question.instruction ? '<p>'+escapeHTML(question.instruction)+'</p>' : ''}</section>
         <div class="listening-answer-grid">
           <section class="listening-answer-correct"><span>正确答案</span><strong>${escapeHTML(question.answer)}</strong></section>
-          <section class="listening-answer-mine"><span>我的答案</span><strong>${escapeHTML(answer)}</strong></section>
+          ${this.answerCells(question)}
         </div>
         <section class="listening-evidence"><h3>02 · 对应听力原文</h3>${evidenceHtml || '<p>未提供原文依据。</p>'}</section>
         <section class="listening-analysis"><h3>03 · ${analysisLabel}</h3><p>${escapeHTML(question.mistake || '')}</p></section>
@@ -40,7 +51,7 @@ window.ListeningStudy = {
       </article>`;
     };
     return `<section class="card wrong-review listening-wrong-review"><header class="listening-review-heading"><h2>错题解析</h2><p>原题 · 答案对比 · 听力原文 · 错因诊断 · 复盘方法</p></header>
-      ${notice && (showAll || !visible.length) ? '<p class="muted">'+escapeHTML(notice)+'</p>' : ''}
+      ${notice && (showNotice || showAll || !visible.length) ? '<p class="muted">'+escapeHTML(notice)+'</p>' : ''}
       ${visible.map(questionCard).join('')}
     </section>`;
   }

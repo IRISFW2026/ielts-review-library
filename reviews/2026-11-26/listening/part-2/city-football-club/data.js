@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "city-football-club-1126", "title": "1126-听力-Part 2-City Football Club 城市足球俱乐部", "storageKey": "ielts-listening-city-football-club-1126-v1", "storageFormat": "flat", "flagPrefix": "city-football-club-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "目前为文档中的待核对文本。黄色标出各题的答案依据，待原录音转写后复核。", "questionNotice": "Q15–Q20 的个人作答未记录，保留标准答案与听力依据。"};
+window.READING_REVIEW_CONFIG = {"id": "city-football-club-1126", "title": "1126-听力-Part 2-City Football Club 城市足球俱乐部", "storageKey": "ielts-listening-city-football-club-1126-v1", "storageFormat": "flat", "flagPrefix": "city-football-club-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "defaultVoice": "Google UK English Female", "transcriptNotice": "根据本套模考录音转写。黄色为答案依据，时间标记对应上传录音。", "questionNotice": "Q15–Q20 的个人作答未记录，保留标准答案与听力依据。", "showQuestionNotice": true};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -134,7 +134,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场参观与儿童活动",
       "examples": [
         {
-          "en": "Assistants are helping to organise this, and hopefully the queue won't be too long — it's very hot and sunny out on the pitch today.",
+          "en": "Assistants are helping to organise this, and hopefully the queue won't be too long. It's very hot and sunny out on the pitch today.",
           "zh": "工作人员会帮忙组织，希望队伍不会太长。今天球场上阳光很强，也很热。",
           "number": 8,
           "source": "original"
@@ -154,7 +154,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场参观与儿童活动",
       "examples": [
         {
-          "en": "Assistants are helping to organise this, and hopefully the queue won't be too long — it's very hot and sunny out on the pitch today.",
+          "en": "Assistants are helping to organise this, and hopefully the queue won't be too long. It's very hot and sunny out on the pitch today.",
           "zh": "工作人员会帮忙组织，希望队伍不会太长。今天球场上阳光很强，也很热。",
           "number": 8,
           "source": "original"
@@ -214,7 +214,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场参观与儿童活动",
       "examples": [
         {
-          "en": "That way, if you've left the stadium before then, we'll send your prize, but sadly we can't return drawings.",
+          "en": "That way, if you've left the stadium before then, we'll send your prize. But sadly, we can't return drawings.",
           "zh": "即使那时你们已经离开，我们也能把奖品寄给你们，但画作无法退还。",
           "number": 12,
           "source": "original"
@@ -234,8 +234,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "We'll start with the three-sixty cinema experience, which has been many other clubs in the past, and then I'll take you to the players' dressing rooms before going outside to the seating area and the pitch.",
-          "zh": "先体验360度影院，然后参观球员更衣室，再去室外看观众席和球场。（影院定语从句在转录中有缺漏。）",
+          "en": "We'll start with the three-sixty cinema experience, which has been very popular over the years. And then I'll take you to the players' dressing rooms before going outside to the seating area and the pitch.",
+          "zh": "我们先体验这些年来一直很受欢迎的360度影院，然后带你们参观球员更衣室，最后去室外的观众席和球场。",
           "number": 14,
           "source": "original"
         }
@@ -254,8 +254,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "If you'd prefer your visit to be self-guided, please collect headphones from the reception desk and then you can listen to the pre-recorded commentary at your own speed.",
-          "zh": "想自助参观的话，请到接待处领耳机，按自己的节奏听预录讲解。",
+          "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
+          "zh": "我还要说一下，如果你想自助参观，请到接待处领耳机，然后按自己的节奏听预录介绍。",
           "number": 15,
           "source": "original"
         }
@@ -263,7 +263,7 @@ window.READING_REVIEW_DATA = {
     },
     {
       "id": "city-football-club-1126-14",
-      "term": "reception desk",
+      "term": "reception",
       "ipa": "",
       "zh": "接待处",
       "note": "collect headphones 领取耳机",
@@ -274,8 +274,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "If you'd prefer your visit to be self-guided, please collect headphones from the reception desk and then you can listen to the pre-recorded commentary at your own speed.",
-          "zh": "想自助参观的话，请到接待处领耳机，按自己的节奏听预录讲解。",
+          "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
+          "zh": "我还要说一下，如果你想自助参观，请到接待处领耳机，然后按自己的节奏听预录介绍。",
           "number": 15,
           "source": "original"
         }
@@ -283,9 +283,9 @@ window.READING_REVIEW_DATA = {
     },
     {
       "id": "city-football-club-1126-15",
-      "term": "pre-recorded commentary",
+      "term": "pre-recorded information",
       "ipa": "",
-      "zh": "预录讲解",
+      "zh": "预录介绍",
       "note": "audio guide 语音导览",
       "stars": 5,
       "pos": "短语／语块",
@@ -294,8 +294,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "If you'd prefer your visit to be self-guided, please collect headphones from the reception desk and then you can listen to the pre-recorded commentary at your own speed.",
-          "zh": "想自助参观的话，请到接待处领耳机，按自己的节奏听预录讲解。",
+          "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
+          "zh": "我还要说一下，如果你想自助参观，请到接待处领耳机，然后按自己的节奏听预录介绍。",
           "number": 15,
           "source": "original"
         }
@@ -314,8 +314,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "If you'd prefer your visit to be self-guided, please collect headphones from the reception desk and then you can listen to the pre-recorded commentary at your own speed.",
-          "zh": "想自助参观的话，请到接待处领耳机，按自己的节奏听预录讲解。",
+          "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
+          "zh": "我还要说一下，如果你想自助参观，请到接待处领耳机，然后按自己的节奏听预录介绍。",
           "number": 15,
           "source": "original"
         }
@@ -334,7 +334,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "We've only just introduced this feature, and would really appreciate your feedback.",
+          "en": "We've only just introduced this feature and would appreciate your feedback.",
           "zh": "这个项目刚推出，我们很希望听到大家的反馈。",
           "number": 16,
           "source": "original"
@@ -354,7 +354,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "We've only just introduced this feature, and would really appreciate your feedback.",
+          "en": "We've only just introduced this feature and would appreciate your feedback.",
           "zh": "这个项目刚推出，我们很希望听到大家的反馈。",
           "number": 16,
           "source": "original"
@@ -374,7 +374,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "新导览项目",
       "examples": [
         {
-          "en": "We're thinking of offering tours in other languages in future so if you have any thoughts on that, we'd welcome those too.",
+          "en": "We're thinking of offering tours in other languages in future, so if you have any thoughts on that, we'd welcome those too.",
           "zh": "我们正在考虑将来提供其他语言的导览，也欢迎大家对此提出想法。",
           "number": 17,
           "source": "original"
@@ -394,7 +394,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "Now, the stadium you see today was built in 1989, as part of a three-year redevelopment project — while that project was going on, the team had to play its matches at the ground of another club — apart from that, the club has been here on this site since 1870.",
+          "en": "Now, the stadium you see today was built in nineteen eighty-nine as part of a three-year redevelopment project. While that project was going on, the team had to play its matches at the ground of another club. Apart from that, the club has been here on this site since eighteen seventy.",
           "zh": "如今这座球场建于1989年，是一项为期三年的改造工程的一部分。施工期间球队借用另一家俱乐部的球场比赛。除此之外，俱乐部自1870年起一直在这里。",
           "number": 19,
           "source": "original"
@@ -414,7 +414,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "For example, 1870 was also the year that football teams started to include a player whose role it was to guard the goal.",
+          "en": "For example, eighteen seventy was also the year that football teams started to include a player whose role it was to guard the goal.",
           "zh": "例如，球队在1870年开始设置专门守门的球员。",
           "number": 21,
           "source": "original"
@@ -434,7 +434,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "In 1872 and 73, many other clubs were established, both here and abroad, and the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
+          "en": "In 1872 and '73, many other clubs were established both here and abroad. And the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
           "zh": "1872年和1873年，国内外成立了不少俱乐部。随后在1874年，裁判获准将有特定违规行为的球员罚下。",
           "number": 23,
           "source": "original"
@@ -454,7 +454,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "In 1872 and 73, many other clubs were established, both here and abroad, and the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
+          "en": "In 1872 and '73, many other clubs were established both here and abroad. And the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
           "zh": "1872年和1873年，国内外成立了不少俱乐部。随后在1874年，裁判获准将有特定违规行为的球员罚下。",
           "number": 23,
           "source": "original"
@@ -474,7 +474,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "In 1872 and 73, many other clubs were established, both here and abroad, and the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
+          "en": "In 1872 and '73, many other clubs were established both here and abroad. And the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
           "zh": "1872年和1873年，国内外成立了不少俱乐部。随后在1874年，裁判获准将有特定违规行为的球员罚下。",
           "number": 23,
           "source": "original"
@@ -574,7 +574,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "Before that, it was a more casual arrangement, and this sometimes caused huge arguments — and sometimes fights — during matches, when one team called the end of the game and the other team wanted to play on to try and score a winning goal.",
+          "en": "Before that, it was a more casual arrangement, and this sometimes caused huge arguments and sometimes fights during matches when one team called the end of the game and the other team wanted to play on to try and score a winning goal.",
           "zh": "在此之前规则随意一些，一队宣布比赛结束、另一队还想继续踢进制胜球时，就可能引发激烈争执甚至斗殴。",
           "number": 27,
           "source": "original"
@@ -594,7 +594,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "In addition, referees started using whistles, and electric lamps were installed on certain pitches.",
+          "en": "In addition, referees started using whistles and electric lamps were installed on certain pitches.",
           "zh": "此外，裁判开始使用哨子，一些球场也装上了电灯。",
           "number": 29,
           "source": "original"
@@ -614,7 +614,7 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "This was a significant change, as games could then be played in the evenings all year round.",
+          "en": "This was a significant change as games could then be played in the evenings all year round.",
           "zh": "这是一项重大变化，因为从此一年四季都能在晚上踢比赛。",
           "number": 30,
           "source": "original"
@@ -634,8 +634,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "In 1880, clubs began to charge fans for admission to games, even though Football League players were still amateurs and had other 'proper' jobs.",
-          "zh": "1880年，俱乐部开始向观众收门票，尽管当时联赛球员仍是业余球员，还有别的正式工作。",
+          "en": "In 1880, clubs began to charge fans for admission to games, even though players were still amateurs and had other proper jobs.",
+          "zh": "1880年，俱乐部开始向球迷收门票，尽管球员当时还是业余选手，还有别的正式工作。",
           "number": 31,
           "source": "original"
         }
@@ -654,8 +654,8 @@ window.READING_REVIEW_DATA = {
       "paragraph": "球场沿革与足球规则",
       "examples": [
         {
-          "en": "In 1880, clubs began to charge fans for admission to games, even though Football League players were still amateurs and had other 'proper' jobs.",
-          "zh": "1880年，俱乐部开始向观众收门票，尽管当时联赛球员仍是业余球员，还有别的正式工作。",
+          "en": "In 1880, clubs began to charge fans for admission to games, even though players were still amateurs and had other proper jobs.",
+          "zh": "1880年，俱乐部开始向球迷收门票，尽管球员当时还是业余选手，还有别的正式工作。",
           "number": 31,
           "source": "original"
         }
@@ -747,25 +747,37 @@ window.READING_REVIEW_DATA = {
       "en": "Good morning, and welcome to City Football Club.",
       "zh": "早上好，欢迎来到城市足球俱乐部。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 51.71,
+      "end": 55.38,
+      "flagId": 1
     },
     {
       "en": "I'd like to give you some useful information about your visit to the stadium today, and then we'll start the tour of the areas of the stadium that are open to visitors.",
       "zh": "我先介绍今天参观球场的一些实用信息，然后带大家看看球场里对游客开放的区域。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 56.036,
+      "end": 66.917,
+      "flagId": 2
     },
     {
       "en": "I can see lots of children here today, so just to let mums and dads know a few things before we start.",
       "zh": "今天来了很多孩子，出发前有几件事要给各位家长交代一下。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 67.845,
+      "end": 74.973,
+      "flagId": 3
     },
     {
       "en": "The stadium has lots of stairs, and the players' tunnel is very dark.",
       "zh": "球场里楼梯很多，球员通道也很暗。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 75.565,
+      "end": 80.352,
+      "flagId": 4
     },
     {
       "en": "Please don't let your children wander off on their own, even for a minute.",
@@ -774,31 +786,46 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q11–12"
-      ]
+      ],
+      "start": 80.742,
+      "end": 85.531,
+      "flagId": 5
     },
     {
       "en": "We don't want any accidents or anyone getting frightened.",
       "zh": "我们希望避免发生事故，也避免有人受惊。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 85.985,
+      "end": 89.696,
+      "flagId": 6
     },
     {
       "en": "Cameras are permitted everywhere, and you can take pictures of your child shooting a penalty.",
       "zh": "所有地方都可以拍照，你们也可以拍下孩子罚点球的瞬间。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 90.596,
+      "end": 97.101,
+      "flagId": 7
     },
     {
-      "en": "Assistants are helping to organise this, and hopefully the queue won't be too long — it's very hot and sunny out on the pitch today.",
+      "en": "Assistants are helping to organise this, and hopefully the queue won't be too long. It's very hot and sunny out on the pitch today.",
       "zh": "工作人员会帮忙组织，希望队伍不会太长。今天球场上阳光很强，也很热。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 97.952,
+      "end": 107.34,
+      "flagId": 8
     },
     {
       "en": "You can get food and drink at the café, and I really recommend the healthy lunch boxes for children.",
       "zh": "咖啡馆有餐饮，我特别推荐儿童健康午餐盒。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 108.077,
+      "end": 115.562,
+      "flagId": 9
     },
     {
       "en": "Also in the café, children are invited to do a football-themed drawing.",
@@ -807,7 +834,10 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q11–12"
-      ]
+      ],
+      "start": 116.601,
+      "end": 122.605,
+      "flagId": 10
     },
     {
       "en": "We'll pick the best one at the end of the afternoon, so don't forget to put your name and contact details on the back.",
@@ -816,94 +846,133 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q11–12"
-      ]
+      ],
+      "start": 123.298,
+      "end": 132.371,
+      "flagId": 11
     },
     {
-      "en": "That way, if you've left the stadium before then, we'll send your prize, but sadly we can't return drawings.",
+      "en": "That way, if you've left the stadium before then, we'll send your prize. But sadly, we can't return drawings.",
       "zh": "即使那时你们已经离开，我们也能把奖品寄给你们，但画作无法退还。",
       "paragraph": "球场参观与儿童活动",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 132.84,
+      "end": 140.848,
+      "flagId": 12
     },
     {
       "en": "I'd like to mention some features of the tour.",
       "zh": "我想介绍一下这次参观的几个项目。",
       "paragraph": "新导览项目",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 142.219,
+      "end": 145.37,
+      "flagId": 13
     },
     {
-      "en": "We'll start with the three-sixty cinema experience, which has been many other clubs in the past, and then I'll take you to the players' dressing rooms before going outside to the seating area and the pitch.",
-      "zh": "先体验360度影院，然后参观球员更衣室，再去室外看观众席和球场。（影院定语从句在转录中有缺漏。）",
+      "en": "We'll start with the three-sixty cinema experience, which has been very popular over the years. And then I'll take you to the players' dressing rooms before going outside to the seating area and the pitch.",
+      "zh": "我们先体验这些年来一直很受欢迎的360度影院，然后带你们参观球员更衣室，最后去室外的观众席和球场。",
       "paragraph": "新导览项目",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 145.938,
+      "end": 161.797,
+      "flagId": 14
     },
     {
-      "en": "If you'd prefer your visit to be self-guided, please collect headphones from the reception desk and then you can listen to the pre-recorded commentary at your own speed.",
-      "zh": "想自助参观的话，请到接待处领耳机，按自己的节奏听预录讲解。",
+      "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
+      "zh": "我还要说一下，如果你想自助参观，请到接待处领耳机，然后按自己的节奏听预录介绍。",
       "paragraph": "新导览项目",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q13–14"
-      ]
+      ],
+      "start": 162.872,
+      "end": 176.204,
+      "flagId": 15
     },
     {
-      "en": "We've only just introduced this feature, and would really appreciate your feedback.",
+      "en": "We've only just introduced this feature and would appreciate your feedback.",
       "zh": "这个项目刚推出，我们很希望听到大家的反馈。",
       "paragraph": "新导览项目",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q13–14"
-      ]
+      ],
+      "start": 176.786,
+      "end": 182.221,
+      "flagId": 16
     },
     {
-      "en": "We're thinking of offering tours in other languages in future so if you have any thoughts on that, we'd welcome those too.",
+      "en": "We're thinking of offering tours in other languages in future, so if you have any thoughts on that, we'd welcome those too.",
       "zh": "我们正在考虑将来提供其他语言的导览，也欢迎大家对此提出想法。",
       "paragraph": "新导览项目",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 183.189,
+      "end": 191.927,
+      "flagId": 17
     },
     {
-      "en": "If you plan to return another time, you might like to book one of our VIP tours — we've only just started offering these, and they can be booked online.",
+      "en": "If you plan to return another time, you might like to book one of our VIP tours. We've only just started offering these, and they can be booked online.",
       "zh": "下次再来，可以预订我们刚推出的贵宾导览。它可以在线预订。",
       "paragraph": "新导览项目",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q13–14"
-      ]
+      ],
+      "start": 192.952,
+      "end": 205.068,
+      "flagId": 18
     },
     {
-      "en": "Now, the stadium you see today was built in 1989, as part of a three-year redevelopment project — while that project was going on, the team had to play its matches at the ground of another club — apart from that, the club has been here on this site since 1870.",
+      "en": "Now, the stadium you see today was built in nineteen eighty-nine as part of a three-year redevelopment project. While that project was going on, the team had to play its matches at the ground of another club. Apart from that, the club has been here on this site since eighteen seventy.",
       "zh": "如今这座球场建于1989年，是一项为期三年的改造工程的一部分。施工期间球队借用另一家俱乐部的球场比赛。除此之外，俱乐部自1870年起一直在这里。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 256.986,
+      "end": 279.228,
+      "flagId": 19
     },
     {
       "en": "As some of you may know, that was the start of a really important decade in the history of football in this country.",
       "zh": "你们当中有些人可能知道，1870年是本国足球史上一个重要十年的开端。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 279.959,
+      "end": 288.19100000000003,
+      "flagId": 20
     },
     {
-      "en": "For example, 1870 was also the year that football teams started to include a player whose role it was to guard the goal.",
+      "en": "For example, eighteen seventy was also the year that football teams started to include a player whose role it was to guard the goal.",
       "zh": "例如，球队在1870年开始设置专门守门的球员。",
       "paragraph": "球场沿革与足球规则",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q15"
-      ]
+      ],
+      "start": 289.06600000000003,
+      "end": 299.21,
+      "flagId": 21
     },
     {
-      "en": "It's hard to imagine that the game must have been like without someone in that position, isn't it?",
+      "en": "It's hard to imagine what the game must have been like without someone in that position, isn't it?",
       "zh": "很难想象没有守门员的比赛是什么样吧？",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 299.892,
+      "end": 306.265,
+      "flagId": 22
     },
     {
-      "en": "In 1872 and 73, many other clubs were established, both here and abroad, and the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
+      "en": "In 1872 and '73, many other clubs were established both here and abroad. And the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
       "zh": "1872年和1873年，国内外成立了不少俱乐部。随后在1874年，裁判获准将有特定违规行为的球员罚下。",
       "paragraph": "球场沿革与足球规则",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q16"
-      ]
+      ],
+      "start": 307.806,
+      "end": 324.861,
+      "flagId": 23
     },
     {
       "en": "And also in that year, teams started having to swap ends at half-time.",
@@ -912,13 +981,19 @@ window.READING_REVIEW_DATA = {
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q16"
-      ]
+      ],
+      "start": 325.587,
+      "end": 331.052,
+      "flagId": 24
     },
     {
-      "en": "One fact I was interested to discover was that in early football games, the aim was for the scorer to get the ball between two flag posts, and later between sticks joined at the top with a piece of tape.",
+      "en": "One fact I was interested to discover was that in early football games, the aim was for the scorer to get the ball between two flag posts and later between sticks joined at the top with a piece of tape.",
       "zh": "我发现一个有意思的事实。早期足球比赛要把球踢进两根旗杆之间，后来改为两根杆之间，上方用一条带子相连。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 332.429,
+      "end": 348.681,
+      "flagId": 25
     },
     {
       "en": "In 1875, that tape was replaced with the solid crossbar that we're familiar with today. 1877 saw the founding of further new clubs, and the history books tell us that in the same year, all the clubs decided to set a limit of ninety minutes for each match.",
@@ -928,49 +1003,70 @@ window.READING_REVIEW_DATA = {
       "answerQuestions": [
         "Q17",
         "Q18"
-      ]
+      ],
+      "start": 349.296,
+      "end": 372.403,
+      "flagId": 26
     },
     {
-      "en": "Before that, it was a more casual arrangement, and this sometimes caused huge arguments — and sometimes fights — during matches, when one team called the end of the game and the other team wanted to play on to try and score a winning goal.",
+      "en": "Before that, it was a more casual arrangement, and this sometimes caused huge arguments and sometimes fights during matches when one team called the end of the game and the other team wanted to play on to try and score a winning goal.",
       "zh": "在此之前规则随意一些，一队宣布比赛结束、另一队还想继续踢进制胜球时，就可能引发激烈争执甚至斗殴。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 372.929,
+      "end": 391.262,
+      "flagId": 27
     },
     {
-      "en": "By 1878, the number of teams in the football league increased again.",
+      "en": "By 1878, the number of teams in the Football League increased again.",
       "zh": "到了1878年，足球联赛中的球队数量又增加了。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 392.725,
+      "end": 398.612,
+      "flagId": 28
     },
     {
-      "en": "In addition, referees started using whistles, and electric lamps were installed on certain pitches.",
+      "en": "In addition, referees started using whistles and electric lamps were installed on certain pitches.",
       "zh": "此外，裁判开始使用哨子，一些球场也装上了电灯。",
       "paragraph": "球场沿革与足球规则",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q19"
-      ]
+      ],
+      "start": 399.322,
+      "end": 407.028,
+      "flagId": 29
     },
     {
-      "en": "This was a significant change, as games could then be played in the evenings all year round.",
+      "en": "This was a significant change as games could then be played in the evenings all year round.",
       "zh": "这是一项重大变化，因为从此一年四季都能在晚上踢比赛。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 407.868,
+      "end": 414.846,
+      "flagId": 30
     },
     {
-      "en": "In 1880, clubs began to charge fans for admission to games, even though Football League players were still amateurs and had other 'proper' jobs.",
-      "zh": "1880年，俱乐部开始向观众收门票，尽管当时联赛球员仍是业余球员，还有别的正式工作。",
+      "en": "In 1880, clubs began to charge fans for admission to games, even though players were still amateurs and had other proper jobs.",
+      "zh": "1880年，俱乐部开始向球迷收门票，尽管球员当时还是业余选手，还有别的正式工作。",
       "paragraph": "球场沿革与足球规则",
       "speaker": "球场讲解员",
       "answerQuestions": [
         "Q20"
-      ]
+      ],
+      "start": 416.347,
+      "end": 426.928,
+      "flagId": 31
     },
     {
       "en": "That's hard to imagine in the modern professional game where top players earn significant sums of money from both playing and commercial activities.",
       "zh": "这在现代职业足球中很难想象，顶尖球员从比赛和商业活动中都能赚得巨额收入。",
       "paragraph": "球场沿革与足球规则",
-      "speaker": "球场讲解员"
+      "speaker": "球场讲解员",
+      "start": 427.716,
+      "end": 437.717,
+      "flagId": 32
     }
   ],
   "questions": [
@@ -992,13 +1088,19 @@ window.READING_REVIEW_DATA = {
       "type": "双选",
       "focus": "明示规则与隐含竞赛",
       "method": "pick the best one 和 send your prize 对应 competition。天气炎热只是在描述现场，题干问讲者明确提出的事项。",
-      "mistake": "两题合一道双选，选 B 和 C。 B competition：'children are invited to do a football-themed drawing. We'll pick the best one'。 C parents stay with kids：'Please don't let your children wander off on their own, even for a minute'。 排除：A 'with a football player' 没说，原文说 children shooting a penalty 自拍；D sunhats/drinks 没说必备；E special offer 没说。",
+      "mistake": "你选的 C 正确，对应家长不能让孩子独自走开。D 来自对炎热天气的联想，讲者没要求孩子戴帽子或带饮料。选画并发奖说明当天有比赛，对应 B。",
       "evidence": [
         {
           "en": "Please don't let your children wander off on their own, even for a minute.",
           "zh": "请始终陪在孩子身边，哪怕一分钟也别让他们独自走开。",
           "paragraph": "球场参观与儿童活动",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q11–12"
+          ],
+          "start": 80.742,
+          "end": 85.531,
+          "flagId": 5,
           "highlight": "wander off on their own"
         },
         {
@@ -1006,6 +1108,12 @@ window.READING_REVIEW_DATA = {
           "zh": "咖啡馆还邀请孩子们画一幅足球主题的画。",
           "paragraph": "球场参观与儿童活动",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q11–12"
+          ],
+          "start": 116.601,
+          "end": 122.605,
+          "flagId": 10,
           "highlight": "football-themed drawing"
         },
         {
@@ -1013,13 +1121,22 @@ window.READING_REVIEW_DATA = {
           "zh": "今天傍晚前我们会选出最好的作品，别忘了在背面写上姓名和联系方式。",
           "paragraph": "球场参观与儿童活动",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q11–12"
+          ],
+          "start": 123.298,
+          "end": 132.371,
+          "flagId": 11,
           "highlight": "pick the best one"
         },
         {
-          "en": "That way, if you've left the stadium before then, we'll send your prize, but sadly we can't return drawings.",
+          "en": "That way, if you've left the stadium before then, we'll send your prize. But sadly, we can't return drawings.",
           "zh": "即使那时你们已经离开，我们也能把奖品寄给你们，但画作无法退还。",
           "paragraph": "球场参观与儿童活动",
           "speaker": "球场讲解员",
+          "start": 132.84,
+          "end": 140.848,
+          "flagId": 12,
           "highlight": "send your prize"
         }
       ]
@@ -1042,34 +1159,55 @@ window.READING_REVIEW_DATA = {
       "type": "双选",
       "focus": "已推出与未来设想",
       "method": "only just introduced / started 对应 new。thinking of 标记还在考虑中的项目。",
-      "mistake": "两题合一道双选，选 A 和 C。 A VIP tour：'we've only just started offering these'。 C audio guide：'pre-recorded information ... We've only just introduced this feature'。 排除：B 360 cinema 'has been very popular over the years' 不是新；D dressing room tour 是常规站；E other languages 'thinking of' 还没有。",
+      "mistake": "only just introduced 指语音导览，only just started 指贵宾导览。360 度影院已经流行多年，其他语言导览还在考虑中。",
       "evidence": [
         {
-          "en": "If you'd prefer your visit to be self-guided, please collect headphones from the reception desk and then you can listen to the pre-recorded commentary at your own speed.",
-          "zh": "想自助参观的话，请到接待处领耳机，按自己的节奏听预录讲解。",
+          "en": "I should say if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen to the pre-recorded information at your own speed.",
+          "zh": "我还要说一下，如果你想自助参观，请到接待处领耳机，然后按自己的节奏听预录介绍。",
           "paragraph": "新导览项目",
           "speaker": "球场讲解员",
-          "highlight": "pre-recorded commentary"
+          "answerQuestions": [
+            "Q13–14"
+          ],
+          "start": 162.872,
+          "end": 176.204,
+          "flagId": 15,
+          "highlight": null
         },
         {
-          "en": "We've only just introduced this feature, and would really appreciate your feedback.",
+          "en": "We've only just introduced this feature and would appreciate your feedback.",
           "zh": "这个项目刚推出，我们很希望听到大家的反馈。",
           "paragraph": "新导览项目",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q13–14"
+          ],
+          "start": 176.786,
+          "end": 182.221,
+          "flagId": 16,
           "highlight": "only just introduced"
         },
         {
-          "en": "We're thinking of offering tours in other languages in future so if you have any thoughts on that, we'd welcome those too.",
+          "en": "We're thinking of offering tours in other languages in future, so if you have any thoughts on that, we'd welcome those too.",
           "zh": "我们正在考虑将来提供其他语言的导览，也欢迎大家对此提出想法。",
           "paragraph": "新导览项目",
           "speaker": "球场讲解员",
+          "start": 183.189,
+          "end": 191.927,
+          "flagId": 17,
           "highlight": "thinking of"
         },
         {
-          "en": "If you plan to return another time, you might like to book one of our VIP tours — we've only just started offering these, and they can be booked online.",
+          "en": "If you plan to return another time, you might like to book one of our VIP tours. We've only just started offering these, and they can be booked online.",
           "zh": "下次再来，可以预订我们刚推出的贵宾导览。它可以在线预订。",
           "paragraph": "新导览项目",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q13–14"
+          ],
+          "start": 192.952,
+          "end": 205.068,
+          "flagId": 18,
           "highlight": "only just started"
         }
       ]
@@ -1098,10 +1236,16 @@ window.READING_REVIEW_DATA = {
       "mistake": "守门员，对应 D。",
       "evidence": [
         {
-          "en": "For example, 1870 was also the year that football teams started to include a player whose role it was to guard the goal.",
+          "en": "For example, eighteen seventy was also the year that football teams started to include a player whose role it was to guard the goal.",
           "zh": "例如，球队在1870年开始设置专门守门的球员。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q15"
+          ],
+          "start": 289.06600000000003,
+          "end": 299.21,
+          "flagId": 21,
           "highlight": "guard the goal"
         }
       ]
@@ -1130,10 +1274,16 @@ window.READING_REVIEW_DATA = {
       "mistake": "两条规则，对应 F。",
       "evidence": [
         {
-          "en": "In 1872 and 73, many other clubs were established, both here and abroad, and the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
+          "en": "In 1872 and '73, many other clubs were established both here and abroad. And the following year, in 1874, referees were allowed to send players off if they committed certain offences.",
           "zh": "1872年和1873年，国内外成立了不少俱乐部。随后在1874年，裁判获准将有特定违规行为的球员罚下。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q16"
+          ],
+          "start": 307.806,
+          "end": 324.861,
+          "flagId": 23,
           "highlight": "send players off"
         },
         {
@@ -1141,6 +1291,12 @@ window.READING_REVIEW_DATA = {
           "zh": "同年，球队也开始必须在半场交换场地。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q16"
+          ],
+          "start": 325.587,
+          "end": 331.052,
+          "flagId": 24,
           "highlight": "swap ends"
         }
       ]
@@ -1169,10 +1325,13 @@ window.READING_REVIEW_DATA = {
       "mistake": "球门设计变化，对应 B。",
       "evidence": [
         {
-          "en": "One fact I was interested to discover was that in early football games, the aim was for the scorer to get the ball between two flag posts, and later between sticks joined at the top with a piece of tape.",
+          "en": "One fact I was interested to discover was that in early football games, the aim was for the scorer to get the ball between two flag posts and later between sticks joined at the top with a piece of tape.",
           "zh": "我发现一个有意思的事实。早期足球比赛要把球踢进两根旗杆之间，后来改为两根杆之间，上方用一条带子相连。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "start": 332.429,
+          "end": 348.681,
+          "flagId": 25,
           "highlight": null
         },
         {
@@ -1180,6 +1339,13 @@ window.READING_REVIEW_DATA = {
           "zh": "1875年，带子换成了如今熟悉的硬质横梁。1877年又有新俱乐部成立。据史料记载，各俱乐部同年约定每场比赛限时90分钟。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q17",
+            "Q18"
+          ],
+          "start": 349.296,
+          "end": 372.403,
+          "flagId": 26,
           "highlight": "replaced with the solid crossbar"
         }
       ]
@@ -1212,6 +1378,13 @@ window.READING_REVIEW_DATA = {
           "zh": "1875年，带子换成了如今熟悉的硬质横梁。1877年又有新俱乐部成立。据史料记载，各俱乐部同年约定每场比赛限时90分钟。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q17",
+            "Q18"
+          ],
+          "start": 349.296,
+          "end": 372.403,
+          "flagId": 26,
           "highlight": "set a limit of ninety minutes"
         }
       ]
@@ -1240,24 +1413,36 @@ window.READING_REVIEW_DATA = {
       "mistake": "首次用灯，对应 C。",
       "evidence": [
         {
-          "en": "By 1878, the number of teams in the football league increased again.",
+          "en": "By 1878, the number of teams in the Football League increased again.",
           "zh": "到了1878年，足球联赛中的球队数量又增加了。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "start": 392.725,
+          "end": 398.612,
+          "flagId": 28,
           "highlight": null
         },
         {
-          "en": "In addition, referees started using whistles, and electric lamps were installed on certain pitches.",
+          "en": "In addition, referees started using whistles and electric lamps were installed on certain pitches.",
           "zh": "此外，裁判开始使用哨子，一些球场也装上了电灯。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q19"
+          ],
+          "start": 399.322,
+          "end": 407.028,
+          "flagId": 29,
           "highlight": "electric lamps"
         },
         {
-          "en": "This was a significant change, as games could then be played in the evenings all year round.",
+          "en": "This was a significant change as games could then be played in the evenings all year round.",
           "zh": "这是一项重大变化，因为从此一年四季都能在晚上踢比赛。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "start": 407.868,
+          "end": 414.846,
+          "flagId": 30,
           "highlight": null
         }
       ]
@@ -1286,10 +1471,16 @@ window.READING_REVIEW_DATA = {
       "mistake": "观众入场费，对应 G。",
       "evidence": [
         {
-          "en": "In 1880, clubs began to charge fans for admission to games, even though Football League players were still amateurs and had other 'proper' jobs.",
-          "zh": "1880年，俱乐部开始向观众收门票，尽管当时联赛球员仍是业余球员，还有别的正式工作。",
+          "en": "In 1880, clubs began to charge fans for admission to games, even though players were still amateurs and had other proper jobs.",
+          "zh": "1880年，俱乐部开始向球迷收门票，尽管球员当时还是业余选手，还有别的正式工作。",
           "paragraph": "球场沿革与足球规则",
           "speaker": "球场讲解员",
+          "answerQuestions": [
+            "Q20"
+          ],
+          "start": 416.347,
+          "end": 426.928,
+          "flagId": 31,
           "highlight": "charge fans for admission"
         }
       ]

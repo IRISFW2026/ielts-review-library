@@ -500,3 +500,28 @@ body.listening-study {
   color: inherit;
   border-radius: 2px;
 }
+
+.listening-study .listening-answer-mine.is-correct,
+.listening-study .listening-answer-choice.is-correct {
+  background: #e7f5e9;
+  border-color: #bbdfc2;
+  color: #23613a;
+}
+.listening-study .listening-answer-mine.is-split {
+  background: transparent;
+  border-color: #e9dfee;
+  color: inherit;
+}
+.listening-study .listening-answer-choices {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 6px;
+}
+.listening-study .listening-answer-choice {
+  text-align: center;
+  border: 1px solid #f0d5de;
+  border-radius: 7px;
+  background: #fbecef;
+  color: #a34d68;
+}
