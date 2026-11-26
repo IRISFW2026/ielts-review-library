@@ -230,3 +230,42 @@ body.listening-study {
 
 /* The study dashboard is intentionally limited to the flashcard home view. */
 .listening-study #stats[hidden],.listening-study .progressline[hidden],.listening-study .bar[hidden]{display:none!important}
+
+/* Refined Tardigrades listening layout */
+.listening-study .main{max-width:none}
+.listening-study .transcript-toolbar{display:grid;gap:14px;margin:22px 0 18px}
+.listening-study .transcript-toolbar>.muted{margin:0;color:#80699C;font-size:13px}
+.listening-study .transcript-toolbar .controls{margin:0}
+.listening-study .transcript-toolbar .controls input{width:100%;min-height:48px;padding:12px 16px;border:1px solid #E5D8F0;border-radius:13px;background:#fff;color:#352B40;font-size:15px;box-shadow:none}
+.listening-study .original-player{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,340px);align-items:center;gap:18px;margin:0;padding:20px 22px;background:#fff;border:1px solid #E8DDF2;border-radius:18px;box-shadow:0 4px 18px rgba(83,55,117,.045)}
+.listening-study .original-player-copy h2{margin:4px 0 5px;color:#49375F;font-size:18px}
+.listening-study .original-player-copy p{margin:0;color:#80699C;font-size:13px;line-height:1.6}
+.listening-study .original-player-kicker{font-size:10px;letter-spacing:.14em;font-weight:750;color:#9474B9}
+.listening-study .original-player-link{display:flex;align-items:center;gap:12px;min-height:68px;padding:12px 15px;border:1px solid #E5D8F0;border-radius:14px;background:#F5EFFB;color:#674B91;text-decoration:none;transition:background .18s,border-color .18s}
+.listening-study .original-player-link:hover{background:#EDE3F7;border-color:#CDB9E2}
+.listening-study .original-player-icon{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#7956A5;color:#fff;font-size:14px}
+.listening-study .original-player-link strong,.listening-study .original-player-link small{display:block}
+.listening-study .original-player-link strong{font-size:14px}
+.listening-study .original-player-link small{margin-top:3px;color:#80699C;font-size:11px}
+.listening-study .original-player-arrow{margin-left:auto;font-size:18px}
+.listening-study .original-player-note{grid-column:1/-1;margin:0;color:#80699C;font-size:12px}
+.listening-study #sentence-list{padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important;display:grid;gap:0}
+.listening-study #sentence-list .paragraph-heading{margin:28px 0 12px;padding:0 2px;color:#624887;font-size:19px;font-weight:750;letter-spacing:.01em}
+.listening-study #sentence-list .paragraph-heading:first-child{margin-top:8px}
+.listening-study #sentence-list .sentence-row{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin:0 0 12px;padding:17px 19px!important;background:#fff!important;border:1px solid #E9DFF2!important;border-radius:16px!important;box-shadow:0 2px 12px rgba(83,55,117,.035)!important}
+.listening-study #sentence-list .sentence-row.is-flagged{background:#FCF9FE!important;border-color:#CDB9E2!important;box-shadow:inset 3px 0 #9474B9!important}
+.listening-study #sentence-list .listening-sentence-meta{display:flex;align-items:center;gap:10px;margin:0 0 11px}
+.listening-study #sentence-list .listening-sentence-meta .tag{display:inline-flex;align-items:center;padding:5px 10px;background:#F0E7F8;color:#75569B;border-radius:999px;font-size:11px;font-weight:700}
+.listening-study #sentence-list .listening-speaker{color:#80699C;font-size:12px}
+.listening-study #sentence-list .listening-sentence-body{display:grid;grid-template-columns:30px minmax(0,1fr);align-items:start;gap:12px;margin:0}
+.listening-study #sentence-list .listening-sentence-body .speaker{display:grid;place-items:center;width:30px;height:30px;min-width:30px;min-height:30px;margin:0;padding:0;background:transparent!important;color:#7956A5!important;border:0!important;box-shadow:none!important}
+.listening-study #sentence-list .listening-sentence-body .speaker svg{width:20px;height:20px}
+.listening-study #sentence-list .listening-sentence-body .sentence-en{display:block;padding-top:2px;color:#352B40;font-size:17px;line-height:1.72;font-weight:500}
+.listening-study #sentence-list .listening-sentence-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:13px 0 0 42px}
+.listening-study #sentence-list .listening-sentence-tools summary,.listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle{display:inline-flex;align-items:center;min-height:34px;padding:6px 12px;background:#FAF6FD!important;border:1px solid #E8DDF2!important;border-radius:999px!important;color:#674B91!important;font-size:12px}
+.listening-study #sentence-list .listening-sentence-tools details[open]{flex-basis:100%}
+.listening-study #sentence-list .listening-sentence-tools details[open] p{margin:8px 0 0;padding:12px 14px;background:#F5EFFB;border-radius:11px;color:#59466F;font-size:13px;line-height:1.7}
+.listening-study #sentence-list .sentence-flag-panel{margin:10px 0 0 42px;padding:13px;background:#F8F3FC;border:1px solid #E8DDF2;border-radius:12px}
+.listening-study .transcript-toolbar+#sentence-list{margin-top:0}
+.listening-study .sentence-collection{margin-top:22px}
+@media(max-width:720px){.listening-study .original-player{grid-template-columns:1fr;padding:16px}.listening-study .original-player-link{min-width:0}.listening-study #sentence-list .sentence-row{padding:14px!important}.listening-study #sentence-list .listening-sentence-tools{margin-left:0}.listening-study #sentence-list .sentence-flag-panel{margin-left:0}.listening-study #sentence-list .listening-sentence-body{grid-template-columns:28px minmax(0,1fr);gap:8px}.listening-study #sentence-list .listening-sentence-body .sentence-en{font-size:16px}}
