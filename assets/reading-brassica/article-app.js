@@ -197,8 +197,11 @@ function sentenceList(){
   let content;
   if(listening){
    const timeLabel=x.timestamp||(Number.isFinite(x.start)?formatTime(x.start):'');
-   content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲座讲者')+'</span><span class="listening-sentence-index">'+escapeHTML(timeLabel||String(number).padStart(2,'0'))+'</span></div>'
-    +'<div class="listening-sentence-body">'+playButton(x.en,'朗读整句',true)+'<span class="sentence-en" lang="en">'+escapeHTML(x.en)+'</span></div>'
+   const answerQuestions=x.answerQuestions?.join('、');
+   const english=answerQuestions?'<mark class="listening-answer-sentence">'+escapeHTML(x.en)+'</mark>':escapeHTML(x.en);
+   const answerLabel=answerQuestions?'<span class="tag">答案句 '+escapeHTML(answerQuestions)+'</span>':'';
+   content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲座讲者')+'</span><span class="listening-sentence-index">'+escapeHTML(timeLabel||String(number).padStart(2,'0'))+'</span>'+answerLabel+'</div>'
+    +'<div class="listening-sentence-body">'+playButton(x.en,'朗读整句',true)+'<span class="sentence-en" lang="en">'+english+'</span></div>'
     +'<div class="listening-sentence-tools">'+(timeLabel?'<span class="listening-time-chip"><span aria-hidden="true">◷</span> '+escapeHTML(timeLabel)+'</span>':'')+translation+sentenceFlagControls(number)+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'

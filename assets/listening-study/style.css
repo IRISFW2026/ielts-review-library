@@ -494,3 +494,9 @@ body.listening-study {
 .listening-study .listening-transcript-list .listening-sentence-tools .sentence-flag-toggle{margin-left:auto;border:0;background:transparent;color:#8b6caf;font-size:13px}
 .listening-study .listening-transcript-list .sentence-notes{margin:12px 0 0 47px}
 @media(max-width:650px){.listening-study .listening-transcript-intro{padding:19px;border-radius:18px}.listening-study .listening-transcript-intro h2{font-size:21px}.listening-study .listening-intro-count{width:58px;height:58px;flex-basis:58px;font-size:21px}.listening-study .listening-transcript-list .sentence-row{padding:16px!important;border-radius:17px!important}.listening-study .listening-transcript-list .listening-sentence-body{grid-template-columns:29px minmax(0,1fr);gap:9px}.listening-study .listening-transcript-list .listening-sentence-body .sentence-en{font-size:16px}.listening-study .listening-transcript-list .listening-sentence-tools{margin-left:0;gap:7px}.listening-study .listening-transcript-list .listening-sentence-tools .sentence-flag-toggle{margin-left:0}}
+
+.listening-study .listening-answer-sentence {
+  background: #fff0a8;
+  color: inherit;
+  border-radius: 2px;
+}

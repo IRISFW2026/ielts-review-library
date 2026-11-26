@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "chembe-bird-sanctuary-1126", "title": "1126-听力-Part 4-Chembe Bird Sanctuary 钦贝鸟类保护区", "storageKey": "ielts-listening-chembe-bird-sanctuary-1126-v1", "storageFormat": "flat", "flagPrefix": "chembe-bird-sanctuary-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "文档仅包含音频文件名。可用逐句设备朗读复习。", "questionNotice": ""};
+window.READING_REVIEW_CONFIG = {"id": "chembe-bird-sanctuary-1126", "title": "1126-听力-Part 4-Chembe Bird Sanctuary 钦贝鸟类保护区", "storageKey": "ielts-listening-chembe-bird-sanctuary-1126-v1", "storageFormat": "flat", "flagPrefix": "chembe-bird-sanctuary-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "目前为文档中的待核对文本。黄色标出各题的答案依据，待原录音转写后复核。", "questionNotice": ""};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -831,7 +831,10 @@ window.READING_REVIEW_DATA = {
       "en": "For example, a lot of damage can be caused to farmers' crops by rodents such as rats, which would consume the crops as they grow in the fields as well as after harvesting if they weren't hunted and killed by the birds.",
       "zh": "例如，若没有猛禽捕食，老鼠等啮齿动物在作物生长及收获后都会啃食作物，造成很大损失。",
       "paragraph": "研究地点与猛禽的益处",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q31"
+      ]
     },
     {
       "en": "And the predatory habits of these birds also protect farmers in other ways.",
@@ -843,7 +846,10 @@ window.READING_REVIEW_DATA = {
       "en": "For example, a major danger to rural workers is snakes, whose bite may be dangerous or even fatal, and birds of prey have a major role in keeping their populations under control.",
       "zh": "例如，蛇是农村劳动者面临的一大危险。蛇咬伤可能有危险，甚至会致命，而猛禽在控制蛇的数量方面发挥着重要作用。",
       "paragraph": "研究地点与猛禽的益处",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q32"
+      ]
     },
     {
       "en": "Local people have always been aware of these benefits and for years, even before the sanctuary was opened in 1973, the birds played a key role in the culture of the region.",
@@ -855,7 +861,10 @@ window.READING_REVIEW_DATA = {
       "en": "However, more recently, the sanctuary and its birds have also become increasingly important to the community in economic terms, because at present, after a relatively slow start, tourism has become an important source of revenue for them.",
       "zh": "不过近些年，保护区及其鸟类在经济上的重要性也不断上升。旅游业起步较慢，如今已经成为社区一项重要的收入来源。",
       "paragraph": "研究地点与猛禽的益处",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q33"
+      ]
     },
     {
       "en": "However, although these birds of prey are protected by the government, their numbers are falling.",
@@ -873,7 +882,10 @@ window.READING_REVIEW_DATA = {
       "en": "Fatalities occur when birds alight on roads to catch and eat their prey, and are hit by fast-moving traffic.",
       "zh": "鸟落在路上捕食时，如果被快速行驶的车辆撞到，就可能死亡。",
       "paragraph": "猛禽数量下降的原因",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q34"
+      ]
     },
     {
       "en": "Drivers in Zambia have to take special care at night, as birds may regard the quieter roads as safe places to sleep.",
@@ -891,7 +903,10 @@ window.READING_REVIEW_DATA = {
       "en": "This is a particular danger in the heavy rain which can occur in the region in the months from December to April.",
       "zh": "当地从12月到4月可能出现大雨，那时这种危险尤为突出。",
       "paragraph": "猛禽数量下降的原因",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q35"
+      ]
     },
     {
       "en": "And local farmers also pose a threat to these birds.",
@@ -915,7 +930,10 @@ window.READING_REVIEW_DATA = {
       "en": "But they're also an easy target for birds of prey, and so farmers may shoot these birds, which is illegal but understandable, or they may poison the birds, which again is illegal and can have negative effects on the ecosystem.",
       "zh": "但鸡也是猛禽容易捕捉的猎物，因此农民可能违法射杀猛禽，虽然可以理解；他们也可能违法投毒，而这会对生态系统产生负面影响。",
       "paragraph": "猛禽数量下降的原因",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q36"
+      ]
     },
     {
       "en": "So how else can farmers protect their chickens from birds of prey?",
@@ -939,7 +957,10 @@ window.READING_REVIEW_DATA = {
       "en": "Another possibility would be to prevent the chickens from going outside at all, and to keep them safe from predators inside a building, but this would cost far too much to be a practical solution.",
       "zh": "另一种做法是完全不让鸡出门，把它们关在建筑内防止捕食。但成本太高，难以实际采用。",
       "paragraph": "保护鸡群的方法",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q37"
+      ]
     },
     {
       "en": "Nearly all the farmers reported that they spent a lot of time and effort trying to frighten off the birds of prey without actually harming them.",
@@ -951,19 +972,28 @@ window.READING_REVIEW_DATA = {
       "en": "Most of the farmers had at least one dog, and said this was a big help at scaring away the predators.",
       "zh": "大部分农民至少养一条狗，他们说狗在吓退猛禽方面很有帮助。",
       "paragraph": "保护鸡群的方法",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q38"
+      ]
     },
     {
       "en": "Some of the farmers also reported that during the breeding season, when the chickens were particularly vulnerable, they encouraged their children to watch over the chickens and to hit pans with a metal spoon so that the resulting noise would succeed in driving away birds that were trying to seize the young chicks.",
       "zh": "一些农民还说，在鸡特别脆弱的繁殖季，他们会让孩子看护鸡群，用金属勺敲锅，借噪声驱赶试图抓走小鸡的鸟。",
       "paragraph": "保护鸡群的方法",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q39"
+      ]
     },
     {
       "en": "None of these methods was a hundred per cent effective, however, so as a result, the village people would still use that more than just using one method, they were forced to use a combination of them to have any effect.",
       "zh": "不过没有哪种方法百分之百有效，因此村民不得不结合使用多种方法，才能产生效果。",
       "paragraph": "保护鸡群的方法",
-      "speaker": "讲座讲者"
+      "speaker": "讲座讲者",
+      "answerQuestions": [
+        "Q40"
+      ]
     },
     {
       "en": "And even so, these birds of prey remain a major threat to the chickens' survival and cause considerable economic loss to farmers.",

@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "family-visit-1126", "title": "1126-听力-Part 1-Advice on Family Visit 亲友来访建议", "storageKey": "ielts-listening-family-visit-1126-v1", "storageFormat": "flat", "flagPrefix": "family-visit-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "文档仅包含音频文件名。可用逐句设备朗读复习。", "questionNotice": ""};
+window.READING_REVIEW_CONFIG = {"id": "family-visit-1126", "title": "1126-听力-Part 1-Advice on Family Visit 亲友来访建议", "storageKey": "ielts-listening-family-visit-1126-v1", "storageFormat": "flat", "flagPrefix": "family-visit-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "目前为文档中的待核对文本。黄色标出各题的答案依据，待原录音转写后复核。", "questionNotice": ""};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -793,7 +793,10 @@ window.READING_REVIEW_DATA = {
       "en": "I always recommend people stay at the Kings Hotel.",
       "zh": "我总是推荐大家住金斯酒店。",
       "paragraph": "来访与住宿",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q1"
+      ]
     },
     {
       "en": "Where's that near?",
@@ -829,7 +832,10 @@ window.READING_REVIEW_DATA = {
       "en": "If you book a family room it's about £125 per night.",
       "zh": "如果订家庭房，一晚约125英镑。",
       "paragraph": "来访与住宿",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q2"
+      ]
     },
     {
       "en": "My brother paid for two double rooms in the end and I think that was around £95 for each room.",
@@ -877,13 +883,19 @@ window.READING_REVIEW_DATA = {
       "en": "I think it's better to do a walking tour — it gives you a much better feel for the city.",
       "zh": "我觉得步行游览更好，能让你更好地感受这座城市。",
       "paragraph": "市中心游览与古堡",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q3"
+      ]
     },
     {
       "en": "There's one that starts from Carlton Square.",
       "zh": "有一条路线从卡尔顿广场出发。",
       "paragraph": "市中心游览与古堡",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q3"
+      ]
     },
     {
       "en": "It takes a couple of hours and doesn't cost that much.",
@@ -907,13 +919,19 @@ window.READING_REVIEW_DATA = {
       "en": "If the weather's nice, one thing you could do is visit the old fort.",
       "zh": "天气好时，可以参观那座古堡。",
       "paragraph": "市中心游览与古堡",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q4"
+      ]
     },
     {
       "en": "You can get there by boat.",
       "zh": "可以坐船去。",
       "paragraph": "市中心游览与古堡",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q4"
+      ]
     },
     {
       "en": "The trip takes half a day.",
@@ -955,7 +973,10 @@ window.READING_REVIEW_DATA = {
       "en": "They're here from Saturday for four nights — so Tuesday could be best, I think.",
       "zh": "他们周六到，住四晚，所以我觉得周二最合适。",
       "paragraph": "科学博物馆",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q5"
+      ]
     },
     {
       "en": "Mmm, and it won't be so crowded then.",
@@ -997,7 +1018,10 @@ window.READING_REVIEW_DATA = {
       "en": "There's another one starting soon on space which looks really good too.",
       "zh": "另一个关于太空的展览很快就要开始，看起来也很不错。",
       "paragraph": "科学博物馆",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q6"
+      ]
     },
     {
       "en": "OK, well I'll mention that to my cousin.",
@@ -1021,7 +1045,10 @@ window.READING_REVIEW_DATA = {
       "en": "My cousin's vegetarian — I know it's one of the best places for that kind of food.",
       "zh": "我表亲吃素，我知道那儿很适合吃素食。",
       "paragraph": "市场午餐与剧院折扣",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q7"
+      ]
     },
     {
       "en": "Definitely, and there'll be loads of choice for the kids, too.",
@@ -1033,7 +1060,10 @@ window.READING_REVIEW_DATA = {
       "en": "You need to get there quite early though — at the weekend most of the stalls stop serving lunch at 2.30.",
       "zh": "不过得早点到。周末多数摊位下午两点半停止供应午餐。",
       "paragraph": "市场午餐与剧院折扣",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q8"
+      ]
     },
     {
       "en": "Good point.",
@@ -1063,7 +1093,10 @@ window.READING_REVIEW_DATA = {
       "en": "But you cannot get some good deals if you book online with bargaintickets.com for the following day — on some seats there's a 75% discount.",
       "zh": "在 bargaintickets.com 上订次日的票，有些座位可减价75%。（文档转录开头写作 cannot，和后文含义冲突。）",
       "paragraph": "市场午餐与剧院折扣",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q9"
+      ]
     },
     {
       "en": "Really?!",
@@ -1129,7 +1162,10 @@ window.READING_REVIEW_DATA = {
       "en": "And if you drive in to Blakewell Gardens — climb Telegraph Hill — you'll be able to look right down on the port.",
       "zh": "如果开车进布莱克韦尔花园，再爬上电报山，就可以俯瞰港口。",
       "paragraph": "免费活动与港口景色",
-      "speaker": "Sandra"
+      "speaker": "Sandra",
+      "answerQuestions": [
+        "Q10"
+      ]
     },
     {
       "en": "Everyone's always really impressed because it's so huge.",

@@ -1,4 +1,4 @@
-window.READING_REVIEW_CONFIG = {"id": "handwriting-1126", "title": "1126-听力-Part 3-Handwriting 手写的益处与挑战", "storageKey": "ielts-listening-handwriting-1126-v1", "storageFormat": "flat", "flagPrefix": "handwriting-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "文档仅包含音频文件名。可用逐句设备朗读复习。", "questionNotice": ""};
+window.READING_REVIEW_CONFIG = {"id": "handwriting-1126", "title": "1126-听力-Part 3-Handwriting 手写的益处与挑战", "storageKey": "ielts-listening-handwriting-1126-v1", "storageFormat": "flat", "flagPrefix": "handwriting-1126-sentence-", "paragraphRange": "听力原文与题干", "skill": "listening", "showAllQuestions": true, "defaultVoice": "Google UK English Female", "transcriptNotice": "目前为文档中的待核对文本。黄色标出各题的答案依据，待原录音转写后复核。", "questionNotice": ""};
 window.READING_REVIEW_DATA = {
   "items": [
     {
@@ -821,7 +821,10 @@ window.READING_REVIEW_DATA = {
       "en": "What's less obvious is how it helps develop their concentration.",
       "zh": "没那么明显的是它如何培养孩子的专注力。",
       "paragraph": "手写对儿童的益处",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q21–22"
+      ]
     },
     {
       "en": "They have to sit still and focus on one thing.",
@@ -839,13 +842,19 @@ window.READING_REVIEW_DATA = {
       "en": "That aspect of handwriting had never occurred to me before.",
       "zh": "我以前没想到手写还有这一面。",
       "paragraph": "手写对儿童的益处",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q21–22"
+      ]
     },
     {
       "en": "Same here.",
       "zh": "我也是。",
       "paragraph": "手写对儿童的益处",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q21–22"
+      ]
     },
     {
       "en": "I'm not sure I understand how it improves children's imagination though.",
@@ -875,7 +884,10 @@ window.READING_REVIEW_DATA = {
       "en": "I'd never associated spatial awareness with handwriting either.",
       "zh": "我也从没把空间感和手写联系起来。",
       "paragraph": "手写对儿童的益处",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q21–22"
+      ]
     },
     {
       "en": "I thought spatial awareness was more to do with knowing where you are in relation to objects or other people.",
@@ -887,7 +899,10 @@ window.READING_REVIEW_DATA = {
       "en": "I thought that too.",
       "zh": "我之前也这么想。",
       "paragraph": "手写对儿童的益处",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q21–22"
+      ]
     },
     {
       "en": "But good spatial awareness is essential for writing because you have to space words correctly.",
@@ -935,7 +950,10 @@ window.READING_REVIEW_DATA = {
       "en": "I liked the idea of using one of those pens that lights up if you press too hard.",
       "zh": "我喜欢那种用力过猛就会亮灯的笔。",
       "paragraph": "动作协调障碍与书写训练",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q23–24"
+      ]
     },
     {
       "en": "That seems like a really simple solution.",
@@ -965,13 +983,19 @@ window.READING_REVIEW_DATA = {
       "en": "One quite simple thing you can do is to use grid paper.",
       "zh": "一个很简单的办法是用方格纸。",
       "paragraph": "动作协调障碍与书写训练",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q23–24"
+      ]
     },
     {
       "en": "So they write each letter in a box and that trains them to space the letters correctly.",
       "zh": "每格写一个字母，就能练习正确控制字母间距。",
       "paragraph": "动作协调障碍与书写训练",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q23–24"
+      ]
     },
     {
       "en": "Indeed, that's more important for legibility for trying to get them to write in a straight line.",
@@ -1007,7 +1031,10 @@ window.READING_REVIEW_DATA = {
       "en": "It's not as frustrating for them if they get things wrong — on a keyboard they can be more willing to have a go.",
       "zh": "用键盘时就算写错，他们也没那么沮丧，更愿意试试。",
       "paragraph": "阅读障碍与键盘写作",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q25"
+      ]
     },
     {
       "en": "But I read that developing fluency in print rather than cursive handwriting, where the letters are joined up?",
@@ -1049,7 +1076,10 @@ window.READING_REVIEW_DATA = {
       "en": "Teachers' attitudes have changed because it's been proved that cursive is more difficult to learn — especially for children with learning difficulties who find joining up letters really challenging.",
       "zh": "事实证明，连笔字更难学，尤其是对很难把字母连起来的学习困难儿童，因此教师的态度变了。",
       "paragraph": "连笔字、可辨认度与考试",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q26"
+      ]
     },
     {
       "en": "I agree.",
@@ -1061,13 +1091,19 @@ window.READING_REVIEW_DATA = {
       "en": "I was always worried that my poor handwriting affected my exam results.",
       "zh": "我一直担心自己的字写得不好会影响考试成绩。",
       "paragraph": "连笔字、可辨认度与考试",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q27"
+      ]
     },
     {
       "en": "And now research shows that I was right to worry.",
       "zh": "现在研究表明，我的担心有道理。",
       "paragraph": "连笔字、可辨认度与考试",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q27"
+      ]
     },
     {
       "en": "I'm sure a lot of students think it's unfair that they can't read the script.",
@@ -1103,13 +1139,19 @@ window.READING_REVIEW_DATA = {
       "en": "Anyway, teachers understand the value of handwriting.",
       "zh": "总之，教师明白手写的价值。",
       "paragraph": "手写的未来与个人习惯",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q28"
+      ]
     },
     {
       "en": "It's a basic life skill.",
       "zh": "它是一项基本生活技能。",
       "paragraph": "手写的未来与个人习惯",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q28"
+      ]
     },
     {
       "en": "You mean like note taking?",
@@ -1133,7 +1175,10 @@ window.READING_REVIEW_DATA = {
       "en": "But my mum is shocked by my awful spelling and the fact that my punctuation is really inconsistent.",
       "zh": "不过，我妈对我糟糕的拼写和不一致的标点用法很吃惊。",
       "paragraph": "手写的未来与个人习惯",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q29"
+      ]
     },
     {
       "en": "I think you can put that down to lack of practice.",
@@ -1151,7 +1196,10 @@ window.READING_REVIEW_DATA = {
       "en": "Personally, I miss writing by hand.",
       "zh": "就我个人来说，我怀念手写。",
       "paragraph": "手写的未来与个人习惯",
-      "speaker": "男士"
+      "speaker": "男士",
+      "answerQuestions": [
+        "Q30"
+      ]
     },
     {
       "en": "I hardly ever write anything now.",
@@ -1187,7 +1235,10 @@ window.READING_REVIEW_DATA = {
       "en": "I feel the same way.",
       "zh": "我也有同感。",
       "paragraph": "手写的未来与个人习惯",
-      "speaker": "女士"
+      "speaker": "女士",
+      "answerQuestions": [
+        "Q30"
+      ]
     },
     {
       "en": "I used to write a diary by hand and now I do that on my phone.",
