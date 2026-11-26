@@ -176,3 +176,54 @@ body.listening-study {
   background: #ffe8a6;
   padding-inline: .15em;
 }
+
+/* Listening master refinement: pale lavender transcript and structured error analysis */
+.listening-study{background:#F5EFFB!important;color:#352B40}
+.listening-study .main{background:transparent}
+.listening-study .card,.listening-study #sentence-list{background:#fff!important;border-color:#eadff4!important;box-shadow:0 3px 16px rgba(83,55,117,.045)}
+.listening-study .sentence-row{background:#fff!important;border:1px solid #eee5f5!important;border-radius:15px;margin:10px 0;padding:15px!important;box-shadow:none!important}
+.listening-study .sentence-row.is-flagged{background:#FBF7FE!important;border-color:#d9c7ec!important;box-shadow:inset 3px 0 #9474B9!important}
+.listening-study .paragraph-heading{color:#624887!important}
+.listening-study .listening-sentence-meta{grid-column:1/-1;display:flex;align-items:center;gap:9px;margin-bottom:7px;color:#80699C}
+.listening-study .listening-sentence-meta .tag{background:#EDE3F7;color:#674B91;border:0;border-radius:999px;padding:5px 10px}
+.listening-study .listening-sentence-body{display:grid;grid-template-columns:32px minmax(0,1fr);gap:10px;align-items:start;grid-column:1/-1}
+.listening-study .listening-sentence-body .speaker{width:32px;height:32px;min-width:32px;padding:4px;border:0;border-radius:7px;background:transparent!important;color:#7956A5;box-shadow:none}
+.listening-study .listening-sentence-body .speaker span{display:none}
+.listening-study .listening-sentence-body .sentence-en{font-size:17px;line-height:1.7;color:#352B40}
+.listening-study .listening-sentence-tools{grid-column:2;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:9px}
+.listening-study .listening-sentence-tools summary,.listening-study .sentence-flag-toggle{color:#674B91!important;background:#F8F3FC!important;border:1px solid #E8DDF2!important;border-radius:999px!important}
+.listening-study .listening-sentence-tools details[open]{flex-basis:100%}
+.listening-study .listening-sentence-tools details[open] p{background:#F5EFFB;padding:12px;border-radius:10px;color:#59466F}
+.listening-study .sentence-actions .speaker{background:#EDE3F7!important;color:#674B91!important;border:0}
+.listening-study .original-player{background:#fff;border:1px solid #eadff4;border-radius:16px;padding:16px}
+.listening-study .original-player audio{width:100%;accent-color:#7956A5}
+.listening-study .listening-wrong-review{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;display:grid;gap:18px}
+.listening-study .listening-review-heading{background:#F5EFFB;border-radius:16px;padding:20px;color:#624887}
+.listening-study .listening-review-heading h2{margin:0 0 5px;color:#624887}
+.listening-study .listening-review-heading p{margin:0;color:#80699C;font-size:13px}
+.listening-study .listening-wrong-card{background:#fff;border:1px solid #eadff4;border-radius:18px;padding:20px;box-shadow:0 3px 16px rgba(83,55,117,.045);display:grid;gap:14px}
+.listening-study .listening-wrong-head{display:flex;align-items:center;gap:8px}
+.listening-study .listening-question-number{background:#EDE3F7;color:#674B91;border-radius:999px;padding:5px 12px;font-weight:750}
+.listening-study .listening-question-type{font-size:12px;color:#80699C}
+.listening-study .listening-question-prompt{background:#F5EFFB;border-radius:12px;padding:15px;color:#49375F}
+.listening-study .listening-question-prompt h3,.listening-study .listening-evidence h3,.listening-study .listening-analysis h3,.listening-study .listening-method h3{font-size:13px;color:#674B91;margin:0 0 8px}
+.listening-study .listening-question-prompt p{margin:4px 0;line-height:1.65;font-size:17px}
+.listening-study .listening-answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.listening-study .listening-answer-correct,.listening-study .listening-answer-mine{padding:13px 15px;border-radius:12px;display:grid;gap:5px;min-width:0}
+.listening-study .listening-answer-correct{background:#EDE3F7;border:1px solid #DCC9EF;color:#674B91}
+.listening-study .listening-answer-mine{background:#FBECEF;border:1px solid #F0D5DE;color:#A34D68}
+.listening-study .listening-answer-grid span{font-size:12px;font-weight:650}
+.listening-study .listening-answer-grid strong{font-size:22px;overflow-wrap:anywhere}
+.listening-study .listening-evidence{background:#F8F3FC;border-radius:12px;padding:15px}
+.listening-study .listening-evidence-item{background:#fff;border:1px solid #EEE5F5;border-radius:11px;padding:13px;margin-top:10px}
+.listening-study .listening-evidence-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#80699C;font-size:12px;margin-bottom:8px}
+.listening-study .listening-time-pending{background:#F5EFFB;color:#80699C;padding:4px 8px;border-radius:999px}
+.listening-study .listening-evidence-item p[lang=en]{font-size:16px;line-height:1.7;color:#352B40}
+.listening-study .listening-evidence-item mark{background:#EADCF7;color:#573B7B;border-radius:3px;padding:1px 3px;font-weight:750}
+.listening-study .listening-evidence-zh{color:#80699C;font-size:13px;line-height:1.6}
+.listening-study .listening-evidence-item .speaker{background:#F1E9FA!important;color:#7956A5!important;border:0}
+.listening-study .listening-analysis{background:#FBECEF;border-radius:12px;padding:15px;color:#774354;line-height:1.75}
+.listening-study .listening-analysis h3{color:#A34D68}
+.listening-study .listening-method{background:#F5EFFB;border-radius:12px;padding:15px;color:#59466F;line-height:1.75}
+.listening-study .listening-options{background:#FBF7FE;border-radius:10px;padding:12px;color:#674B91}
+@media(max-width:540px){.listening-study .sentence-row{grid-template-columns:minmax(0,1fr)!important}.listening-study .listening-sentence-tools{grid-column:1}.listening-study .listening-wrong-card{padding:14px}.listening-study .listening-answer-grid{gap:8px}.listening-study .listening-answer-grid strong{font-size:18px}}
