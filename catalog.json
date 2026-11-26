@@ -1,8 +1,30 @@
 {
   "version": 1,
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "why-we-need-silence-1126",
+      "date": "2026-11-26",
+      "skill": "阅读",
+      "kind": "模考",
+      "en": "Why We Need Silence",
+      "zh": "我们为什么需要安静",
+      "topic": "健康与生活",
+      "tags": [
+        "噪音与安静",
+        "漂浮舱",
+        "段落信息匹配",
+        "摘要填空",
+        "人物观点匹配"
+      ],
+      "description": "333 张词卡 · A–G 双语原文与难点句 · Q16、Q18、Q23 错题解析",
+      "path": "reviews/2026-11-26/reading/practice/why-we-need-silence/index.html",
+      "dateBasis": "用户于 2026-11-26 提供原文、题干与作答，题型指定为模考",
+      "aliases": [],
+      "title": "1126-阅读-模考-Why We Need Silence 我们为什么需要安静",
+      "url": "/ielts-review-library/reviews/2026-11-26/reading/practice/why-we-need-silence/"
+    },
     {
       "id": "stanthorpe-twinning-association-1125",
       "date": "2026-11-25",
