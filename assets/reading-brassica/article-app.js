@@ -194,9 +194,9 @@ function sentenceList(){
   const translation='<details><summary>查看中文</summary><p>'+escapeHTML(x.zh)+'</p></details>';
   let content;
   if(listening){
-   content='<div class="listening-sentence-meta"><span class="tag">'+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+escapeHTML(x.speaker)+'</span></div>'
-    +'<p class="sentence-text">'+playButton(x.en,'朗读整句',true)+'<span lang="en">'+escapeHTML(x.en)+'</span></p>'
-    +'<div class="listening-sentence-tools">'+(CONFIG.recording?listening.seekButton?.(x.start)||'':'')+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
+   content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲者')+'</span></div>'
+    +'<div class="listening-sentence-body">'+playButton(x.en,'朗读整句',true)+'<span class="sentence-en" lang="en">'+escapeHTML(x.en)+'</span></div>'
+    +'<div class="listening-sentence-tools">'+(CONFIG.recording&&Number.isFinite(x.start)?listening.seekButton?.(x.start)||'':'')+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
     +'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+translation+(isOriginal?sentenceFlagControls(number):'');
