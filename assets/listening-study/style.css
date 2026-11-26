@@ -269,3 +269,37 @@ body.listening-study {
 .listening-study .transcript-toolbar+#sentence-list{margin-top:0}
 .listening-study .sentence-collection{margin-top:22px}
 @media(max-width:720px){.listening-study .original-player{grid-template-columns:1fr;padding:16px}.listening-study .original-player-link{min-width:0}.listening-study #sentence-list .sentence-row{padding:14px!important}.listening-study #sentence-list .listening-sentence-tools{margin-left:0}.listening-study #sentence-list .sentence-flag-panel{margin-left:0}.listening-study #sentence-list .listening-sentence-body{grid-template-columns:28px minmax(0,1fr);gap:8px}.listening-study #sentence-list .listening-sentence-body .sentence-en{font-size:16px}}
+
+/* Screenshot-matched listening transcript master */
+.listening-study .transcript-toolbar{margin:18px 0 14px;gap:12px}
+.listening-study .original-player{display:block;margin:16px 0 24px;padding:24px 26px;background:#F3ECFA;border:1px solid #E6DCEF;border-radius:28px;box-shadow:none}
+.listening-study .original-player-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.listening-study .original-player-heading h2{margin:0;color:#17131C;font-size:22px;font-weight:750}
+.listening-study .original-player-heading p{margin:5px 0 0;color:#856BA5;font-size:14px;letter-spacing:.02em}
+.listening-study .original-player-headphones{color:#8058B2;font-size:28px}
+.listening-study .original-player-open{display:flex;align-items:center;gap:14px;min-height:94px;padding:18px 22px;background:#fff;border:0;border-radius:22px;color:#674B91;text-decoration:none}
+.listening-study .original-player-play{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;background:#7956A5;color:#fff;border-radius:50%;font-size:15px}
+.listening-study .original-player-open strong,.listening-study .original-player-open small{display:block}
+.listening-study .original-player-open strong{font-size:17px;color:#30263B}
+.listening-study .original-player-open small{margin-top:5px;font-size:13px;color:#856BA5}
+.listening-study .original-player-arrow{margin-left:auto;font-size:22px;color:#8058B2}
+.listening-study .original-player-hint{margin:12px 0 0;color:#856BA5;font-size:14px;line-height:1.6}
+.listening-study #sentence-list .paragraph-heading{display:flex;align-items:center;justify-content:space-between;margin:32px 0 16px;font-size:24px;color:#674B91}
+.listening-study #sentence-list .paragraph-heading:after{content:attr(aria-label);font-size:14px;color:#856BA5;font-weight:500}
+.listening-study #sentence-list .sentence-row{padding:22px 24px!important;margin-bottom:14px;border-radius:22px!important;border:1px solid #F0E8F5!important;box-shadow:none!important}
+.listening-study #sentence-list .listening-sentence-meta{margin-bottom:20px;gap:14px}
+.listening-study #sentence-list .listening-sentence-meta .tag{font-size:15px;padding:6px 12px;background:#EFE2FA;color:#7650A7}
+.listening-study #sentence-list .listening-speaker{font-size:15px;color:#856BA5}
+.listening-study #sentence-list .listening-sentence-index{margin-left:auto;color:#856BA5;font-size:15px}
+.listening-study #sentence-list .listening-sentence-body{grid-template-columns:42px minmax(0,1fr);gap:16px;align-items:center}
+.listening-study #sentence-list .listening-sentence-body .speaker{width:42px;height:42px;min-width:42px;min-height:42px}
+.listening-study #sentence-list .listening-sentence-body .speaker svg{width:27px;height:27px}
+.listening-study #sentence-list .listening-sentence-body .sentence-en{font-size:22px;line-height:1.65;font-weight:500;color:#33283D}
+.listening-study #sentence-list .listening-sentence-tools{display:flex;align-items:center;gap:12px;margin:24px 0 0 0;min-height:48px}
+.listening-study #sentence-list .listening-time-chip{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;background:#EFE3F8;border-radius:999px;color:#704A9D;font-size:15px;font-weight:600;white-space:nowrap}
+.listening-study #sentence-list .listening-sentence-tools details{order:2}
+.listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle{order:3;margin-left:auto;min-height:48px;padding:0 16px;background:transparent!important;border:0!important;font-size:15px}
+.listening-study #sentence-list .listening-sentence-tools details summary{min-height:48px;padding:0 18px;background:#F8F2FC!important;border:0!important;border-radius:999px!important;font-size:15px}
+.listening-study #sentence-list .listening-sentence-tools details[open]{order:4}
+.listening-study #sentence-list .sentence-row.is-flagged{background:#FCF9FE!important}
+@media(max-width:720px){.listening-study .original-player{padding:18px;border-radius:22px}.listening-study #sentence-list .sentence-row{padding:18px!important;border-radius:18px!important}.listening-study #sentence-list .listening-sentence-body{grid-template-columns:32px minmax(0,1fr);gap:10px}.listening-study #sentence-list .listening-sentence-body .sentence-en{font-size:17px}.listening-study #sentence-list .listening-sentence-tools{gap:8px;flex-wrap:wrap}.listening-study #sentence-list .listening-time-chip{min-height:40px;padding:0 13px;font-size:13px}.listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle{margin-left:0;min-height:40px}.listening-study #sentence-list .listening-sentence-tools details summary{min-height:40px;padding:0 13px}}
