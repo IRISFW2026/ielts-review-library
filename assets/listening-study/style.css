@@ -227,3 +227,6 @@ body.listening-study {
 .listening-study .listening-method{background:#F5EFFB;border-radius:12px;padding:15px;color:#59466F;line-height:1.75}
 .listening-study .listening-options{background:#FBF7FE;border-radius:10px;padding:12px;color:#674B91}
 @media(max-width:540px){.listening-study .sentence-row{grid-template-columns:minmax(0,1fr)!important}.listening-study .listening-sentence-tools{grid-column:1}.listening-study .listening-wrong-card{padding:14px}.listening-study .listening-answer-grid{gap:8px}.listening-study .listening-answer-grid strong{font-size:18px}}
+
+/* The study dashboard is intentionally limited to the flashcard home view. */
+.listening-study #stats[hidden],.listening-study .progressline[hidden],.listening-study .bar[hidden]{display:none!important}
