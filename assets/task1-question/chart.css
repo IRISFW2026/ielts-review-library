@@ -1,0 +1,91 @@
+.task1-question .prompt {
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.55;
+  color: #173632;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.task1-question .prompt:first-of-type {
+  font-weight: 650;
+}
+
+.task1-question .chart-heading {
+  flex-wrap: wrap;
+}
+
+.task1-chart-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 10px;
+}
+
+.task1-chart-tabs button {
+  background: #f4f8f5;
+  border: 1px solid #cbdad2;
+  border-radius: 8px;
+  color: #19463e;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 6px 9px;
+}
+
+.task1-chart-tabs button[aria-pressed="true"] {
+  background: #dceee4;
+  border-color: #7eb09c;
+  font-weight: 700;
+}
+
+.task1-question .task1-chart-preview {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #fff;
+  cursor: zoom-in;
+  transform: none;
+}
+
+.task1-chart-preview svg,
+.task1-chart-viewport svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.task1-chart-dialog form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  text-align: start;
+}
+
+.task1-chart-dialog form strong {
+  margin-inline-end: auto;
+}
+
+.task1-chart-dialog [hidden] {
+  display: none !important;
+}
+
+.task1-chart-viewport {
+  max-height: 77dvh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #dce8df;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.task1-chart-viewport svg {
+  max-width: none;
+}
+
+@media (min-width: 1000px) {
+  .study-layout.show-question:has(.task1-question) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
