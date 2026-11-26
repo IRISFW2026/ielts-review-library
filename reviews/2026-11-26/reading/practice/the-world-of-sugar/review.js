@@ -121,7 +121,7 @@ if(view!=='cards'){html+=`<div class="answer">${view==='dictation'?`<p class="${
 if(x.examples.length){html+=`<div class="example">${x.examples.slice(0,3).map((e,i)=>`<div class="example-item"><div class="example-line"><p class="example-en"><span class="example-source ${e.source==='original'?'example-source-original':'example-source-supplemental'}">${sourceLabel(e)}</span>${escapeHTML(e.en)}</p>${playButton(e.en,e.source==='original'?'原文例句朗读':'题干朗读',true,i===0)}</div><p class="example-zh">${escapeHTML(e.zh)}${e.sense?`<span class="example-sense">${escapeHTML(e.sense)}</span>`:''}${e.skill?`<span class="example-sense">${escapeHTML(e.skill)}迁移例句</span>`:''}</p><div class="card-sentence-flag">${exampleFlagControls(e)}</div></div>`).join('')}</div>`}}
 if(revealed)html+=memoryHtml(x);html+='</div>';
 if(revealed){let gated=view!=='cards'&&(!meaningOK||(view==='dictation'&&!spellingCorrect()));
-html+=`<div class="grades">${[[1,'Again','重来'],[2,'Hard','吃力'],[3,'Good','记得'],[4,'Easy','轻松']].map(([n,l,t])=>`<button class="grade-${l.toLowerCase()}" data-grade="${n}" ${gated&&n>=2?'disabled':''}><b>${l}</b><span>${t}</span><small>${formatDelay(scheduleRecord(r,n,Date.now()).intervalDays)}</small></button>`).join('')}</div><p class="hint">Enter 揭晓释义 · Space 发音 · 1 Again · 2 Hard · 3 Good · 4 Easy</p>`}
+html+=`<div class="grades">${[[1,'Again','重来'],[2,'Hard','吃力'],[3,'Good','记得'],[4,'Easy','轻松']].map(([n,l,t])=>`<button class="grade-${l.toLowerCase()}" data-grade="${n}" ${gated&&n>=2?'disabled':''}><b>${l}</b><span>${t}</span><small>${formatDelay(scheduleRecord(r,n,Date.now()).intervalDays)}</small></button>`).join('')}</div><p class="hint">Enter 揭晓释义 · Space 正面读词条／背面读例句 · 1 Again · 2 Hard · 3 Good · 4 Easy</p>`}
 return html+'</section><div class="bottom"><span>间隔复习 · 到期词优先，五星重要词先学</span><button id="skip">暂时跳过</button></div>'}
 function formatIPA(s){return s.split('；').map(p=>{let m=p.match(/^([^（]+)(.*)$/);return '/'+escapeHTML(m?m[1]:p)+'/'+escapeHTML(m?m[2]:'')}).join('；')}
 function wordMeta(x, showIPA=true){return `<div class="word-meta">${x.pos?`<span class="pos">${escapeHTML(x.pos)}</span>`:""}${showIPA&&x.type==='word'?(x.ipa?`<span class="ipa" lang="en-GB">${formatIPA(x.ipa)}</span>`:'<span class="small muted">音标待补</span>'):''}<span class="stars" role="img" aria-label="雅思重要程度 ${x.stars} 星，共 5 星">${'★'.repeat(x.stars)}${'☆'.repeat(5-x.stars)} <span class="star-label">重要 ${x.stars}/5</span></span></div>`}
@@ -297,7 +297,9 @@ document.addEventListener('keydown',e=>{
   if((e.code==='Space'||e.key===' ')&&view==='cards'){
     if(/^(INPUT|TEXTAREA|SELECT|BUTTON|A)$/.test(tag)||document.activeElement?.isContentEditable)return;
     e.preventDefault();
-    speak(current.audioTerm||current.term,true);
+    const sentence=revealed?current.examples?.[0]?.en:null;
+    if(sentence)speak(sentence,false);
+    else speak(current.audioTerm||current.term,true);
     return;
   }
   if(e.key==='Enter'&&view==='cards'&&!revealed){
