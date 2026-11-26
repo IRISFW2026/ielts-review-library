@@ -790,4 +790,45 @@ else {
   cardsTab.addEventListener('click',()=>{if(current===null&&!completed)buildStudy();});
   window.addEventListener('hashchange',()=>{if(location.hash==='\x23cards'&&!studyPane.querySelector('.term')&&!completed)buildStudy();});
 }
-</script></body></html>
+</script>
+<script>
+(function(){
+ const original=document.getElementById('original-question');
+ if(!original)return;
+ function setupQuestionPanel(target){
+   if(!target||target.querySelector('.question-side-copy'))return;
+   const layout=document.createElement('div');
+   layout.className='question-study-grid';
+   const side=document.createElement('aside');
+   side.className='panel question-side-copy';
+   side.innerHTML=original.innerHTML;
+   side.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+   side.querySelectorAll('[data-chart]').forEach(btn=>{
+     btn.addEventListener('click',()=>{
+       side.querySelectorAll('[data-chart]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+       side.querySelectorAll('[data-chart-image]').forEach(img=>img.hidden=img.dataset.chartImage!==btn.dataset.chart);
+     });
+   });
+   const content=document.createElement('div');
+   content.className='question-study-main';
+   while(target.firstChild)content.appendChild(target.firstChild);
+   layout.append(side,content);
+   target.appendChild(layout);
+ }
+ function place(){
+   const hash=location.hash;
+   const section=hash==='#dictation'?document.getElementById('dictation'):hash==='#patterns'?document.getElementById('patterns'):null;
+   if(section)setupQuestionPanel(section);
+ }
+ place();
+ window.addEventListener('hashchange',place);
+})();
+</script>
+<style>
+.question-study-grid{display:grid;grid-template-columns:minmax(0,44fr) minmax(0,56fr);gap:18px;align-items:start}
+.question-side-copy{position:sticky;top:18px;min-width:0;background:#f3f7f2;border-color:#dce8df}
+.question-side-copy .chart-detail{background:#fff}
+.question-study-main{min-width:0}
+@media(max-width:900px){.question-study-grid{grid-template-columns:minmax(0,1fr)}.question-side-copy{position:static}}
+</style>
+</body></html>
