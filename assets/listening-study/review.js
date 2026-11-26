@@ -2,11 +2,11 @@
 
 window.ListeningStudy = {
   player(recording, description = '') {
-    if (!recording) return '<p class="muted">本篇未附原录音。可用逐句按钮朗读原文。</p>';
+    if (!recording) return '';
     return `<section class="original-player" aria-labelledby="original-player-title">
-      <h2 id="original-player-title">听力原录音</h2>
-      <iframe src="${escapeHTML(recording)}" title="Tardigrades 原始听力录音" loading="lazy" allow="autoplay; fullscreen" allowfullscreen style="width:100%;min-height:150px;border:0;border-radius:14px;background:#F5EFFB"></iframe>
-      ${description ? '<p class="muted">' + escapeHTML(description) + '</p>' : ''}
+      <div class="original-player-copy"><span class="original-player-kicker">LISTENING AUDIO</span><h2 id="original-player-title">听力原录音</h2><p>打开原始录音，可完整播放本篇听力材料。</p></div>
+      <a class="original-player-link" href="${escapeHTML(recording)}" target="_blank" rel="noopener noreferrer"><span class="original-player-icon" aria-hidden="true">▶</span><span><strong>播放完整录音</strong><small>Descript · 原始音频</small></span><span class="original-player-arrow" aria-hidden="true">↗</span></a>
+      ${description ? '<p class="original-player-note">' + escapeHTML(description) + '</p>' : ''}
     </section>`;
   },
 
