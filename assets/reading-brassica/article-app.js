@@ -202,7 +202,11 @@ function sentenceList(){
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
     +'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+translation+(isOriginal?sentenceFlagControls(number):'');
   }
-  return (entry===rows[0]||rows[rows.indexOf(entry)-1].sentence.paragraph!==x.paragraph?'<h2 class="paragraph-heading" aria-label="'+escapeHTML(x.paragraph)+' 段">'+escapeHTML(x.paragraph)+'</h2>':'')+opening+content+sentenceNotes(x)+'</article>';
+  const firstInParagraph=entry===rows[0]||rows[rows.indexOf(entry)-1].sentence.paragraph!==x.paragraph;
+  const paragraphRows=DATA.sentences.filter(function(sentence){return sentence.paragraph===x.paragraph});
+  const paragraphStart=DATA.sentences.findIndex(function(sentence){return sentence.paragraph===x.paragraph})+1;
+  const paragraphEnd=paragraphStart+paragraphRows.length-1;
+  return (firstInParagraph?'<h2 class="paragraph-heading"><span>'+escapeHTML(x.paragraph)+'</span><small>'+String(paragraphStart).padStart(2,'0')+'–'+String(paragraphEnd).padStart(2,'0')+'</small></h2>':'')+opening+content+sentenceNotes(x)+'</article>';
  }).join('')||'<p>没有匹配的句子。</p>';
  renderSentenceCollection();
 }
