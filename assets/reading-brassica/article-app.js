@@ -197,7 +197,7 @@ function sentenceList(){
   if(listening){
    content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲者')+'</span><span class="listening-sentence-index">句子 '+String(number).padStart(2,'0')+'</span></div>'
     +'<div class="listening-sentence-body">'+playButton(x.en,'朗读整句',true)+'<span class="sentence-en" lang="en">'+escapeHTML(x.en)+'</span></div>'
-    +'<div class="listening-sentence-tools">'+(Number.isFinite(x.start)?'<span class="listening-time-chip">原录音 · '+escapeHTML(x.timestamp||formatTime(x.start))+'</span>':'')+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
+    +'<div class="listening-sentence-tools">'+''+translation+(isOriginal?sentenceFlagControls(number):'')+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
     +'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+translation+(isOriginal?sentenceFlagControls(number):'');
