@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IELTS Reading Review Data (template v1)",
+  "type": "object",
+  "required": [
+    "title",
+    "items",
+    "sentences",
+    "analysisHtml"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "term",
+          "zh",
+          "stars"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "term": {
+            "type": "string"
+          },
+          "ipa": {
+            "type": "string"
+          },
+          "zh": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "stars": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "memory": {
+            "type": "object",
+            "required": [
+              "method",
+              "parts",
+              "tip",
+              "family"
+            ],
+            "properties": {
+              "method": {
+                "type": "string"
+              },
+              "parts": {
+                "type": "string"
+              },
+              "tip": {
+                "type": "string"
+              },
+              "family": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sentences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "en",
+          "zh",
+          "paragraph"
+        ],
+        "properties": {
+          "en": {
+            "type": "string"
+          },
+          "zh": {
+            "type": "string"
+          },
+          "paragraph": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "core": {
+            "type": "string"
+          },
+          "grammar": {
+            "type": "array"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "analysisHtml": {
+      "type": "string",
+      "description": "HTML using the reusable reading-review classes: reading-error-card, reading-question, reading-answer-grid, reading-answer-correct, reading-answer-mine, reading-evidence, reading-reasoning, reading-dispute."
+    }
+  }
+}
