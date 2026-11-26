@@ -285,7 +285,7 @@ body.listening-study {
 .listening-study .original-player-arrow{margin-left:auto;font-size:22px;color:#8058B2}
 .listening-study .original-player-hint{margin:12px 0 0;color:#856BA5;font-size:14px;line-height:1.6}
 .listening-study #sentence-list .paragraph-heading{display:flex;align-items:center;justify-content:space-between;margin:32px 0 16px;font-size:24px;color:#674B91}
-.listening-study #sentence-list .paragraph-heading:after{content:attr(aria-label);font-size:14px;color:#856BA5;font-weight:500}
+.listening-study #sentence-list .paragraph-heading small{font-size:16px;color:#856BA5;font-weight:500}
 .listening-study #sentence-list .sentence-row{padding:22px 24px!important;margin-bottom:14px;border-radius:22px!important;border:1px solid #F0E8F5!important;box-shadow:none!important}
 .listening-study #sentence-list .listening-sentence-meta{margin-bottom:20px;gap:14px}
 .listening-study #sentence-list .listening-sentence-meta .tag{font-size:15px;padding:6px 12px;background:#EFE2FA;color:#7650A7}
