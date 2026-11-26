@@ -303,3 +303,63 @@ body.listening-study {
 .listening-study #sentence-list .listening-sentence-tools details[open]{order:4}
 .listening-study #sentence-list .sentence-row.is-flagged{background:#FCF9FE!important}
 @media(max-width:720px){.listening-study .original-player{padding:18px;border-radius:22px}.listening-study #sentence-list .sentence-row{padding:18px!important;border-radius:18px!important}.listening-study #sentence-list .listening-sentence-body{grid-template-columns:32px minmax(0,1fr);gap:10px}.listening-study #sentence-list .listening-sentence-body .sentence-en{font-size:17px}.listening-study #sentence-list .listening-sentence-tools{gap:8px;flex-wrap:wrap}.listening-study #sentence-list .listening-time-chip{min-height:40px;padding:0 13px;font-size:13px}.listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle{margin-left:0;min-height:40px}.listening-study #sentence-list .listening-sentence-tools details summary{min-height:40px;padding:0 13px}}
+
+
+/* Tardigrades final transcript layout override */
+.listening-study #sentence-list .sentence-row{
+ display:block!important;
+ width:100%!important;
+ box-sizing:border-box!important;
+ padding:22px 24px!important;
+ margin:0 0 14px!important;
+ border-radius:22px!important;
+ background:#fff!important;
+ border:1px solid #F0E8F5!important;
+}
+.listening-study #sentence-list .listening-sentence-meta{
+ display:flex!important;
+ align-items:center!important;
+ width:100%!important;
+ margin:0 0 20px!important;
+ gap:14px!important;
+}
+.listening-study #sentence-list .listening-sentence-index{
+ margin-left:auto!important;
+ display:inline-block!important;
+}
+.listening-study #sentence-list .listening-sentence-body{
+ display:grid!important;
+ grid-template-columns:42px minmax(0,1fr)!important;
+ align-items:center!important;
+ width:100%!important;
+ gap:16px!important;
+}
+.listening-study #sentence-list .listening-sentence-body .sentence-en{
+ display:block!important;
+ min-width:0!important;
+ font-size:22px!important;
+ line-height:1.65!important;
+ overflow-wrap:anywhere!important;
+}
+.listening-study #sentence-list .listening-sentence-tools{
+ display:flex!important;
+ flex-direction:row!important;
+ align-items:center!important;
+ justify-content:flex-start!important;
+ flex-wrap:wrap!important;
+ width:100%!important;
+ min-height:48px!important;
+ margin:24px 0 0!important;
+ gap:12px!important;
+}
+.listening-study #sentence-list .listening-sentence-tools .listening-time-chip{display:none!important}
+.listening-study #sentence-list .listening-sentence-tools details{order:1!important;display:inline-flex!important}
+.listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle{order:2!important;margin-left:auto!important}
+.listening-study #sentence-list .sentence-row.is-flagged{background:#FCF9FE!important}
+@media(max-width:720px){
+ .listening-study #sentence-list .sentence-row{padding:18px!important;border-radius:18px!important}
+ .listening-study #sentence-list .listening-sentence-body{grid-template-columns:32px minmax(0,1fr)!important;gap:10px!important}
+ .listening-study #sentence-list .listening-sentence-body .sentence-en{font-size:17px!important}
+ .listening-study #sentence-list .listening-sentence-tools{gap:8px!important}
+ .listening-study #sentence-list .listening-sentence-tools .sentence-flag-toggle{margin-left:0!important}
+}
