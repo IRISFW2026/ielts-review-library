@@ -1,14 +1,7 @@
 'use strict';
 
 window.ListeningStudy = {
-  player(recording, description = '') {
-    if (!recording) return '';
-    return `<section class="original-player" aria-labelledby="original-player-title">
-      <div class="original-player-heading"><div><h2 id="original-player-title">完整原录音</h2><p>Tardigrades · Listening Part 4</p></div><span class="original-player-headphones" aria-hidden="true">♧</span></div>
-      <a class="original-player-open" href="${escapeHTML(recording)}" target="_blank" rel="noopener noreferrer"><span class="original-player-play" aria-hidden="true">▶</span><span><strong>打开完整原录音</strong><small>在 Descript 中播放 · 07:07</small></span><span class="original-player-arrow" aria-hidden="true">↗</span></a>
-      <p class="original-player-hint">逐句时间标签用于对应原文位置；点击上方按钮打开完整录音。</p>
-    </section>`;
-  },
+
 
 
   evidenceText(line) {
@@ -45,7 +38,6 @@ window.ListeningStudy = {
       </article>`;
     };
     return `<section class="card wrong-review listening-wrong-review"><header class="listening-review-heading"><h2>错题解析</h2><p>原题 · 答案对比 · 听力原文 · 错因诊断 · 复盘方法</p></header>
-      ${this.player(recording)}
       ${wrong.map(questionCard).join('') || (notice ? '<p class="muted">'+escapeHTML(notice)+'</p>' : '')}
     </section>`;
   }
