@@ -16,11 +16,12 @@ window.ListeningStudy = {
 
   answerCells(question) {
     const answer = question.chosen || '未作答';
-    if (question.type !== '双选' || !/^[A-Z](?:\+[A-Z])+$/.test(answer)) {
+    const choices = answer.toUpperCase().trim();
+    if (!/^[A-Z](?:\s*\+\s*[A-Z])+$/.test(choices)) {
       return `<section class="listening-answer-mine${question.wrong ? '' : ' is-correct'}"><span>我的答案</span><strong>${escapeHTML(answer)}</strong></section>`;
     }
-    const correct = new Set(question.answer.split('+'));
-    const cells = answer.split('+').map(choice =>
+    const correct = new Set(question.answer.toUpperCase().trim().split(/\s*\+\s*/));
+    const cells = choices.split(/\s*\+\s*/).map(choice =>
       `<strong class="listening-answer-choice${correct.has(choice) ? ' is-correct' : ''}" aria-label="${choice}，${correct.has(choice) ? '正确' : '错误'}">${choice}</strong>`
     ).join('');
     return `<section class="listening-answer-mine is-split"><span>我的答案</span><div class="listening-answer-choices">${cells}</div></section>`;
