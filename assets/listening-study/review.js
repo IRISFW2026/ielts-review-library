@@ -10,13 +10,6 @@ window.ListeningStudy = {
     </section>`;
   },
 
-  seekButton(second) {
-    if (!Number.isFinite(second) || second < 0) return '';
-    const total = Math.floor(second);
-    const timestamp = Math.floor(total / 60) + ':' + String(total % 60).padStart(2, '0');
-    return '<button type="button" class="speaker small" data-original-second="' + second
-      + '">原录音 · ' + timestamp + '</button>';
-  },
 
   evidenceText(line) {
     const text = String(line.en ?? '');
@@ -34,7 +27,7 @@ window.ListeningStudy = {
       const answer = question.chosen || '未作答';
       const evidence = question.evidence || [];
       const evidenceHtml = evidence.map((line,index) => `<div class="listening-evidence-item">
-        <div class="listening-evidence-meta"><span>原文依据 ${index+1} · ${escapeHTML(line.paragraph || '')}</span>${recording && Number.isFinite(line.start) ? this.seekButton(line.start) : '<span class="listening-time-pending">时间戳待校准</span>'}</div>
+        <div class="listening-evidence-meta"><span>原文依据 ${index+1} · ${escapeHTML(line.paragraph || '')}</span></div>
         <p lang="en">${this.evidenceText(line)}</p><p class="listening-evidence-zh">${escapeHTML(line.zh)}</p>
         ${playButton(line.en,'设备朗读',true)}
       </div>`).join('');
@@ -58,18 +51,3 @@ window.ListeningStudy = {
   }
 };
 
-document.addEventListener('click', event => {
-  const button = event.target.closest('button[data-original-second]');
-  if (!button) return;
-  const player = document.querySelector('.original-player audio');
-  if (!player) return;
-  const play = () => {
-    player.currentTime = Number(button.dataset.originalSecond);
-    player.play().catch(() => {
-      player.scrollIntoView({block:'nearest'});
-      player.focus();
-    });
-  };
-  if (player.readyState >= 1) play();
-  else player.addEventListener('loadedmetadata', play, {once:true});
-});
