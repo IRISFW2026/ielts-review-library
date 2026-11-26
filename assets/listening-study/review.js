@@ -4,9 +4,9 @@ window.ListeningStudy = {
   player(recording, description = '') {
     if (!recording) return '';
     return `<section class="original-player" aria-labelledby="original-player-title">
-      <div class="original-player-copy"><span class="original-player-kicker">LISTENING AUDIO</span><h2 id="original-player-title">听力原录音</h2><p>打开原始录音，可完整播放本篇听力材料。</p></div>
-      <a class="original-player-link" href="${escapeHTML(recording)}" target="_blank" rel="noopener noreferrer"><span class="original-player-icon" aria-hidden="true">▶</span><span><strong>播放完整录音</strong><small>Descript · 原始音频</small></span><span class="original-player-arrow" aria-hidden="true">↗</span></a>
-      ${description ? '<p class="original-player-note">' + escapeHTML(description) + '</p>' : ''}
+      <div class="original-player-heading"><div><h2 id="original-player-title">完整原录音</h2><p>Tardigrades · Listening Part 4</p></div><span class="original-player-headphones" aria-hidden="true">♧</span></div>
+      <a class="original-player-open" href="${escapeHTML(recording)}" target="_blank" rel="noopener noreferrer"><span class="original-player-play" aria-hidden="true">▶</span><span><strong>打开完整原录音</strong><small>在 Descript 中播放 · 07:07</small></span><span class="original-player-arrow" aria-hidden="true">↗</span></a>
+      <p class="original-player-hint">逐句时间标签用于对应原文位置；点击上方按钮打开完整录音。</p>
     </section>`;
   },
 
