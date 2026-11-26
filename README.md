@@ -26,6 +26,10 @@
 |---|---|---|
 | 2026-11-26 | 阅读 模考 | [1126-阅读-模考-Why We Need Silence 我们为什么需要安静](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-26/reading/practice/why-we-need-silence/) |
 | 2026-11-26 | 阅读 模考 | [1126-阅读-模考-The World of Sugar 糖的世界](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-26/reading/practice/the-world-of-sugar/) |
+| 2026-11-26 | 听力 Part 3 | [1126-听力-Part 3-Handwriting 手写的益处与挑战](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-26/listening/part-3/handwriting/) |
+| 2026-11-26 | 听力 Part 1 | [1126-听力-Part 1-Advice on Family Visit 亲友来访建议](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-26/listening/part-1/family-visit/) |
+| 2026-11-26 | 听力 Part 2 | [1126-听力-Part 2-City Football Club 城市足球俱乐部](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-26/listening/part-2/city-football-club/) |
+| 2026-11-26 | 听力 Part 4 | [1126-听力-Part 4-Chembe Bird Sanctuary 钦贝鸟类保护区](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-26/listening/part-4/chembe-bird-sanctuary/) |
 | 2026-11-25 | 听力 Part 2 | [1125-听力-Stanthorpe Twinning Association 斯坦索普城镇结对协会](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-2/stanthorpe-twinning-association/) |
 | 2026-11-25 | 听力 Part 1 | [1125-听力-Hinchingbrooke Country Park 欣钦布鲁克乡村公园](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-1/hinchingbrooke-country-park/) |
 | 2026-11-25 | 听力 Part 3 | [1125-听力-Food Trends 食品趋势](https://irisfw2026.github.io/ielts-review-library/reviews/2026-11-25/listening/part-3/food-trends/) |

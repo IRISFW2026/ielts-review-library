@@ -135,7 +135,7 @@ function libraryFamiliarity(x){const r=rec(x),level=[1,2,3,4].includes(r.level)?
 function libraryPronounce(x){return `<button class="speaker library-pronounce" data-say="${escapeHTML(x.audioTerm||x.term)}" type="button" title="朗读 ${escapeHTML(x.term)}" aria-label="朗读 ${escapeHTML(x.term)}">${icon}</button>`}
 function library(){let rows=DATA.items.filter(x=>(kind==='all'||kind===x.type)&&(starFilter==='all'||String(x.stars)===starFilter)&&(x.term+' '+x.zh+' '+(x.ipa||'')+' '+(x.pos||'')).toLowerCase().includes(search.trim().toLowerCase())).sort((a,b)=>libraryOrder==='source'?a.sourceOrder-b.sourceOrder:b.stars-a.stars||((a.type==='word'?0:1)-(b.type==='word'?0:1))||a.sourceOrder-b.sourceOrder);if(!rows.some(x=>x.id===activeLibraryId))activeLibraryId=rows[0]?.id||null;return `<label class="library-search" for="search">搜索全部词库</label><div class="controls"><input id="search" type="search" aria-label="搜索词库" placeholder="输入英文、中文或音标，例如：species / 物种 / 名词" value="${escapeHTML(search)}"><select id="kind"><option value="all">全部类型</option><option value="word">单词</option><option value="phrase">短语</option></select><select id="star-filter" aria-label="按五星重要程度筛选"><option value="all">全部重要程度</option>${[5,4,3,2,1].map(n=>`<option value="${n}">${"★".repeat(n)} · ${n} 星</option>`).join('')}</select></div><p class="search-help">支持英文、中文、音标实时搜索。右侧可设置四档熟练度，自动影响翻卡出现时间。点击词条选中后，按空格键播放读音；在搜索框输入时空格键照常使用。</p><div class="controls"><label>词库顺序 <select id="library-order"><option value="source">${listening?'材料首次出现顺序':PARAGRAPH_RANGE+' 段落与首次出现顺序'}</option><option value="priority">五星重要程度优先</option></select></label></div><p class="small muted">共 ${rows.length} 条；${libraryOrder==='source'?listening?'按材料首次出现顺序排列':'按'+PARAGRAPH_RANGE+'自然段与段内首次出现顺序排列':'按重要程度排列'}。</p><section class="card">${rows.map(x=>`<article class="list-item library-entry${activeLibraryId===x.id?' is-current':''}" data-library-id="${escapeHTML(x.id)}" tabindex="0" aria-label="${escapeHTML(x.term)}：空格键播放读音"><div class="library-word-head"><div class="library-headings"><div class="library-title-line">${libraryPronounce(x)}<span class="library-title-content"><span class="tag">${escapeHTML(x.paragraph)}${listening?'':' 段'}</span><b class="library-term">${escapeHTML(x.term)}</b><span class="library-main-meaning">${escapeHTML(libraryMeanings(x).main)} <span class="context-badge">本文义</span></span></span>${libraryFamiliarity(x)}</div>${wordMeta(x)}</div></div>${libraryMeanings(x).other?`<p class="library-secondary-meaning">其他常见义：${escapeHTML(libraryMeanings(x).other)}</p>`:''}${x.note?`<p class="library-note">${escapeHTML(x.note)}</p>`:""}${memoryHtml(x)}${x.examples.length?`<details class="example library-example"><summary>查看例句 · ${x.examples.length} 条</summary>${x.examples.map(e=>`<div class="example-item"><div class="example-line"><p class="example-en"><span class="example-source ${e.source==='original'?'example-source-original':'example-source-supplemental'}">${sourceLabel(e)}</span>${escapeHTML(e.en)}</p>${libraryExamplePlay(e)}</div><p class="example-zh">${escapeHTML(e.zh)}${e.sense?`<span class="example-sense">${escapeHTML(e.sense)}</span>`:''}${e.skill?`<span class="example-sense">${escapeHTML(e.skill)}迁移例句</span>`:''}</p></div>`).join('')}</details>`:''}</article>`).join('')||'<p>没有匹配的词条。</p>'}</section>`}
 function sentences(){
- if(listening)return '<section class="listening-transcript-intro"><div><span class="listening-eyebrow">LISTENING TRANSCRIPT</span><h2>听力原文与难点句</h2><p>按讲座内容分段整理 · 逐句朗读 · 中文对照 · 难点标记</p></div><span class="listening-intro-count">38 <small>句</small></span></section><section id="sentence-list" class="listening-transcript-list"></section><div id="sentence-collection"></div>';
+ if(listening)return '<section class="listening-transcript-intro"><div><span class="listening-eyebrow">LISTENING TRANSCRIPT</span><h2>听力原文与难点句</h2><p>按内容分段整理 · 逐句朗读 · 中文对照 · 难点标记</p>'+(CONFIG.transcriptNotice?'<p>'+escapeHTML(CONFIG.transcriptNotice)+'</p>':'')+'</div><span class="listening-intro-count">'+DATA.sentences.length+' <small>句</small></span></section><section id="sentence-list" class="listening-transcript-list"></section><div id="sentence-collection"></div>';
  return '<p class="muted">'+DATA.sentences.length+' 个原文句子。阅读时遇到理解障碍，直接在句子下方标记；读完整篇后，在页面底部集中查看并导出解析清单。</p><div class="controls"><input id="sentence-search" placeholder="搜索原文或例句" aria-label="搜索句子" value="'+escapeHTML(search)+'"></div><section class="card" id="sentence-list"></section><div id="sentence-collection"></div>'}
 
 let sentenceType='original';
@@ -196,11 +196,10 @@ function sentenceList(){
   const translation='<details><summary>查看中文</summary><p>'+escapeHTML(x.zh)+'</p></details>';
   let content;
   if(listening){
-   const audioTime=Number(x.start)||0;
-   const timeLabel=x.timestamp||formatTime(audioTime);
-   content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲座讲者')+'</span><span class="listening-sentence-index">'+escapeHTML(timeLabel)+'</span></div>'
+   const timeLabel=x.timestamp||(Number.isFinite(x.start)?formatTime(x.start):'');
+   content='<div class="listening-sentence-meta"><span class="tag">原文 '+String(number).padStart(2,'0')+'</span><span class="listening-speaker">'+(x.speaker?escapeHTML(x.speaker):'讲座讲者')+'</span><span class="listening-sentence-index">'+escapeHTML(timeLabel||String(number).padStart(2,'0'))+'</span></div>'
     +'<div class="listening-sentence-body">'+playButton(x.en,'朗读整句',true)+'<span class="sentence-en" lang="en">'+escapeHTML(x.en)+'</span></div>'
-    +'<div class="listening-sentence-tools"><span class="listening-time-chip"><span aria-hidden="true">◷</span> '+escapeHTML(timeLabel)+'</span>'+translation+sentenceFlagControls(number)+'</div>';
+    +'<div class="listening-sentence-tools">'+(timeLabel?'<span class="listening-time-chip"><span aria-hidden="true">◷</span> '+escapeHTML(timeLabel)+'</span>':'')+translation+sentenceFlagControls(number)+'</div>';
   }else{
    content='<span class="tag">'+escapeHTML(x.paragraph)+' 段 · '+String(number).padStart(2,'0')+'</span> <span class="example-source '+(isOriginal?'example-source-original':'example-source-supplemental')+'">'+(isOriginal?'原文句子':'补充例句')+'</span>'
     +'<p class="sentence-text">'+escapeHTML(x.en)+'</p>'+playButton(x.en,'朗读整句',true)+translation+(isOriginal?sentenceFlagControls(number):'');
@@ -289,7 +288,7 @@ document.addEventListener('change',e=>{
 let audio=null,soundToken=0;
 function stopSound(){soundToken++;if(audio){audio.pause();audio=null}if('speechSynthesis'in window)speechSynthesis.cancel()}
 function voiceScore(v){return (/natural|neural|premium|enhanced/i.test(v.name)?100:0)+(!v.localService?30:0)+(/^en-GB/i.test(v.lang)?10:0)+(/Google|Microsoft|Samantha|Daniel|Serena/i.test(v.name)?5:0)}
-function selectedVoice(){return voices.find(v=>v.voiceURI===settings.voice)||voices[0]}
+function selectedVoice(){return voices.find(v=>v.voiceURI===settings.voice)||voices.find(v=>v.name===CONFIG.defaultVoice)||voices[0]}
 function loadVoices(){voices=('speechSynthesis'in window?speechSynthesis.getVoices():[]).filter(v=>/^en(?:-|_)/i.test(v.lang)).sort((a,b)=>voiceScore(b)-voiceScore(a));voiceStatus();if(view==='settings')voiceOptions()}
 function voiceStatus(){let v=selectedVoice();$('voice-status').textContent=v?'英语音色 · '+v.name:('speechSynthesis'in window?'未检测到英语音色，请查看学习设置':'此浏览器不支持设备朗读，请尝试在线词典发音或其他浏览器')}
 function voiceOptions(){if(!$('voice-select'))return;$('voice-select').innerHTML='<option value="">自动选择 · 优先自然英语音色</option>'+voices.map(v=>`<option value="${escapeHTML(v.voiceURI)}">${escapeHTML(v.name)} · ${escapeHTML(v.lang)}</option>`).join('');$('voice-select').value=settings.voice}
@@ -525,7 +524,7 @@ function referenceValue(value) {
 }
 
 function analysisPage() {
-  if (listening) return listening.questions({questions:DATA.questions, recording:CONFIG.recording, notice:CONFIG.questionNotice});
+  if (listening) return listening.questions({questions:DATA.questions, notice:CONFIG.questionNotice, showAll:CONFIG.showAllQuestions});
   if (DATA.analysisHtml) return DATA.analysisHtml;
   const questions = DATA.questions || [];
   const wrong = questions.filter(question => question.wrong);
