@@ -5,7 +5,7 @@ window.ListeningStudy = {
     if (!recording) return '<p class="muted">本篇未附原录音。可用逐句按钮朗读原文。</p>';
     return `<section class="original-player" aria-labelledby="original-player-title">
       <h2 id="original-player-title">听力原录音</h2>
-      <audio controls preload="metadata" aria-label="播放完整原录音" src="${escapeHTML(recording)}"></audio>
+      <iframe src="${escapeHTML(recording)}" title="Tardigrades 原始听力录音" loading="lazy" allow="autoplay; fullscreen" allowfullscreen style="width:100%;min-height:150px;border:0;border-radius:14px;background:#F5EFFB"></iframe>
       ${description ? '<p class="muted">' + escapeHTML(description) + '</p>' : ''}
     </section>`;
   },
