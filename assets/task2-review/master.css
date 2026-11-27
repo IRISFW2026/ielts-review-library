@@ -1,0 +1,89 @@
+
+.sidebar{position:sticky;top:0;align-self:start;min-height:100vh}
+.sidebar .book h3{margin-bottom:5px}
+.nav button span{display:inline-block;width:1.65em}
+.top{margin-bottom:25px}
+.top .sub{margin-bottom:0}
+.hidden{display:none!important}
+.study-layout.show-question{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.study-content{min-width:0}
+.study-layout:not(.show-question) .question{display:none}
+.panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(16px,2vw,23px)}
+.panel h2{margin:0 0 8px}
+.panel h3{font-size:16px;margin:20px 0 8px}
+.question{position:sticky;top:20px}
+.prompt{font-size:14px;margin:8px 0 14px}
+.chart-preview{display:block;width:100%;padding:0;background:white;border-radius:10px;overflow:hidden;margin:0 0 12px;cursor:zoom-in}
+.chart-preview:hover{transform:none}
+.chart-preview img,dialog img{display:block;width:100%;height:auto}
+dialog{border:1px solid var(--line);border-radius:16px;width:min(96vw,1150px);max-height:93vh;padding:16px}
+dialog form{text-align:right;margin-bottom:8px}
+dialog::backdrop{background:#183b3a99}
+.takeaway,.drill{background:var(--paper);padding:14px 16px;border-radius:12px}
+.takeaway h3,.takeaway p{margin:0}
+.takeaway h3{margin-bottom:5px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.checks{padding-left:19px}
+.checks li{margin:8px 0}
+.continue{font-weight:700}
+.note,.progress,.feedback,.count{color:var(--muted);font-size:13px}
+.count{margin-left:auto}
+.cn{font-size:17px;font-weight:650;margin-bottom:13px}
+.drill textarea{width:100%;min-height:100px;padding:12px;border:1px solid var(--line);border-radius:10px;background:white;resize:vertical;color:var(--ink)}
+#dict-answer{background:white;border:1px solid var(--line)}
+.flashcard{min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer}
+.flashcard .term{color:var(--ink);font-weight:600}
+.flashback{width:100%;text-align:left;overflow-wrap:anywhere}
+.flashback .meaning{margin:8px 0}
+.flashback .source{background:var(--paper);border-radius:12px;padding:14px}
+.flash-controls,.audio-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0;align-items:center}
+.shortcuts{text-align:center}
+.essay-paragraph,.pattern{border-top:1px solid var(--line);margin-top:15px}
+.essay-paragraph .sentence p,.pattern .example p{margin:5px 0}
+.sentence .speaker,.pattern .speaker{padding:4px 7px;vertical-align:middle}
+.pattern .example{padding-top:9px;margin-top:9px}
+.formula{color:var(--green);font-weight:650}
+.translation-toggle{font-size:13px}
+.english-only .translation{display:none}
+#essay-copy-status{margin-left:10px}
+.audio-bar{justify-content:flex-start}
+.field{max-width:100%;padding:8px;border:1px solid var(--line);border-radius:10px;color:var(--ink);background:#fff}
+@media(max-width:900px){
+  .sidebar,.question{position:static;min-height:0}
+  .study-layout.show-question{display:block}
+  .question{margin-bottom:14px}
+  .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .nav button{text-align:center;white-space:normal}
+}
+@media(max-width:520px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flashcard{min-height:200px}
+  .nav button span{width:1.3em}
+}
+
+/* Task 2 content adaptation; base layout and visual system are inherited from Doctors in Australia master */
+.task2-focus-grid{display:grid;grid-template-columns:minmax(0,44fr) minmax(0,56fr);gap:18px;align-items:start}
+.task2-focus-grid>.panel{min-width:0}
+.task2-prompt{font-size:18px;line-height:1.8;font-weight:600;color:#183b3a}
+.task2-chip{display:inline-block;padding:4px 10px;border-radius:8px;background:#edf5ef;color:#4d8065;font-size:12px;margin:3px 5px 3px 0}
+.task2-plan{display:grid;gap:12px}
+.task2-plan article{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px 18px}
+.task2-plan h3{margin:0 0 8px;color:var(--green);font-size:16px}
+.task2-plan p{margin:5px 0}
+.task2-outline{font-size:14px;color:var(--muted);margin-top:10px}
+.task2-table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:15px}
+.task2-table{border-collapse:collapse;width:100%;min-width:820px;font-size:13px}
+.task2-table th,.task2-table td{padding:12px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.task2-table th{background:#edf5ef;color:#285b4d;position:sticky;top:0}
+.task2-table td:first-child{font-weight:650;color:#244d40}
+.task2-flash{min-height:300px;display:grid;align-content:center;justify-items:center;text-align:center;cursor:pointer}
+.task2-flash .term{font-size:clamp(26px,4vw,42px)}
+.task2-sentence{padding:18px 0;border-bottom:1px solid var(--line)}
+.task2-sentence textarea{width:100%;min-height:78px;padding:12px;border:1px solid var(--line);border-radius:10px}
+.task2-translation{color:var(--muted);font-size:14px}
+.task2-migration{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.task2-migration .card{min-height:0;padding:22px}
+.task2-red{color:#c53535;font-weight:750}
+.task2-small-btn{min-height:38px;padding:7px 12px}
+@media(max-width:900px){.task2-focus-grid{grid-template-columns:1fr}.task2-migration{grid-template-columns:1fr}}
