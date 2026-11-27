@@ -1,8 +1,407 @@
 {
   "version": 1,
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "naming": "MMDD-科目-题型-English topic 中文主题",
   "entries": [
+    {
+      "id": "who-should-fund-public-art",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Who Should Fund Public Art?",
+      "zh": "公共艺术应由谁资助",
+      "topic": "文化与历史",
+      "tags": [
+        "公共艺术",
+        "政府资助",
+        "私人赞助",
+        "2025.10.11"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/who-should-fund-public-art/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "watching-the-same-films",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Watching the Same Films",
+      "zh": "全世界看同样的电影",
+      "topic": "文化与历史",
+      "tags": [
+        "全球文化",
+        "电影产业",
+        "文化多样性",
+        "2026.9.30"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/watching-the-same-films/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "watching-films-and-tv-alone",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Watching Films and TV Alone",
+      "zh": "独自观看影视节目",
+      "topic": "科技与媒体",
+      "tags": [
+        "媒体消费",
+        "个人选择",
+        "社交关系",
+        "2026.7.25"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/watching-films-and-tv-alone/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "travel-to-untouched-places",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Travel to Untouched Places",
+      "zh": "前往未开发自然地区旅游",
+      "topic": "交通与旅游",
+      "tags": [
+        "自然旅游",
+        "生态保护",
+        "地方经济",
+        "2025.12.13"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/travel-to-untouched-places/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "spending-less-time-at-home",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Spending Less Time at Home",
+      "zh": "待在家的时间越来越少",
+      "topic": "社会与家庭",
+      "tags": [
+        "外出活动",
+        "家庭生活",
+        "社会影响",
+        "2026.8.22"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/spending-less-time-at-home/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "scientific-or-natural-food-production",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Scientific or Natural Food Production",
+      "zh": "科学种植与自然种植",
+      "topic": "环境与动物",
+      "tags": [
+        "农业科技",
+        "自然种植",
+        "粮食供应",
+        "2025.11.1"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/scientific-or-natural-food-production/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "rewarding-excellence-or-improvement",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Rewarding Excellence or Improvement",
+      "zh": "奖励优秀还是进步",
+      "topic": "教育与学习",
+      "tags": [
+        "学生奖励",
+        "学业表现",
+        "进步激励",
+        "2025.10.25"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/rewarding-excellence-or-improvement/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "raising-the-legal-driving-age",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Raising the Legal Driving Age",
+      "zh": "提高法定驾驶年龄",
+      "topic": "交通与旅游",
+      "tags": [
+        "道路安全",
+        "驾驶年龄",
+        "交通政策",
+        "2025.12.27"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/raising-the-legal-driving-age/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "purpose-of-advertising",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "The Purpose of Advertising",
+      "zh": "广告的目的",
+      "topic": "工作与商业",
+      "tags": [
+        "广告",
+        "消费行为",
+        "品牌信息",
+        "2026.9.30"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/purpose-of-advertising/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "money-workplace-motivator",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Is Money the Best Workplace Motivator?",
+      "zh": "金钱是最大的工作动力吗",
+      "topic": "工作与商业",
+      "tags": [
+        "薪酬",
+        "工作动力",
+        "职业发展",
+        "2026.8.15"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/money-workplace-motivator/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "maths-or-communication-in-real-life",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Maths or Communication in Real Life",
+      "zh": "数学与沟通的现实价值",
+      "topic": "教育与学习",
+      "tags": [
+        "数学能力",
+        "沟通能力",
+        "现实应用",
+        "2026.8.1"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/maths-or-communication-in-real-life/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "laws-that-are-hard-to-enforce",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Laws That Are Hard to Enforce",
+      "zh": "难以执行的法律",
+      "topic": "政府与法律",
+      "tags": [
+        "法律执行",
+        "执法资源",
+        "公众遵守",
+        "2025.10.18"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/laws-that-are-hard-to-enforce/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "group-study-or-self-study",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Group Study or Self-Study",
+      "zh": "小组学习与自主学习",
+      "topic": "教育与学习",
+      "tags": [
+        "小组学习",
+        "自主学习",
+        "学习效率",
+        "2025.11.22"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/group-study-or-self-study/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "frequent-new-product-versions",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Frequent New Product Versions",
+      "zh": "产品频繁推出新版本",
+      "topic": "工作与商业",
+      "tags": [
+        "产品更新",
+        "消费主义",
+        "创新",
+        "2025.12.6"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/frequent-new-product-versions/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "everyday-stress",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Everyday Stress",
+      "zh": "日常生活压力",
+      "topic": "健康与生活",
+      "tags": [
+        "现代压力",
+        "时间管理",
+        "公共支持",
+        "2026.7.18"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/everyday-stress/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "english-medium-education",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "English-Medium Education",
+      "zh": "英语作为教学语言",
+      "topic": "教育与学习",
+      "tags": [
+        "英语授课",
+        "教育公平",
+        "国际交流",
+        "2026.7.11"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/english-medium-education/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "economic-growth-or-protecting-nature",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Economic Growth or Protecting Nature",
+      "zh": "经济发展与自然保护",
+      "topic": "政府与法律",
+      "tags": [
+        "经济增长",
+        "环境保护",
+        "政府政策",
+        "2026.8.8"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/economic-growth-or-protecting-nature/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "competition-or-cooperation",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Competition or Cooperation",
+      "zh": "竞争与合作",
+      "topic": "社会与家庭",
+      "tags": [
+        "竞争",
+        "合作",
+        "团队表现",
+        "2025.11.15"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/competition-or-cooperation/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "coaching-or-natural-talent-in-sport",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Coaching or Natural Talent in Sport",
+      "zh": "教练与运动天赋",
+      "topic": "健康与生活",
+      "tags": [
+        "体育训练",
+        "天赋",
+        "教练指导",
+        "2025.12.20"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/coaching-or-natural-talent-in-sport/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "age-and-job-applications",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Age and Job Applications",
+      "zh": "年龄与招聘",
+      "topic": "工作与商业",
+      "tags": [
+        "年龄歧视",
+        "招聘公平",
+        "工作能力",
+        "2026.9.30"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/age-and-job-applications/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
+    {
+      "id": "access-to-communication-technology",
+      "date": "2026-11-27",
+      "skill": "写作",
+      "kind": "大作文",
+      "en": "Access to Communication Technology",
+      "zh": "通信技术的普及与数字鸿沟",
+      "topic": "科技与媒体",
+      "tags": [
+        "数字鸿沟",
+        "通信技术",
+        "社会公平",
+        "2026.9.30"
+      ],
+      "description": "Task 2 · 原题审题与立场 · 解题思路 · 四段规划 · 高分表达翻卡 · Band 7–7.5 范文与复盘",
+      "path": "reviews/2026-11-27/writing/task-2/access-to-communication-technology/index.html",
+      "dateBasis": "用户于2026-11-27提供的《1127-大作文-Task 2.docx》题目清单；题目原始日期保留在标签中",
+      "aliases": []
+    },
     {
       "id": "why-we-need-silence-1126",
       "date": "2026-11-26",
