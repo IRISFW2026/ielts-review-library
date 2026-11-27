@@ -26,3 +26,7 @@ The user has adopted the current date, skill and topic structure as the standard
 ## Speaking Studio tool exception
 
 The user explicitly requested the reusable tool name `口语模考，Speaking Studio` without a date prefix, including its homepage link. Its catalog entry uses `displayTitle`; the original canonical path and first publication date stay unchanged. This exception applies only to the reusable tool. Practice export filenames use the actual session start date and time in the device timezone (`MMDD-YYYY-HHmmss`), not the publication date or later download date. Preserve this behavior when regenerating the catalog.
+
+## Writing Task 2 review-page master
+
+For new or redesigned Task 2 review pages, follow [the Writing Task 2 master](templates/IELTS-Writing-Task-2-Master.md). Reuse the approved Work-life balance page styles, module order, and interactions. In the writing focus, use the integrated prompt and analysis on the left, with the thesis and four-paragraph plan on the right. Use arrows to show the sequence of this question’s concrete writing steps in every paragraph.
