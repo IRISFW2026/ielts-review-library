@@ -549,20 +549,64 @@
 @media(max-width:900px){#spStudio .layout{grid-template-columns:minmax(0,1fr) minmax(180px,32%)}}
 @media(max-width:700px){#spStudio .shell{grid-template-columns:1fr}#spStudio .sidebar{display:grid;grid-template-columns:88px repeat(2,minmax(0,1fr));gap:6px 9px;padding:10px 15px;border-inline-end:0}#spStudio .sidebar figure{grid-row:span 2;width:100%;margin:0}#spStudio .sidebar figcaption{display:none}#spStudio .sidebar button{text-align:center;padding:6px}#spStudio .sidebar [data-done-count]{grid-column:2/-1;text-align:center;padding:0}}
 @media(max-width:560px){#spStudio .layout{grid-template-columns:1fr}#spStudio .notefields{grid-template-columns:1fr}#spStudio [data-pane="practice"] nav{gap:5px}#spStudio [data-part]{padding:6px 8px}}
+
+#spStudio{--ink:light-dark(#3d2532,#f5e8f0);--base:light-dark(#faf3f6,#201720);--paper:light-dark(#fffcfd,#2b2029);--line:light-dark(#ead9e1,#493344);--muted:light-dark(#6f5262,#d0b4c5);--accent:light-dark(#842554,#ffb0d6);--tint:light-dark(#f5e2eb,#47273b);--go:light-dark(#842554,#ffb0d6);--sidebar-bg:light-dark(#f4e6ed,#291d28);--topic-bg:light-dark(#ecd4e1,#422a3a)}
+#spStudio .shell{grid-template-columns:265px minmax(0,1fr)}
+#spStudio .studio-main{min-width:0}
+#spStudio .sidebar{display:block;min-width:0;padding:35px 24px;text-align:left;background:var(--sidebar-bg);border:0;border-right:1px solid var(--line);border-radius:0}
+#spStudio .sidebar-brand{font-size:22px;font-weight:800;line-height:1.2;letter-spacing:-.025em}
+#spStudio .sidebar-brand span{display:block;margin-top:5px;color:var(--muted);font-size:13px;font-weight:500;letter-spacing:.19em}
+#spStudio .sidebar-topic{margin:30px 0 28px;padding:15px;background:var(--topic-bg);border-radius:16px}
+#spStudio .sidebar-topic h2{margin:0 0 12px;font:750 15px/1.5 system-ui,sans-serif;overflow-wrap:anywhere}
+#spStudio .sidebar-topic figure{width:auto;margin:0 0 9px}
+#spStudio .sidebar-topic img{border-radius:11px}
+#spStudio .sidebar-topic figcaption{display:block;font-size:11px}
+#spStudio .sidebar-topic p{margin:0;font-size:12px;color:var(--muted)}
+#spStudio .sidebar-nav{display:grid;gap:8px;margin:0;padding:0;border:0;background:transparent}
+#spStudio .sidebar-nav button{display:flex;align-items:center;gap:10px;padding:10px 17px;border-radius:12px;font-weight:550;text-align:left}
+#spStudio .sidebar-nav button span{width:1em;text-align:center}
+#spStudio .sidebar-nav button[aria-pressed=true]{background:var(--go);border-color:var(--go);color:var(--on);box-shadow:none}
+#spStudio .sidebar-nav button[aria-pressed=false]:hover{background:var(--tint);border-color:var(--line)}
+#spStudio .sidebar [data-done-count]{margin:16px 0 0;padding-left:17px}
+#spStudio header{background:var(--base)}
+#spStudio .source-notes{padding-top:6px}
+@media(max-width:900px){
+#spStudio .shell{grid-template-columns:1fr}
+#spStudio .sidebar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 14px;padding:15px 20px;border:0;border-bottom:1px solid var(--line)}
+#spStudio .sidebar-brand{align-self:center;font-size:19px}
+#spStudio .sidebar-topic{grid-column:2;grid-row:1;margin:0;padding:5px;width:83px;border-radius:10px}
+#spStudio .sidebar-topic h2,#spStudio .sidebar-topic p,#spStudio .sidebar-topic figcaption{display:none}
+#spStudio .sidebar-topic figure{margin:0}
+#spStudio .sidebar-topic img{border-radius:6px}
+#spStudio .sidebar-nav{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px}
+#spStudio .sidebar-nav button{padding:8px 12px;min-height:44px;font-size:13px}
+#spStudio .sidebar [data-done-count]{grid-column:1/-1;margin:0;padding:0;text-align:left}
+}
+@media(max-width:600px){
+#spStudio .sidebar-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+#spStudio .sidebar-nav button{justify-content:center;border-color:var(--line)}
+}
 </style>
 <section id="spStudio" aria-label="雅思口语复习页">
-<header><div><small>1029 · 雅思口语模考</small><h1>Emails &amp; Buildings <span>邮件与建筑</span></h1></div><a class="home" href="/ielts-review-library/index.html">← 复习总览</a></header>
-<div class="shell">
-<div class="sidebar" role="navigation" aria-label="复习模块">
-<figure><img src="assets/luhu.jpg" width="680" height="510" alt="鹭湖艺术中心白色几何建筑与水中倒影"><figcaption>LUHU ART CENTER <span>白色几何 · 水中倒影</span></figcaption></figure>
 
-<button data-view="practice" aria-pressed="true">口语练习</button>
-<button data-view="cards" aria-pressed="false">翻卡复习</button>
-<button data-view="words" aria-pressed="false">全部词库</button>
-<button data-view="settings" aria-pressed="false">学习设置</button>
-<p data-done-count aria-live="polite"></p>
+<div class="shell">
+<aside class="sidebar" aria-label="复习导航">
+<div class="sidebar-brand">雅思口语<span>SPEAKING STUDIO</span></div>
+<div class="sidebar-topic">
+<h2>Emails &amp; Buildings</h2>
+<figure><img src="assets/luhu.jpg" width="680" height="510" alt="鹭湖艺术中心白色几何建筑与水中倒影"><figcaption>LUHU ART CENTER <span>白色几何 · 水中倒影</span></figcaption></figure>
+<p>口语模考 · 1029</p>
 </div>
-<div>
+<nav class="sidebar-nav" aria-label="学习模块">
+<button data-view="practice" aria-pressed="true"><span aria-hidden="true">▷</span>口语练习</button>
+<button data-view="cards" aria-pressed="false"><span aria-hidden="true">◫</span>翻卡复习</button>
+<button data-view="words" aria-pressed="false"><span aria-hidden="true">▤</span>全部词库</button>
+<button data-view="settings" aria-pressed="false"><span aria-hidden="true">⚙</span>学习设置</button>
+</nav>
+<p data-done-count aria-live="polite"></p>
+</aside>
+<div class="studio-main">
+<header><div><small>1029 · 雅思口语模考</small><h1>Emails &amp; Buildings <span>邮件与建筑</span></h1></div><a class="home" href="/ielts-review-library/index.html">← 复习总览</a></header>
 <section data-pane="practice" aria-label="口语练习">
 <nav aria-label="模考部分">
 <button data-part="1" aria-pressed="false">Part 1 · 邮件</button>
