@@ -292,6 +292,15 @@ footer{margin-top:16px}
 #original-question .prompt{font-size:clamp(17px,1.35vw,20px);line-height:1.55;overflow-wrap:anywhere}
 #original-question .prompt:first-of-type{font-weight:650}
 #original-question .question-translation{border-top:1px solid var(--line);padding-top:10px;margin:12px 0 0}
+.outline article + article{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
+.outline article h3{color:var(--green);margin:0 0 4px}
+.outline article p{font-size:14px;line-height:1.6;margin:0}
+.outline h2 + article{margin-top:14px}
+@media(min-width:1081px){
+  .study-layout.show-question.show-outline{grid-template-columns:minmax(0,1.15fr) minmax(0,1.7fr) minmax(185px,.9fr)}
+  .outline{grid-column:3;position:sticky;top:12px}
+}
+@media(max-width:1080px){.outline{margin-top:14px}}
 #patterns .example .speaker{background:transparent;border:0;box-shadow:none;color:var(--green);padding:4px}
 #patterns .example .speaker svg{width:17px;height:17px;display:block}
 </style></head>
@@ -329,7 +338,14 @@ footer{margin-top:16px}
 <section id="essay" class="panel hidden"><h2>完整全文</h2><div class="controls"><button class="btn primary" id="essay-play">▶ 连续朗读全文</button><button class="btn" id="essay-stop">停止</button><button class="btn" id="essay-copy">复制全文</button><label class="translation-toggle"><input type="checkbox" id="show-translations"> 显示中文</label></div><span class="note" id="essay-copy-status" role="status"></span><div id="essay-content" class="english-only"></div></section>
 <section id="dictation" class="panel hidden"><h2>句子默写</h2><p class="note">只显示中文。请独立写出英文，不提供关键词或首字母提示。提交后可核对参考答案。</p><div class="controls"><button id="dict-prev">上一句</button><button id="dict-next">下一句</button><span class="count" id="dict-index">1 / 18</span></div><div class="drill"><div class="cn" id="dict-cn"></div><textarea id="dict-input" aria-label="英文默写" placeholder="在这里默写英文……" spellcheck="false"></textarea><div class="controls"><button class="btn primary" id="dict-check">提交并核对</button><button class="btn" id="dict-show">显示参考答案</button><button class="btn" id="dict-clear">清空</button></div><div id="dict-feedback" class="feedback" aria-live="polite"></div><div id="dict-comparison" class="dict-comparison hidden"><div class="answer"><strong>我的答案</strong><p id="dict-own"></p></div><div class="answer"><strong>参考答案</strong><p id="dict-answer"></p></div></div></div><p class="progress" id="dict-progress">掌握状态：尚未标记</p><div class="controls"><button id="dict-master" class="btn">标记为已掌握</button><button id="dict-review" class="btn">标记为需复习</button></div></section>
 <section id="patterns" class="panel hidden"><h2>可迁移句子</h2><p class="note">每组附可迁移句型、补充例句、中文翻译与朗读。</p><div id="pattern-content"></div></section>
-<section id="settings" class="panel hidden"><h2>学习设置</h2><div class="stats"><div class="stat"><b id="dict-total">18</b><span>默写句子</span></div><div class="stat"><b id="dict-done">0</b><span>已掌握</span></div><div class="stat"><b id="card-total">35</b><span>词汇与语块</span></div><div class="stat"><b id="card-done">0</b><span>已掌握卡片</span></div></div><h3>翻卡计划</h3><label>每日新词上限 <input type="number" class="field" id="daily-limit" min="1" max="35" value="20"></label><p class="note" id="quota-settings"></p><h3>朗读偏好</h3><div class="audio-bar"><button class="speaker" id="stop-audio">■ 停止朗读</button><label>语速 <select id="rate" class="field"><option value=".8">0.8 慢速</option><option value=".9" selected>0.9 推荐</option><option value="1">1.0 正常</option><option value="1.1">1.1</option></select></label><label>音色 <select id="voice" class="field"><option value="">自动选择英语音色</option></select></label><span id="audio-status" aria-live="polite">英语语音就绪</span></div><h3>翻卡快捷键</h3><p><kbd>Enter</kbd> 揭晓释义 · <kbd>Space</kbd> 正面读词／背面读例句 · <kbd>1</kbd> Again · <kbd>2</kbd> Hard · <kbd>3</kbd> Good · <kbd>4</kbd> Easy</p><p class="note">练习进度和朗读偏好保存在当前浏览器。</p></section></div></div>
+<section id="settings" class="panel hidden"><h2>学习设置</h2><div class="stats"><div class="stat"><b id="dict-total">18</b><span>默写句子</span></div><div class="stat"><b id="dict-done">0</b><span>已掌握</span></div><div class="stat"><b id="card-total">35</b><span>词汇与语块</span></div><div class="stat"><b id="card-done">0</b><span>已掌握卡片</span></div></div><h3>翻卡计划</h3><label>每日新词上限 <input type="number" class="field" id="daily-limit" min="1" max="35" value="20"></label><p class="note" id="quota-settings"></p><h3>朗读偏好</h3><div class="audio-bar"><button class="speaker" id="stop-audio">■ 停止朗读</button><label>语速 <select id="rate" class="field"><option value=".8">0.8 慢速</option><option value=".9" selected>0.9 推荐</option><option value="1">1.0 正常</option><option value="1.1">1.1</option></select></label><label>音色 <select id="voice" class="field"><option value="">自动选择英语音色</option></select></label><span id="audio-status" aria-live="polite">英语语音就绪</span></div><h3>翻卡快捷键</h3><p><kbd>Enter</kbd> 揭晓释义 · <kbd>Space</kbd> 正面读词／背面读例句 · <kbd>1</kbd> Again · <kbd>2</kbd> Hard · <kbd>3</kbd> Good · <kbd>4</kbd> Easy</p><p class="note">练习进度和朗读偏好保存在当前浏览器。</p></section></div>
+<aside class="panel outline hidden" id="writing-outline" aria-labelledby="writing-outline-title">
+  <h2 id="writing-outline-title">写提纲</h2>
+  <article><h3><span lang="en">Introduction</span>｜开头段</h3><p>改写题目 + 回应题目</p></article>
+  <article><h3><span lang="en">Body 1</span>｜主体段一</h3><p>核心论点 → 解释 → 展开 → 例子</p></article>
+  <article><h3><span lang="en">Body 2</span>｜主体段二</h3><p>核心论点 → 解释 → 展开 → 例子</p></article>
+  <article><h3><span lang="en">Conclusion</span>｜结尾段</h3><p>总结观点 + 回应题目</p></article>
+</aside></div>
 <footer>复习进度保存在当前浏览器。</footer></main></div>
 <script>
 const essay = ["Although many people want a healthy balance between work and personal life, this often proves difficult to achieve.", "The main obstacles are excessive work demands and difficulties in managing personal time, which require action from both employers and individuals.", "One major barrier is that work often extends beyond official working hours.", "Employees may be expected to work overtime or answer messages in the evening, leaving little time for family activities or hobbies.", "Long commutes make matters worse by using up time and energy that could otherwise be spent on personal interests.", "Even when free time is available, tired workers may struggle to use it as they intended.", "For example, someone who plans to watch a few short videos after work may end up scrolling through social media all evening.", "Unexpected caring responsibilities, such as looking after a sick relative, can also disrupt plans, especially when working arrangements are inflexible.", "Addressing these problems requires changes in both workplace practices and personal routines.", "Employers should set realistic workloads and avoid expecting staff to respond to non-urgent messages outside working hours.", "This would give employees more predictable periods of personal time.", "Where the job allows it, occasional home working could also reduce commuting time.", "Employees can improve their working methods to reduce avoidable overtime, although greater efficiency alone cannot solve excessive workloads.", "To protect their leisure time, individuals could schedule a few enjoyable activities each week and limit aimless phone use.", "Arranging a walk with a friend, for instance, creates a specific commitment that is easier to keep than a vague intention to relax.", "When family emergencies arise, flexible working hours and shared caring duties can help people manage competing demands.", "In conclusion, demanding jobs, unplanned leisure time and sudden family needs can all prevent people from achieving a satisfactory balance.", "More supportive employers and realistic personal planning can make this goal more achievable."];
@@ -494,7 +510,11 @@ function syncTab() {
     else link.removeAttribute('aria-current');
     document.getElementById(link.dataset.tab).classList.toggle('hidden', !active);
   });
-  document.querySelector('.study-layout').classList.toggle('show-question', ['focus', 'essay', 'dictation', 'patterns'].includes(selected.dataset.tab));
+  const layout = document.querySelector('.study-layout');
+  layout.classList.toggle('show-question', ['focus', 'essay', 'dictation', 'patterns'].includes(selected.dataset.tab));
+  const showOutline = selected.dataset.tab === 'focus';
+  layout.classList.toggle('show-outline', showOutline);
+  document.getElementById('writing-outline').classList.toggle('hidden', !showOutline);
 }
 navigation.forEach(button => {
   button.onclick = () => {
