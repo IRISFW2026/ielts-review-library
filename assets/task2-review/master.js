@@ -1,1 +1,451 @@
-(()=>{'use strict';const $=id=>document.getElementById(id);const speak=t=>{if(!('speechSynthesis'in window))return; speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=Number($('rate')?.value||.9);const vs=speechSynthesis.getVoices();u.voice=vs.find(v=>/Google UK English Female/i.test(v.name))||vs.find(v=>/en-GB/i.test(v.lang))||null;speechSynthesis.speak(u)};let d=JSON.parse($('task2-data').textContent),ci=0,revealed=false,si=0;const cards=d.phrases||[],essay=d.essay||[],sentences=essay.flatMap(p=>(p.en.match(/[^.!?]+[.!?]+/g)||[p.en]).map(s=>({en:s.trim(),zh:''})));function tab(id){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('hidden',s.id!==id));location.hash=id;}document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>tab(b.dataset.tab));function renderCard(){const c=cards[ci];if(!c)return;$('card-term').textContent=c.en;$('card-zh').textContent=revealed?c.zh:'点击揭晓释义';$('card-example').textContent=revealed?c.example:'';$('card-example-zh').textContent=revealed?(c.exampleZh||''):'';$('card-progress').textContent=(ci+1)+' / '+cards.length;}function grade(v){localStorage.setItem('task2-grade-'+d.slug+'-'+ci,v);$('grade-status').textContent=v+' 已记录';} $('prev-card').onclick=()=>{ci=(ci+cards.length-1)%cards.length;revealed=false;renderCard()};$('next-card').onclick=()=>{ci=(ci+1)%cards.length;revealed=false;renderCard()};$('reveal').onclick=()=>{revealed=!revealed;renderCard()};$('say-card').onclick=()=>speak(revealed?(cards[ci]?.example||''):(cards[ci]?.en||''));document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>grade(b.dataset.grade));$('phrase-list').innerHTML=cards.map((c,i)=>'<article class="list-item"><div class="listhead"><b>'+c.en+'</b><button class="speaker" data-phrase="'+i+'">🔊</button></div><p>'+c.zh+'</p><p class="small">'+c.example+'</p></article>').join('');$('phrase-list').onclick=e=>{const b=e.target.closest('[data-phrase]');if(b)speak(cards[+b.dataset.phrase].en)};$('essay-play').onclick=()=>speak(essay.map(p=>p.en).join(' '));$('essay-stop').onclick=()=>speechSynthesis.cancel();$('essay-copy').onclick=()=>{navigator.clipboard?.writeText(essay.map(p=>p.en).join('\n\n'));$('essay-copy-status').textContent='已复制'};$('essay-content').innerHTML=essay.map(p=>'<article class="card essay-paragraph"><div class="eyebrow">'+p.heading+'</div><p lang="en">'+p.en+'</p><button class="speaker" data-essay="'+essay.indexOf(p)+'">🔊 朗读本段</button></article>').join('');$('essay-content').onclick=e=>{const b=e.target.closest('[data-essay]');if(b)speak(essay[+b.dataset.essay].en)};$('dict-total').textContent=sentences.length;$('dict-done').textContent=0;$('dict-index').textContent=(si+1)+' / '+sentences.length;$('dict-cn').textContent=sentences[si]?.zh||'请先根据本句英文含义默写';$('dict-answer').textContent=sentences[si]?.en||'';$('dict-input').value='';function renderSentence(){ $('dict-index').textContent=(si+1)+' / '+sentences.length;$('dict-cn').textContent='请默写本句英文';$('dict-answer').textContent=sentences[si]?.en||'';$('dict-input').value='';$('dict-comparison').hidden=true;} $('dict-prev').onclick=()=>{si=Math.max(0,si-1);renderSentence()};$('dict-next').onclick=()=>{si=Math.min(sentences.length-1,si+1);renderSentence()};$('dict-show').onclick=()=>{$('dict-comparison').hidden=false};$('dict-clear').onclick=()=>{$('dict-input').value=''};$('dict-check').onclick=()=>{$('dict-own').textContent=$('dict-input').value;$('dict-answer').textContent=sentences[si]?.en||'';$('dict-comparison').hidden=false};$('dict-say').onclick=()=>speak(sentences[si]?.en||'');$('dict-progress').textContent='共 '+sentences.length+' 句 · 逐句默写';$('settings-daily-limit').value=localStorage.getItem('task2-limit')||20;$('settings-daily-limit').onchange=e=>localStorage.setItem('task2-limit',e.target.value);$('rate').value=localStorage.getItem('task2-rate')||.9;$('rate').onchange=e=>localStorage.setItem('task2-rate',e.target.value);document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.code==='Enter'&&location.hash==='#cards'){e.preventDefault();$('reveal').click()}if(e.code==='Space'&&location.hash==='#cards'){e.preventDefault();$('say-card').click()}if(/^[1-4]$/.test(e.key)&&location.hash==='#cards'){const b=document.querySelector('[data-grade="'+(['','Again','Hard','Good','Easy'][+e.key])+'"]');b?.click()}});document.querySelectorAll('[data-migrate]').forEach(b=>b.addEventListener('click',()=>speak(cards[Number(b.dataset.migrate)]?.example||cards[Number(b.dataset.migrate)]?.en||'')));$('dict-comparison').addEventListener('click',e=>{const b=e.target.closest('[data-dict]');if(b)speak(sentences[Number(b.dataset.dict)]?.en||'')});renderCard();renderSentence();const h=location.hash.slice(1);if(h&&$(h))tab(h);})();
+'use strict';
+
+const {slug, essay, translations, cards, patterns, paragraphs, rank, ipa, sourceIndex, supplementalSources} =
+  JSON.parse(document.getElementById('task2-data').textContent);
+const storageKey = 'task2-'+slug;
+let voices = [];
+let audioSession = 0;
+const audioStatus = document.getElementById('audio-status');
+function loadVoices() {
+  voices = speechSynthesis.getVoices();
+  const select = document.getElementById('voice');
+  select.replaceChildren(new Option('自动选择英语音色', ''));
+  voices.forEach((voice, index) => {
+    if (/^en(-|_)/i.test(voice.lang)) select.add(new Option(voice.name + ' · ' + voice.lang, index));
+  });
+}
+function stopAudio() {
+  audioSession++;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  audioStatus.textContent = '已停止';
+}
+function speak(text) {
+  if (!('speechSynthesis' in window)) {
+    audioStatus.textContent = '当前浏览器不支持语音合成';
+    return;
+  }
+  const session = ++audioSession;
+  speechSynthesis.cancel();
+  const sentences = Array.isArray(text) ? text : [text];
+  const selectedVoice = voice.value === ''
+    ? voices.find(option => /^en-GB/i.test(option.lang)) || voices.find(option => /^en/i.test(option.lang))
+    : voices[Number(voice.value)];
+  function play(index) {
+    if (session !== audioSession) return;
+    if (index === sentences.length) {
+      audioStatus.textContent = '朗读完成';
+      return;
+    }
+    const utterance = new SpeechSynthesisUtterance(sentences[index]);
+    utterance.lang = selectedVoice?.lang || 'en-GB';
+    utterance.rate = Number(rate.value);
+    if (selectedVoice) utterance.voice = selectedVoice;
+    utterance.onstart = () => { audioStatus.textContent = '正在朗读…'; };
+    utterance.onend = () => play(index + 1);
+    utterance.onerror = () => {
+      if (session === audioSession) audioStatus.textContent = '当前音色无法播放，请在学习设置切换音色';
+    };
+    speechSynthesis.speak(utterance);
+  }
+  play(0);
+}
+document.getElementById('stop-audio').onclick = stopAudio;
+
+const dictState = readState(storageKey+'-dict');
+let di=0;function renderDict(){document.getElementById('dict-cn').textContent=translations[di];document.getElementById('dict-input').value=dictState[di]?.draft||'';document.getElementById('dict-index').textContent=(di+1)+' / '+translations.length;document.getElementById('dict-feedback').textContent='';document.getElementById('dict-comparison').classList.add('hidden');document.getElementById('dict-answer').textContent=essay[di];document.getElementById('dict-progress').textContent='掌握状态：'+(dictState[di]?.status||'尚未标记');document.getElementById('dict-done').textContent=Object.values(dictState).filter(x=>x.status==='掌握').length}
+document.getElementById('dict-prev').onclick=()=>{di=(di+translations.length-1)%translations.length;renderDict()};document.getElementById('dict-next').onclick=()=>{di=(di+1)%translations.length;renderDict()};document.getElementById('dict-input').oninput=e=>{dictState[di]={...(dictState[di]||{}),draft:e.target.value};localStorage.setItem(storageKey+'-dict',JSON.stringify(dictState))};function updateOwnAnswer() {
+  document.getElementById('dict-own').textContent = document.getElementById('dict-input').value.trim() || '尚未输入';
+}
+document.getElementById('dict-input').addEventListener('input', updateOwnAnswer);
+document.getElementById('dict-check').onclick=()=>{updateOwnAnswer();document.getElementById('dict-comparison').classList.remove('hidden');document.getElementById('dict-feedback').textContent='已显示参考答案。对照检查拼写、冠词、时态、介词和搭配。'};document.getElementById('dict-show').onclick=()=>{updateOwnAnswer();document.getElementById('dict-comparison').classList.toggle('hidden')};document.getElementById('dict-clear').onclick=()=>{document.getElementById('dict-input').value='';dictState[di]={...(dictState[di]||{}),draft:''};updateOwnAnswer();localStorage.setItem(storageKey+'-dict',JSON.stringify(dictState))};function mark(s){dictState[di]={...(dictState[di]||{}),status:s};localStorage.setItem(storageKey+'-dict',JSON.stringify(dictState));renderDict()}document.getElementById('dict-master').onclick=()=>mark('掌握');document.getElementById('dict-review').onclick=()=>mark('需复习');renderDict();
+const essayContent = document.getElementById('essay-content');
+essayContent.innerHTML = paragraphs.map(([title, start, end]) =>
+  '<section class="essay-paragraph"><h3>' + title + '</h3><p class="essay-en" lang="en">' +
+  essay.slice(start, end).map((sentence, offset) =>
+    sentence + ' <button class="speaker sentence-audio" data-sentence="' + (start + offset) +
+    '" aria-label="朗读第 ' + (start + offset + 1) + ' 句"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4m12-1a5 5 0 0 1 0 8m2-10a8 8 0 0 1 0 12"/></svg></button>'
+  ).join(' ') + '</p><p class="note translation">' + translations.slice(start, end).join('') + '</p></section>'
+).join('');
+document.querySelectorAll('[data-sentence]').forEach(button => {
+  button.onclick = () => speak(essay[Number(button.dataset.sentence)]);
+});
+document.getElementById('show-translations').onchange = event => {
+  essayContent.classList.toggle('english-only', !event.target.checked);
+};
+document.getElementById('essay-play').onclick = () => {
+  speak(essay);
+};
+document.getElementById('essay-stop').onclick = () => {
+  document.getElementById('stop-audio').click();
+};
+document.getElementById('essay-copy').onclick = async () => {
+  const status = document.getElementById('essay-copy-status');
+  try {
+    await navigator.clipboard.writeText(paragraphs.map(([, start, end]) => essay.slice(start, end).join(' ')).join('\n\n'));
+    status.textContent = '已复制';
+  } catch {
+    status.textContent = '无法自动复制，请选中正文复制。';
+  }
+};
+const patternContent = document.getElementById('pattern-content');
+patternContent.innerHTML = patterns.map(([title, formula, examples, chinese], group) =>
+  '<article class="pattern"><h3>' + title + '</h3><div class="transfer-card"><span class="transfer-number">' +
+  (group + 1) + '</span><p class="transfer-en" lang="en">' + formula + '</p></div>' +
+  examples.map((sentence, index) =>
+    '<div class="example"><button class="speaker" data-pattern="' + group + '-' + index +
+    '" aria-label="朗读例句 ' + (index + 1) + '"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4m12-1a5 5 0 0 1 0 8m2-10a8 8 0 0 1 0 12"/></svg></button><p lang="en">' + sentence +
+    '</p><p class="note">' + chinese[index] + '</p></div>'
+  ).join('') + '</article>'
+).join('');
+patternContent.addEventListener('click', event => {
+  const button = event.target.closest('[data-pattern]');
+  if (!button) return;
+  const [group, index] = button.dataset.pattern.split('-').map(Number);
+  speak(patterns[group][2][index]);
+});
+
+function readState(key) {
+  try { return JSON.parse(localStorage.getItem(key)) || {}; }
+  catch { return {}; }
+}
+const navigation = Array.from(document.querySelectorAll('[data-tab]'));
+function syncTab() {
+  const selected = navigation.find(link => '#' + link.dataset.tab === location.hash) || navigation[0];
+  navigation.forEach(link => {
+    const active = link === selected;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+    document.getElementById(link.dataset.tab).classList.toggle('hidden', !active);
+  });
+  const layout = document.querySelector('.study-layout');
+  const question = document.getElementById('original-question');
+  const inFocus = selected.dataset.tab === 'focus';
+  const questionParent = inFocus ? document.getElementById('focus-question') : layout;
+  if (question.parentElement !== questionParent) questionParent.prepend(question);
+  layout.classList.toggle('show-question', ['essay', 'dictation', 'patterns'].includes(selected.dataset.tab));
+}
+navigation.forEach(button => {
+  button.onclick = () => {
+    location.hash = button.dataset.tab;
+    if (button.dataset.tab === 'cards') {
+      queueMicrotask(() => {
+        syncTab();
+        document.querySelector('#cards .card')?.focus({preventScroll: true});
+      });
+    }
+  };
+});
+window.addEventListener('hashchange', () => {
+  syncTab();
+  window.scrollTo(0, 0);
+});
+syncTab();
+
+const rate = document.getElementById('rate');
+const voice = document.getElementById('voice');
+const previousRate = Number(localStorage.getItem('task2-rate'));
+const audioPreferences = {
+  rate: Array.from(rate.options).find(option => Number(option.value) === previousRate)?.value,
+  ...readState(storageKey+'-audio')
+};
+if (Array.from(rate.options).some(option => option.value === audioPreferences.rate)) rate.value = audioPreferences.rate;
+function saveAudioPreferences() {
+  audioPreferences.rate = rate.value;
+  audioPreferences.voice = voice.value === '' ? '' : voices[Number(voice.value)].voiceURI;
+  localStorage.setItem(storageKey+'-audio', JSON.stringify(audioPreferences));
+}
+function restoreVoice() {
+  loadVoices();
+  const saved = audioPreferences.voice;
+  const preferred = voices.findIndex(option => option.name === 'Google UK English Female');
+  const selected = saved ? voices.findIndex(option => option.voiceURI === saved || option.name === saved) : -1;
+  voice.value = selected >= 0 ? String(selected) : preferred >= 0 ? String(preferred) : '';
+  updateVoiceSummary();
+}
+if ('speechSynthesis' in window) {
+  restoreVoice();
+  speechSynthesis.onvoiceschanged = restoreVoice;
+}
+function updateVoiceSummary() {
+  const selected = voice.value !== '' ? voices[Number(voice.value)] : voices.find(option => /^en-GB/i.test(option.lang)) || voices.find(option => /^en/i.test(option.lang));
+  document.getElementById('voice-summary').textContent = selected ? '英语音色 · ' + selected.name : '英语音色 · 由浏览器提供';
+}
+rate.onchange = saveAudioPreferences;
+voice.onchange = () => { saveAudioPreferences(); updateVoiceSummary(); };
+updateVoiceSummary();
+const studyDay = 86400000;
+const DAY = studyDay;
+const MAX_INTERVAL_DAYS = 365;
+function dayKey() {
+  const today = new Date();
+  return [today.getFullYear(), today.getMonth()+1, today.getDate()].join('-');
+}
+function scheduleRecord(old,level,now=Date.now()){
+ const previous=Number(old.intervalDays)||0, ease=Math.max(1.6,Math.min(2.85,Number(old.easeFactor)||2.4));
+ const wasLearning=previous<1, again=level===1;
+ let days=level===1?(old.reps>0?10:1)/1440:level===2?(wasLearning?Math.max(10/1440,previous*1.5):Math.max(1,previous*1.18)):level===3?(wasLearning?1:Math.max(previous+1,previous*ease)):(wasLearning?4:Math.max(previous+2,previous*(ease+0.55)));
+ days=Math.min(days,MAX_INTERVAL_DAYS);
+ return {...old,level,reps:(old.reps||0)+1,due:now+Math.round(days*DAY),intervalDays:days,easeFactor:Math.max(1.6,Math.min(2.85,ease+(level===1?-.2:level===2?-.08:level===4?.08:0))),lapses:(old.lapses||0)+(again?1:0),streak:again?0:(old.streak||0)+1,startedDay:old.startedDay||dayKey(),updated:now};
+}
+function formatDelay(days){let minutes=Math.round(days*1440);if(minutes<60)return Math.max(1,minutes)+' 分钟后';if(minutes<1440)return Math.round(minutes/60)+' 小时后';let d=days>=10?Math.round(days):Math.round(days*10)/10;return d+' 天后'}
+
+const wordTypes = ['v','n','adj','adv','n/adv','n/v'];
+const grades = [['Again','重来'],['Hard','吃力'],['Good','记得'],['Easy','轻松']];
+const stages = [['all','全部状态'],['due','到期复习'],['new','尚未学习'],['learning','正在巩固'],['mature','长间隔复习']];
+const studyKey = storageKey+'-study';
+const studyState = readState(studyKey);
+const legacyLevels = {Again:1, Hard:2, Good:3, Easy:4};
+for (const index of cards.keys()) {
+  if (studyState[index]) continue;
+  const previous = localStorage.getItem('task2-grade-'+slug+'-'+index);
+  const level = legacyLevels[previous];
+  if (level) studyState[index] = {...scheduleRecord({},level), due:Date.now()};
+}
+const studyPane = document.getElementById('cards');
+const libraryPane = document.getElementById('library');
+const dailyInput = document.getElementById('daily-limit');
+dailyInput.value = Math.min(cards.length, Number(readState(storageKey+'-plan').limit ?? localStorage.getItem('task2-limit')) || 20);
+const audioIcon = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4m12-1a5 5 0 0 1 0 8m2-10a8 8 0 0 1 0 12"/></svg>';
+let studyStage = 'all', kind = 'all', star = 'all', scope = 'due';
+let current = null, queue = [], revealed = false, completed = 0;
+const rec = i => studyState[i] || {};
+const isWord = i => wordTypes.includes(cards[i][1]);
+const indices = cards.map((_,i) => i);
+const todayCount = () => indices.filter(i => rec(i).startedDay === dayKey()).length;
+const saveStudy = () => localStorage.setItem(studyKey, JSON.stringify(studyState));
+const limit = () => Math.max(1,Math.min(cards.length,Number(dailyInput.value)||20));
+const stageMatch = (i,stage) => {
+  const record = rec(i);
+  return ({all:true,due:!!record.level && record.due<=Date.now(),new:!record.level,learning:!!record.level && record.intervalDays<21,mature:record.intervalDays>=21})[stage];
+};
+const filterMatch = (i,k,s) => (k==='all'||isWord(i)===(k==='word')) && (s==='all'||rank[i]===Number(s));
+const stars = i => '<span class="stars" aria-label="重要程度 '+rank[i]+' 星">'+'★'.repeat(rank[i])+'</span><span class="star-label">重要 '+rank[i]+'/5</span>';
+const option = (value,label,selected) => '<option value="'+value+'" '+(value===selected?'selected':'')+'>'+label+'</option>';
+const kindOptions = k => [['all','全部 · 单词与短语'],['word','只看单词'],['phrase','只看短语']].map(([v,n])=>option(v,n,k)).join('');
+const starOptions = s => option('all','雅思重要程度 · 全部星级',s)+[5,4,3,2,1].map(n=>option(String(n),'★'.repeat(n)+' · '+n+' 星',s)).join('');
+const speaker = (type,i,label,small=false) => '<button class="speaker'+(small?' small':'')+'" data-'+type+'="'+i+'" aria-label="'+label+'">'+audioIcon+'<span>'+label+'</span></button>';
+const escapeText = value => String(value).replace(/[&<>"']/g, char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
+function wordMetadata(i) {
+  return '<span class="pos">'+(isWord(i)?cards[i][1].split('/').map(part => part+'.').join('/'):'语块')+'</span>'+(ipa[cards[i][0]]?'<span class="ipa">/'+ipa[cards[i][0]]+'/</span>':'')+stars(i);
+}
+function sourceSentence(i) {
+  const index = sourceIndex[i];
+  return index === null ? supplementalSources[i] : [essay[index], translations[index]];
+}
+function sourceHtml(i) {
+  const supplemental = sourceIndex[i] === null;
+  const label = supplemental ? '补充例句' : '范文例句';
+  const [sentence, translation] = sourceSentence(i);
+  return '<div class="example-line"><p class="example-en"><span class="example-source '+
+    (supplemental ? 'example-source-supplemental' : 'example-source-original')+'">'+label+
+    '</span><span lang="en">'+escapeText(sentence)+'</span></p>'+speaker('say-source',i,label+'朗读')+
+    '</div><p class="example-zh">'+escapeText(translation)+'</p>';
+}
+function nextCard() {
+  current = queue.shift() ?? null;
+  revealed = false;
+  if(current!==null&&!rec(current).level&&!rec(current).startedDay){
+    studyState[current]={...rec(current),startedDay:dayKey()};
+    saveStudy();
+  } else if(current!==null&&!rec(current).level&&rec(current).startedDay!==dayKey()){
+    studyState[current].startedDay=dayKey();
+    saveStudy();
+  }
+  renderStudy();
+}
+function buildStudy() {
+  const eligible = indices.filter(i=>filterMatch(i,kind,star)&&stageMatch(i,studyStage));
+  const sorted = eligible.sort((a,b)=>Number(stageMatch(b,'due'))-Number(stageMatch(a,'due'))||rank[b]-rank[a]);
+  if((studyStage==='all'&&scope==='due')||studyStage==='new'){
+    const available = Math.max(0,limit()-todayCount());
+    const fresh = sorted.filter(i=>!rec(i).level&&rec(i).startedDay!==dayKey()).slice(0,available);
+    queue=sorted.filter(i=>stageMatch(i,'due')||(!rec(i).level&&rec(i).startedDay===dayKey())||fresh.includes(i));
+  } else queue=sorted;
+  nextCard();
+  if (!studyPane.classList.contains('hidden')) studyPane.querySelector('.study-card')?.focus({preventScroll:true});
+}
+function renderStudy() {
+  const countBase = indices.filter(i=>filterMatch(i,kind,star));
+  const daily = '今日新词：'+todayCount()+' / '+limit()+' 个，剩余 '+Math.max(0,limit()-todayCount())+' 个';
+  document.getElementById('quota-settings').textContent=daily;
+  document.getElementById('card-done').textContent=indices.filter(i=>rec(i).level>=3).length;
+  studyPane.innerHTML = '<fieldset class="study-stage-filter"><legend>学习状态</legend><div class="study-stage-options">'+stages.map(([value,label])=>'<button type="button" data-stage="'+value+'" aria-pressed="'+(value===studyStage)+'">'+label+' <span class="study-stage-count">'+countBase.filter(i=>stageMatch(i,value)).length+'</span></button>').join('')+'</div></fieldset>'+
+    '<div class="controls"><select data-study-filter="kind" aria-label="词汇类型">'+kindOptions(kind)+'</select><select data-study-filter="star" aria-label="重要程度">'+starOptions(star)+'</select>'+ (studyStage==='all'?'<select data-study-filter="scope" aria-label="练习范围">'+option('due','按计划 · 到期＋新词',scope)+option('all','提前练习 · 当前筛选全部',scope)+'</select>':'')+'</div>'+
+    '<p class="study-filter-note">'+daily+'（到期复习不占新词额度）。</p>';
+  if(current===null){
+    studyPane.insertAdjacentHTML('beforeend','<section class="card empty"><h2>当前筛选没有待练词条</h2><p>本轮已完成 '+completed+' 次。</p><button data-study-action="reset" class="primary">查看全部状态</button></section>');
+    return;
+  }
+  const i=current, card=cards[i];
+  const label=rec(i).level?grades[rec(i).level-1].join(' · '):'未学';
+  const shown = revealed
+    ? '<div class="meaning context-meaning">'+escapeText(card[2])+' <span class="context-badge">本题义</span></div>'+(card[3]?'<p class="small muted">搭配／同义替换：'+escapeText(card[3])+'</p>':'')
+    : '<p class="reveal-row"><button data-study-action="reveal" class="primary">揭晓释义 · Enter ↵</button></p>';
+  const answer = revealed ? '<div class="example">'+sourceHtml(i)+'</div><div class="grades">'+grades.map(([en,zh],g)=>'<button class="grade-'+en.toLowerCase()+'" data-grade="'+(g+1)+'"><b>'+en+'</b><span>'+zh+'</span><small>'+formatDelay(scheduleRecord(rec(i),g+1).intervalDays)+'</small></button>').join('')+'</div>':'';
+  studyPane.insertAdjacentHTML('beforeend','<section class="card study-card'+(revealed?' is-revealed':'')+'" tabindex="-1"><div class="cardtop"><span class="tag">'+(isWord(i)?'WORD · 单词':'PHRASE · 语块')+' / '+label+'</span><span class="counter">本轮已完成 '+completed+' · 待练 '+(queue.length+1)+'</span></div><div class="center"><div class="term" lang="en">'+escapeText(card[0])+'</div><div class="word-meta">'+wordMetadata(i)+'</div><div class="study-pronunciation">'+speaker('say-term',i,'播放读音')+'</div>'+shown+'</div>'+answer+'</section><div class="bottom"><span>Enter 揭晓释义 · Space 正面读词／背面读例句 · 1–4 评估熟练度</span><button data-study-action="skip">暂时跳过</button></div>');
+}
+function speakEntry(button) {
+  if(button.dataset.sayTerm!==undefined) speak(cards[Number(button.dataset.sayTerm)][0]);
+  if(button.dataset.saySource!==undefined) speak(sourceSentence(Number(button.dataset.saySource))[0]);
+}
+function revealStudy() {
+  if(current===null || revealed)return;
+  revealed=true;
+  renderStudy();
+  studyPane.querySelector('.card')?.focus({preventScroll:true});
+}
+function gradeStudy(level) {
+  if(current===null||!revealed)return;
+  studyState[current]=scheduleRecord(rec(current),level);
+  saveStudy();
+  completed++;
+  nextCard();
+  studyPane.querySelector('.card')?.focus({preventScroll:true});
+}
+studyPane.onclick=event=>{
+  const button=event.target.closest('button');
+  if(!button)return;
+  speakEntry(button);
+  if(button.dataset.stage){studyStage=button.dataset.stage;buildStudy();}
+  if(button.dataset.grade)gradeStudy(Number(button.dataset.grade));
+  if(button.dataset.studyAction==='reveal')revealStudy();
+  if(button.dataset.studyAction==='skip'){
+    nextCard();
+    studyPane.querySelector('.study-card')?.focus({preventScroll:true});
+  }
+  if(button.dataset.studyAction==='reset'){studyStage=kind=star='all';scope='all';buildStudy();}
+};
+studyPane.onchange=event=>{
+  const filter=event.target.dataset.studyFilter;
+  if(!filter)return;
+  if(filter==='kind')kind=event.target.value;
+  if(filter==='star')star=event.target.value;
+  if(filter==='scope')scope=event.target.value;
+  buildStudy();
+};
+dailyInput.onchange=()=>{
+  dailyInput.value=limit();
+  localStorage.setItem(storageKey+'-plan',JSON.stringify({limit:limit()}));
+  if(studyPane.classList.contains('hidden')) {
+    libraryNeedsQueue = true;
+    document.getElementById('quota-settings').textContent='每日新词上限：'+limit()+' 个';
+  } else buildStudy();
+};
+document.addEventListener('keydown',event=>{
+  if(studyPane.classList.contains('hidden')||current===null||event.repeat||event.ctrlKey||event.altKey||event.metaKey||event.target.closest('select,input,textarea,button,a,[contenteditable]'))return;
+  if(event.key==='Enter')revealStudy();
+  else if(event.code==='Space') revealed?speak(sourceSentence(current)[0]):speak(cards[current][0]);
+  else if(/^[1-4]$/.test(event.key))gradeStudy(Number(event.key));
+  else return;
+  event.preventDefault();
+});
+libraryPane.innerHTML=`<div class="stats library-stats" id="library-stats"></div>
+<div class="progressline"><span>长期记忆进度</span><span id="library-progress-label"></span></div>
+<div class="bar" id="library-progress" role="progressbar" aria-label="长期记忆进度" aria-valuemin="0" aria-valuemax="${cards.length}"><i></i></div>
+<label for="vocab-search" class="library-search">搜索全部词库</label>
+<div class="controls library-controls">
+<input type="search" id="vocab-search" placeholder="输入英文、中文、音标或搭配">
+<select id="vocab-kind" aria-label="词汇类型">${kindOptions('all').replace('全部 · 单词与短语','全部类型')}</select>
+<select id="vocab-star" aria-label="重要程度">${starOptions('all').replace('雅思重要程度 · 全部星级','全部重要程度')}</select>
+</div>
+<div class="controls library-order"><label for="vocab-order">词库顺序</label><select id="vocab-order"><option value="importance">重要性 · 高到低</option><option value="alphabetical">首字母 · A–Z</option></select></div>
+<p id="vocab-count" class="study-filter-note" role="status"></p>
+<div id="vocab-list" class="card library-entries"></div>`;
+const libraryOrder=document.getElementById('vocab-order');
+const collation=new Intl.Collator('en',{sensitivity:'base'});
+function updateLibraryStats() {
+  const counts=stages.slice(1).map(([stage,label])=>[indices.filter(i=>stageMatch(i,stage)).length,label]);
+  document.getElementById('library-stats').innerHTML=counts.map(([count,label])=>`<div class="stat"><b>${count}</b><span>${label}</span></div>`).join('');
+  const mature=counts[3][0];
+  document.getElementById('library-progress-label').textContent=mature+' / '+cards.length;
+  const progress=document.getElementById('library-progress');
+  progress.setAttribute('aria-valuenow',mature);
+  const fill=progress.querySelector('i');
+  if(fill)fill.style.width=(mature/cards.length*100)+'%';
+}
+function librarySchedule(i) {
+  if(!rec(i).due)return '未安排复习';
+  if(rec(i).due<=Date.now())return '已到期';
+  return '下次：'+new Date(rec(i).due).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});
+}
+function renderLibrary() {
+  updateLibraryStats();
+  const q=document.getElementById('vocab-search').value.toLowerCase().trim();
+  const k=document.getElementById('vocab-kind').value;
+  const s=document.getElementById('vocab-star').value;
+  const byName=(a,b)=>collation.compare(cards[a][0],cards[b][0]);
+  const alphabetical=libraryOrder.value==='alphabetical';
+  const found=indices.filter(i=>filterMatch(i,k,s)&&[cards[i][0],cards[i][1],cards[i][2],cards[i][3],ipa[cards[i][0]]].join(' ').toLowerCase().includes(q))
+    .sort((a,b)=>alphabetical?byName(a,b):rank[b]-rank[a]||byName(a,b));
+  document.getElementById('vocab-count').textContent=found.length+' / '+cards.length+' 条词汇 · '+(alphabetical?'按首字母 A–Z':'按重要性由高到低');
+  document.getElementById('vocab-list').innerHTML=found.map(i=>{
+    const [term,,meaning,collocations]=cards[i];
+    const index = sourceIndex[i];
+    const heading = index === null ? '补充词汇' : paragraphs.find(([,start,end]) => index >= start && index < end)[0].split(' · ')[0];
+    const level=String(rec(i).level||'');
+    return `<article class="library-entry" data-library-entry="${i}" tabindex="0">
+      <div class="library-title-line">
+        <button class="speaker library-pronounce" data-say-term="${i}" aria-label="朗读 ${escapeText(term)}">${audioIcon}</button>
+        <div class="library-title-content"><span class="tag">${heading||'范文'}</span><span class="library-term" lang="en">${escapeText(term)}</span><span class="library-main-meaning">${escapeText(meaning)} <span class="context-badge">本题义</span></span></div>
+        <div class="library-rating"><select aria-label="${escapeText(term)} 的熟练度" data-library-grade="${i}">${option('','选择熟练度',level).replace('value=""','value="" disabled')}${grades.map(([en,zh],g)=>option(String(g+1),en+' · '+zh,level)).join('')}</select><small data-library-due>${librarySchedule(i)}</small></div>
+      </div>
+      <div class="word-meta">${wordMetadata(i)}</div>${collocations?`<p class="library-note">搭配／同义替换：${escapeText(collocations)}</p>`:''}
+      <details class="library-example example"><summary>查看例句</summary>${sourceHtml(i)}<button class="library-jump" data-vocab-card="${i}">去翻卡 →</button></details>
+    </article>`;
+  }).join('')||'<p class="muted">没有匹配的词汇。</p>';
+}
+libraryPane.oninput=event=>{if(event.target.id==='vocab-search')renderLibrary();};
+libraryPane.onchange=event=>{
+  const select=event.target;
+  if (select.matches('#vocab-kind, #vocab-star, #vocab-order')) {
+    renderLibrary();
+    return;
+  }
+  if (select.dataset.libraryGrade === undefined) return;
+  const index=Number(select.dataset.libraryGrade);
+  const level=Number(select.value);
+  if(![1,2,3,4].includes(level))return;
+  studyState[index]=scheduleRecord(rec(index),level);
+  saveStudy();
+  libraryNeedsQueue=true;
+  select.closest('.library-rating').querySelector('[data-library-due]').textContent=librarySchedule(index);
+  updateLibraryStats();
+  document.getElementById('card-done').textContent=indices.filter(i=>rec(i).level>=3).length;
+};
+let libraryNeedsQueue=false;
+window.addEventListener('hashchange',()=>{
+  if(location.hash==='#library')renderLibrary();
+  if(location.hash==='#cards'&&libraryNeedsQueue){libraryNeedsQueue=false;buildStudy();}
+});
+libraryPane.addEventListener('focusin',event=>{
+  const row=event.target.closest('[data-library-entry]');
+  if(!row)return;
+  libraryPane.querySelector('.is-current')?.classList.remove('is-current');
+  row.classList.add('is-current');
+});
+libraryPane.addEventListener('keydown',event=>{
+  if(event.code!=='Space'||!event.target.matches('[data-library-entry]'))return;
+  event.preventDefault();
+  speak(cards[Number(event.target.dataset.libraryEntry)][0]);
+});
+libraryPane.onclick=event=>{
+  const button=event.target.closest('button');
+  if(!button)return;
+  speakEntry(button);
+  if(button.dataset.vocabCard===undefined)return;
+  libraryNeedsQueue=false;
+  queue=[Number(button.dataset.vocabCard)];
+  nextCard();
+  location.hash='cards';
+  syncTab();
+  studyPane.querySelector('.card')?.focus({preventScroll:true});
+};
+renderLibrary();
+if(location.hash==='#cards')buildStudy();
+else {
+  renderStudy();
+  const cardsTab=navigation.find(button=>button.dataset.tab==='cards');
+  cardsTab.addEventListener('click',()=>{if(current===null&&!completed)buildStudy();});
+  window.addEventListener('hashchange',()=>{if(location.hash==='#cards'&&!studyPane.querySelector('.term')&&!completed)buildStudy();});
+}
