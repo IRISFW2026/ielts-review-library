@@ -9,7 +9,7 @@
 .hidden{display:none!important}
 .study-layout.show-question{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
 .study-content{min-width:0}
-.study-layout:not(.show-question) .question{display:none}
+.study-layout:not(.show-question)>.question{display:none}
 .panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(16px,2vw,23px)}
 .panel h2{margin:0 0 8px}
 .panel h3{font-size:16px;margin:20px 0 8px}
@@ -292,15 +292,24 @@ footer{margin-top:16px}
 #original-question .prompt{font-size:clamp(17px,1.35vw,20px);line-height:1.55;overflow-wrap:anywhere}
 #original-question .prompt:first-of-type{font-weight:650}
 #original-question .question-translation{border-top:1px solid var(--line);padding-top:10px;margin:12px 0 0}
-.outline article + article{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
-.outline article h3{color:var(--green);margin:0 0 4px}
-.outline article p{font-size:14px;line-height:1.6;margin:0}
-.outline h2 + article{margin-top:14px}
-@media(min-width:1081px){
-  .study-layout.show-question.show-outline{grid-template-columns:minmax(0,1.15fr) minmax(0,1.7fr) minmax(185px,.9fr)}
-  .outline{grid-column:3;position:sticky;top:12px}
-}
-@media(max-width:1080px){.outline{margin-top:14px}}
+#original-question .question-translation p{margin:0}
+#original-question .question-translation h4{display:none}
+#focus #original-question .question-translation h4{display:block}
+#focus .focus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:16px}
+#focus .focus-column{min-width:0}
+#focus .focus-column>h3{font-size:18px;margin:0 0 14px}
+#focus .question{position:static;border:0;padding:0;margin:0}
+#focus .question h2,#focus h4{font-size:16px;margin:0 0 7px}
+#focus .question-translation,#focus .focus-audit,#focus .outline{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+#focus .focus-audit ul{margin:0;padding-left:20px}
+#focus .takeaway{margin:0}
+#focus .outline article + article{margin-top:13px}
+#focus .outline article h5{color:var(--green);font-size:15px;margin:0 0 4px}
+#focus .outline article p{margin:0 0 4px}
+#focus .outline .outline-formula{color:var(--green);font-size:13px;font-weight:650}
+#focus .scoring-points{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}
+#focus .scoring-points h3{margin-top:0}
+@media(max-width:760px){#focus .focus-grid{grid-template-columns:minmax(0,1fr)}}
 #patterns .example .speaker{background:transparent;border:0;box-shadow:none;color:var(--green);padding:4px}
 #patterns .example .speaker svg{width:17px;height:17px;display:block}
 </style></head>
@@ -311,20 +320,59 @@ footer{margin-top:16px}
 <h2>原题</h2>
 <p class="prompt" lang="en">People aim to keep a balance between their work and other parts of their lives, but few people achieve it. What are the problems in trying to achieve this goal and how can these problems be overcome?</p>
 <p class="prompt" lang="en">You should spend about 40 minutes on this task. Write at least 250 words.</p>
-<p class="question-translation">人们希望在工作与生活的其他部分之间保持平衡，但真正做到的人并不多。实现这一目标会遇到哪些问题？这些问题可以怎样克服？</p>
+<div class="question-translation">
+  <h4>中文翻译</h4>
+  <p>人们希望在工作与生活的其他部分之间保持平衡，但真正做到的人并不多。实现这一目标会遇到哪些问题？这些问题可以怎样克服？</p>
+</div>
 </aside><div class="study-content"><section id="focus" class="panel">
-<h2>考察要点</h2>
-<div class="takeaway"><h3>本题写作核心</h3><p>题目问的是实现平衡时遇到的障碍，以及怎样克服这些障碍。范文先解释工作如何挤压私人时间，再说明闲暇和照护安排为何容易被打乱，接着逐一回应。</p></div>
-<h3>四段写作思路</h3>
-<div style="overflow-x:auto"><table>
-<thead><tr><th scope="col">段落</th><th scope="col">本题写什么</th></tr></thead>
-<tbody>
-<tr><th scope="row">Introduction · 引言</th><td>改写题意，点出过高的工作要求和私人时间管理困难，并预告雇主和个人都能采取行动。</td></tr>
-<tr><th scope="row">Body 1 · 主体段一</th><td>先写加班、下班后回消息和通勤消耗时间与精力，再写疲惫时容易刷手机消磨一整晚，以及突发照护责任在固定班表下如何打乱计划。</td></tr>
-<tr><th scope="row">Body 2 · 主体段二</th><td>雇主设定合理工作量、明确下班后的消息边界，并在岗位允许时提供居家办公。个人改进工作方法、提前安排休闲。遇到突发照护，用弹性工时和家人分担协调。</td></tr>
-<tr><th scope="row">Conclusion · 结论</th><td>回扣工作过重、闲暇安排和突发家庭责任，归纳雇主支持与个人规划的作用。</td></tr>
-</tbody></table></div>
-<p class="note"><strong>分段理由</strong>　两个主体段分别回答题干的两问。第二段沿着第一段的障碍逐一回应，方便读者看出每项措施解决什么。</p>
+<h2>原题 · 审题 · 写作规划</h2>
+<div class="focus-grid">
+  <div class="focus-column">
+    <h3>题目与分析</h3>
+    <div id="focus-question"></div>
+    <section class="focus-audit">
+      <h4>审题</h4>
+      <ul>
+        <li>题型　<span lang="en">Problems &amp; Solutions</span></li>
+        <li>任务一　解释哪些障碍让工作与生活难以平衡。</li>
+        <li>任务二　针对这些障碍提出解决办法。</li>
+        <li>关键词　<span lang="en">work–life balance</span></li>
+      </ul>
+    </section>
+  </div>
+  <div class="focus-column">
+    <h3>思路与立意</h3>
+    <div class="takeaway">
+      <h4>核心立意</h4>
+      <p>工作要求、闲暇安排和突发照护责任都会妨碍工作与生活的平衡。雇主可以调整工作量和工时安排，个人可以主动规划闲暇并与家人分担照护。</p>
+    </div>
+    <section class="outline" aria-labelledby="writing-outline-title">
+      <h4 id="writing-outline-title">四段式写作规划 · 写提纲</h4>
+      <article>
+        <h5><span lang="en">Introduction</span>｜开头段</h5>
+        <p class="outline-formula">改写题目 + 回应题目</p>
+        <p>改写题意，点出过高的工作要求和私人时间管理困难，预告雇主和个人都能采取行动。</p>
+      </article>
+      <article>
+        <h5><span lang="en">Body 1</span>｜主体段一</h5>
+        <p class="outline-formula">核心论点 → 解释 → 展开 → 例子</p>
+        <p>说明加班、晚间回复消息和长通勤如何消耗时间与精力。用下班后刷短视频消磨整晚及亲属突然生病来说明个人计划如何被打乱。</p>
+      </article>
+      <article>
+        <h5><span lang="en">Body 2</span>｜主体段二</h5>
+        <p class="outline-formula">核心论点 → 解释 → 展开 → 例子</p>
+        <p>雇主设定合理工作量、明确下班后的消息边界，并在岗位允许时提供居家办公。个人可提前安排休闲，例如约朋友散步。遇到突发照护，则用弹性工时和家庭分担应对。</p>
+      </article>
+      <article>
+        <h5><span lang="en">Conclusion</span>｜结尾段</h5>
+        <p class="outline-formula">总结观点 + 回应题目</p>
+        <p>回扣工作过重、闲暇安排和突发家庭责任，归纳雇主支持与个人规划的作用。</p>
+      </article>
+      <p class="note"><strong>分段理由</strong>　两个主体段分别回答两问。第二个主体段沿着第一个主体段提出的障碍逐一回应。</p>
+    </section>
+  </div>
+</div>
+<section class="scoring-points">
 <h3>本题必写得分点</h3>
 <ol class="checks">
 <li><strong>写清工作怎样侵占私人时间。</strong> 加班和晚间回复消息压缩休闲时段，长通勤继续消耗时间与精力。合理工作量、下班消息边界和适度居家办公分别针对这三处。</li>
@@ -333,19 +381,14 @@ footer{margin-top:16px}
 </ol>
 <a class="continue" href="#essay">对照四段范文 →</a>
 </section>
+</section>
 <section id="cards" class="hidden" aria-label="翻卡复习"></section>
 <section id="library" class="hidden" aria-label="全部词库"></section>
 <section id="essay" class="panel hidden"><h2>完整全文</h2><div class="controls"><button class="btn primary" id="essay-play">▶ 连续朗读全文</button><button class="btn" id="essay-stop">停止</button><button class="btn" id="essay-copy">复制全文</button><label class="translation-toggle"><input type="checkbox" id="show-translations"> 显示中文</label></div><span class="note" id="essay-copy-status" role="status"></span><div id="essay-content" class="english-only"></div></section>
 <section id="dictation" class="panel hidden"><h2>句子默写</h2><p class="note">只显示中文。请独立写出英文，不提供关键词或首字母提示。提交后可核对参考答案。</p><div class="controls"><button id="dict-prev">上一句</button><button id="dict-next">下一句</button><span class="count" id="dict-index">1 / 18</span></div><div class="drill"><div class="cn" id="dict-cn"></div><textarea id="dict-input" aria-label="英文默写" placeholder="在这里默写英文……" spellcheck="false"></textarea><div class="controls"><button class="btn primary" id="dict-check">提交并核对</button><button class="btn" id="dict-show">显示参考答案</button><button class="btn" id="dict-clear">清空</button></div><div id="dict-feedback" class="feedback" aria-live="polite"></div><div id="dict-comparison" class="dict-comparison hidden"><div class="answer"><strong>我的答案</strong><p id="dict-own"></p></div><div class="answer"><strong>参考答案</strong><p id="dict-answer"></p></div></div></div><p class="progress" id="dict-progress">掌握状态：尚未标记</p><div class="controls"><button id="dict-master" class="btn">标记为已掌握</button><button id="dict-review" class="btn">标记为需复习</button></div></section>
 <section id="patterns" class="panel hidden"><h2>可迁移句子</h2><p class="note">每组附可迁移句型、补充例句、中文翻译与朗读。</p><div id="pattern-content"></div></section>
 <section id="settings" class="panel hidden"><h2>学习设置</h2><div class="stats"><div class="stat"><b id="dict-total">18</b><span>默写句子</span></div><div class="stat"><b id="dict-done">0</b><span>已掌握</span></div><div class="stat"><b id="card-total">35</b><span>词汇与语块</span></div><div class="stat"><b id="card-done">0</b><span>已掌握卡片</span></div></div><h3>翻卡计划</h3><label>每日新词上限 <input type="number" class="field" id="daily-limit" min="1" max="35" value="20"></label><p class="note" id="quota-settings"></p><h3>朗读偏好</h3><div class="audio-bar"><button class="speaker" id="stop-audio">■ 停止朗读</button><label>语速 <select id="rate" class="field"><option value=".8">0.8 慢速</option><option value=".9" selected>0.9 推荐</option><option value="1">1.0 正常</option><option value="1.1">1.1</option></select></label><label>音色 <select id="voice" class="field"><option value="">自动选择英语音色</option></select></label><span id="audio-status" aria-live="polite">英语语音就绪</span></div><h3>翻卡快捷键</h3><p><kbd>Enter</kbd> 揭晓释义 · <kbd>Space</kbd> 正面读词／背面读例句 · <kbd>1</kbd> Again · <kbd>2</kbd> Hard · <kbd>3</kbd> Good · <kbd>4</kbd> Easy</p><p class="note">练习进度和朗读偏好保存在当前浏览器。</p></section></div>
-<aside class="panel outline hidden" id="writing-outline" aria-labelledby="writing-outline-title">
-  <h2 id="writing-outline-title">写提纲</h2>
-  <article><h3><span lang="en">Introduction</span>｜开头段</h3><p>改写题目 + 回应题目</p></article>
-  <article><h3><span lang="en">Body 1</span>｜主体段一</h3><p>核心论点 → 解释 → 展开 → 例子</p></article>
-  <article><h3><span lang="en">Body 2</span>｜主体段二</h3><p>核心论点 → 解释 → 展开 → 例子</p></article>
-  <article><h3><span lang="en">Conclusion</span>｜结尾段</h3><p>总结观点 + 回应题目</p></article>
-</aside></div>
+</div>
 <footer>复习进度保存在当前浏览器。</footer></main></div>
 <script>
 const essay = ["Although many people want a healthy balance between work and personal life, this often proves difficult to achieve.", "The main obstacles are excessive work demands and difficulties in managing personal time, which require action from both employers and individuals.", "One major barrier is that work often extends beyond official working hours.", "Employees may be expected to work overtime or answer messages in the evening, leaving little time for family activities or hobbies.", "Long commutes make matters worse by using up time and energy that could otherwise be spent on personal interests.", "Even when free time is available, tired workers may struggle to use it as they intended.", "For example, someone who plans to watch a few short videos after work may end up scrolling through social media all evening.", "Unexpected caring responsibilities, such as looking after a sick relative, can also disrupt plans, especially when working arrangements are inflexible.", "Addressing these problems requires changes in both workplace practices and personal routines.", "Employers should set realistic workloads and avoid expecting staff to respond to non-urgent messages outside working hours.", "This would give employees more predictable periods of personal time.", "Where the job allows it, occasional home working could also reduce commuting time.", "Employees can improve their working methods to reduce avoidable overtime, although greater efficiency alone cannot solve excessive workloads.", "To protect their leisure time, individuals could schedule a few enjoyable activities each week and limit aimless phone use.", "Arranging a walk with a friend, for instance, creates a specific commitment that is easier to keep than a vague intention to relax.", "When family emergencies arise, flexible working hours and shared caring duties can help people manage competing demands.", "In conclusion, demanding jobs, unplanned leisure time and sudden family needs can all prevent people from achieving a satisfactory balance.", "More supportive employers and realistic personal planning can make this goal more achievable."];
@@ -511,10 +554,11 @@ function syncTab() {
     document.getElementById(link.dataset.tab).classList.toggle('hidden', !active);
   });
   const layout = document.querySelector('.study-layout');
-  layout.classList.toggle('show-question', ['focus', 'essay', 'dictation', 'patterns'].includes(selected.dataset.tab));
-  const showOutline = selected.dataset.tab === 'focus';
-  layout.classList.toggle('show-outline', showOutline);
-  document.getElementById('writing-outline').classList.toggle('hidden', !showOutline);
+  const question = document.getElementById('original-question');
+  const inFocus = selected.dataset.tab === 'focus';
+  const questionParent = inFocus ? document.getElementById('focus-question') : layout;
+  if (question.parentElement !== questionParent) questionParent.prepend(question);
+  layout.classList.toggle('show-question', ['essay', 'dictation', 'patterns'].includes(selected.dataset.tab));
 }
 navigation.forEach(button => {
   button.onclick = () => {
