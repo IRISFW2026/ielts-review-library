@@ -510,12 +510,51 @@
 #spStudio .source-notes a{color:var(--accent)}
 #spStudio .sidebar [data-done-count]{margin:2px 0;font-size:13px}
 @media(max-width:760px){#spStudio .sidebar figure{width:104px;margin-right:7px}}
+
+#spStudio{--ink:light-dark(#342331,#f5e8f0);--base:light-dark(#fbf5f8,#201720);--paper:light-dark(#fffdfd,#2b2029);--line:light-dark(#ecdce5,#493344);--muted:light-dark(#6c5363,#d0b4c5);--accent:light-dark(#8a2457,#ffb0d6);--tint:light-dark(#f9e8f0,#47273b);--go:light-dark(#8d285a,#ffb0d6);--on:light-dark(#fff,#38172b);--sidebar-bg:light-dark(#f7eaf1,#291d28);--shadow:light-dark(#56213e0b,#0002);line-height:1.62}
+#spStudio header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:22px clamp(17px,4vw,42px);border-bottom:1px solid var(--line)}
+#spStudio header small{font-weight:650;color:var(--accent)}
+#spStudio h1{font-size:clamp(23px,4vw,34px);line-height:1.2;margin:4px 0 0;letter-spacing:-.02em}
+#spStudio h1 span{display:inline-block;font-size:.61em;font-weight:550;color:var(--muted)}
+#spStudio .home{margin:0;text-underline-offset:4px}
+#spStudio .shell{grid-template-columns:clamp(173px,19vw,228px) minmax(0,1fr)}
+#spStudio .sidebar{padding:22px 15px;background:var(--sidebar-bg)}
+#spStudio .sidebar figure{margin:0 0 12px}
+#spStudio .sidebar button{background:transparent;border-color:transparent;font-weight:550}
+#spStudio .sidebar button[aria-pressed=true]{background:var(--paper);border-color:var(--line);box-shadow:0 2px 10px var(--shadow);color:var(--accent)}
+#spStudio .sidebar [data-done-count]{padding-left:12px;color:var(--muted)}
+#spStudio [data-pane="practice"]{--gutter:clamp(16px,3.5vw,32px)}
+#spStudio [data-pane="practice"] nav{padding:14px var(--gutter);background:var(--paper)}
+#spStudio [data-part][aria-pressed=true]{background:var(--go);color:var(--on);font-weight:650}
+#spStudio .guide{margin:18px var(--gutter) 0;padding:13px 16px;background:var(--tint);border-inline-start:3px solid var(--accent)}
+#spStudio .guide strong{color:var(--accent)}
+#spStudio [data-guide-time]{color:var(--muted);font-size:14px}
+#spStudio .layout{grid-template-columns:minmax(0,1fr) minmax(212px,28%);padding:18px var(--gutter);gap:15px}
+#spStudio .layout article,#spStudio .layout aside,#spStudio .notes{padding:clamp(14px,2.8vw,25px);box-shadow:0 4px 18px var(--shadow)}
+#spStudio .layout h2{font-size:clamp(24px,3.6vw,36px);line-height:1.22;overflow-wrap:anywhere}
+#spStudio [data-question-zh]{margin:0;color:var(--muted)}
+#spStudio .question-nav button{min-height:40px}
+#spStudio .question-nav button[aria-pressed=true]{border-color:var(--accent)}
+#spStudio .hotkeys{display:flex;flex-wrap:wrap;gap:8px 15px;margin:16px 0 0;padding:12px 0 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+#spStudio .hotkeys kbd{display:inline-block;background:var(--base);color:var(--accent);font-weight:600;white-space:nowrap}
+#spStudio .timer-keys{justify-content:center}
+#spStudio .clock{border-color:var(--tint);color:var(--accent)}
+#spStudio .notes{margin:0 var(--gutter) 20px}
+#spStudio .notes h3{font-size:18px;margin:0 0 12px}
+#spStudio .notes textarea{min-height:96px;resize:vertical}
+#spStudio [data-review]{margin-top:16px;padding-top:6px;border-top:1px solid var(--line)}
+#spStudio [data-answer][lang],#spStudio [data-sample]{padding:14px 16px;background:var(--base);border-radius:10px;max-width:78ch;line-height:1.7}
+#spStudio [data-extra]{padding:0 12px;border:1px solid var(--line);border-radius:9px}
+#spStudio #spReading{--muted:#755c6b;--green:#8a2457;--paper:#fcf6f9}
+@media(max-width:900px){#spStudio .layout{grid-template-columns:minmax(0,1fr) minmax(180px,32%)}}
+@media(max-width:700px){#spStudio .shell{grid-template-columns:1fr}#spStudio .sidebar{display:grid;grid-template-columns:88px repeat(2,minmax(0,1fr));gap:6px 9px;padding:10px 15px;border-inline-end:0}#spStudio .sidebar figure{grid-row:span 2;width:100%;margin:0}#spStudio .sidebar figcaption{display:none}#spStudio .sidebar button{text-align:center;padding:6px}#spStudio .sidebar [data-done-count]{grid-column:2/-1;text-align:center;padding:0}}
+@media(max-width:560px){#spStudio .layout{grid-template-columns:1fr}#spStudio .notefields{grid-template-columns:1fr}#spStudio [data-pane="practice"] nav{gap:5px}#spStudio [data-part]{padding:6px 8px}}
 </style>
 <section id="spStudio" aria-label="雅思口语复习页">
-<header><small>1029 · 雅思口语模考</small><strong>Emails &amp; Buildings 邮件与建筑</strong><a class="home" href="/ielts-review-library/index.html">← 复习总览</a></header>
+<header><div><small>1029 · 雅思口语模考</small><h1>Emails &amp; Buildings <span>邮件与建筑</span></h1></div><a class="home" href="/ielts-review-library/index.html">← 复习总览</a></header>
 <div class="shell">
 <div class="sidebar" role="navigation" aria-label="复习模块">
-<figure><img src="assets/luhu.jpg" alt="鹭湖艺术中心白色几何建筑与水中倒影"><figcaption>LUHU ART CENTER <span>白色几何 · 水中倒影</span></figcaption></figure>
+<figure><img src="assets/luhu.jpg" width="680" height="510" alt="鹭湖艺术中心白色几何建筑与水中倒影"><figcaption>LUHU ART CENTER <span>白色几何 · 水中倒影</span></figcaption></figure>
 
 <button data-view="practice" aria-pressed="true">口语练习</button>
 <button data-view="cards" aria-pressed="false">翻卡复习</button>
@@ -537,14 +576,23 @@
 <p data-question-zh></p>
 <ul data-prompts lang="en"><li>Where it is</li><li>What it looks like</li><li>What it is used for</li><li>And explain why you like it</li></ul>
 <div class="question-nav" data-questions hidden></div>
+<div class="hotkeys" aria-label="题目导航快捷键">
+<span><kbd>←</kbd> / <kbd>→</kbd> <span data-arrow-label>在当前 Part 内换题</span></span>
+<span><kbd>Shift + ←</kbd> / <kbd>Shift + →</kbd> 切换 Part</span>
+</div>
 </article>
 <aside aria-label="练习计时">
 <strong>练习计时</strong>
 <div class="clock"><span data-time>01:00</span><small data-phase>准备</small></div>
 <div class="actions"><button class="primary" data-start>开始准备</button><button data-speak>开始作答</button></div>
+<div class="hotkeys timer-keys" aria-label="计时快捷键">
+<span><kbd>Space</kbd> 开始 / 暂停</span>
+<span data-part-two-key hidden><kbd>P</kbd> 开始 Part 2 作答</span>
+</div>
 </aside>
 </div>
 <section class="notes" aria-label="复习区">
+<h3>作答笔记</h3>
 <div class="notefields">
 <label><strong data-note-label>我的提纲</strong><textarea id="sp-note" placeholder="写关键词或自己的想法"></textarea></label>
 <label><strong>我的英文答案</strong><textarea data-personal lang="en" placeholder="写下自己的答案，或补一版修改稿"></textarea></label>
@@ -563,7 +611,7 @@
 <p class="hint" data-original-note></p>
 </details>
 </section>
-<p class="hotkeys"><kbd>←</kbd> <kbd>→</kbd> 同一 Part 换题　 <kbd>Shift + ←</kbd> <kbd>Shift + →</kbd> 切换 Part　 <kbd>Space</kbd> 开始 / 暂停　 <kbd>P</kbd> Part 2 开始作答</p>
+
 </section>
 <section class="toolpane" data-pane="vocabulary" hidden>
 <div id="spReading" aria-label="口语词汇复习" hidden>
@@ -1332,6 +1380,8 @@ async function importData(event) {
   find('answer').textContent = answer;
   find('prompts').hidden = part !== 2;
   find('speak').hidden = part !== 2;
+  find('part-two-key').hidden = part !== 2;
+  find('arrow-label').textContent = part === 2 ? '在 Part 2 内切换素材' : '在当前 Part 内换题';
   find('review').open = false;
   root.querySelectorAll('[data-extra]').forEach(detail => detail.open = false);
   find('note-label').textContent = part === 2 ? '我的提纲' : '作答笔记';
@@ -1382,7 +1432,7 @@ async function importData(event) {
  };
  document.addEventListener('keydown', event => {
   if (!(event.target instanceof Element) || event.altKey || event.metaKey || event.ctrlKey || event.target.closest('textarea,input,select,[contenteditable]')) return;
-  if (view !== 'practice') return;
+  if (view !== 'practice' || event.isComposing || event.repeat || event.defaultPrevented) return;
   if (event.code === 'Space' && (!event.target.closest('button,summary') || event.target.closest('[data-part],[data-view]'))) { event.preventDefault(); start.click(); }
   if (event.key.toLowerCase() === 'p' && part === 2) find('speak').click();
   if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
@@ -1395,7 +1445,7 @@ async function importData(event) {
    index = 0;
   } else {
    const nextQuestion = index + direction;
-   if (part === 2 || !data[part][nextQuestion]) return;
+   if (!data[part][nextQuestion]) return;
    index = nextQuestion;
   }
   render();
