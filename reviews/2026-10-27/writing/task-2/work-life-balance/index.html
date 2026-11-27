@@ -673,7 +673,17 @@ else {
   window.addEventListener('hashchange',()=>{if(location.hash==='\x23cards'&&!studyPane.querySelector('.term')&&!completed)buildStudy();});
 }
 
-</script></head>
+</script><style>
+/* Task 2 first-page content only; all shared module styling remains from the Task 1 master. */
+.task2-prompt{font:600 17px/1.75 Georgia,serif;color:var(--ink);margin:12px 0 16px}
+.task2-chip{display:inline-block;padding:4px 9px;margin:3px 5px 3px 0;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:12px}
+.task2-audit,.task2-plan{display:grid;gap:9px;margin:12px 0 18px}
+.task2-audit article,.task2-plan article{padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.task2-audit h4,.task2-plan h4{margin:0 0 5px;color:var(--green);font-size:14px;line-height:1.5}
+.task2-audit p,.task2-plan p{margin:0;font-size:14px;line-height:1.7}
+#focus .task2-plan article{background:#f7faf7}
+@media(max-width:600px){.task2-prompt{font-size:16px}.task2-audit article,.task2-plan article{padding:10px 11px}}
+</style></head>
 <body><div class="shell"><aside class="sidebar"><div class="brand">雅思写作 <span>IELTS WRITING</span></div><div class="book"><h3 lang="en">Work–Life Balance</h3><p>雅思写作 Task 2 · 1027</p></div><nav class="nav" aria-label="学习模块"><button type="button" data-tab="focus"><span aria-hidden="true">☑</span>考察要点</button><button type="button" data-tab="cards"><span aria-hidden="true">◫</span>翻卡复习</button><button type="button" data-tab="library"><span aria-hidden="true">▤</span>全部词库</button><button type="button" data-tab="essay"><span aria-hidden="true">☷</span>完整全文</button><button type="button" data-tab="dictation"><span aria-hidden="true">✎</span>句子默写</button><button type="button" data-tab="patterns"><span aria-hidden="true">▤</span>可迁移句子</button><button type="button" data-tab="settings"><span aria-hidden="true">⚙</span>学习设置</button></nav></aside>
 <main class="main"><nav class="catalog-return" aria-label="复习库导航"><a href="https://irisfw2026.github.io/ielts-review-library/index.html">← 复习总览</a><span>2026-10-27 · 写作</span></nav><header class="top"><div><h1>Work–Life Balance｜工作与生活的平衡</h1><div class="sub">Task 2 · 问题与解决（Problems & Solutions）</div></div><div class="soundstatus" id="voice-summary" role="status"></div></header>
 
